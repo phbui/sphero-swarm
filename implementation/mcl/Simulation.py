@@ -8,26 +8,33 @@ class Simulation:
         # Verify if the map image loaded correctly
         if self.map.image is None:
             raise FileNotFoundError("Map image could not be loaded. Please check the path and file format.")
+        self.original_map = self.map.image.copy()
+        self.base_image = self.original_map.copy()  # Start with a clean copy
+        self.draw_drones_on_base_image()
+
+    def draw_drones_on_base_image(self):
+        self.base_image = self.original_map.copy()
+
+        for i, drone in enumerate(self.drones):
+            # Convert drone's position to pixel coordinates
+            pixel_x, pixel_y = self.map.map_to_pixel(drone.x, drone.y)
+            # Draw the drone's position on the base image
+            cv2.circle(self.base_image, (pixel_x, pixel_y), 14, (0, 0, 0), -1)  # Black border
+            cv2.circle(self.base_image, (pixel_x, pixel_y), 10, drone.color, -1)
 
     def render_frame(self):
-        # Create a copy of the map for displaying particles and drone positions
-        map_copy = self.map.image.copy()
+        # Start with the base image (drones drawn, no particles)
+        frame = self.base_image.copy()
         
-        # Draw each drone's particles and position
-        for i, drone in enumerate(self.drones):
-            # Draw particles for this drone in its color
+        # Draw particles on top for display
+        for drone in self.drones:
             for particle in drone.mcl.particles:
                 pixel_x, pixel_y = self.map.map_to_pixel(particle.x, particle.y)
-                cv2.circle(map_copy, (pixel_x, pixel_y), 2, drone.color, -1)
+                cv2.circle(frame, (pixel_x, pixel_y), 2, drone.color, -1)
+        
+        # Show the frame with particles overlaid on base image
+        cv2.imshow("Monte Carlo Localization", frame)
 
-            # Draw the drone's position with a black border
-            pixel_x, pixel_y = self.map.map_to_pixel(drone.x, drone.y)
-            cv2.circle(map_copy, (pixel_x, pixel_y), 14, (0, 0, 0), -1)  # 4px black border
-            cv2.circle(map_copy, (pixel_x, pixel_y), 10, drone.color, -1)  # Drone's color circle
-            cv2.putText(map_copy, f"Drone {i+1}", (pixel_x - 20, pixel_y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.4, drone.color, 1)
-
-        # Display the map
-        cv2.imshow("Monte Carlo Localization", map_copy)
 
     def move_drones(self, dx, dy):
         """Move all drones by the specified dx and dy."""
@@ -35,6 +42,12 @@ class Simulation:
             # Move each drone and get the actual noisy movement
             actual_x, actual_y = drone.move(dx, dy)
             print(f"Drone {i+1} Actual Position: ({actual_x:.2f}, {actual_y:.2f})")
+
+            # Update the base image with the new position of each drone
+            self.draw_drones_on_base_image()
+
+            # Update MCL particles with the new frame
+            drone.mcl.map.image = self.base_image  # Update MCL with the new base image
 
             # Estimate position based on particles
             estimated_x, estimated_y = drone.mcl.estimate_position()
