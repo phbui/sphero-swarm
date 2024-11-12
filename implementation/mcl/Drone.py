@@ -50,8 +50,8 @@ class Drone:
 
     def move(self, dx, dy):
         # Apply movement noise and update position
-        actual_dx = dx + random.gauss(0, self.noise_sigma)
-        actual_dy = dy + random.gauss(0, self.noise_sigma)
+        actual_dx = dx + random.gauss(0, self.noise_sigma * 0.1)
+        actual_dy = dy + random.gauss(0, self.noise_sigma * 0.1)
 
         self.x += actual_dx
         self.y += actual_dy

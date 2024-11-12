@@ -15,9 +15,9 @@ if __name__ == "__main__":
     
     # Create unique colors for each drone
     colors = [
-        (255, 0, 0),    # Bright Red
-        (0, 255, 255),  # Bright Cyan
-        (57, 255, 20)   # Neon Green
+        (0, 0, 255),    # Bright Red
+        (255, 255, 0),  # Bright Cyan
+        (20, 255, 57)   # Neon Green
     ]
     
     # Create drones with predefined colors and initialize MCL for each
