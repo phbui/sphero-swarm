@@ -1,10 +1,8 @@
 from Map import Map
 from Drone import Drone
 from Simulation import Simulation
-from MonteCarloLocalization import MonteCarloLocalization
 
 if __name__ == "__main__":
-    import random
     
     # Initialize the map
     map_obj = Map()
@@ -12,8 +10,8 @@ if __name__ == "__main__":
     
     # Set parameters
     num_drones = 3
-    noise_sigma = 0.1
-    num_particles = 3000
+    noise_sigma = 0.01
+    num_particles = 500
     
     # Create unique colors for each drone
     colors = [

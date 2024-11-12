@@ -20,9 +20,10 @@ class Simulation:
                 pixel_x, pixel_y = self.map.map_to_pixel(particle.x, particle.y)
                 cv2.circle(map_copy, (pixel_x, pixel_y), 2, drone.color, -1)
 
-            # Draw the drone's position in its color
+            # Draw the drone's position with a black border
             pixel_x, pixel_y = self.map.map_to_pixel(drone.x, drone.y)
-            cv2.circle(map_copy, (pixel_x, pixel_y), 10, drone.color, -1)
+            cv2.circle(map_copy, (pixel_x, pixel_y), 14, (0, 0, 0), -1)  # 4px black border
+            cv2.circle(map_copy, (pixel_x, pixel_y), 10, drone.color, -1)  # Drone's color circle
             cv2.putText(map_copy, f"Drone {i+1}", (pixel_x - 20, pixel_y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.4, drone.color, 1)
 
         # Display the map
@@ -32,10 +33,8 @@ class Simulation:
         """Move all drones by the specified dx and dy."""
         for i, drone in enumerate(self.drones):
             # Move each drone and get the actual noisy movement
-            actual_dx, actual_dy = drone.move(dx, dy)
-
-            # Update particles based on the intended movement
-            drone.mcl.update_particles(dx, dy)
+            actual_x, actual_y = drone.move(dx, dy)
+            print(f"Drone {i+1} Actual Position: ({actual_x:.2f}, {actual_y:.2f})")
 
             # Estimate position based on particles
             estimated_x, estimated_y = drone.mcl.estimate_position()
@@ -55,6 +54,10 @@ class Simulation:
         step_count = 0
         
         while True:
+            # Check if the window is still open; break if it has been closed
+            if cv2.getWindowProperty("Monte Carlo Localization", cv2.WND_PROP_VISIBLE) < 1:
+                break
+
             # Wait for user input with a blocking call
             key = cv2.waitKey(0) & 0xFF  
 
@@ -77,7 +80,7 @@ class Simulation:
             self.move_drones(dx, dy)
 
             # Resample particles every 5 steps for each drone
-            if step_count % 5 == 0:
+            if step_count % 3 == 0:
                 for drone in self.drones:
                     drone.mcl.resample_particles()
 
@@ -86,4 +89,5 @@ class Simulation:
             # Render the updated frame after each movement
             self.render_frame()
 
+        # Clean up and close the window
         cv2.destroyAllWindows()

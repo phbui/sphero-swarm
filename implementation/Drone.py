@@ -55,10 +55,8 @@ class Drone:
 
         self.x += actual_dx
         self.y += actual_dy
-        self.x = max(min(self.x, self.map.x_max), self.map.x_min)
-        self.y = max(min(self.y, self.map.y_max), self.map.y_min)
 
         # Update MCL particles
         self.mcl.update_particles(dx, dy)
 
-        return actual_dx, actual_dy
+        return self.x, self.y
