@@ -1,13 +1,14 @@
 import random
 
 class Particle:
-    def __init__(self, x, y, noise_sigma, weight=1.0):
+    def __init__(self, x, y, noise_sigma, weight=1.0, color=None):
         self.x = x
         self.y = y
         self.prev_x = x  # Initialize previous position as the starting position
         self.prev_y = y
         self.weight = weight
         self.noise_sigma = noise_sigma
+        self.color = color  # Assign color to each particle
 
     def move(self, dx, dy, map_obj):
         # Update previous position before moving
