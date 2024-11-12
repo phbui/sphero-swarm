@@ -1,9 +1,8 @@
 import cv2
 
 class Simulation:
-    def __init__(self, drones, particles):
+    def __init__(self, drones):
         self.drones = drones
-        self.mcls = particles
         self.map = drones[0].map  # Assuming all drones share the same map
         
         # Verify if the map image loaded correctly
@@ -15,9 +14,9 @@ class Simulation:
         map_copy = self.map.image.copy()
         
         # Draw each drone's particles and position
-        for i, (mcl, drone) in enumerate(zip(self.mcls, self.drones)):
+        for i, drone in enumerate(self.drones):
             # Draw particles for this drone in its color
-            for particle in mcl.particles:
+            for particle in drone.mcl.particles:
                 pixel_x, pixel_y = self.map.map_to_pixel(particle.x, particle.y)
                 cv2.circle(map_copy, (pixel_x, pixel_y), 2, drone.color, -1)
 
@@ -31,15 +30,15 @@ class Simulation:
 
     def move_drones(self, dx, dy):
         """Move all drones by the specified dx and dy."""
-        for i, (drone, mcl) in enumerate(zip(self.drones, self.mcls)):
+        for i, drone in enumerate(self.drones):
             # Move each drone and get the actual noisy movement
             actual_dx, actual_dy = drone.move(dx, dy)
 
             # Update particles based on the intended movement
-            mcl.update_particles(dx, dy)
+            drone.mcl.update_particles(dx, dy)
 
             # Estimate position based on particles
-            estimated_x, estimated_y = mcl.estimate_position()
+            estimated_x, estimated_y = drone.mcl.estimate_position()
             print(f"Drone {i+1} Estimated Position: ({estimated_x:.2f}, {estimated_y:.2f})")
 
     def run(self):
@@ -79,8 +78,8 @@ class Simulation:
 
             # Resample particles every 5 steps for each drone
             if step_count % 5 == 0:
-                for mcl in self.mcls:
-                    mcl.resample_particles()
+                for drone in self.drones:
+                    drone.mcl.resample_particles()
 
             step_count += 1
 

@@ -28,9 +28,6 @@ if __name__ == "__main__":
         for i in range(num_drones)
     ]
     
-    # Initialize MCL for each drone with specified particle count
-    particles = [MonteCarloLocalization(map_obj, noise_sigma, num_particles) for _ in range(num_drones)]
-    
     # Create and run the simulation
-    simulation = Simulation(drones=drones, particles=particles)
+    simulation = Simulation(drones=drones)
     simulation.run()
