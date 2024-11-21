@@ -13,7 +13,7 @@ class MonteCarloLocalization:
         self.color = color 
         self.particles = self.initialize_particles(initial_x, initial_y) 
 
-    def initialize_particles(self, initial_x=None, initial_y=None, spread=2.0):
+    def initialize_particles(self, initial_x=None, initial_y=None, spread=1.0):
         # Initializes particles, centered around initial coordinates if given, or random across the map
         particles = []
         for _ in range(self.num_particles):
@@ -26,13 +26,13 @@ class MonteCarloLocalization:
             particles.append(Particle(x, y))
         return particles
 
-    def update_particles(self, dx, dy):
+    def update_particles(self, dx, dy, detected_position=None):
         # Shifts particles based on intended movement, updating each particle's position and weight
         for particle in self.particles:
             noise_x = np.random.normal(0, self.noise_sigma)
             noise_y = np.random.normal(0, self.noise_sigma)
             particle.move(dx + noise_x, dy + noise_y) 
-        self.update_weights(dx, dy)
+        self.update_weights(dx, dy, detected_position)
 
     def get_map_color_at_particle(self, particle):
         # Finds the map color where each particle is located for color-based localization
@@ -59,10 +59,10 @@ class MonteCarloLocalization:
         sigma_color = 20 
         return np.exp(-color_diff**2 / (2 * sigma_color**2))
 
-    def update_weights(self, dx, dy):
+    def update_weights(self, dx, dy, detected_position=None):
         # Updates particle weights based on both motion and color
         intended_angle = np.arctan2(dy, dx)
-        
+
         for particle in self.particles:
             # Calculate particle's movement angle
             particle_dx = particle.x - particle.prev_x
@@ -80,9 +80,16 @@ class MonteCarloLocalization:
             color_weight = self.color_similarity_weight(map_color)
             
             # Combined weight (motion + color)
-            motion_weight = np.exp(-angle_diff**2 / (2 * 0.05**2)) 
+            motion_weight = np.exp(-angle_diff**2 / (2 * 0.1**2)) 
             particle.weight = motion_weight * (color_weight ** 2)
-        
+            
+            # If detected position is available, add a correction factor based on distance to detected color position
+            if detected_position:
+                detected_x, detected_y = self.map.pixel_to_map(detected_position[0], detected_position[1])
+                distance_to_detected = np.hypot(particle.x - detected_x, particle.y - detected_y)
+                correction_weight = np.exp(-distance_to_detected**2 / (2 * self.noise_sigma**2))
+                particle.weight *= correction_weight
+
         # Normalize weights
         total_weight = sum(p.weight for p in self.particles)
         if total_weight > 0:
@@ -98,8 +105,8 @@ class MonteCarloLocalization:
         y_estimate = sum(p.y * p.weight for p in self.particles)
         return x_estimate, y_estimate
 
-    def resample_particles(self):
-        # Resamples particles based on their weights to maintain distribution around high-weight particles
+    def resample_particles(self, detected_position=None):
+        # Resamples particles based on their weights
         weights = [p.weight for p in self.particles]
         if np.sum(weights) == 0:
             return
@@ -111,12 +118,19 @@ class MonteCarloLocalization:
         # Use adaptive correction based on particle spread
         x_spread = np.std([p.x for p in self.particles])
         y_spread = np.std([p.y for p in self.particles])
-        adaptive_noise = min(self.noise_sigma * 0.05, x_spread, y_spread)
+        adaptive_noise = min(self.noise_sigma * 0.1, x_spread, y_spread)
 
-        # Adjust particle positions to tighten around the estimated position
+        # Detect the current drone position by color
+        if detected_position:
+            detected_x, detected_y = self.map.pixel_to_map(detected_position[0], detected_position[1])
+        
+        # Adjust particle positions to concentrate around the detected position
         for particle in new_particles:
-            particle.x += random.gauss(0, adaptive_noise)
-            particle.y += random.gauss(0, adaptive_noise)
+            if detected_position:
+                particle.x = detected_x + random.gauss(0, adaptive_noise)
+                particle.y = detected_y + random.gauss(0, adaptive_noise)
+            else:
+                particle.x += random.gauss(0, adaptive_noise)
+                particle.y += random.gauss(0, adaptive_noise)
 
         self.particles = new_particles
-

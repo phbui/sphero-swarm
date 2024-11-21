@@ -48,7 +48,12 @@ class Drone:
         self.mcl = MonteCarloLocalization(self.map, noise_sigma, num_particles, color=self.color, initial_x=self.x, initial_y=self.y)
         print(f"Initial Drone Position: ({self.x}, {self.y}), Color: {self.color}")
 
-    def move(self, dx, dy):
+    def move(self, dx, dy, step_count):
+        detected_position = detect_drone_position_by_color(self.map.image, self.color)
+
+        if step_count % 5 == 0:
+            self.mcl.resample_particles(detected_position)
+
         # Apply movement noise and update position
         actual_dx = dx + random.gauss(0, self.noise_sigma * 0.1)
         actual_dy = dy + random.gauss(0, self.noise_sigma * 0.1)
@@ -56,7 +61,7 @@ class Drone:
         self.x += actual_dx
         self.y += actual_dy
 
-        # Update MCL particles
-        self.mcl.update_particles(dx, dy)
+        # Update MCL particles, passing in the detected position
+        self.mcl.update_particles(dx, dy, detected_position)
 
         return self.x, self.y

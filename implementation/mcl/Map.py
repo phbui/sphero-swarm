@@ -44,3 +44,9 @@ class Map:
         pixel_x = int((x * SCALE_FACTOR) + (self.width / 2))
         pixel_y = int((-y * SCALE_FACTOR) + (self.height / 2))
         return pixel_x, pixel_y
+
+    def pixel_to_map(self, pixel_x, pixel_y):
+        # Convert pixel coordinates back to map (world) coordinates
+        x = (pixel_x - (self.width / 2)) / SCALE_FACTOR
+        y = -((pixel_y - (self.height / 2)) / SCALE_FACTOR)
+        return x, y

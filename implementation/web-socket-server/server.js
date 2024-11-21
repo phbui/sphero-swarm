@@ -1,173 +1,149 @@
 const WebSocket = require("ws");
 
-// Check CLI arguments to decide which server to run
-const args = process.argv.slice(2);
-const mode = args[0] || "face"; // Default to "face" if no argument is given
-
-const face_ServerUrl = "ws://localhost:8081";
-const scan_ServerUrl = "ws://localhost:8082";
-let socket;
-
+// Create a WebSocket server on port 8080
 const wss = new WebSocket.Server({ port: 8080 });
 console.log("WebSocket server is running on ws://localhost:8080");
 
-// Store connections for ESP32 clients
+// List of connected clients
 let clients = [];
 
-function handleConnection(clientType, id, ws) {
+/**
+ * Handles the connection of a general client (non-SpheroController).
+ * Adds the client to the `clients` list.
+ * @param {WebSocket} ws - The WebSocket connection.
+ * @param {string} clientType - The type of client connecting.
+ */
+function handleConnection(ws, clientType) {
   console.log("Client connected: " + clientType);
-  console.log("Id: " + id);
-  clients.push({ clientType: clientType, ws: ws });
-  notifyOpen();
+  clients.push({ clientType: clientType, id: clientType, ws: ws });
 }
 
-function handleLog(clientType, message) {
-  let log = JSON.parse(message.toString()).message;
-  console.log(`Message from ${clientType}: ${log}`);
+/**
+ * Handles the connection of a SpheroController and its associated Spheros.
+ * Adds each Sphero to the `clients` list.
+ * @param {WebSocket} ws - The WebSocket connection.
+ * @param {Array} spheros - List of Sphero objects being controlled.
+ */
+function handleSpheroConnection(ws, spheros) {
+  spheros.forEach((sphero) => {
+    console.log(`Client connected: [SpheroController]: ${sphero.id}`);
+    clients.push({ clientType: "SpheroController", id: sphero.id, ws: ws });
+  });
 }
 
-function notifyOpen() {
-  if (socket.readyState === WebSocket.OPEN) {
-    clients.forEach((client) => {
-      if (client.ws.readyState === WebSocket.OPEN) {
-        client.ws.send(
-          JSON.stringify({
-            id: "run",
-            message: "Begin",
-          })
-        );
-        console.log("Sent 'Begin' to esp32 clients.");
-      }
-    });
-  }
-}
-
-// Function to connect to the specified WebSocket server based on CLI argument
-function connectToServer() {
-  switch (mode) {
-    case "face":
-      socket = new WebSocket(face_ServerUrl);
-      console.log("Connecting to face recognition server...");
-      break;
-    case "scan":
-      socket = new WebSocket(scan_ServerUrl);
-      console.log("Connecting to scan server...");
-      break;
-    default:
-      console.error(`Invalid mode specified: ${mode}. Use "face" or "scan".`);
-      process.exit(1);
-  }
-
-  // Send "Begin" to all esp32 clients when connected
-  socket.on("open", () => {
-    console.log(
-      `Connected to ${mode === "face" ? "face recognition" : "scan"} server.`
+/**
+ * Sends a message to a specific client.
+ * @param {string} id - The ID of the target client.
+ * @param {string} messageType - The type of the message being sent.
+ * @param {any} message - The content of the message.
+ */
+function sendMessageToClient(id, messageType, message) {
+  const client = clients.find((c) => c.id === id); // Find the client by ID
+  if (client && client.ws.readyState === WebSocket.OPEN) {
+    client.ws.send(
+      JSON.stringify({ id: id, messageType: messageType, message: message })
     );
+    console.log(`Message sent to ${id}: ${JSON.stringify(message)}`);
+  } else {
+    console.log(`${id} not found or not connected.`);
+  }
+}
 
-    notifyOpen();
-  });
+/**
+ * Sends a movement command to a specific Sphero.
+ * @param {string} id - The ID of the Sphero to move.
+ * @param {Array} path - A list of coordinate pairs for the Sphero to follow.
+ */
+function moveSphero(id, path) {
+  sendMessageToClient(id, "SpheroMovement", path);
+}
 
-  socket.on("error", (error) => {
-    console.error(`Error connecting to ${mode} server: ${error}`);
-  });
-
-  // Send "End" to all esp32 clients before reconnecting
-  socket.on("close", () => {
-    clients.forEach((client) => {
-      if (client.ws.readyState === WebSocket.OPEN) {
-        client.ws.send(
-          JSON.stringify({
-            id: "run",
-            message: "End",
-          })
-        );
-        console.log("Sent 'End' to esp32 clients.");
-      }
-    });
-    console.log(`Disconnected from ${mode} server. Reconnecting...`);
-    setTimeout(connectToServer, 5000); // Reconnect after 5 seconds
+/**
+ * Generates three random coordinate pairs within a given range.
+ * @param {number} range - The maximum value for x and y coordinates.
+ * @returns {Array} An array of 3 coordinate pairs.
+ */
+function generateRandomCoordinatePairs(range = 100) {
+  return Array.from({ length: 3 }, () => {
+    return [Math.random() * range, Math.random() * range];
   });
 }
 
-// Handle client connections
+/**
+ * Sends random movement commands to all connected Spheros.
+ * This is called every 5 seconds.
+ */
+function moveSpheroRandomly() {
+  clients.forEach((client) => {
+    if (
+      client &&
+      client.clientType === "SpheroController" &&
+      client.ws.readyState === WebSocket.OPEN
+    ) {
+      moveSphero(client.id, generateRandomCoordinatePairs());
+    }
+  });
+}
+
+// Call moveSpheroRandomly every 5 seconds
+setInterval(moveSpheroRandomly, 5000);
+
+/**
+ * Handles messages sent by SpheroControllers.
+ * Processes different message types such as "SpheroConnection" and "SpheroFeedback".
+ * @param {WebSocket} ws - The WebSocket connection.
+ * @param {Object} parsedMessage - The message received from the client.
+ */
+function handleSpheroControllerMessage(ws, parsedMessage) {
+  let messageType = parsedMessage.messageType;
+
+  switch (messageType) {
+    case "SpheroConnection": // SpheroController is connecting its Spheros
+      let spheros = parsedMessage.spheros;
+      handleSpheroConnection(ws, spheros);
+      break;
+
+    case "SpheroFeedback": // Feedback from a SpheroController
+      console.log(parsedMessage);
+      break;
+  }
+}
+
+/**
+ * Handles messages from any client.
+ * Routes the message to the correct handler based on client type.
+ * @param {WebSocket} ws - The WebSocket connection.
+ * @param {Object} parsedMessage - The message received from the client.
+ */
+function handleClientConnection(ws, parsedMessage) {
+  let clientType = parsedMessage.clientType;
+
+  switch (clientType) {
+    case "SpheroController": // If the client is a SpheroController
+      handleSpheroControllerMessage(ws, parsedMessage);
+      break;
+
+    default: // General client connection
+      handleConnection(ws, clientType);
+      break;
+  }
+}
+
+// Listen for new WebSocket connections
 wss.on("connection", (ws) => {
+  // Handle incoming messages from clients
   ws.on("message", (message) => {
+    let parsedMessage = JSON.parse(message.toString());
     try {
-      let clientType = JSON.parse(message.toString()).clientType;
-      let id = JSON.parse(message.toString()).id;
-
-      switch (clientType) {
-        case "esp32-cam":
-          switch (id) {
-            case "start":
-              handleConnection(clientType, id, ws);
-              break;
-            case "binaryImage":
-              //console.log("Received binary message (image data)");
-              let binaryImageBase64 = JSON.parse(
-                message.toString()
-              ).binaryImage;
-              let binaryImageBuffer = Buffer.from(binaryImageBase64, "base64");
-
-              if (socket && socket.readyState === WebSocket.OPEN) {
-                socket.send(binaryImageBuffer);
-                //console.log(`Forwarded image to ${mode} server.`);
-              } else {
-                /* console.log(
-                  `The ${mode} server is not connected. Cannot forward image.`
-                ); */
-              }
-              break;
-            case "log":
-              handleLog(clientType, message);
-              break;
-          }
-          break;
-        case "esp32-controller":
-          switch (id) {
-            case "start":
-              handleConnection(clientType, id, ws);
-              break;
-            case "log":
-              handleLog(clientType, message);
-              break;
-          }
-          break;
-        case "python-face":
-          switch (id) {
-            case "start":
-              handleConnection(clientType, id, ws);
-              break;
-            case "faceData":
-              let faceData = JSON.parse(message.toString()).faceData;
-              clients.forEach((client) => {
-                if (
-                  client.clientType === "esp32-controller" &&
-                  client.ws.readyState === WebSocket.OPEN
-                ) {
-                  let message = JSON.stringify({
-                    id: "control",
-                    message: faceData,
-                  });
-                  client.ws.send(message);
-                  //console.log(`Sent ${message} to esp32-control client.`);
-                }
-              });
-              break;
-          }
-          break;
-      }
+      handleClientConnection(ws, parsedMessage);
     } catch (e) {
-      console.log(`Error: ${e}`);
+      console.log(`Error processing message: ${e}`);
     }
   });
 
-  // Handle client disconnection
+  // Remove the client from the `clients` list when they disconnect
   ws.on("close", () => {
     console.log("A client has disconnected.");
-    clients = clients.filter((client) => client.ws !== ws); // Remove disconnected clients
+    clients = clients.filter((client) => client.ws !== ws);
   });
 });
-
-// Start the connection based on CLI argument
-connectToServer();

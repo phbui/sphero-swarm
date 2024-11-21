@@ -36,11 +36,11 @@ class Simulation:
         cv2.imshow("Monte Carlo Localization", frame)
 
 
-    def move_drones(self, dx, dy):
+    def move_drones(self, dx, dy, step_count):
         """Move all drones by the specified dx and dy."""
         for i, drone in enumerate(self.drones):
             # Move each drone and get the actual noisy movement
-            actual_x, actual_y = drone.move(dx, dy)
+            actual_x, actual_y = drone.move(dx, dy, step_count)
             print(f"Drone {i+1} Actual Position: ({actual_x:.2f}, {actual_y:.2f})")
 
             # Update the base image with the new position of each drone
@@ -90,15 +90,10 @@ class Simulation:
                 continue  # Ignore other keys
 
             # Move all drones based on input
-            self.move_drones(dx, dy)
-
-            # Resample particles every 5 steps for each drone
-            if step_count % 3 == 0:
-                for drone in self.drones:
-                    drone.mcl.resample_particles()
+            self.move_drones(dx, dy, step_count)
 
             step_count += 1
-
+                  
             # Render the updated frame after each movement
             self.render_frame()
 

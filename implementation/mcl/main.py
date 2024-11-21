@@ -10,7 +10,7 @@ if __name__ == "__main__":
     
     # Set parameters
     num_drones = 3
-    noise_sigma = 0.01
+    noise_sigma = 0.1
     num_particles = 500
     
     # Create unique colors for each drone
