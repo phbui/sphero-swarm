@@ -59,14 +59,15 @@ function moveSphero(id, path) {
 }
 
 /**
- * Generates three random coordinate pairs within a given range.
+ * Generates three random coordinate objects with currentLocation and targetLocation.
  * @param {number} range - The maximum value for x and y coordinates.
- * @returns {Array} An array of 3 coordinate pairs.
+ * @returns {Array} An array of 3 objects with currentLocation and targetLocation.
  */
 function generateRandomCoordinatePairs(range = 100) {
-  return Array.from({ length: 3 }, () => {
-    return [Math.random() * range, Math.random() * range];
-  });
+  return {
+    currentLocation: [Math.random() * range, Math.random() * range],
+    targetLocation: [Math.random() * range, Math.random() * range],
+  };
 }
 
 /**
