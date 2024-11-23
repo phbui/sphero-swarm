@@ -4,14 +4,14 @@ import multiprocessing
 from websockets import connect
 
 # This function handles incoming messages from the WebSocket server
-async def websocket_receiver(message_bus, spheros):
+async def websocket_receiver(message_bus):
     try:
         # Establish a WebSocket connection to the server
         async with connect("ws://localhost:8080") as ws:
             print("WebSocket: Connected to the server.\n")
 
-            # Send an initialization message to identify this client as a Sphero controller
-            await ws.send(json.dumps({"clientType": "SpheroController", "messageType": "SpheroConnection", "spheros": spheros}))
+            # Send an initialization message to identify this client as the Sphero brain
+            await ws.send(json.dumps({"clientType": "SpheroBrain", "messageType": "BrainConnection"}))
             print("WebSocket: Sent connection initialization.\n")
 
             while True:
@@ -69,7 +69,7 @@ def send_message_to_server(outgoing_queue, id, messageType, message):
     try:
         # Create the message in a dictionary format
         message_json = {
-            "clientType": "SpheroController",
+            "clientType": "SpheroBrain",
             "id": id,
             "messageType": messageType,
             "message": message
@@ -103,20 +103,12 @@ def process_subscriber(client_id, message_bus, outgoing_queue):
             break
 
 
-# This function tells the Sphero to move and sends feedback
-def move(id, path, outgoing_queue):
-    # Print the movement path for the Sphero
-    print(f"I am moving Sphero {id} to {path}\n")
-
-    # Add feedback to the outgoing queue
-    send_message_to_server(outgoing_queue, id, "SpheroFeedback", "Done")
-
 
 # This function decides what to do with incoming messages based on their type
 def handle_message(id, message_type, message, outgoing_queue):
     match message_type:
-        case "SpheroMovement":
-            move(id, message, outgoing_queue)
+        case "SpheroConnection":
+            print(message)
         case _:
             print(f"Sphero {id}: Unhandled message type: {message_type}\n")
 
@@ -133,31 +125,10 @@ def run_websocket_sender(outgoing_queue):
 
 if __name__ == "__main__":
     with multiprocessing.Manager() as manager:
-        spheros = [
-            {"id": "Alpha", "color": "#000"},
-            {"id": "Beta", "color": "#FFF"},
-            {"id": "Sigma", "color": "#111"},
-            {"id": "Rho", "color": "#BBB"},
-        ]
 
-        message_bus = manager.dict({sphero["id"]: manager.list() for sphero in spheros})
+
         outgoing_queue = manager.Queue()
-
-        websocket_process = multiprocessing.Process(target=run_websocket, args=(message_bus, spheros))
         websocket_sender_process = multiprocessing.Process(target=run_websocket_sender, args=(outgoing_queue,))
 
-        subscriber_processes = [
-            multiprocessing.Process(target=process_subscriber, args=(sphero["id"], message_bus, outgoing_queue))
-            for sphero in spheros
-        ]
-
-        websocket_process.start()
         websocket_sender_process.start()
-
-        for process in subscriber_processes:
-            process.start()
-
-        websocket_process.join()
         websocket_sender_process.join()
-        for process in subscriber_processes:
-            process.join()
