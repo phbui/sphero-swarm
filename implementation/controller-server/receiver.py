@@ -1,6 +1,7 @@
 import asyncio
 import json
 import multiprocessing
+import math
 from websockets import connect
 from spherov2 import scanner
 from spherov2.sphero_edu import SpheroEduAPI
@@ -155,13 +156,11 @@ def initialize_sphero(client_id, client_color, message_bus, outgoing_queue,first
     process_subscriber(client_id, client_color, message_bus, outgoing_queue, toy)
         
 
-# TODO Change from two separate movements to one movement
+
 # This function tells the Sphero to move and sends feedback
 def move(id, client_color, current, target, outgoing_queue, toy):
     # Print the movement path for the Sphero
     print(f"I am moving Sphero {id} at {current} to {target}\n")
-    x_dir = 0
-    y_dir = 0
 
     try:
         with SpheroEduAPI(toy) as droid:
@@ -170,23 +169,23 @@ def move(id, client_color, current, target, outgoing_queue, toy):
             # The spheros automatically go into sleep mode which is why this is needed
             droid.set_main_led(client_color)
 
-            # Checks the x direction of the target
-            if (target[0] > current[0]):
-                x_dir = 90
-            else:
-                x_dir = 270
+            # Gets the change in x and y coordinates
+            deltax = target[0]-current[0]
+            deltay = target[1]-current[1]
 
-            # rolls in the x direction. Timing needs to be adjusted
-            droid.roll(x_dir, 30, round(abs(target[0] - current[0])*multiplier))
+            # Gets the angle in radians, clockwise
+            rad = math.atan2(-deltax, deltay)
+
+            # Converts from radians to degrees
+            deg = rad * (180/math.pi)
+
+            # If the angle is negative, add 360 because 270 is west
+            if deg < 0:
+                deg = deg + 360
+
             
-            # checks the y direction of the target
-            if (target[1] > current[1]):
-                y_dir = 0
-            else:
-                y_dir = 180
-
-            # rolls in the x direction. Timing needs to be adjusted
-            droid.roll(y_dir, 30, round(abs(target[1] - current[1]))*multiplier)
+            # rolls towards the target. Timing needs to be adjusted
+            droid.roll(round(deg), 30, round(abs(target[1] - current[1]))*multiplier)
 
     except Exception as e:
         print(e)
