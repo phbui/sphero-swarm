@@ -73,36 +73,6 @@ function moveSphero(id, path) {
   sendMessageToClient(id, "SpheroMovement", path);
 }
 
-/**
- * Generates three random coordinate objects with currentLocation and targetLocation.
- * @param {number} range - The maximum value for x and y coordinates.
- * @returns {Array} An array of 3 objects with currentLocation and targetLocation.
- */
-function generateRandomCoordinatePairs(range = 100) {
-  return {
-    currentLocation: [Math.random() * range, Math.random() * range],
-    targetLocation: [Math.random() * range, Math.random() * range],
-  };
-}
-
-/**
- * Sends random movement commands to all connected Spheros.
- * This is called every 5 seconds.
- */
-function moveSpheroRandomly() {
-  clients.forEach((client) => {
-    if (
-      client &&
-      client.clientType === "SpheroController" &&
-      client.ws.readyState === WebSocket.OPEN
-    ) {
-      moveSphero(client.id, generateRandomCoordinatePairs());
-    }
-  });
-}
-
-// Call moveSpheroRandomly every 5 seconds
-setInterval(moveSpheroRandomly, 5000);
 
 /**
  * Handles messages sent by SpheroControllers.

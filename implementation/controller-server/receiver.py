@@ -134,10 +134,10 @@ def run_websocket_sender(outgoing_queue):
 if __name__ == "__main__":
     with multiprocessing.Manager() as manager:
         spheros = [
-            {"id": "Alpha", "color": "#000"},
-            {"id": "Beta", "color": "#FFF"},
-            {"id": "Sigma", "color": "#111"},
-            {"id": "Rho", "color": "#BBB"},
+            {"id": "Alpha", "color": "red"},
+            {"id": "Beta", "color": "blue"},
+            {"id": "Sigma", "color": "green"},
+            {"id": "Rho", "color": "yellow"},
         ]
 
         message_bus = manager.dict({sphero["id"]: manager.list() for sphero in spheros})
