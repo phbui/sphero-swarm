@@ -10,7 +10,7 @@ from PIL import ImageColor
 import time
 
 
-multiplier = 1 # Global variable for adjusting the timing of Sphero movements
+multiplier = 0.3 # Global variable for adjusting the timing of Sphero movements
 
 
 # This function handles incoming messages from the WebSocket server
@@ -185,14 +185,98 @@ def move(id, client_color, current, target, outgoing_queue, toy):
 
             
             # rolls towards the target. Timing needs to be adjusted
-            droid.roll(round(deg), 30, round(abs(target[1] - current[1]))*multiplier)
+            droid.roll(round(deg), 30, math.sqrt(deltax**2+deltay**2)*multiplier)
 
     except Exception as e:
         print(e)
     
     # Add feedback to the outgoing queue
-    send_message_to_server(outgoing_queue, id, "SpheroFeedback", id)
+    send_server = multiprocessing.Process(target=send_message_to_server, args=(outgoing_queue, id, "SpheroFeedback", "Done"))
+    send_server.start()
+    time.sleep(10)  # Wait to show animation
+    send_server.join()
 
+
+def move_north(id, client_color, time, outgoing_queue, toy):
+
+    try:
+        with SpheroEduAPI(toy) as droid:
+
+            # Turns on the LED for tracking. 
+            # The spheros automatically go into sleep mode which is why this is needed
+            droid.set_main_led(client_color)
+            
+            # rolls towards the target. Timing needs to be adjusted
+            droid.roll(0, 30, time)
+
+    except Exception as e:
+        print(e)
+    
+
+
+def move_east(id, client_color, time, outgoing_queue, toy):
+
+    try:
+        with SpheroEduAPI(toy) as droid:
+
+            # Turns on the LED for tracking. 
+            # The spheros automatically go into sleep mode which is why this is needed
+            droid.set_main_led(client_color)
+            
+            # rolls towards the target. Timing needs to be adjusted
+            droid.roll(90, 30, time)
+
+    except Exception as e:
+        print(e)
+    
+
+def move_south(id, client_color, time, outgoing_queue, toy):
+
+    try:
+        with SpheroEduAPI(toy) as droid:
+
+            # Turns on the LED for tracking. 
+            # The spheros automatically go into sleep mode which is why this is needed
+            droid.set_main_led(client_color)
+            
+            # rolls towards the target. Timing needs to be adjusted
+            droid.roll(180, 30, time)
+
+    except Exception as e:
+        print(e)
+    
+
+def move_west(id, client_color, time, outgoing_queue, toy):
+
+    try:
+        with SpheroEduAPI(toy) as droid:
+
+            # Turns on the LED for tracking. 
+            # The spheros automatically go into sleep mode which is why this is needed
+            droid.set_main_led(client_color)
+            
+            # rolls towards the target. Timing needs to be adjusted
+            droid.roll(270, 30, time)
+
+    except Exception as e:
+        print(e)
+    
+
+def set_matrix(id, message, outgoing_queue, toy):
+    try:
+        with SpheroEduAPI(toy) as droid:
+            for y in range(8):
+                for x in range(8):
+                    droid.set_matrix_pixel(x, y, message[y][x])
+
+    except Exception as e:
+        print(e)
+
+
+    send_server = multiprocessing.Process(target=send_message_to_server, args=(outgoing_queue, id, "SpheroFeedback", "Done"))
+    send_server.start()
+    time.sleep(10)  # Wait to show animation
+    send_server.join()
 
 # This function decides what to do with incoming messages based on their type
 def handle_message(id, client_color, message_type, message, outgoing_queue, toy):
@@ -204,6 +288,25 @@ def handle_message(id, client_color, message_type, message, outgoing_queue, toy)
         
         # sends a command to the sphero to move
         move(id, client_color, current, target, outgoing_queue, toy)
+
+    elif message_type == "SpheroMatrix":
+
+        set_matrix(id, message, outgoing_queue, toy)
+
+    elif message_type == "MoveNorth":
+    
+        move_north(id, client_color, message, outgoing_queue, toy)
+
+    elif message_type == "MoveSouth":
+
+        move_south(id, client_color, message, outgoing_queue, toy)
+
+    elif message_type == "MoveWest":
+
+        move_west(id, client_color, message, outgoing_queue, toy)
+
+    elif message_type == "MoveEast":
+        move_east(id, client_color, message, outgoing_queue, toy)
 
     else:
         print(f"Sphero {id}: Unhandled message type: {message_type}\n")
