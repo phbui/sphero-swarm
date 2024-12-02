@@ -1,14 +1,15 @@
 import numpy as np
 import random
 from scipy.spatial import KDTree
+import Localizer
 
 
 class Map:
     def __init__(self, display, spheros):
         self.display = display
         self.spheros = spheros
-        self.obstacle_localizer = Localizer(display, 'orange', 500)  # Detect obstacles
-        self.goal_localizer = Localizer(display, 'purple', 500)  # Detect goal state
+        self.obstacle_localizer = Localizer.Localizer(display, 'orange', 100)  # Detect obstacles
+        self.goal_localizer = Localizer.Localizer(display, 'purple', 100)  # Detect goal state
         self.roadmap = None
 
     def generate_prm(self, num_samples=100, k_neighbors=5):
@@ -22,7 +23,14 @@ class Map:
         
         # Get obstacle and goal regions
         obstacles = self.get_obstacle_regions()
+        if not obstacles:
+            print("No obstacles detected.")
+            obstacles = []
+
         goal = self.get_goal_location()
+        if goal is None:
+            print("No goal detected, using default center location.")
+            goal = (self.display.width // 2, self.display.height // 2)
 
         # Sample free space
         free_space_samples = self.sample_free_space(obstacles, num_samples)
@@ -35,6 +43,7 @@ class Map:
         self.roadmap["edges"].append([])  # Empty connections for now
         
         print("PRM generation complete.")
+        print(self.roadmap)
         return self.roadmap
 
     def get_obstacle_regions(self):
@@ -43,9 +52,10 @@ class Map:
         Returns:
             List of (x, y) coordinates representing obstacle centers.
         """
-        obstacle_particles = self.obstacle_localizer.updateParticles()
-        print(f"Obstacle region center: {obstacle_particles}")
-        return obstacle_particles
+        x, y = self.obstacle_localizer.updateParticles()
+        if x is None or y is None:
+            return []
+        return [(x, y)]
 
     def get_goal_location(self):
         """
@@ -53,9 +63,10 @@ class Map:
         Returns:
             Tuple (x, y) representing the goal location.
         """
-        goal_x, goal_y = self.goal_localizer.updateParticles()
-        print(f"Goal location: ({goal_x}, {goal_y})")
-        return (goal_x, goal_y)
+        x, y = self.goal_localizer.updateParticles()
+        if x is None or y is None:
+            return None
+        return x, y
 
     def sample_free_space(self, obstacles, num_samples):
         """
@@ -98,7 +109,7 @@ class Map:
 
         for i, point in enumerate(samples):
             distances, neighbors = tree.query(point, k=k_neighbors + 1)
-            for j, neighbor_idx in enumerate(neighbors[1:], start=1):  # Skip the point itself
+            for neighbor_idx in neighbors[1:]:  # Skip the point itself
                 neighbor = samples[neighbor_idx]
 
                 # Check if the edge intersects with obstacles

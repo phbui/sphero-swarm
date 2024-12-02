@@ -6,7 +6,7 @@ class Drone:
         self.sphero_id = sphero_id
         self.sphero_color= sphero_color
         print(f"Sphero Initialized: {sphero_id}")
-        self.localizer = Localizer.Localizer(display, sphero_color, 10)
+        self.localizer = Localizer.Localizer(display, sphero_color, 100)
         self.x, self.y = self.localizer.updateParticles()
         print(f"Sphero [{self.sphero_id}]: Initial x: {self.x}, Initial y: {self.y}")
 
