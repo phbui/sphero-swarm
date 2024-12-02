@@ -43,7 +43,6 @@ class Map:
         self.roadmap["edges"].append([])  # Empty connections for now
         
         print("PRM generation complete.")
-        print(self.roadmap)
         return self.roadmap
 
     def get_obstacle_regions(self):

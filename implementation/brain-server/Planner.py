@@ -33,9 +33,13 @@ class Planner:
 
         self.map = Map.Map(self.display, self.spheros)
         self.roadmap = self.map.generate_prm()
+        self.states = {}
         self.run_states()
 
         print(f"Planner initialized with Spheros: {spheros}\n")
+
+    def run_states(self):
+        print(self.states)
 
     def stop(self):
         """
