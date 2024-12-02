@@ -69,40 +69,12 @@ function sendMessageToClient(id, messageType, message) {
  * @param {string} id - The ID of the Sphero to move.
  * @param {Array} path - A list of coordinate pairs for the Sphero to follow.
  */
-function moveSphero(id, path) {
-  sendMessageToClient(id, "SpheroMovement", path);
-}
-
-/**
- * Generates three random coordinate objects with currentLocation and targetLocation.
- * @param {number} range - The maximum value for x and y coordinates.
- * @returns {Array} An array of 3 objects with currentLocation and targetLocation.
- */
-function generateRandomCoordinatePairs(range = 100) {
-  return {
-    currentLocation: [Math.random() * range, Math.random() * range],
-    targetLocation: [Math.random() * range, Math.random() * range],
-  };
-}
-
-/**
- * Sends random movement commands to all connected Spheros.
- * This is called every 5 seconds.
- */
-function moveSpheroRandomly() {
-  clients.forEach((client) => {
-    if (
-      client &&
-      client.clientType === "SpheroController" &&
-      client.ws.readyState === WebSocket.OPEN
-    ) {
-      moveSphero(client.id, generateRandomCoordinatePairs());
-    }
+function moveSphero(id, current_x, current_y, target_x, target_y) {
+  sendMessageToClient(id, "SpheroMovement", {
+    currentLocation: [current_x, current_y],
+    targetLocation: [target_x, target_y],
   });
 }
-
-// Call moveSpheroRandomly every 5 seconds
-setInterval(moveSpheroRandomly, 5000);
 
 /**
  * Handles messages sent by SpheroControllers.
@@ -120,7 +92,7 @@ function handleControllerMessage(ws, parsedMessage) {
       break;
 
     case "SpheroFeedback": // Feedback from a SpheroController
-      //console.log(parsedMessage);
+      sendMessageToClient("SpheroBrain", "SpheroFeedback", "Done");
       break;
   }
 }
@@ -131,6 +103,17 @@ function handleBrainMessage(ws, parsedMessage) {
   switch (messageType) {
     case "BrainConnection":
       handleBrainConnection(ws);
+      break;
+
+    case "BrainControl":
+      let message = parsedMessage.message;
+      moveSphero(
+        message.id,
+        message.current_x,
+        message.current_y,
+        message.target_x,
+        message.target_y
+      );
       break;
   }
 }
