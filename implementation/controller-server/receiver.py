@@ -191,7 +191,7 @@ def move(id, client_color, current, target, outgoing_queue, toy):
         print(e)
     
     # Add feedback to the outgoing queue
-    send_message_to_server(outgoing_queue, id, "SpheroFeedback", "Done")
+    send_message_to_server(outgoing_queue, id, "SpheroFeedback", id)
 
 
 # This function decides what to do with incoming messages based on their type

@@ -92,7 +92,11 @@ function handleControllerMessage(ws, parsedMessage) {
       break;
 
     case "SpheroFeedback": // Feedback from a SpheroController
-      sendMessageToClient("SpheroBrain", "SpheroFeedback", "Done");
+      sendMessageToClient(
+        "SpheroBrain",
+        "SpheroFeedback",
+        parsedMessage.message
+      );
       break;
   }
 }
