@@ -1,12 +1,6 @@
-import math
-from multiprocessing import Process
-from spherov2.sphero_edu import SpheroEduAPI
-from spherov2.types import Color
-import time
-
 class SpheroMovement:
-    def __init__(self, toy, client_id, client_color, outgoing_queue):
-        self.toy = toy
+    def __init__(self, droid, client_id, client_color, outgoing_queue):
+        self.droid = droid  # Use the persistent SpheroEduAPI instance
         self.client_id = client_id
         self.client_color = client_color
         self.outgoing_queue = outgoing_queue
@@ -28,18 +22,17 @@ class SpheroMovement:
 
     def move(self, current, target):
         try:
-            with SpheroEduAPI(self.toy) as droid:
-                droid.set_main_led(self.client_color)
+            self.droid.set_main_led(self.client_color)  # Use the persistent droid instance
 
-                deltax = target[0] - current[0]
-                deltay = target[1] - current[1]
+            deltax = target[0] - current[0]
+            deltay = target[1] - current[1]
 
-                rad = math.atan2(-deltax, deltay)
-                deg = rad * (180 / math.pi)
-                if deg < 0:
-                    deg += 360
+            rad = math.atan2(-deltax, deltay)
+            deg = rad * (180 / math.pi)
+            if deg < 0:
+                deg += 360
 
-                droid.roll(round(deg), 30, math.sqrt(deltax ** 2 + deltay ** 2) * self.multiplier)
+            self.droid.roll(round(deg), 30, math.sqrt(deltax ** 2 + deltay ** 2) * self.multiplier)
         except Exception as e:
             print(f"Error in move: {e}")
         self.send_feedback("Done")
@@ -54,17 +47,15 @@ class SpheroMovement:
         angle = directions.get(direction.lower(), 0)
 
         try:
-            with SpheroEduAPI(self.toy) as droid:
-                droid.set_main_led(self.client_color)
-                droid.roll(angle, 30, duration)
+            self.droid.set_main_led(self.client_color)
+            self.droid.roll(angle, 30, duration)
         except Exception as e:
             print(f"Error in move_direction: {e}")
 
     def set_matrix(self, pattern):
         try:
-            with SpheroEduAPI(self.toy) as droid:
-                if pattern == "X":
-                    droid.set_matrix_character("X", self.client_color)
-                # Add more patterns as needed
+            if pattern == "X":
+                self.droid.set_matrix_character("X", self.client_color)
+            # Add more patterns as needed
         except Exception as e:
             print(f"Error in set_matrix: {e}")

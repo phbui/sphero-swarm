@@ -80,7 +80,7 @@ def send_message_to_server(outgoing_queue, id, messageType, message):
         logging.error(f"Error adding message to outgoing queue: {e}")
 
 # This function processes incoming messages for a specific Sphero
-def process_subscriber(client_id, client_color, message_bus, outgoing_queue, droid):
+def process_subscriber(client_id, client_color, message_bus, outgoing_queue, sphero):
     logging.info(f"{client_id}: Subscribed to message bus.")
     while True:
         try:
@@ -88,14 +88,12 @@ def process_subscriber(client_id, client_color, message_bus, outgoing_queue, dro
                 parsed_message = json.loads(message_bus[client_id].pop(0))
                 message_type = parsed_message["messageType"]
                 message_content = parsed_message["message"]
-                handle_message(client_id, client_color, message_type, message_content, outgoing_queue, droid)
+                handle_message(client_id, client_color, message_type, message_content, outgoing_queue, sphero)
         except Exception as e:
             logging.error(f"{client_id}: Error in subscriber: {e}")
 
 # This function handles specific messages for the Sphero
-def handle_message(id, client_color, message_type, message, outgoing_queue, droid):
-    sphero = SpheroMovement(droid, id, client_color, outgoing_queue)  # Create a movement instance
-
+def handle_message(id, client_color, message_type, message, outgoing_queue, sphero):
     if message_type == "SpheroMovement":
         current = message["currentLocation"]
         target = message["targetLocation"]
@@ -151,7 +149,8 @@ def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=F
                     first_run_bool = False
                 droid.set_main_led(client_color)
                 logging.info(f"{client_id}: Initialization complete.")
-                process_subscriber(client_id, client_color, message_bus, outgoing_queue, droid)
+                sphero = SpheroMovement(droid, id, client_color, outgoing_queue)
+                process_subscriber(client_id, client_color, message_bus, outgoing_queue, sphero)
 
         except Exception as e:
             logging.error(f"{client_id}: Failed to initialize or maintain connection to Sphero: {e}")
@@ -195,16 +194,18 @@ if __name__ == "__main__":
         websocket_process = multiprocessing.Process(target=run_websocket, args=(message_bus, spheros))
         websocket_sender_process = multiprocessing.Process(target=run_websocket_sender, args=(outgoing_queue,))
 
-        subscriber_processes = [
-            multiprocessing.Process(target=run_sphero, args=(sphero["id"], sphero["color"], message_bus, outgoing_queue, True))
-            for sphero in spheros
-        ]
+
 
         websocket_process.start()
         websocket_sender_process.start()
 
-        for process in subscriber_processes:
+        subscriber_processes = []
+
+        for sphero in spheros:
+            process = multiprocessing.Process(target=run_sphero, args=(sphero["id"], sphero["color"], message_bus, outgoing_queue, True))
             process.start()
+            subscriber_processes.append(process)
+            time.sleep(4) 
 
         logging.info("Main: All processes started.")
 
