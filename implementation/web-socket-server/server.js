@@ -76,6 +76,20 @@ function moveSphero(id, current_x, current_y, target_x, target_y) {
   });
 }
 
+function matrixCall() {
+  clients.forEach((client) => {
+    if (
+      client &&
+      client.clientType === "SpheroController" &&
+      client.ws.readyState === WebSocket.OPEN
+    ) {
+      sendMessageToClient(client.id, "SpheroMatrix", "X");
+    }
+  });
+}
+
+setInterval(matrixCall,60000)
+
 /**
  * Handles messages sent by SpheroControllers.
  * Processes different message types such as "SpheroConnection" and "SpheroFeedback".
