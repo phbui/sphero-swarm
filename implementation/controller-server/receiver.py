@@ -194,8 +194,6 @@ if __name__ == "__main__":
         websocket_process = multiprocessing.Process(target=run_websocket, args=(message_bus, spheros))
         websocket_sender_process = multiprocessing.Process(target=run_websocket_sender, args=(outgoing_queue,))
 
-
-
         websocket_process.start()
         websocket_sender_process.start()
 
