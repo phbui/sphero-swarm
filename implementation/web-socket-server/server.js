@@ -48,7 +48,7 @@ function intializeSpheros() {
 
 function readyBrain() {
   if (spheros.length > 0) {
-    sendMessageToClient("SpheroBrain", "SpheroConnection", spheros);
+    sendMessageToClient("SpheroBrain", "SpheroConnection", "Ready");
   }
 }
 

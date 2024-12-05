@@ -19,17 +19,34 @@ async def websocket_receiver():
                     # Receive and process messages in real-time
                     message = await ws.recv()
                     print(f"WebSocket: Received message: {message} \n")
-                    parsed_message = json.loads(message)
 
-                    # Handle the message
-                    await handle_message(ws, parsed_message["id"], parsed_message["messageType"], parsed_message["message"])
+                    try:
+                        parsed_message = json.loads(message)
+                        
+                        # Ensure parsed_message is a dictionary
+                        if not isinstance(parsed_message, dict):
+                            raise ValueError("Parsed message is not a dictionary.")
+                        
+                        # Extract and validate required keys
+                        required_keys = ["id", "messageType", "message"]
+                        if not all(key in parsed_message for key in required_keys):
+                            raise KeyError(f"Message missing required keys. Received: {parsed_message}")
+
+                        # Handle the message
+                        await handle_message(
+                            ws,
+                            parsed_message["id"],
+                            parsed_message["messageType"],
+                            parsed_message["message"],
+                        )
+                    except (json.JSONDecodeError, KeyError, ValueError) as e:
+                        print(f"WebSocket: Malformed message: {e}")
                 except Exception as e:
                     print(f"WebSocket: Error processing message: {e}\n")
     except Exception as e:
         print(f"WebSocket: Connection error: {e}\n")
     finally:
         print("WebSocket: Closing connection.\n")
-
 
 # Handle messages by type
 async def handle_message(ws, id, message_type, message):
@@ -38,10 +55,12 @@ async def handle_message(ws, id, message_type, message):
     match message_type:
         case "SpheroConnection":
             print(f"Received SpheroConnection message: {message}")
-            spheros = message  # Assume `message` contains the list of Spheros
-            planner = Planner.Planner(spheros)  # Initialize the Planner
+            spheros = message
+            planner = Planner.Planner(spheros) 
+            print("Starting planner.")
+            planner.start()
         case "SpheroReady":
-            planner.run_all_states(ws)
+            print("Ready!")
         case "SpheroFeedback":
             planner.next_move(ws, message)
         case _:

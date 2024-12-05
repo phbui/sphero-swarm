@@ -36,8 +36,30 @@ class Display:
         """
         with self.lock:
             return self.image
+        
+    def hex_to_bgr(self, hex_color):
+        """
+        Convert a hex color code to BGR format.
 
-    def draw(self, id, x, y, weight, color_name):
+        Args:
+            hex_color (str): The hex color code as a string (e.g., "#RRGGBB").
+
+        Returns:
+            tuple: A tuple representing the BGR color (Blue, Green, Red).
+        """
+        hex_color = hex_color.lstrip('#')  # Remove the '#' if present
+        if len(hex_color) != 6:
+            raise ValueError(f"Invalid hex color: {hex_color}")
+        
+        # Convert hex to RGB
+        r = int(hex_color[0:2], 16)
+        g = int(hex_color[2:4], 16)
+        b = int(hex_color[4:6], 16)
+
+        # Return as BGR (OpenCV format)
+        return (b, g, r)
+
+    def draw(self, id, x, y, weight, color):
         """
         Draw a visualization for a specific object on the display using the color from the color map.
         Args:
@@ -45,10 +67,10 @@ class Display:
             x: X-coordinate.
             y: Y-coordinate.
             weight: Weight or size of the object.
-            color_name: The color name ('red', 'blue', 'green', 'yellow').
+            color: The color in hex.
         """
         # Get the color from the COLOR_MAP dictionary
-        color = COLOR_MAP.get(color_name.lower(), (0, 0, 0))  # Default to black if not found
+        color = self.hex_to_bgr(color) # Default to black if not found
         
         with self.lock:
             # Remove any existing drawings with the same ID

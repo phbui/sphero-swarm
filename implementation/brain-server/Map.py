@@ -8,8 +8,8 @@ class Map:
     def __init__(self, display, spheros):
         self.display = display
         self.spheros = spheros
-        self.obstacle_localizer = Localizer.Localizer(display, 'orange', 100)  # Detect obstacles
-        self.goal_localizer = Localizer.Localizer(display, 'purple', 100)  # Detect goal state
+        self.obstacle_localizer = Localizer.Localizer(display, '#FF5E00', 100)  # Detect obstacles
+        self.goal_localizer = Localizer.Localizer(display, '#9D00FF', 100)  # Detect goal state
         self.roadmap = None
 
     def generate_prm(self, num_samples=100, k_neighbors=5):
@@ -52,6 +52,7 @@ class Map:
             List of (x, y) coordinates representing obstacle centers.
         """
         x, y = self.obstacle_localizer.updateParticles()
+        print(f"Obstacle detected at: {(x, y)}")
         if x is None or y is None:
             return []
         return [(x, y)]
@@ -63,6 +64,7 @@ class Map:
             Tuple (x, y) representing the goal location.
         """
         x, y = self.goal_localizer.updateParticles()
+        print(f"Goal detected at: {(x, y)}")
         if x is None or y is None:
             return None
         return x, y

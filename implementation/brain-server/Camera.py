@@ -52,20 +52,6 @@ class Camera:
         else:
             print("Failed to capture image.")
 
-    def capture_periodically(self, interval=1):
-        """
-        Capture images periodically at a specified interval (in seconds).
-        Args:
-            interval (int): Time between captures in seconds (default: 1).
-        """
-        try:
-            while self.display.running:
-                self.capture_image()  # Capture and update the display
-                time.sleep(interval)
-        except KeyboardInterrupt:
-            print("Stopping periodic capture.")
-            self.release_camera()
-
     def release_camera(self):
         """
         Release the camera resource.
