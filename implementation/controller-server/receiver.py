@@ -10,6 +10,7 @@ from PIL import ImageColor
 import time
 
 
+
 multiplier = 0.3 # Global variable for adjusting the timing of Sphero movements
 
 
@@ -141,6 +142,7 @@ def initialize_sphero(client_id, client_color, message_bus, outgoing_queue,first
                 # Only calibrates the compass on first startup
                 if (first_run == True):
                     droid.calibrate_compass()
+                    droid.set_compass_direction(0)
                     
                 # sets the main led color
                 droid.set_main_led(client_color)
@@ -164,6 +166,8 @@ def move(id, client_color, current, target, outgoing_queue, toy):
 
     try:
         with SpheroEduAPI(toy) as droid:
+
+
 
             # Turns on the LED for tracking. 
             # The spheros automatically go into sleep mode which is why this is needed
@@ -265,10 +269,85 @@ def move_west(id, client_color, time, outgoing_queue, toy):
 def set_matrix(id, message, outgoing_queue, toy):
     try:
         with SpheroEduAPI(toy) as droid:
+
+            if message=="X":
+                droid.set_heading(0)
+                if id == "SB-2E86" or id == "SB-D8B2":
+                    droid.set_matrix_character("\\",Color(r=255,g=0,b=0))
+                elif id == "SB-4844" or id == "SB-7104":
+                    droid.set_matrix_character("/",Color(r=255,g=0,b=0))
+                else:
+                    print("Droid not found")
+            
+            elif message=="UpArrow":
+                droid.set_heading(0)
+                if id == "SB-2E86":
+                    droid.set_matrix_line(7,0,0,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-4844":
+                    droid.set_matrix_line(0,0,7,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                elif id == "SB-7104":
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-D8B2":
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                else:
+                    print("Droid not found")
+
+            elif message=="RightArrow":
+                droid.set_heading(90)
+                if id == "SB-4844":
+                    droid.set_matrix_line(7,0,0,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-D8B2":
+                    droid.set_matrix_line(0,0,7,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                elif id == "SB-2E86":
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-7104":
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                else:
+                    print("Droid not found")
+
+            elif message=="DownArrow":
+                droid.set_heading(180)
+                if id == "SB-D8B2":
+                    droid.set_matrix_line(7,0,0,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-7104":
+                    droid.set_matrix_line(0,0,7,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                elif id == "SB-4844":
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-2E86":
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                else:
+                    print("Droid not found")
+
+            
+            elif message=="LeftArrow":
+                droid.set_heading(270)
+                if id == "SB-7104":
+                    droid.set_matrix_line(7,0,0,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-2E86":
+                    droid.set_matrix_line(0,0,7,7,Color(r=0,g=0,b=255))
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                elif id == "SB-28B2":
+                    droid.set_matrix_line(7,0,7,7,Color(r=0,g=0,b=255))
+                elif id == "SB-4844":
+                    droid.set_matrix_line(0,0,0,7,Color(r=0,g=0,b=255))
+                else:
+                    print("Droid not found")
+
+
+            '''
+
             for y in range(8):
                 for x in range(8):
                     droid.set_matrix_pixel(x, y, message[y][x])
 
+            '''
     except Exception as e:
         print(e)
 
@@ -290,6 +369,7 @@ def handle_message(id, client_color, message_type, message, outgoing_queue, toy)
         move(id, client_color, current, target, outgoing_queue, toy)
 
     elif message_type == "SpheroMatrix":
+        
 
         set_matrix(id, message, outgoing_queue, toy)
 
