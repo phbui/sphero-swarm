@@ -88,8 +88,6 @@ function matrixCall() {
   });
 }
 
-setInterval(matrixCall,60000)
-
 /**
  * Handles messages sent by SpheroControllers.
  * Processes different message types such as "SpheroConnection" and "SpheroFeedback".
@@ -103,6 +101,10 @@ function handleControllerMessage(ws, parsedMessage) {
     case "SpheroConnection": // SpheroController is connecting its Spheros
       let spheroList = parsedMessage.spheros;
       handleControllerConnection(ws, spheroList);
+      break;
+
+    case "SpheroReady": // SpheroController is connecting its Spheros
+      matrixCall();
       break;
 
     case "SpheroFeedback": // Feedback from a SpheroController
