@@ -46,6 +46,12 @@ function intializeSpheros() {
   }
 }
 
+function readyBrain() {
+  if (spheros.length > 0) {
+    sendMessageToClient("SpheroBrain", "SpheroConnection", spheros);
+  }
+}
+
 /**
  * Sends a message to a specific client.
  * @param {string} id - The ID of the target client.
@@ -88,6 +94,23 @@ function matrixCall() {
   });
 }
 
+function handleReady(sphero_id) {
+  const sphero = spheros.find((s) => s.id === sphero_id);
+
+  if (!sphero) {
+    console.error(`Sphero with id ${sphero_id} not found.`);
+    return false;
+  }
+
+  console.log(`[Sphero ${sphero_id}] Ready!`);
+
+  sphero.ready = true;
+
+  const allReady = spheros.every((s) => s.ready);
+
+  return allReady;
+}
+
 /**
  * Handles messages sent by SpheroControllers.
  * Processes different message types such as "SpheroConnection" and "SpheroFeedback".
@@ -104,7 +127,11 @@ function handleControllerMessage(ws, parsedMessage) {
       break;
 
     case "SpheroReady": // SpheroController is connecting its Spheros
-      matrixCall();
+      let sphero_id = parsedMessage.id;
+      if (handleReady(sphero_id)) {
+        readyBrain();
+        matrixCall();
+      }
       break;
 
     case "SpheroFeedback": // Feedback from a SpheroController

@@ -1,0 +1,12 @@
+2024-12-05 12:35:18,254 [INFO] Main: All processes started.
+2024-12-05 12:35:22,896 [INFO] SB-7104: Attempting to connect.
+2024-12-05 12:35:23,004 [INFO] SB-2E86: Attempting to connect.
+2024-12-05 12:35:23,086 [INFO] SB-D8B2: Attempting to connect.
+2024-12-05 12:35:23,245 [INFO] SB-4844: Attempting to connect.
+2024-12-05 12:35:23,939 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-05 12:35:24,785 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 12:35:27,014 [INFO] SB-2E86: Connected to Sphero.
+2024-12-05 12:35:27,177 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-05 12:35:27,181 [WARNING] WebSocket Sender: Closing connection.
+2024-12-05 12:35:27,268 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-05 12:35:27,269 [WARNING] WebSocket: Closing connection.

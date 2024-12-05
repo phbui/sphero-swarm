@@ -9,27 +9,6 @@ from PIL import ImageColor
 import time
 import logging
 from sphero_movement import SpheroMovement  # Import the movement class
-import signal
-import sys
-
-active_spheros = []
-
-# Signal handler for graceful shutdown
-def shutdown_handler(signal_received, frame):
-    logging.info("Signal received, shutting down...")
-    for toy in active_spheros:
-        try:
-            toy.stop_roll()  # Stop movement if any
-            toy.set_main_led(Color(0, 0, 0))  # Turn off the LED
-            toy.close()  # Close the connection
-            logging.info(f"Disconnected Sphero {toy.toy.name}.")
-        except Exception as e:
-            logging.error(f"Error disconnecting Sphero: {e}")
-    sys.exit(0)
-
-# Register the signal handler
-signal.signal(signal.SIGINT, shutdown_handler)
-signal.signal(signal.SIGTERM, shutdown_handler)
 
 # Set up logging
 logging.basicConfig(
@@ -73,13 +52,14 @@ async def websocket_sender(outgoing_queue):
             logging.info("WebSocket Sender: Connected to the server.")
             while True:
                 try:
-                    if not outgoing_queue.empty():
-                        message = outgoing_queue.get()
+                    while not outgoing_queue.empty():
+                        message = outgoing_queue.get_nowait()
                         await ws.send(json.dumps(message))
                         logging.info(f"WebSocket Sender: Sent message: {message}")
                 except Exception as e:
                     logging.error(f"WebSocket Sender: Error sending message: {e}")
                     break
+                await asyncio.sleep(0.1)
     except Exception as e:
         logging.error(f"WebSocket Sender: Connection error: {e}")
     finally:
@@ -100,7 +80,7 @@ def send_message_to_server(outgoing_queue, id, messageType, message):
         logging.error(f"Error adding message to outgoing queue: {e}")
 
 # This function processes incoming messages for a specific Sphero
-def process_subscriber(client_id, client_color, message_bus, outgoing_queue, toy):
+def process_subscriber(client_id, client_color, message_bus, outgoing_queue, droid):
     logging.info(f"{client_id}: Subscribed to message bus.")
     while True:
         try:
@@ -108,13 +88,13 @@ def process_subscriber(client_id, client_color, message_bus, outgoing_queue, toy
                 parsed_message = json.loads(message_bus[client_id].pop(0))
                 message_type = parsed_message["messageType"]
                 message_content = parsed_message["message"]
-                handle_message(client_id, client_color, message_type, message_content, outgoing_queue, toy)
+                handle_message(client_id, client_color, message_type, message_content, outgoing_queue, droid)
         except Exception as e:
             logging.error(f"{client_id}: Error in subscriber: {e}")
 
 # This function handles specific messages for the Sphero
-def handle_message(id, client_color, message_type, message, outgoing_queue, toy):
-    sphero = SpheroMovement(toy, id, client_color, outgoing_queue)  # Create a movement instance
+def handle_message(id, client_color, message_type, message, outgoing_queue, droid):
+    sphero = SpheroMovement(droid, id, client_color, outgoing_queue)  # Create a movement instance
 
     if message_type == "SpheroMovement":
         current = message["currentLocation"]
@@ -144,6 +124,7 @@ def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=F
     logging.info(f"{client_id}: Attempting to connect.")
     rgb = ImageColor.getrgb(client_color)
     client_color = Color(r=rgb[0], g=rgb[1], b=rgb[2])
+    first_run_bool = first_run
 
     while True:  # Retry loop
         toy = None
@@ -162,39 +143,50 @@ def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=F
 
         try:
             with SpheroEduAPI(toy) as droid:
-                active_spheros.append(droid)  # Add to the active Spheros list
-                if first_run:
+                if first_run_bool:
                     logging.info(f"{client_id}: Calibrating compass.")
                     droid.calibrate_compass()
                     droid.set_compass_direction(0)
+                    send_message_to_server(outgoing_queue, client_id, "SpheroReady", "Ready")
+                    first_run_bool = False
                 droid.set_main_led(client_color)
                 logging.info(f"{client_id}: Initialization complete.")
-                process_subscriber(client_id, client_color, message_bus, outgoing_queue, toy)
+                process_subscriber(client_id, client_color, message_bus, outgoing_queue, droid)
 
         except Exception as e:
             logging.error(f"{client_id}: Failed to initialize or maintain connection to Sphero: {e}")
 
         finally:
             # Clean up and prepare for retry
-            if toy in active_spheros:
-                active_spheros.remove(toy)
             logging.warning(f"{client_id}: Sphero connection closed. Retrying...")
             time.sleep(5)  # Retry delay before attempting to reconnect
 
 # WebSocket processes
 def run_websocket(message_bus, spheros):
-    asyncio.run(websocket_receiver(message_bus, spheros))
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    try:
+        loop.run_until_complete(websocket_receiver(message_bus, spheros))
+    finally:
+        loop.close()
 
 def run_websocket_sender(outgoing_queue):
-    asyncio.run(websocket_sender(outgoing_queue))
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    try:
+        loop.run_until_complete(websocket_sender(outgoing_queue))
+    finally:
+        loop.close()
 
 if __name__ == "__main__":
+    multiprocessing.set_start_method("spawn")
+
     with multiprocessing.Manager() as manager:
         spheros = [
-            {"id": "SB-2E86", "color": "#0000FF"},
-            {"id": "SB-4844", "color": "#FF0000"},
-            {"id": "SB-7104", "color": "#008000"},
-            {"id": "SB-D8B2", "color": "#FFFF00"},
+            {"id": "SB-2E86", "color": "#0000FF", "ready": False},
+            {"id": "SB-4844", "color": "#FF0000", "ready": False},
+            {"id": "SB-7104", "color": "#008000", "ready": False},
+            {"id": "SB-D8B2", "color": "#FFFF00", "ready": False},
         ]
 
         message_bus = manager.dict({sphero["id"]: manager.list() for sphero in spheros})
