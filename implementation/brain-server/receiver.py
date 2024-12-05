@@ -40,10 +40,9 @@ async def handle_message(ws, id, message_type, message):
             print(f"Received SpheroConnection message: {message}")
             spheros = message  # Assume `message` contains the list of Spheros
             planner = Planner.Planner(spheros)  # Initialize the Planner
-        case "Command":
-            print(f"Sphero {id}: Received command: {message}")
-            # Example of sending a response
-            await send_message(ws, id, "CommandAck", f"Command {message} received")
+            planner.run_all_states(ws)
+        case "SpheroFeedback":
+            planner.next_move(ws, message)
         case _:
             print(f"Sphero {id}: Unhandled message type: {message_type}")
 
