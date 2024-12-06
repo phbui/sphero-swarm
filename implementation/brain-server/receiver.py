@@ -57,10 +57,9 @@ async def handle_message(ws, id, message_type, message):
             print(f"Received SpheroConnection message: {message}")
             spheros = message
             planner = Planner.Planner(spheros) 
-            print("Starting planner.")
-            planner.start()
         case "SpheroReady":
-            print("Ready!")
+            print("Starting planner.")
+            planner.start(ws)
         case "SpheroFeedback":
             planner.next_move(ws, message)
         case _:

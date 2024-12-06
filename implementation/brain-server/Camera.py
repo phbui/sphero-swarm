@@ -4,7 +4,7 @@ import time
 SCALE_FACTOR = 50  # 1 unit of distance = 50 pixels
 
 class Camera:
-    def __init__(self, display, camera_index=0):
+    def __init__(self, display, camera_index=1):
         """
         Initialize the Camera class.
         Args:
@@ -48,7 +48,7 @@ class Camera:
         ret, frame = self.cap.read()
         if ret:
             print("Image captured.")
-            self.display.setImage(frame)  # Update the display with the captured frame
+            self.display.set_image(frame)  # Update the display with the captured frame
         else:
             print("Failed to capture image.")
 

@@ -8,8 +8,6 @@ color_ranges = {
     '#FF0000': ([100, 150, 0], [140, 255, 255]),  # Red
     '#008000': ([40, 120, 100], [80, 255, 255]),  # Green
     '#00FFFF': ([85, 100, 100], [100, 255, 255]),  # Yellow
-    '#9D00FF': ([130, 50, 50], [160, 255, 255]),  # Purple
-    '#FF5E00': ([10, 100, 75], [20, 255, 255]),  # Orange
 }
 
 
@@ -24,7 +22,7 @@ class Localizer:
 
     def updateParticles(self):
         # Capture the current frame
-        image = self.display.getImage()
+        image = self.display.get_image()
         height, width = image.shape[:2]  # Extract height and width from the image
 
         # Extract the region of interest (mask) based on the target color

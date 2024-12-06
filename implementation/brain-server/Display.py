@@ -17,7 +17,7 @@ class Display:
         self.lock = threading.Lock()
         self.running = True  # Controls the display loop
 
-    def setImage(self, image):
+    def set_image(self, image):
         """
         Set the current image to be displayed and update dimensions.
         Args:
@@ -28,7 +28,7 @@ class Display:
             if image is not None:
                 self.height, self.width = image.shape[:2]  # Dynamically update dimensions
 
-    def getImage(self):
+    def get_image(self):
         """
         Get the current image being displayed.
         Returns:
@@ -83,7 +83,7 @@ class Display:
         Continuously display the current image with any drawings.
         """
         while self.running:
-            image = self.getImage()
+            image = self.get_image()
             if image is not None:
                 with self.lock:
                     # Create a copy to draw overlays on

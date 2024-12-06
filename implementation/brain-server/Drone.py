@@ -1,17 +1,18 @@
 import numpy as np
 from scipy.spatial import KDTree
 import heapq
-import Localizer 
+import Localizer
 from receiver import send_message
 
 class Drone:
-    def __init__(self, display, sphero_id, sphero_color):
+    def __init__(self, display, sphero_id, sphero_color, map):
         """
         Initialize a Drone (Sphero) with its display, ID, and color.
         Args:
             display: The display instance for visualization.
             sphero_id: Unique identifier for the Sphero.
             sphero_color: Color used for identifying the Sphero.
+            map: Reference to the Map instance.
         """
         self.display = display
         self.sphero_id = sphero_id
@@ -19,8 +20,9 @@ class Drone:
         print(f"Sphero Initialized: {sphero_id}")
         self.localizer = Localizer.Localizer(display, sphero_color, 100)
         self.x, self.y = self.get_position()
-        self.goal = None  # Goal position, set externally by the Planner
-        self.prm_nodes = []  # PRM nodes, updated dynamically by the Planner
+        self.map = map
+        self.goal = self.map.goal  # Set the goal from the map
+        self.prm_nodes = self.map.nodes  # Set PRM nodes from the map
 
         # State Machine for the Drone
         self.states = [
@@ -211,9 +213,19 @@ class Drone:
     def _get_neighbors(self, idx):
         """
         Retrieve neighbors of a node from the PRM structure.
+        Args:
+            idx: Index of the current node in the PRM nodes list.
+        Returns:
+            List of neighbor indices.
         """
-        # Placeholder: Implement actual neighbor retrieval logic
-        return []
+        neighbors = []
+        current_node = self.prm_nodes[idx]
+        for (node1, node2) in self.map.edges:
+            if current_node == node1:
+                neighbors.append(self.prm_nodes.index(node2))
+            elif current_node == node2:
+                neighbors.append(self.prm_nodes.index(node1))
+        return neighbors
 
     @staticmethod
     def _euclidean_distance(p1, p2):

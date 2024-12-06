@@ -1,160 +1,86 @@
 import numpy as np
+import cv2
 import random
-from scipy.spatial import KDTree
-import Localizer
-
-
 class Map:
-    def __init__(self, display, spheros):
+    def __init__(self, display):
+        """
+        Initialize the Map class.
+        Args:
+            display: Reference to the Display class for visualization.
+        """
         self.display = display
-        self.spheros = spheros
-        self.obstacle_localizer = Localizer.Localizer(display, '#FF5E00', 100)  # Detect obstacles
-        self.goal_localizer = Localizer.Localizer(display, '#9D00FF', 100)  # Detect goal state
-        self.roadmap = None
+        self.obstacles = []
+        self.goal = None
+        self.nodes = []
+        self.edges = []
 
-    def generate_prm(self, num_samples=100, k_neighbors=5):
+    def process_image(self):
         """
-        Generate a probabilistic road map (PRM) using the Localizer.
+        Process the input image to detect obstacles and the goal.
+        """
+        image = self.display.get_image()
+        # Convert the image to HSV color space
+        hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+        # Define color ranges for obstacles and goal
+        obstacle_range = {
+            "lower": np.array([15, 45, 60]),
+            "upper": np.array([30, 255, 255])
+        }
+        goal_range = {
+            "lower": np.array([130, 50, 50]),
+            "upper": np.array([160, 255, 255])
+        }
+
+        # Detect obstacles
+        obstacle_mask = cv2.inRange(hsv_image, obstacle_range["lower"], obstacle_range["upper"])
+        num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(obstacle_mask, connectivity=8)
+
+        self.obstacles = []
+        for i in range(1, num_labels):  # Start from 1 to skip the background
+            x, y, w, h, area = stats[i]
+            if area > 0.1:  # Filter out very small regions to avoid tiny noise clusters
+                obstacle_center = (x + w // 2, y + h // 2)
+                self.obstacles.append(obstacle_center)
+                # Draw larger obstacle region as a circle or rectangle
+                self.display.draw(f"obstacle_{obstacle_center}", obstacle_center[1], obstacle_center[0], weight=(0.25), color="#FFA500")
+
+        # Detect goal
+        goal_mask = cv2.inRange(hsv_image, goal_range["lower"], goal_range["upper"])
+        goal_points = cv2.findNonZero(goal_mask)
+        if goal_points is not None:
+            # Assuming the goal is a single region, take the centroid as the goal position
+            goal_coords = np.mean(goal_points, axis=0)[0]
+            self.goal = (int(goal_coords[0]), int(goal_coords[1]))
+            # Draw the goal on the display
+            self.display.draw("goal", self.goal[1], self.goal[0], weight=1.0, color="#0000FF")
+
+    def generate_prm(self, num_nodes=100, connection_radius=50):
+        """
+        Generate a probabilistic roadmap (PRM) for path planning.
         Args:
-            num_samples (int): Number of samples in free space.
-            k_neighbors (int): Number of nearest neighbors to connect.
+            num_nodes: Number of nodes to generate for the roadmap.
+            connection_radius: Maximum distance to connect nodes.
         """
-        print("Generating PRM...")
-        
-        # Get obstacle and goal regions
-        obstacles = self.get_obstacle_regions()
-        if not obstacles:
-            print("No obstacles detected.")
-            obstacles = []
+        # Process the image to detect obstacles and goal
+        self.process_image()
 
-        goal = self.get_goal_location()
-        if goal is None:
-            print("No goal detected, using default center location.")
-            goal = (self.display.width // 2, self.display.height // 2)
+        height, width = self.display.height, self.display.width
 
-        # Sample free space
-        free_space_samples = self.sample_free_space(obstacles, num_samples)
+        # Generate random nodes
+        for _ in range(num_nodes):
+            x, y = random.randint(0, width - 1), random.randint(0, height - 1)
 
-        # Connect samples using k-nearest neighbors
-        self.roadmap = self.connect_samples(free_space_samples, obstacles, k_neighbors)
+            # Check if the node is in an obstacle region
+            if any(abs(x - ox) < 5 and abs(y - oy) < 5 for (ox, oy) in self.obstacles):
+                continue
 
-        # Add the goal as a node
-        self.roadmap["nodes"].append(goal)
-        self.roadmap["edges"].append([])  # Empty connections for now
-        
-        print("PRM generation complete.")
-        return self.roadmap
+            self.nodes.append((x, y))
 
-    def get_obstacle_regions(self):
-        """
-        Use the Localizer to detect obstacles and return their regions.
-        Returns:
-            List of (x, y) coordinates representing obstacle centers.
-        """
-        x, y = self.obstacle_localizer.updateParticles()
-        print(f"Obstacle detected at: {(x, y)}")
-        if x is None or y is None:
-            return []
-        return [(x, y)]
-
-    def get_goal_location(self):
-        """
-        Use the Localizer to detect the goal location.
-        Returns:
-            Tuple (x, y) representing the goal location.
-        """
-        x, y = self.goal_localizer.updateParticles()
-        print(f"Goal detected at: {(x, y)}")
-        if x is None or y is None:
-            return None
-        return x, y
-
-    def sample_free_space(self, obstacles, num_samples):
-        """
-        Sample points in free space while avoiding obstacle regions.
-        Args:
-            obstacles: List of obstacle centers.
-            num_samples: Number of points to sample.
-        Returns:
-            List of (x, y) tuples representing sampled points.
-        """
-        free_space = []
-        for _ in range(num_samples):
-            while True:
-                # Randomly sample a point
-                x = random.uniform(0, self.display.width)
-                y = random.uniform(0, self.display.height)
-
-                # Check if the point is far from obstacles
-                if all(self.euclidean_distance((x, y), obs) > 50 for obs in obstacles):
-                    free_space.append((x, y))
-                    break
-
-        print(f"Sampled {len(free_space)} free space points.")
-        return free_space
-
-    def connect_samples(self, samples, obstacles, k_neighbors):
-        """
-        Connect sampled points using k-nearest neighbors.
-        Args:
-            samples: List of free space points.
-            obstacles: List of obstacle centers.
-            k_neighbors: Number of nearest neighbors to connect.
-        Returns:
-            A dictionary with nodes and edges.
-        """
-        nodes = samples
-        edges = [[] for _ in samples]
-
-        tree = KDTree(samples)
-
-        for i, point in enumerate(samples):
-            distances, neighbors = tree.query(point, k=k_neighbors + 1)
-            for neighbor_idx in neighbors[1:]:  # Skip the point itself
-                neighbor = samples[neighbor_idx]
-
-                # Check if the edge intersects with obstacles
-                if not self.is_edge_blocked(point, neighbor, obstacles):
-                    edges[i].append(neighbor_idx)
-
-        return {"nodes": nodes, "edges": edges}
-
-    def is_edge_blocked(self, point1, point2, obstacles):
-        """
-        Check if a straight line between two points intersects any obstacles.
-        Args:
-            point1: Start of the line segment.
-            point2: End of the line segment.
-            obstacles: List of obstacle centers.
-        Returns:
-            True if blocked, False otherwise.
-        """
-        for obs in obstacles:
-            if self.distance_to_line_segment(point1, point2, obs) < 50:  # Minimum safe distance
-                return True
-        return False
-
-    @staticmethod
-    def euclidean_distance(p1, p2):
-        return np.sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)
-
-    @staticmethod
-    def distance_to_line_segment(point1, point2, obs):
-        """
-        Calculate the minimum distance from an obstacle to a line segment.
-        """
-        px, py = obs
-        x1, y1 = point1
-        x2, y2 = point2
-
-        dx = x2 - x1
-        dy = y2 - y1
-
-        if dx == 0 and dy == 0:
-            return np.sqrt((px - x1)**2 + (py - y1)**2)
-
-        t = max(0, min(1, ((px - x1) * dx + (py - y1) * dy) / (dx * dx + dy * dy)))
-        nearest_x = x1 + t * dx
-        nearest_y = y1 + t * dy
-
-        return np.sqrt((px - nearest_x)**2 + (py - nearest_y)**2)
+        # Connect nodes based on distance
+        for i, (x1, y1) in enumerate(self.nodes):
+            for j, (x2, y2) in enumerate(self.nodes):
+                if i != j:
+                    distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+                    if distance <= connection_radius:
+                        self.edges.append(((x1, y1), (x2, y2)))
