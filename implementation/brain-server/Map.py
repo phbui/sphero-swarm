@@ -28,8 +28,8 @@ class Map:
             "upper": np.array([30, 255, 255])
         }
         goal_range = {
-            "lower": np.array([130, 50, 50]),
-            "upper": np.array([160, 255, 255])
+            "lower": np.array([115, 50, 30]),
+            "upper": np.array([125, 255, 100])
         }
 
         # Detect obstacles

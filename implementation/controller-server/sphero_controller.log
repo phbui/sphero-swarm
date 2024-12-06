@@ -2236,3 +2236,519 @@ spherov2.controls.PacketDecodingException: Unexpected start of packet
 2024-12-05 16:19:45,034 [INFO] SB-7104: Calibrating compass.
 2024-12-05 16:19:45,542 [ERROR] WebSocket: Error receiving message: no close frame received or sent
 2024-12-05 16:19:45,545 [WARNING] WebSocket: Closing connection.
+2024-12-05 16:20:47,033 [INFO] SB-2E86: Attempting to connect.
+2024-12-05 16:20:47,038 [INFO] WebSocket: Connected to the server.
+2024-12-05 16:20:47,038 [INFO] WebSocket: Sent connection initialization.
+2024-12-05 16:20:47,046 [INFO] WebSocket Sender: Connected to the server.
+2024-12-05 16:20:49,798 [INFO] SB-2E86: Connected to Sphero.
+2024-12-05 16:20:51,056 [INFO] SB-4844: Attempting to connect.
+2024-12-05 16:20:55,037 [INFO] SB-7104: Attempting to connect.
+2024-12-05 16:20:56,171 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:20:56,216 [INFO] SB-2E86: Calibrating compass.
+2024-12-05 16:20:59,123 [INFO] SB-D8B2: Attempting to connect.
+2024-12-05 16:21:00,135 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:21:00,360 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-05 16:21:00,434 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:21:00,480 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:21:00,536 [INFO] SB-2E86: Initialization complete.
+2024-12-05 16:21:00,537 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-05 16:21:02,460 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-05 16:21:02,460 [WARNING] WebSocket: Closing connection.
+2024-12-05 16:21:02,653 [INFO] Main: All processes started.
+2024-12-05 16:21:03,956 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,957 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,957 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,958 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,958 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,959 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,959 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,960 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,960 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,961 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,962 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,963 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,963 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,965 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,966 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,966 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,967 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,968 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,969 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,970 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,970 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,971 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,972 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,973 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,973 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,974 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,975 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,976 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,976 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,978 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,979 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,979 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,980 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,981 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,982 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,983 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,984 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,984 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,985 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,986 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,987 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,988 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,989 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,993 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,994 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,995 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:21:03,996 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:22:57,053 [INFO] SB-2E86: Attempting to connect.
+2024-12-05 16:22:57,062 [INFO] WebSocket: Connected to the server.
+2024-12-05 16:22:57,062 [INFO] WebSocket: Sent connection initialization.
+2024-12-05 16:22:57,066 [INFO] WebSocket Sender: Connected to the server.
+2024-12-05 16:22:58,231 [INFO] SB-2E86: Connected to Sphero.
+2024-12-05 16:23:01,029 [INFO] SB-4844: Attempting to connect.
+2024-12-05 16:23:01,300 [INFO] SB-4844: Connected to Sphero.
+2024-12-05 16:23:02,081 [INFO] SB-2E86: Calibrating compass.
+2024-12-05 16:23:06,088 [INFO] SB-4844: Calibrating compass.
+2024-12-05 16:23:06,113 [INFO] SB-7104: Attempting to connect.
+2024-12-05 16:23:06,288 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:06,290 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:06,410 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:23:06,425 [INFO] SB-2E86: Initialization complete.
+2024-12-05 16:23:06,425 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-05 16:23:10,252 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:10,354 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:10,368 [INFO] SB-4844: Initialization complete.
+2024-12-05 16:23:10,368 [INFO] SB-4844: Subscribed to message bus.
+2024-12-05 16:23:10,783 [INFO] SB-D8B2: Attempting to connect.
+2024-12-05 16:23:11,554 [INFO] SB-7104: Calibrating compass.
+2024-12-05 16:23:12,651 [INFO] Main: All processes started.
+2024-12-05 16:23:14,196 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-05 16:23:15,844 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:15,931 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:15,950 [INFO] SB-7104: Initialization complete.
+2024-12-05 16:23:15,950 [INFO] SB-7104: Subscribed to message bus.
+2024-12-05 16:23:19,329 [INFO] SB-D8B2: Calibrating compass.
+2024-12-05 16:23:23,622 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:23,711 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:23:23,715 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMatrix","message":"X"}
+2024-12-05 16:23:23,737 [INFO] SB-D8B2: Initialization complete.
+2024-12-05 16:23:23,737 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMatrix","message":"X"}
+2024-12-05 16:23:23,738 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-05 16:23:23,770 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMatrix","message":"X"}
+2024-12-05 16:23:23,795 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMatrix","message":"X"}
+2024-12-05 16:23:30,511 [ERROR] SB-4844: Error in subscriber: 
+2024-12-05 16:23:30,511 [ERROR] SB-D8B2: Error in subscriber: 
+2024-12-05 16:23:30,511 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,511 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,512 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,512 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,512 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,512 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,512 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,513 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,513 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,513 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,513 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,514 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,516 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,516 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,516 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,516 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,516 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,516 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,517 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,517 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,517 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,517 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,517 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,518 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,518 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,518 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,518 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,518 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,518 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,519 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,519 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,519 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,519 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,519 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,520 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,520 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,520 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,520 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,520 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,521 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,521 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,521 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,521 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,521 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,522 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,522 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,522 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,523 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,524 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,524 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,524 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,525 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,525 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,525 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,525 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,526 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,526 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,526 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,526 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,526 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,527 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,527 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,527 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,527 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,527 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,529 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,529 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,529 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,529 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,529 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,530 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,530 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,530 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,530 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,530 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,530 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,531 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,531 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,533 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,533 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,533 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,533 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,534 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,534 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,534 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,534 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,534 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,535 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,535 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,535 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,535 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,536 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,536 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,536 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,536 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,536 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,537 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,537 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,537 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,538 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,539 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,539 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,540 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-05 16:23:30,542 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,545 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,547 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,547 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,548 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,549 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,549 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,549 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,549 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,550 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,550 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,550 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,550 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,550 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,550 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,551 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,551 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,551 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,551 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,551 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,551 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,553 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,553 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,553 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,553 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,553 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,554 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,554 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,554 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,554 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,555 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,555 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,556 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,555 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,557 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,557 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,557 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,558 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,558 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,558 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,558 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,558 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,559 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,559 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,559 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,559 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,560 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,560 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,561 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,561 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,561 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,562 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,562 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,563 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,563 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,563 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,563 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,563 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,563 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,564 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,565 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,567 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,567 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,567 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,567 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,568 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,568 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,568 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,569 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,569 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,569 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,569 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,569 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,570 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,570 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,570 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,570 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,570 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,571 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,571 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,571 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,571 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,571 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,573 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,571 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,573 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,574 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,574 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,574 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,575 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,578 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,578 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,578 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,579 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,579 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,579 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,579 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,579 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,580 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,580 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,580 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,580 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,581 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,581 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,581 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,581 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,582 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,583 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,583 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,583 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,583 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,583 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,584 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,584 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,584 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,584 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,585 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,585 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,585 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,585 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,585 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,585 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,586 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,586 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,586 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,586 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,586 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,587 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,587 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,587 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,587 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,587 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,587 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,588 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,588 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,588 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,588 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,588 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,588 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,589 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,589 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,590 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,590 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,590 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,590 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,590 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,591 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,591 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,591 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,591 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,591 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,591 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,592 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,592 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,592 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,592 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,592 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,593 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,593 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,593 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,593 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,594 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,594 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,594 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,594 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,595 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,595 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,595 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,595 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,596 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,596 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,596 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,597 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,597 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,597 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,597 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,597 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,598 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,598 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,598 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,599 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,599 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,599 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,600 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,600 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,600 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,600 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,601 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,601 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,602 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,602 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,603 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,603 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,603 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,605 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,605 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,605 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,606 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,606 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,607 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,607 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,608 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,608 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,608 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,608 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,609 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,609 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,609 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,610 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,610 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,610 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,610 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,611 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,611 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,611 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,611 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,612 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,612 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,612 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,612 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,612 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,614 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,614 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,614 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,614 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,614 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,614 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,615 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,615 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,615 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,616 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,616 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,616 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,616 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,617 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,617 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,617 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,619 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,619 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,620 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,620 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,621 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,622 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,624 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,624 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,624 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,626 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,626 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,627 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,627 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,627 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,627 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,628 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,629 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,629 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,629 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,630 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,630 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,630 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,632 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,632 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,633 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,633 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,634 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,634 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,634 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,635 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,635 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,635 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,636 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,636 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,637 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,637 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:23:30,637 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
