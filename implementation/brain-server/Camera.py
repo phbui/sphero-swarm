@@ -13,7 +13,7 @@ class Camera:
         """
         self.display = display
         self.camera_index = camera_index
-        self.cap = cv2.VideoCapture(self.camera_index)
+        self.cap = cv2.VideoCapture(self.camera_index, cv2.CAP_DSHOW)
         self.width = 0
         self.height = 0
         self.x_min = 0

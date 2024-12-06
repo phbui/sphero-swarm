@@ -2752,3 +2752,939 @@ spherov2.controls.PacketDecodingException: Unexpected start of packet
 2024-12-05 16:23:30,637 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
 2024-12-05 16:23:30,637 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
 2024-12-05 16:23:30,637 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:24:23,275 [INFO] SB-2E86: Attempting to connect.
+2024-12-05 16:24:23,279 [INFO] WebSocket Sender: Connected to the server.
+2024-12-05 16:24:23,279 [INFO] WebSocket: Connected to the server.
+2024-12-05 16:24:23,279 [INFO] WebSocket: Sent connection initialization.
+2024-12-05 16:24:27,306 [INFO] SB-4844: Attempting to connect.
+2024-12-05 16:24:28,387 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:31,333 [INFO] SB-7104: Attempting to connect.
+2024-12-05 16:24:31,929 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:24:32,418 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:35,398 [INFO] SB-D8B2: Attempting to connect.
+2024-12-05 16:24:37,053 [INFO] SB-7104: Calibrating compass.
+2024-12-05 16:24:38,442 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:38,882 [INFO] Main: All processes started.
+2024-12-05 16:24:40,512 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:41,315 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:24:41,418 [INFO] SB-7104: Initialization complete.
+2024-12-05 16:24:41,418 [INFO] SB-7104: Subscribed to message bus.
+2024-12-05 16:24:41,418 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:24:42,428 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:46,457 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-05 16:24:48,486 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:51,924 [INFO] SB-D8B2: Calibrating compass.
+2024-12-05 16:24:52,476 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-05 16:24:54,394 [INFO] SB-2E86: Connected to Sphero.
+2024-12-05 16:24:56,125 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:24:56,164 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:24:56,256 [INFO] SB-D8B2: Initialization complete.
+2024-12-05 16:24:56,257 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-05 16:24:57,567 [INFO] SB-4844: Connected to Sphero.
+2024-12-05 16:25:16,495 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-05 16:25:16,496 [WARNING] WebSocket: Closing connection.
+2024-12-05 16:25:17,221 [ERROR] SB-D8B2: Error in subscriber: 
+2024-12-05 16:25:17,221 [ERROR] SB-7104: Error in subscriber: 
+2024-12-05 16:25:17,223 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,223 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,224 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,224 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,224 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,225 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,225 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,226 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,226 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,227 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,228 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,228 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,229 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,229 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,229 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,230 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,231 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,231 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,231 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,231 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,231 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,232 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,233 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,234 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,235 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,235 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,236 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,237 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,237 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,238 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,238 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,239 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,239 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,240 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,241 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,241 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,242 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,243 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,244 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,245 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,245 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,246 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,246 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,247 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,250 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,253 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,254 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,255 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,256 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,256 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,257 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,258 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,259 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,260 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,261 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,262 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,263 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,263 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,264 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,264 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,265 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,265 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,266 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,268 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,269 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,269 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,270 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,270 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,270 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,271 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,271 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,272 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,272 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,272 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,274 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,274 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,275 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,275 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,276 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,276 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,276 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,276 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,277 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,280 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,285 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,286 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,287 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,287 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,288 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,290 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,291 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,292 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,292 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,294 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,294 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,295 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,295 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,295 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,296 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,296 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,298 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,298 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,299 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,302 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,303 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,305 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,305 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,305 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,306 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,307 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,307 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,307 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,307 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,308 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,310 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,310 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,311 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,312 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,312 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,312 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,314 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,315 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,315 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,317 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,323 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,324 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,325 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,326 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,328 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,328 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,329 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,330 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,331 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,332 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,333 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,334 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,335 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,336 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,337 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,338 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,339 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,342 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,343 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,343 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,344 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,346 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,348 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,351 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,355 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,358 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,360 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,361 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,362 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,364 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,365 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,366 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,368 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,368 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,369 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,370 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:17,381 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:25:31,748 [INFO] SB-2E86: Attempting to connect.
+2024-12-05 16:25:31,763 [INFO] WebSocket: Connected to the server.
+2024-12-05 16:25:31,763 [INFO] WebSocket: Sent connection initialization.
+2024-12-05 16:25:31,770 [INFO] WebSocket Sender: Connected to the server.
+2024-12-05 16:25:32,283 [INFO] SB-2E86: Connected to Sphero.
+2024-12-05 16:25:35,591 [INFO] SB-2E86: Calibrating compass.
+2024-12-05 16:25:35,807 [INFO] SB-4844: Attempting to connect.
+2024-12-05 16:25:36,642 [INFO] SB-4844: Connected to Sphero.
+2024-12-05 16:25:39,779 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:25:39,801 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:25:39,910 [INFO] SB-2E86: Initialization complete.
+2024-12-05 16:25:39,911 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-05 16:25:39,928 [INFO] SB-7104: Attempting to connect.
+2024-12-05 16:25:40,182 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:25:42,043 [INFO] SB-4844: Calibrating compass.
+2024-12-05 16:25:44,576 [INFO] SB-D8B2: Attempting to connect.
+2024-12-05 16:25:44,802 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-05 16:25:44,803 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-05 16:25:44,846 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-05 16:25:46,201 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:25:46,273 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:25:46,305 [INFO] SB-4844: Initialization complete.
+2024-12-05 16:25:46,306 [INFO] SB-4844: Subscribed to message bus.
+2024-12-05 16:25:47,380 [INFO] Main: All processes started.
+2024-12-05 16:25:49,602 [ERROR] SB-D8B2: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-05 16:25:49,603 [WARNING] SB-D8B2: Sphero connection closed. Retrying...
+2024-12-05 16:25:50,085 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:25:58,806 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-05 16:26:00,839 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-05 16:26:00,840 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-05 16:26:05,164 [INFO] SB-D8B2: Calibrating compass.
+2024-12-05 16:26:09,207 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:26:09,327 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:26:09,375 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:26:09,423 [INFO] SB-D8B2: Initialization complete.
+2024-12-05 16:26:09,424 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-05 16:26:14,271 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-05 16:26:14,272 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-05 16:26:19,412 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:26:25,232 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-05 16:26:25,235 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-05 16:26:32,638 [INFO] SB-7104: Connected to Sphero.
+2024-12-05 16:26:37,057 [INFO] SB-7104: Calibrating compass.
+2024-12-05 16:26:41,232 [INFO] Message added to outgoing queue: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:26:41,235 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-05 16:26:41,316 [INFO] SB-7104: Initialization complete.
+2024-12-05 16:26:41,317 [INFO] SB-7104: Subscribed to message bus.
+2024-12-05 16:27:07,617 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'4\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'4\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:07,746 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'pA\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'pA\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:07,747 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'(\\\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'(\\\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:07,840 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'm\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'm\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:07,908 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e\xa6\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e\xa6\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:07,931 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'=...\xd7\xc5\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'=...\xd7\xc5\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:08,012 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\xd7\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\xd7\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,050 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xfa\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xfa\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,072 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e]\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e]\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:08,093 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xd7\xd7\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xd7\xd7\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 173, in add
+    raise PacketDecodingException(f'Very small packet {[hex(x) for x in pkt]}')
+spherov2.controls.PacketDecodingException: Very small packet ['0xd7', '0xd7', '0xd8']
+2024-12-05 16:27:08,223 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xd9\x99\x07\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xd9\x99\x07\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,323 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1d\x1e\x91\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1d\x1e\x91\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:08,698 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b"\'\xd8"))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b"\'\xd8"))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,858 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\x19\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\x19\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,881 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xda\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xda\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,944 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xcb\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xcb\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:08,956 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\...\x1e\x7f\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\...\x1e\x7f\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:09,000 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'Y\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'Y\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 173, in add
+    raise PacketDecodingException(f'Very small packet {[hex(x) for x in pkt]}')
+spherov2.controls.PacketDecodingException: Very small packet ['0x2', '0x59', '0xd8']
+2024-12-05 16:27:09,005 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xd7*\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xd7*\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:09,012 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'>...x1d\x1eO\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'>...x1d\x1eO\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:09,016 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xf0\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\xf0\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:09,016 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...x10Q\x91\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...x10Q\x91\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:09,019 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'#...x93\x85Q\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'#...x93\x85Q\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:09,021 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\x99\x1e\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\x99\x1e\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:09,021 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...x10Q\xc6\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...x10Q\xc6\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:09,143 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1d\x1e\xdb\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1d\x1e\xdb\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:11,085 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\x90\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\x90\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:11,164 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'C\xba\x10Q*\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'C\xba\x10Q*\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,242 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e\x16\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e\x16\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:11,292 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'v\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'v\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,294 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\...xddp\xd0\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\...xddp\xd0\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,296 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'7\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'7\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,300 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\x18\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'\x18\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,303 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e\xa4\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1e\xa4\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,306 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\xcf\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\xcf\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,307 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'C...x99\xebQ\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'C...x99\xebQ\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:11,308 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1eF\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00270F2C927B0>)(bytearray(b'\x1eF\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,310 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...x10Q\x9b\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...x10Q\x9b\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,310 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'6\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'6\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 173, in add
+    raise PacketDecodingException(f'Very small packet {[hex(x) for x in pkt]}')
+spherov2.controls.PacketDecodingException: Very small packet ['0xff', '0x36', '0xd8']
+2024-12-05 16:27:11,312 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\x93\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\x93\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:11,314 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xeb\x01\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001DC52C2A600>)(bytearray(b'\xeb\x01\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 173, in add
+    raise PacketDecodingException(f'Very small packet {[hex(x) for x in pkt]}')
+spherov2.controls.PacketDecodingException: Very small packet ['0xeb', '0x1', '0xd8']
+2024-12-05 16:27:11,351 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'v\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0028A32941D00>)(bytearray(b'v\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-05 16:27:11,430 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...ba\x10Q?\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EE73DA1CA0>)(bytearray(b'\...ba\x10Q?\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-05 16:27:13,888 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-05 16:27:13,888 [WARNING] WebSocket: Closing connection.
+2024-12-05 16:27:14,978 [ERROR] SB-D8B2: Error in subscriber: 
+message: 
+2024-12-05 16:27:14,978 [ERROR] SB-2E86: Error in subscriber: 
+2024-12-05 16:27:14,980 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,981 [WARNING] WebSocket Sender: Closing connection.
+2024-12-05 16:27:14,981 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+ile specified
+2024-12-05 16:27:14,982 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,983 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,983 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,983 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,984 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,985 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,985 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,986 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,987 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,987 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,988 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,988 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,989 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,990 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,990 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,990 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,991 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,991 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,994 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,995 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,995 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,997 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,997 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,998 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,998 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,998 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:14,999 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:14,999 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,000 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,001 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,001 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,001 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,002 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,002 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,002 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,003 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,003 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,004 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,004 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,004 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,004 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,004 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,005 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,005 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,005 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+ile specified
+2024-12-05 16:27:15,005 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,005 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,006 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,006 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,007 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,007 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,008 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,008 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,008 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,008 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,009 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,012 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,013 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,013 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,013 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,014 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,014 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,015 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,015 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,016 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,016 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,017 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,017 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,017 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,018 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,018 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,018 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,019 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,019 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,020 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,020 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,020 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,021 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,021 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,021 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,022 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,023 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,023 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,024 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,025 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,026 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,029 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,033 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,033 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,035 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,035 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,037 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,037 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,039 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,039 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,040 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,040 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,057 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,067 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,073 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,084 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,096 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,097 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,099 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,103 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,106 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,106 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,106 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,107 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,107 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-05 16:27:15,109 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,115 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,117 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,118 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,120 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,120 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,121 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,122 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,123 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,124 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,124 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,130 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,131 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,132 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,134 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,135 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,136 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,137 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,138 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,139 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,139 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,140 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,141 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,141 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,144 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,145 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,146 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-05 16:27:15,153 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
