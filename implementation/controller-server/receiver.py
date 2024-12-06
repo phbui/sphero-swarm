@@ -75,7 +75,6 @@ def send_message_to_server(outgoing_queue, id, messageType, message):
             "message": message
         }
         outgoing_queue.put(message_json)
-        logging.info(f"Message added to outgoing queue: {message_json}")
     except Exception as e:
         logging.error(f"Error adding message to outgoing queue: {e}")
 

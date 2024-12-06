@@ -105,6 +105,18 @@ class Display:
                             thickness=2
                         )
 
+                # Resize the overlay image to max half the screen width while maintaining the aspect ratio
+                screen_width = 1920
+                max_width = screen_width // 2
+                
+                original_height, original_width = overlay_image.shape[:2]
+                aspect_ratio = original_height / original_width
+
+                if original_width > max_width:
+                    new_width = max_width
+                    new_height = int(new_width * aspect_ratio)
+                    overlay_image = cv2.resize(overlay_image, (new_width, new_height))
+
                 # Show the image in a window
                 cv2.imshow("Display", overlay_image)
                 if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit

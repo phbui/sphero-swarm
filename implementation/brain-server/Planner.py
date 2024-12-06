@@ -1,4 +1,3 @@
-import asyncio
 import threading
 import Camera
 import Display
@@ -17,17 +16,15 @@ class Planner:
         self.map.generate_prm()
         self.spheros = [Drone.Drone(self.display, sphero["id"], sphero["color"],  self.map) for sphero in spheros]
 
-    async def start(self, ws):
+    def start(self, ws):
         """Iterate over all Spheros and trigger their next moves."""
-        tasks = [
-            self.next_move(ws, sphero.sphero_id)
-            for sphero in self.spheros
-        ]
-        await asyncio.gather(*tasks) 
+        print("System started.")
+        for sphero in self.spheros:
+            sphero.execute_state(ws)
 
-    async def next_move(self, ws, id):
+    def next_move(self, ws, id):
         """Trigger the next move for a specific Sphero."""
         for sphero in self.spheros:
             if sphero.sphero_id == id:
-                await sphero.execute_state(ws)
+                sphero.execute_state(ws)
 

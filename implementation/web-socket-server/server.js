@@ -48,7 +48,7 @@ function intializeSpheros() {
 
 function readyBrain() {
   if (spheros.length > 0) {
-    sendMessageToClient("SpheroBrain", "SpheroConnection", "Ready");
+    sendMessageToClient("SpheroBrain", "SpheroReady", {});
   }
 }
 
@@ -130,7 +130,7 @@ function handleControllerMessage(ws, parsedMessage) {
       let sphero_id = parsedMessage.id;
       if (handleReady(sphero_id)) {
         readyBrain();
-        matrixCall();
+        //matrixCall();
       }
       break;
 

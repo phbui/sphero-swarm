@@ -2,7 +2,35 @@ import numpy as np
 from scipy.spatial import KDTree
 import heapq
 import Localizer
-from receiver import send_message
+import asyncio
+import json
+
+def send_message(ws, id, message_type, message_content):
+    """Sends a message to the WebSocket server in a non-async way."""
+    try:
+        # Prepare the message
+        message = {
+            "clientType": "SpheroBrain",
+            "id": id,
+            "messageType": message_type,
+            "message": message_content,
+        }
+
+        message = json.dumps(message)
+
+        # Get the running event loop and run the async send_message coroutine in a thread-safe way
+        loop = asyncio.get_running_loop()
+        asyncio.run_coroutine_threadsafe(_send_message_async(ws, message), loop)
+        print(f"WebSocket: Sent message: {message}")
+    except Exception as e:
+        print(f"WebSocket: Error sending message: {e}")
+
+async def _send_message_async(ws, message):
+    """Async function to send the message via the WebSocket connection."""
+    try:
+        await ws.send( message)
+    except Exception as e:
+        print(f"WebSocket: Error sending message: {e}")
 
 class Drone:
     def __init__(self, display, sphero_id, sphero_color, map):
@@ -81,7 +109,7 @@ class Drone:
         self.x, self.y = target_x, target_y
         return self.x, self.y
 
-    async def execute_state(self, ws):
+    def execute_state(self, ws):
         """
         Execute the current state of the Sphero.
         Args:
@@ -92,13 +120,13 @@ class Drone:
         print(f"Sphero [{self.sphero_id}] executing state: {state_name}")
 
         if state_name == "move_to_goal":
-            await self._move_to_goal(ws)
+            self._move_to_goal(ws)
         elif state_name == "reaching_goal":
             self._reaching_goal()
         elif state_name == "interact":
             self._interact()
 
-    async def _move_to_goal(self, ws):
+    def _move_to_goal(self, ws):
         """
         Navigate towards the goal and send movement updates.
         Args:
@@ -124,7 +152,7 @@ class Drone:
                 "target_x": target_x,
                 "target_y": target_y,
             }
-            await send_message(ws, self.sphero_id, "SpheroMove", message_content)
+            send_message(ws, self.sphero_id, "SpheroMove", message_content)
 
             # Transition to the next state if within goal threshold
             if self._euclidean_distance((target_x, target_y), self.goal) <= 10:
