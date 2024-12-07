@@ -1,5 +1,6 @@
 import math
 from multiprocessing import Process
+from spherov2.types import Color
 
 
 class SpheroMovement:
@@ -36,7 +37,9 @@ class SpheroMovement:
             if deg < 0:
                 deg += 360
 
-            self.droid.roll(round(deg), 30, math.sqrt(deltax ** 2 + deltay ** 2) * self.multiplier)
+            self.droid.set_compass_direction(round(deg))
+
+            self.droid.roll(0, 30, math.sqrt(deltax ** 2 + deltay ** 2) * self.multiplier)
         except Exception as e:
             print(f"Error in move: {e}")
         self.send_feedback("Done")
@@ -52,14 +55,22 @@ class SpheroMovement:
 
         try:
             self.droid.set_main_led(self.client_color)
-            self.droid.roll(angle, 30, duration)
+            self.droid.set_compass_direction(angle)
+            self.droid.roll(0, 30, duration)
         except Exception as e:
             print(f"Error in move_direction: {e}")
 
     def set_matrix(self, pattern):
         try:
+            self.droid.clear_matrix()
             if pattern == "X":
-                self.droid.set_matrix_character("X", self.client_color)
+                self.droid.set_compass_direction(0)
+                if self.client_id == "SB-2E86" or self.client_id == "SB-D8B2":
+                    self.droid.set_matrix_character("\\",Color(r=255,g=0,b=0))
+                elif self.client_id == "SB-4844" or self.client_id == "SB-7104":
+                    self.droid.set_matrix_character("/",Color(r=255,g=0,b=0))
+                else:
+                    print("Droid not found")
             # Add more patterns as needed
         except Exception as e:
             print(f"Error in set_matrix: {e}")

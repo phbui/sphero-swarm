@@ -130,7 +130,7 @@ function handleControllerMessage(ws, parsedMessage) {
       let sphero_id = parsedMessage.id;
       if (handleReady(sphero_id)) {
         readyBrain();
-        //matrixCall();
+        matrixCall();
       }
       break;
 
