@@ -78,12 +78,13 @@ class Map:
             # Draw the goal on the display
             self.display.draw_point("goal", self.goal[1], self.goal[0], weight=1.0, color="#0000FF")
 
-    def generate_prm(self, num_nodes=100, connection_radius=1000):
+    def generate_prm(self, num_nodes=100, initial_radius=100, max_radius=1000):
         """
         Generate a probabilistic roadmap (PRM) for path planning.
         Args:
             num_nodes: Number of nodes to generate for the roadmap.
-            connection_radius: Maximum distance to connect nodes.
+            initial_radius: Starting distance to connect nodes.
+            max_radius: Maximum distance to connect nodes.
         """
         # Process the image to detect obstacles and goal
         self.process_image()
@@ -106,14 +107,23 @@ class Map:
             self.nodes.append((x, y))
             self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
 
-        # Connect nodes based on distance and collision checks
+        # Dynamically adjust the connection radius to ensure at least 5 connections per node
         for i, (x1, y1) in enumerate(self.nodes):
-            for j, (x2, y2) in enumerate(self.nodes):
-                if i != j:
-                    distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-                    if distance <= connection_radius and not self.check_collision((x1, y1), (x2, y2)):
-                        self.edges.append(((x1, y1), (x2, y2)))
-                        self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
+            current_radius = initial_radius
+            connections = 0
+
+            while connections < 5 and current_radius <= max_radius:
+                for j, (x2, y2) in enumerate(self.nodes):
+                    if i != j:
+                        distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+                        if distance <= current_radius and not self.check_collision((x1, y1), (x2, y2)):
+                            edge = ((x1, y1), (x2, y2))
+                            if edge not in self.edges:  # Prevent duplicate edges
+                                self.edges.append(edge)
+                                self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
+                                connections += 1
+                if connections < 10:
+                    current_radius += 50  # Increase radius if fewer than 5 connections
 
     def is_near_obstacle(self, x, y, ox, oy, weight):
         """
