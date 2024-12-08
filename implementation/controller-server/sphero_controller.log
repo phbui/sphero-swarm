@@ -1001,3 +1001,220 @@ ile specified
 2024-12-08 14:22:51,806 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
 2024-12-08 14:22:52,023 [ERROR] WebSocket: Error receiving message: no close frame received or sent
 2024-12-08 14:22:52,027 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:25:32,326 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:25:32,326 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:25:32,330 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:25:32,335 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:25:36,327 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:25:37,410 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:25:37,465 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:25:37,465 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:25:37,932 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-08 14:25:37,932 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:25:53,957 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:25:53,962 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:25:53,971 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:25:53,972 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:25:58,247 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:25:59,098 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:26:02,335 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:26:02,628 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:26:02,629 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:26:03,231 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-08 14:26:03,232 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:26:18,420 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:26:18,420 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:26:18,422 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:26:18,436 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:26:22,144 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:26:23,681 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:26:26,366 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:26:27,343 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:26:30,801 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:26:30,802 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:26:31,686 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:27:02,550 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:27:02,583 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:27:02,584 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:27:02,587 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:27:07,937 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:27:11,058 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:27:12,066 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:27:12,070 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:27:12,692 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-08 14:27:12,700 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:27:37,966 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:27:38,024 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:27:38,027 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:27:38,057 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:27:43,253 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:27:43,517 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:27:46,765 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:27:48,917 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:27:49,806 [INFO] SB-D8B2: Attempting to connect.
+2024-12-08 14:27:50,731 [INFO] Main: All processes started.
+2024-12-08 14:27:52,316 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:27:52,688 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:27:52,690 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:27:53,398 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-08 14:27:53,417 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:28:09,381 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:28:09,383 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:28:09,389 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:28:09,403 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:28:13,603 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:28:14,763 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:17,319 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:28:19,011 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:21,531 [INFO] SB-D8B2: Attempting to connect.
+2024-12-08 14:28:22,748 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:23,181 [INFO] Main: All processes started.
+2024-12-08 14:28:24,802 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:26,969 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:27,620 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-08 14:28:44,867 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:28:44,907 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:28:44,909 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:28:44,952 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:28:49,425 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:28:50,320 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:53,576 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:28:55,033 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:28:55,707 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:28:55,709 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:28:56,363 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-08 14:29:10,592 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:29:10,593 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:29:10,595 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:29:10,645 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:29:14,179 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:29:15,977 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:18,595 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:29:18,839 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:29:18,841 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:29:19,440 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:19,503 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-08 14:29:19,509 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:29:39,047 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:29:39,050 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:29:39,055 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:29:39,074 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:29:43,663 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:29:45,106 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:47,136 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:29:49,137 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:50,683 [INFO] SB-D8B2: Attempting to connect.
+2024-12-08 14:29:52,509 [INFO] Main: All processes started.
+2024-12-08 14:29:52,562 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:55,162 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:56,086 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:29:59,204 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:02,587 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:05,229 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:06,133 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:09,235 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:12,631 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:15,253 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:15,776 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:30:15,776 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:30:16,180 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:30:16,462 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-08 14:30:16,466 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:32:30,258 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:32:30,263 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:32:30,268 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:32:30,290 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:32:34,181 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:32:35,394 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:32:35,398 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:32:35,763 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:33:15,500 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:33:15,538 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:33:15,541 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:33:15,543 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:33:19,473 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:33:20,918 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:33:23,157 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:33:24,833 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:33:27,472 [INFO] SB-D8B2: Attempting to connect.
+2024-12-08 14:33:28,472 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:33:29,597 [INFO] Main: All processes started.
+2024-12-08 14:33:30,978 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:33:33,012 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:33:33,798 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:33:33,802 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:34:21,760 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:34:21,804 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:34:21,805 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:34:21,823 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:34:25,408 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:34:27,193 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:34:29,205 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:34:30,802 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:34:33,931 [INFO] SB-D8B2: Attempting to connect.
+2024-12-08 14:34:34,605 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:34:35,030 [INFO] Main: All processes started.
+2024-12-08 14:34:37,277 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:34:37,286 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:34:37,295 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:34:38,154 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-08 14:34:38,156 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:34:56,767 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:34:56,787 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:34:56,791 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:34:56,793 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:35:00,213 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:35:02,162 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:35:04,081 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:35:05,506 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:35:08,322 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:35:08,324 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:37:27,617 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:37:27,629 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:37:27,630 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:37:27,630 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:37:32,756 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:37:32,954 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:37:32,958 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:37:33,561 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-08 14:37:33,562 [WARNING] WebSocket Sender: Closing connection.
+2024-12-08 14:37:48,783 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:37:48,806 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:37:48,807 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:37:48,827 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:37:52,347 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:37:54,200 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:37:57,034 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:37:57,668 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:37:59,013 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:37:59,017 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:38:56,559 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:38:56,575 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:38:56,577 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:38:56,624 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:39:00,857 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:39:01,967 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:39:04,608 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:39:05,865 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:39:05,866 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:39:06,343 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:39:57,067 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:39:57,089 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:39:57,091 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:39:57,111 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:40:01,689 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:40:02,477 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:40:05,390 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:40:07,116 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:40:08,254 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:40:08,258 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:41:20,066 [INFO] SB-2E86: Attempting to connect.
+2024-12-08 14:41:20,093 [INFO] WebSocket: Connected to the server.
+2024-12-08 14:41:20,094 [INFO] WebSocket: Sent connection initialization.
+2024-12-08 14:41:20,096 [INFO] WebSocket Sender: Connected to the server.
+2024-12-08 14:41:25,342 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-08 14:41:26,062 [INFO] SB-4844: Attempting to connect.
+2024-12-08 14:41:30,501 [INFO] SB-7104: Attempting to connect.
+2024-12-08 14:41:31,091 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-08 14:41:31,093 [WARNING] WebSocket: Closing connection.
+2024-12-08 14:41:31,471 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...

@@ -78,7 +78,7 @@ class Map:
             # Draw the goal on the display
             self.display.draw_point("goal", self.goal[1], self.goal[0], weight=1.0, color="#0000FF")
 
-    def generate_prm(self, num_nodes=200, connection_radius=100):
+    def generate_prm(self, num_nodes=100, connection_radius=1000):
         """
         Generate a probabilistic roadmap (PRM) for path planning.
         Args:
@@ -113,7 +113,7 @@ class Map:
                     distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
                     if distance <= connection_radius and not self.check_collision((x1, y1), (x2, y2)):
                         self.edges.append(((x1, y1), (x2, y2)))
-                        self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.05, color="#AAAAAA")
+                        self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
 
     def is_near_obstacle(self, x, y, ox, oy, weight):
         """
@@ -125,7 +125,7 @@ class Map:
         Returns:
             True if the node is near the obstacle, False otherwise.
         """
-        safe_distance = 10 * weight  # Scale safe distance based on weight
+        safe_distance = 250 * weight  # Scale safe distance based on weight
         return np.sqrt((x - ox) ** 2 + (y - oy) ** 2) < safe_distance
 
     def check_collision(self, point1, point2):
@@ -138,7 +138,7 @@ class Map:
         """
         for (ox, oy) in self.obstacles:
             distance = self.point_to_segment_distance(point1, point2, (ox, oy))
-            if distance < 5:  # Collision threshold
+            if distance < 10:  # Collision threshold
                 return True
         return False
 
