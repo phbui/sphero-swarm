@@ -148,7 +148,7 @@ def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=F
                     first_run_bool = False
                 droid.set_main_led(client_color)
                 logging.info(f"{client_id}: Initialization complete.")
-                sphero = SpheroMovement(droid, id, client_color, outgoing_queue)
+                sphero = SpheroMovement(droid, client_id, client_color, outgoing_queue)
                 process_subscriber(client_id, client_color, message_bus, outgoing_queue, sphero)
 
         except Exception as e:
