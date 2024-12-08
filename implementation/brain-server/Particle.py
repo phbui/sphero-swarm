@@ -10,7 +10,7 @@ class Particle:
         self.weight = 1
 
     def draw_particle(self):
-        self.display.draw(self.id, self.x, self.y, self.weight, self.color)
+        self.display.draw_point(self.id, self.x, self.y, self.weight, self.color)
 
     def move(self, x, y, weight):
         self.x = x

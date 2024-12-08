@@ -43,7 +43,7 @@ class Map:
                 obstacle_center = (x + w // 2, y + h // 2)
                 self.obstacles.append(obstacle_center)
                 # Draw larger obstacle region as a circle or rectangle
-                self.display.draw(f"obstacle_{obstacle_center}", obstacle_center[1], obstacle_center[0], weight=(0.25), color="#FFA500")
+                self.display.draw_point(f"obstacle_{obstacle_center}", obstacle_center[1], obstacle_center[0], weight=(0.25), color="#FFA500")
 
         # Detect goal
         goal_mask = cv2.inRange(hsv_image, goal_range["lower"], goal_range["upper"])
@@ -53,9 +53,9 @@ class Map:
             goal_coords = np.mean(goal_points, axis=0)[0]
             self.goal = (int(goal_coords[0]), int(goal_coords[1]))
             # Draw the goal on the display
-            self.display.draw("goal", self.goal[1], self.goal[0], weight=1.0, color="#0000FF")
+            self.display.draw_point("goal", self.goal[1], self.goal[0], weight=1.0, color="#0000FF")
 
-    def generate_prm(self, num_nodes=100, connection_radius=50):
+    def generate_prm(self, num_nodes=200, connection_radius=100):
         """
         Generate a probabilistic roadmap (PRM) for path planning.
         Args:
@@ -76,6 +76,7 @@ class Map:
                 continue
 
             self.nodes.append((x, y))
+            self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
 
         # Connect nodes based on distance
         for i, (x1, y1) in enumerate(self.nodes):
@@ -84,3 +85,4 @@ class Map:
                     distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
                     if distance <= connection_radius:
                         self.edges.append(((x1, y1), (x2, y2)))
+                        self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.05, color="#AAAAAA")

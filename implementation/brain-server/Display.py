@@ -59,7 +59,7 @@ class Display:
         # Return as BGR (OpenCV format)
         return (b, g, r)
 
-    def draw(self, id, x, y, weight, color):
+    def draw_point(self, id, x, y, weight, color):
         """
         Draw a visualization for a specific object on the display using the color from the color map.
         Args:
@@ -78,6 +78,32 @@ class Display:
             # Add the new drawing with the specified color
             self.drawings.append({"id": id, "x": x, "y": y, "weight": weight, "color": color})
 
+    def draw_line(self, id, point1, point2, weight, color):
+        """
+        Draw a line between two points on the display.
+
+        Args:
+            id: Unique identifier for the line.
+            point1: Tuple (x1, y1) representing the start of the line.
+            point2: Tuple (x2, y2) representing the end of the line.
+            weight: Thickness of the line.
+            color: The color in hex.
+        """
+        color = self.hex_to_bgr(color)  # Convert hex color to BGR
+
+        with self.lock:
+            # Remove any existing drawings with the same ID
+            self.drawings = [drawing for drawing in self.drawings if drawing["id"] != id]
+            # Add the new line drawing with the specified color
+            self.drawings.append({
+                "id": id,
+                "start": point1,
+                "end": point2,
+                "weight": weight,
+                "color": color
+            })
+
+
     def show(self):
         """
         Continuously display the current image with any drawings.
@@ -91,24 +117,39 @@ class Display:
 
                     # Draw all the overlays
                     for drawing in self.drawings:
-                        # Ensure x and y are integers for cv2.circle
-                        x = int(drawing["x"])
-                        y = int(drawing["y"])
-                        radius = int(drawing["weight"] * 50)  # Example scaling
-                        color = drawing["color"]  # Use the specified color (in BGR)
+                        if "x" in drawing and "y" in drawing:  # Point handling
+                            x = int(drawing["x"])
+                            y = int(drawing["y"])
+                            radius = int(drawing["weight"] * 50)  # Example scaling
+                            color = drawing["color"]  # Use the specified color (in BGR)
 
-                        cv2.circle(
-                            overlay_image,
-                            (y, x),  # Pass the integer coordinates
-                            radius=radius,
-                            color=color,  # Use the specified color
-                            thickness=2
-                        )
+                            cv2.circle(
+                                overlay_image,
+                                (y, x),  # Pass the integer coordinates
+                                radius=radius,
+                                color=color,  # Use the specified color
+                                thickness=2
+                            )
+                        elif "start" in drawing and "end" in drawing:  # Line handling
+                            start_x, start_y = drawing["start"]
+                            end_x, end_y = drawing["end"]
+
+                            # Ensure weight is a valid thickness
+                            weight = max(1, min(int(drawing["weight"] * 5), 255))  # Scale and clamp thickness
+                            color = drawing["color"]  # Use the specified color (in BGR)
+
+                            cv2.line(
+                                overlay_image,
+                                (int(start_y), int(start_x)),  # Start coordinates (y, x)
+                                (int(end_y), int(end_x)),  # End coordinates (y, x)
+                                color=color,
+                                thickness=weight
+                            )
 
                 # Resize the overlay image to max half the screen width while maintaining the aspect ratio
                 screen_width = 1920
                 max_width = screen_width // 2
-                
+
                 original_height, original_width = overlay_image.shape[:2]
                 aspect_ratio = original_height / original_width
 
