@@ -104,6 +104,33 @@ class Display:
             })
 
 
+    def draw_rectangle(self, id, x, y, w, h, weight, color):
+        """
+        Draw a rectangle on the display.
+
+        Args:
+            id: Unique identifier for the rectangle.
+            x, y: Top-left corner of the rectangle.
+            w, h: Width and height of the rectangle.
+            weight: Thickness of the rectangle edges.
+            color: The color in hex format.
+        """
+        color = self.hex_to_bgr(color)  # Convert hex color to BGR
+
+        with self.lock:
+            # Remove any existing drawings with the same ID
+            self.drawings = [drawing for drawing in self.drawings if drawing["id"] != id]
+            # Add the new rectangle drawing with the specified color
+            self.drawings.append({
+                "id": id,
+                "x": x,
+                "y": y,
+                "w": w,
+                "h": h,
+                "weight": weight,
+                "color": color
+            })
+
     def show(self):
         """
         Continuously display the current image with any drawings.
@@ -117,7 +144,22 @@ class Display:
 
                     # Draw all the overlays
                     for drawing in self.drawings:
-                        if "x" in drawing and "y" in drawing:  # Point handling
+                        if "x" in drawing and "y" in drawing and "w" in drawing and "h" in drawing:  # Rectangle handling
+                            x = int(drawing["x"])
+                            y = int(drawing["y"])
+                            w = int(drawing["w"])
+                            h = int(drawing["h"])
+                            weight = max(1, int(drawing["weight"] * 5))  # Scale thickness
+                            color = drawing["color"]  # Use the specified color (in BGR)
+
+                            cv2.rectangle(
+                                overlay_image,
+                                (x, y),  # Top-left corner
+                                ( x + w, y + h),  # Bottom-right corner
+                                color=color,
+                                thickness=weight
+                            )
+                        elif "x" in drawing and "y" in drawing:  # Point handling
                             x = int(drawing["x"])
                             y = int(drawing["y"])
                             radius = int(drawing["weight"] * 50)  # Example scaling
@@ -166,6 +208,7 @@ class Display:
             else:
                 # If no image is set, wait briefly before checking again
                 cv2.waitKey(100)
+
 
     def stop(self):
         """
