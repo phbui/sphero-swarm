@@ -7,7 +7,7 @@ from spherov2.helper import bound_color
 from spherov2.types import Color
 
 def new_set_matrix_line(self, x1: int, y1: int, x2: int, y2: int, color: Color):
-    dx = abs()
+    dx = abs(x2 - x1)
     dy = abs(y2 - y1)
     if (dx != 0 and dy != 0 and dx != dy) or (dx == 0 and dy == 0):
         raise Exception("Can only draw straight lines and diagonals")

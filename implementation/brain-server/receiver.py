@@ -16,15 +16,12 @@ class WebSocketHandler:
                     print(f"Received SpheroConnection message: {message}")
                     spheros = message
                     self.planner = Planner.Planner(spheros)
-
-
+                case "SpheroReady":
+                    print("Starting planner.")
                     if self.planner is not None:
                         await self.planner.start(ws)  # Assuming `start` is an async function
                     else:
                         print("Planner has not been initialized. Received SpheroReady before SpheroConnection.")
-                case "SpheroReady":
-                    print("Starting planner.")
-
                 case "SpheroFeedback":
                     if self.planner is not None:
                         await self.planner.next_move(ws, message)  # Assuming `next_move` is an async function
