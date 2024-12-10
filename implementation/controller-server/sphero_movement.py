@@ -76,6 +76,13 @@ class SpheroMovement:
                     self.droid.set_matrix_line(0,7,7,0,Color(r=255,g=0,b=0))
                     self.droid.set_matrix_line(0,6,6,0,Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(1,7,7,1,Color(r=255, g=0, b=0))
+                elif self.client_id == "SB-E12C":
+                    self.droid.set_matrix_line(0,0,7,7,Color(r=255,g=0,b=0))
+                    self.droid.set_matrix_line(1,0,7,6,Color(r=255, g=0, b=0))
+                    self.droid.set_matrix_line(0,1,6,7,Color(r=255, g=0, b=0))
+                    self.droid.set_matrix_line(0,7,7,0,Color(r=255,g=0,b=0))
+                    self.droid.set_matrix_line(0,6,6,0,Color(r=255, g=0, b=0))
+                    self.droid.set_matrix_line(1,7,7,1,Color(r=255, g=0, b=0))
                 else:
                     print("Droid not found")
             # Add more patterns as needed
