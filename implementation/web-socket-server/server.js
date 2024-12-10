@@ -75,10 +75,19 @@ function sendMessageToClient(id, messageType, message) {
  * @param {string} id - The ID of the Sphero to move.
  * @param {Array} path - A list of coordinate pairs for the Sphero to follow.
  */
-function moveSphero(id, current_x, current_y, target_x, target_y) {
+function moveSphero(
+  id,
+  current_x,
+  current_y,
+  target_x,
+  target_y,
+  last_x,
+  last_y
+) {
   sendMessageToClient(id, "SpheroMovement", {
     currentLocation: [current_x, current_y],
     targetLocation: [target_x, target_y],
+    lastTargetLocation: [last_x, last_y],
   });
 }
 
@@ -130,7 +139,7 @@ function handleControllerMessage(ws, parsedMessage) {
       let sphero_id = parsedMessage.id;
       if (handleReady(sphero_id)) {
         readyBrain();
-        matrixCall();
+        //matrixCall();
       }
       break;
 
@@ -159,7 +168,9 @@ function handleBrainMessage(ws, parsedMessage) {
         message.current_x,
         message.current_y,
         message.target_x,
-        message.target_y
+        message.target_y,
+        message.last_x,
+        message.last_y
       );
       break;
   }

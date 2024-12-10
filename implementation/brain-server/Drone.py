@@ -47,11 +47,19 @@ class Drone:
         self.sphero_color = sphero_color
         print(f"Sphero Initialized: {sphero_id}")
         self.localizer = Localizer.Localizer(display, sphero_color, 100)
-        self.x, self.y = self.get_position()
         self.map = map
-        self.goal = self.map.goal  # Set the goal from the map
+        if len(self.map.goal) == 4:
+            # map.goal = (x_min, y_min, x_max, y_max)
+            x_min, y_min, x_max, y_max = self.map.goal
+            goal_x = (x_min + x_max) / 2
+            goal_y = (y_min + y_max) / 2
+            self.goal = (goal_x, goal_y)
+        else:
+            # Assume goal is already a tuple (x, y)
+            self.goal = self.map.goal
         self.prm_nodes = self.map.nodes  # Set PRM nodes from the map
-
+        self.last_x = -1
+        self.last_y = -1
         # State Machine for the Drone
         self.states = [
             {
@@ -106,8 +114,9 @@ class Drone:
         """
         print(f"Sphero [{self.sphero_id}] moving to x: {target_x}, y: {target_y}")
         # Placeholder for actual movement logic; update position directly
-        self.x, self.y = target_x, target_y
-        return self.x, self.y
+        self.last_x = target_x
+        self.last_y = target_y
+        return target_x, target_y
 
     def execute_state(self, ws):
         """
@@ -141,22 +150,26 @@ class Drone:
         if path and len(path) > 1:
             # Move to the next point on the path
             next_point = path[1]
+
             current_x, current_y = self.get_position()
-            target_x, target_y = self.move(next_point[0], next_point[1])
-
-            # Send movement update via WebSocket
-            message_content = {
-                "id": self.sphero_id,
-                "current_x": current_x,
-                "current_y": current_y,
-                "target_x": target_x,
-                "target_y": target_y,
-            }
-            send_message(ws, self.sphero_id, "SpheroMove", message_content)
-
-            # Transition to the next state if within goal threshold
-            if self._euclidean_distance((target_x, target_y), self.goal) <= 10:
+            if self._euclidean_distance((current_x, current_y), self.goal) <= 10:
                 self._transition_to_state("reaching_goal")
+            else:
+                message_content = {
+                    "id": self.sphero_id,
+                    "current_x": float(current_x),
+                    "current_y": float(current_y),
+                    "target_x": float(next_point[0]),
+                    "target_y": float(next_point[1]),
+                    "last_x": float(self.last_x),
+                    "last_y": float(self.last_y)
+                }
+
+                print(ws)
+
+                self.move(next_point[0], next_point[1])
+                send_message(ws, self.sphero_id, "BrainControl", message_content)
+
 
     def _reaching_goal(self):
         """
