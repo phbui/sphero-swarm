@@ -4638,3 +4638,40 @@ ile specified
 2024-12-10 09:06:13,475 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-10 09:06:13,477 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-10 09:06:13,479 [ERROR] SB-D8B2: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-10 09:50:22,732 [INFO] WebSocket: Connected to the server.
+2024-12-10 09:50:22,734 [INFO] WebSocket: Sent connection initialization.
+2024-12-10 09:50:22,764 [INFO] SB-2E86: Attempting to connect.
+2024-12-10 09:50:22,766 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:22,769 [INFO] WebSocket Sender: Connected to the server.
+2024-12-10 09:50:26,702 [INFO] SB-4844: Attempting to connect.
+2024-12-10 09:50:26,714 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:27,773 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:30,435 [INFO] SB-7104: Attempting to connect.
+2024-12-10 09:50:30,446 [ERROR] SB-7104: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:31,719 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:32,786 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:34,823 [INFO] SB-D8B2: Attempting to connect.
+2024-12-10 09:50:34,829 [ERROR] SB-D8B2: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:35,451 [ERROR] SB-7104: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:36,560 [INFO] Main: All processes started.
+2024-12-10 09:50:36,724 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:37,794 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:39,834 [ERROR] SB-D8B2: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:40,455 [ERROR] SB-7104: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:41,728 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:42,797 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:44,843 [ERROR] SB-D8B2: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:45,474 [ERROR] SB-7104: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:46,731 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:47,801 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:49,858 [ERROR] SB-D8B2: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:50,479 [ERROR] SB-7104: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:51,789 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:52,813 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:54,863 [ERROR] SB-D8B2: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:55,482 [ERROR] SB-7104: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:56,833 [ERROR] SB-4844: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:57,842 [ERROR] SB-2E86: Unexpected error: No module named 'bleak'
+2024-12-10 09:50:58,890 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-10 09:50:58,893 [WARNING] WebSocket: Closing connection.
+2024-12-10 09:50:59,113 [INFO] Main: All processes terminated.

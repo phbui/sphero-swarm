@@ -1,7 +1,7 @@
 import math
 from multiprocessing import Process
 import math
-import spherov2
+from spherov2.sphero_edu import SpheroEduAPI
 from spherov2.utils import ToyUtil
 from spherov2.helper import bound_color
 from spherov2.types import Color
@@ -21,8 +21,7 @@ def new_set_matrix_line(self, x1: int, y1: int, x2: int, y2: int, color: Color):
 
     ToyUtil.set_matrix_line(self.__toy, x1, y1, x2, y2, color.r, color.g, color.b, is_user_color=False)
 
-# Monkey-patch the method
-spherov2.OriginalClass.set_matrix_line = new_set_matrix_line
+SpheroEduAPI.set_matrix_line = new_set_matrix_line
 
 class SpheroMovement:
     def __init__(self, droid, client_id, client_color, outgoing_queue):
