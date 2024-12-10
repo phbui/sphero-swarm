@@ -165,8 +165,6 @@ class Drone:
                     "last_y": float(self.last_y)
                 }
 
-                print(ws)
-
                 self.move(next_point[0], next_point[1])
                 send_message(ws, self.sphero_id, "BrainControl", message_content)
 
