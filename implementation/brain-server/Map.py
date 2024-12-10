@@ -67,7 +67,7 @@ class Map:
             x, y, w, h = cv2.boundingRect(contour)
             area = w * h
 
-            if area > 5:  # Ignore small noise-like regions
+            if area > 100:  # Ignore small noise-like regions
                 # Create a filled mask of the contour
                 contour_mask = np.zeros_like(obstacle_mask)
                 cv2.drawContours(contour_mask, [contour], -1, 255, thickness=cv2.FILLED)
@@ -135,7 +135,7 @@ class Map:
             self.display.draw_rectangle("goal", x, y, w, h, weight=1.0, color="#0000FF")
 
 
-    def generate_prm(self, num_nodes=100, initial_radius=100, max_radius=1000):
+    def generate_prm(self, num_nodes=200, initial_radius=100, max_radius=1000):
         """
         Generate a probabilistic roadmap (PRM) for path planning.
         Args:
@@ -146,23 +146,33 @@ class Map:
         # Process the image to detect obstacles and goal
         self.process_image()
 
+        # Initialize nodes and edges
+        self.nodes = []
+        self.edges = []
+
         height, width = self.display.height, self.display.width
 
-        # Add goal as the first node if detected
-        if self.goal:
-            self.nodes.append(self.goal)
-            self.display.draw_point("goal_node", self.goal[1], self.goal[0], weight=0.2, color="#0000FF")
+        # Add goal as an area if detected
+        if self.goal:  # Assume self.goal is (x, y, w, h)
+            gx, gy, gw, gh = self.goal
+            goal_center = (gx + gw // 2, gy + gh // 2)  # Use center of the goal area
+            self.nodes.append(goal_center)  # Add the center of the goal area as a node
+            self.display.draw_point("goal_node", goal_center[1], goal_center[0], weight=0.2, color="#0000FF")
+        else:
+            print("No goal detected.")
+
+        if not self.obstacles:
+            print("No obstacles detected.")
 
         # Generate random nodes
-        for _ in range(num_nodes):
+        max_attempts = 1000  # Limit attempts to avoid infinite loops
+        attempts = 0
+        while len(self.nodes) < num_nodes and attempts < max_attempts:
             x, y = random.randint(0, width - 1), random.randint(0, height - 1)
-
-            # Penalize nodes based on proximity to obstacles
-            if any(self.is_near_obstacle(x, y, ox, oy, self.obstacle_weights[(ox, oy)]) for (ox, oy) in self.obstacles):
-                continue
-
-            self.nodes.append((x, y))
-            self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
+            if not any(self.is_near_obstacle_rect(x, y, rect) for rect in self.obstacles):
+                self.nodes.append((x, y))
+                self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
+            attempts += 1
 
         # Dynamically adjust the connection radius to ensure at least 5 connections per node
         for i, (x1, y1) in enumerate(self.nodes):
@@ -173,66 +183,75 @@ class Map:
                 for j, (x2, y2) in enumerate(self.nodes):
                     if i != j:
                         distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-                        if distance <= current_radius and not self.check_collision((x1, y1), (x2, y2)):
+                        if distance <= current_radius and not self.check_collision_with_rects((x1, y1), (x2, y2)):
                             edge = ((x1, y1), (x2, y2))
                             if edge not in self.edges:  # Prevent duplicate edges
                                 self.edges.append(edge)
                                 self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
                                 connections += 1
-                if connections < 10:
+                if connections < 5:
                     current_radius += 50  # Increase radius if fewer than 5 connections
 
-    def is_near_obstacle(self, x, y, ox, oy, weight):
+    def is_near_obstacle_rect(self, x, y, rect):
         """
-        Check if a node is too close to an obstacle, considering its weight.
+        Check if a node is too close to a rectangular obstacle.
         Args:
             x, y: Node coordinates.
-            ox, oy: Obstacle coordinates.
-            weight: Weight of the obstacle.
+            rect: Tuple (rx, ry, rw, rh) representing the rectangle.
         Returns:
-            True if the node is near the obstacle, False otherwise.
+            True if the node is near the rectangle, False otherwise.
         """
-        safe_distance = 100 * weight  # Scale safe distance based on weight
-        return np.sqrt((x - ox) ** 2 + (y - oy) ** 2) < safe_distance
+        rx, ry, rw, rh = rect
+        buffer = 10  # Buffer distance around the rectangle
+        return rx - buffer <= x <= rx + rw + buffer and ry - buffer <= y <= ry + rh + buffer
 
-    def check_collision(self, point1, point2):
+    def check_collision_with_rects(self, point1, point2):
         """
-        Check if a line segment between two points intersects any obstacles.
+        Check if a line segment between two points intersects any rectangular obstacles.
         Args:
-            point1, point2: Endpoints of the line segment.
+            point1: Tuple (x1, y1) representing the start point of the line segment.
+            point2: Tuple (x2, y2) representing the end point of the line segment.
         Returns:
             True if the line segment intersects any obstacle, False otherwise.
         """
-        for (ox, oy) in self.obstacles:
-            distance = self.point_to_segment_distance(point1, point2, (ox, oy))
-            if distance < 10:  # Collision threshold
+        for rect in self.obstacles:
+            if self.line_intersects_rect(point1, point2, rect):
                 return True
         return False
 
-    def point_to_segment_distance(self, p1, p2, p):
+
+    def line_intersects_rect(self, p1, p2, rect):
         """
-        Calculate the minimum distance from a point to a line segment.
+        Check if a line segment intersects a rectangle.
         Args:
             p1, p2: Endpoints of the line segment.
-            p: The point to calculate the distance to.
+            rect: Tuple (rx, ry, rw, rh) representing the rectangle.
         Returns:
-            The minimum distance from the point to the line segment.
+            True if the line segment intersects the rectangle, False otherwise.
         """
-        x1, y1 = p1
-        x2, y2 = p2
-        px, py = p
+        rx, ry, rw, rh = rect
+        rect_edges = [
+            ((rx, ry), (rx + rw, ry)),  # Top edge
+            ((rx, ry), (rx, ry + rh)),  # Left edge
+            ((rx + rw, ry), (rx + rw, ry + rh)),  # Right edge
+            ((rx, ry + rh), (rx + rw, ry + rh))   # Bottom edge
+        ]
+        for edge in rect_edges:
+            if self.line_segments_intersect(p1, p2, edge[0], edge[1]):
+                return True
+        return False
 
-        # Compute the projection of the point onto the line segment
-        line_mag = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-        if line_mag < 1e-6:  # Avoid division by zero
-            return np.sqrt((px - x1) ** 2 + (py - y1) ** 2)
+    def line_segments_intersect(self, p1, p2, q1, q2):
+        """
+        Check if two line segments intersect.
+        Args:
+            p1, p2: Endpoints of the first line segment.
+            q1, q2: Endpoints of the second line segment.
+        Returns:
+            True if the line segments intersect, False otherwise.
+        """
+        def ccw(a, b, c):
+            return (c[1] - a[1]) * (b[0] - a[0]) > (b[1] - a[1]) * (c[0] - a[0])
 
-        u = ((px - x1) * (x2 - x1) + (py - y1) * (y2 - y1)) / (line_mag ** 2)
-        u = max(0, min(1, u))  # Clamp u to the range [0, 1]
+        return ccw(p1, q1, q2) != ccw(p2, q1, q2) and ccw(p1, p2, q1) != ccw(p1, p2, q2)
 
-        # Compute the closest point on the line segment
-        closest_x = x1 + u * (x2 - x1)
-        closest_y = y1 + u * (y2 - y1)
-
-        # Compute the distance from the point to the closest point
-        return np.sqrt((px - closest_x) ** 2 + (py - closest_y) ** 2)
