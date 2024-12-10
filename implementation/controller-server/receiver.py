@@ -3,7 +3,7 @@ import json
 import multiprocessing
 from websockets import connect
 from spherov2 import scanner
-from spherov2.sphero_edu import SpheroEduAPI
+from sphero_subclass import MySpheroEduAPI
 from spherov2.types import Color
 from PIL import ImageColor
 import time
@@ -139,7 +139,7 @@ def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=F
                 time.sleep(5)
 
         try:
-            with SpheroEduAPI(toy) as droid:
+            with MySpheroEduAPI(toy) as droid:
                 
                 if first_run_bool:
                     logging.info(f"{client_id}: Calibrating compass.")
