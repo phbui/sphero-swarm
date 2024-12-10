@@ -23,7 +23,7 @@ function handleConnection(ws, clientType) {
  * Handles the connection of a SpheroController and its associated Spheros.
  * Adds each Sphero to the `clients` list.
  * @param {WebSocket} ws - The WebSocket connection.
- * @param {Array} sphespheroListros - List of Sphero objects being controlled.
+ * @param {Array} spheroList - List of Sphero objects being controlled.
  */
 function handleControllerConnection(ws, spheroList) {
   spheros = spheroList;
@@ -34,18 +34,29 @@ function handleControllerConnection(ws, spheroList) {
   intializeSpheros();
 }
 
+/**
+ * Handles the connection of the Brain Server.
+ * Adds the Brain Server to the `clients` list.
+ * @param {WebSocket} ws - The WebSocket connection.
+ */
 function handleBrainConnection(ws) {
   console.log(`Client connected: [SpheroBrain]`);
   clients.push({ clientType: "SpheroBrain", id: "SpheroBrain", ws: ws });
   intializeSpheros();
 }
 
+/**
+ * Initializes the Spheros by notifying the Brain Server of their connection.
+ */
 function intializeSpheros() {
   if (spheros.length > 0) {
     sendMessageToClient("SpheroBrain", "SpheroConnection", spheros);
   }
 }
 
+/**
+ * Notifies the Brain Server that all Spheros are ready.
+ */
 function readyBrain() {
   if (spheros.length > 0) {
     sendMessageToClient("SpheroBrain", "SpheroReady", {});
@@ -73,7 +84,12 @@ function sendMessageToClient(id, messageType, message) {
 /**
  * Sends a movement command to a specific Sphero.
  * @param {string} id - The ID of the Sphero to move.
- * @param {Array} path - A list of coordinate pairs for the Sphero to follow.
+ * @param {number} current_x - Current x-coordinate of the Sphero.
+ * @param {number} current_y - Current y-coordinate of the Sphero.
+ * @param {number} target_x - Target x-coordinate for the Sphero.
+ * @param {number} target_y - Target y-coordinate for the Sphero.
+ * @param {number} last_x - Last x-coordinate the Sphero moved to.
+ * @param {number} last_y - Last y-coordinate the Sphero moved to.
  */
 function moveSphero(
   id,
@@ -91,6 +107,9 @@ function moveSphero(
   });
 }
 
+/**
+ * Sends an LED matrix pattern to all connected Spheros.
+ */
 function matrixCall() {
   clients.forEach((client) => {
     if (
@@ -103,6 +122,11 @@ function matrixCall() {
   });
 }
 
+/**
+ * Marks a specific Sphero as ready and checks if all Spheros are ready.
+ * @param {string} sphero_id - The ID of the Sphero.
+ * @returns {boolean} True if all Spheros are ready, otherwise false.
+ */
 function handleReady(sphero_id) {
   const sphero = spheros.find((s) => s.id === sphero_id);
 
@@ -121,8 +145,7 @@ function handleReady(sphero_id) {
 }
 
 /**
- * Handles messages sent by SpheroControllers.
- * Processes different message types such as "SpheroConnection" and "SpheroFeedback".
+ * Processes messages from SpheroControllers.
  * @param {WebSocket} ws - The WebSocket connection.
  * @param {Object} parsedMessage - The message received from the client.
  */
@@ -130,20 +153,19 @@ function handleControllerMessage(ws, parsedMessage) {
   let messageType = parsedMessage.messageType;
 
   switch (messageType) {
-    case "SpheroConnection": // SpheroController is connecting its Spheros
+    case "SpheroConnection":
       let spheroList = parsedMessage.spheros;
       handleControllerConnection(ws, spheroList);
       break;
 
-    case "SpheroReady": // SpheroController is connecting its Spheros
+    case "SpheroReady":
       let sphero_id = parsedMessage.id;
       if (handleReady(sphero_id)) {
         readyBrain();
-        //matrixCall();
       }
       break;
 
-    case "SpheroFeedback": // Feedback from a SpheroController
+    case "SpheroFeedback":
       sendMessageToClient(
         "SpheroBrain",
         "SpheroFeedback",
@@ -153,6 +175,11 @@ function handleControllerMessage(ws, parsedMessage) {
   }
 }
 
+/**
+ * Processes messages from the Brain Server.
+ * @param {WebSocket} ws - The WebSocket connection.
+ * @param {Object} parsedMessage - The message received from the Brain Server.
+ */
 function handleBrainMessage(ws, parsedMessage) {
   let messageType = parsedMessage.messageType;
 
@@ -176,6 +203,11 @@ function handleBrainMessage(ws, parsedMessage) {
   }
 }
 
+/**
+ * Routes incoming messages to the appropriate handler based on the client type.
+ * @param {WebSocket} ws - The WebSocket connection.
+ * @param {Object} parsedMessage - The message received from the client.
+ */
 function handleClientMessage(ws, parsedMessage) {
   let clientType = parsedMessage.clientType;
 
@@ -186,7 +218,7 @@ function handleClientMessage(ws, parsedMessage) {
     case "SpheroBrain":
       handleBrainMessage(ws, parsedMessage);
       break;
-    default: // General client connection
+    default:
       handleConnection(ws, clientType);
       break;
   }
@@ -194,7 +226,6 @@ function handleClientMessage(ws, parsedMessage) {
 
 // Listen for new WebSocket connections
 wss.on("connection", (ws) => {
-  // Handle incoming messages from clients
   ws.on("message", (message) => {
     let parsedMessage = JSON.parse(message.toString());
     try {
@@ -204,7 +235,6 @@ wss.on("connection", (ws) => {
     }
   });
 
-  // Remove the client from the `clients` list when they disconnect
   ws.on("close", () => {
     console.log("A client has disconnected.");
     clients = clients.filter((client) => client.ws !== ws);

@@ -6,7 +6,14 @@ import asyncio
 import json
 
 def send_message(ws, id, message_type, message_content):
-    """Sends a message to the WebSocket server in a non-async way."""
+    """
+    Sends a message to the WebSocket server in a non-async way.
+    Args:
+        ws: WebSocket connection instance.
+        id: Unique identifier for the message sender.
+        message_type: Type of message (e.g., "BrainControl").
+        message_content: Content of the message to be sent.
+    """
     try:
         # Prepare the message
         message = {
@@ -26,9 +33,14 @@ def send_message(ws, id, message_type, message_content):
         print(f"WebSocket: Error sending message: {e}")
 
 async def _send_message_async(ws, message):
-    """Async function to send the message via the WebSocket connection."""
+    """
+    Async function to send the message via the WebSocket connection.
+    Args:
+        ws: WebSocket connection instance.
+        message: JSON-formatted message to send.
+    """
     try:
-        await ws.send( message)
+        await ws.send(message)
     except Exception as e:
         print(f"WebSocket: Error sending message: {e}")
 
@@ -37,10 +49,11 @@ class Drone:
         """
         Initialize a Drone (Sphero) with its display, ID, and color.
         Args:
+            camera: Camera instance for localization.
             display: The display instance for visualization.
             sphero_id: Unique identifier for the Sphero.
             sphero_color: Color used for identifying the Sphero.
-            map: Reference to the Map instance.
+            map: Reference to the Map instance containing PRM and obstacles.
         """
         self.display = display
         self.sphero_id = sphero_id
@@ -49,7 +62,7 @@ class Drone:
         self.localizer = Localizer.Localizer(camera, display, sphero_color, 100)
         self.map = map
         if len(self.map.goal) == 4:
-            # map.goal = (x_min, y_min, x_max, y_max)
+            # If the goal is represented as a rectangle, use its center as the target goal
             x_min, y_min, x_max, y_max = self.map.goal
             goal_x = (x_min + x_max) / 2
             goal_y = (y_min + y_max) / 2
@@ -58,8 +71,8 @@ class Drone:
             # Assume goal is already a tuple (x, y)
             self.goal = self.map.goal
         self.prm_nodes = self.map.nodes  # Set PRM nodes from the map
-        self.last_x = -1
-        self.last_y = -1
+        self.last_x = -1  # Last known x-coordinate of the drone
+        self.last_y = -1  # Last known y-coordinate of the drone
         # State Machine for the Drone
         self.states = [
             {
@@ -167,7 +180,6 @@ class Drone:
 
                 self.move(next_point[0], next_point[1])
                 send_message(ws, self.sphero_id, "BrainControl", message_content)
-
 
     def _reaching_goal(self):
         """

@@ -10,15 +10,15 @@ class Camera:
             display (Display): The display instance to update.
             camera_index (int): Index of the camera to use (default: 0).
         """
-        self.display = display
-        self.camera_index = camera_index
-        self.cap = cv2.VideoCapture(self.camera_index, cv2.CAP_DSHOW)
-        self.width = 0
-        self.height = 0
-        self.x_min = 0
-        self.x_max = 0
-        self.y_min = 0
-        self.y_max = 0
+        self.display = display  # Reference to a Display instance for visualization
+        self.camera_index = camera_index  # Camera index for accessing the video stream
+        self.cap = cv2.VideoCapture(self.camera_index, cv2.CAP_DSHOW)  # Initialize camera capture
+        self.width = 0  # Width of the camera frame
+        self.height = 0  # Height of the camera frame
+        self.x_min = 0  # Minimum x-coordinate in world units
+        self.x_max = 0  # Maximum x-coordinate in world units
+        self.y_min = 0  # Minimum y-coordinate in world units
+        self.y_max = 0  # Maximum y-coordinate in world units
 
         if not self.cap.isOpened():
             raise ValueError(f"Unable to access camera at index {self.camera_index}")
@@ -26,8 +26,8 @@ class Camera:
         # Get initial frame dimensions
         ret, frame = self.cap.read()
         if ret:
-            self.height, self.width, _ = frame.shape
-            self.update_coordinate_bounds()
+            self.height, self.width, _ = frame.shape  # Set the frame dimensions
+            self.update_coordinate_bounds()  # Update the coordinate bounds based on dimensions
         else:
             raise ValueError("Failed to capture initial frame from camera.")
 
@@ -35,14 +35,16 @@ class Camera:
         """
         Update the map's coordinate bounds based on the current image dimensions.
         """
-        self.x_min = -self.width / (2 * SCALE_FACTOR)
-        self.x_max = self.width / (2 * SCALE_FACTOR)
-        self.y_min = -self.height / (2 * SCALE_FACTOR)
-        self.y_max = self.height / (2 * SCALE_FACTOR)
+        self.x_min = -self.width / (2 * SCALE_FACTOR)  # Convert pixel width to world units
+        self.x_max = self.width / (2 * SCALE_FACTOR)  # Convert pixel width to world units
+        self.y_min = -self.height / (2 * SCALE_FACTOR)  # Convert pixel height to world units
+        self.y_max = self.height / (2 * SCALE_FACTOR)  # Convert pixel height to world units
 
     def capture_image(self):
         """
         Capture an image from the camera and update the display.
+        Returns:
+            frame (numpy.ndarray): Captured frame from the camera.
         """
         ret, frame = self.cap.read()
         if ret:
@@ -56,4 +58,4 @@ class Camera:
         """
         Release the camera resource.
         """
-        self.cap.release()
+        self.cap.release()  # Release the camera to free system resources

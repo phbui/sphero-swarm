@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import random
+
 class Map:
     def __init__(self, display):
         """
@@ -8,11 +9,11 @@ class Map:
         Args:
             display: Reference to the Display class for visualization.
         """
-        self.display = display
-        self.obstacles = []
-        self.goal = None
-        self.nodes = []
-        self.edges = []
+        self.display = display  # Reference to a display object for visualization
+        self.obstacles = []  # List to store obstacle rectangles
+        self.goal = None  # Variable to store the goal region
+        self.nodes = []  # List of PRM nodes
+        self.edges = []  # List of PRM edges
 
     def calculate_obstacle_weight(self, area):
         """
@@ -23,7 +24,7 @@ class Map:
             A weight value.
         """
         # Normalize the area to a range (e.g., between 0.1 and 1.0)
-        max_area = 1000  # Adjust based on expected maximum obstacle size
+        max_area = 1000 
         min_weight = 0.1
         max_weight = 1.0
 
@@ -31,16 +32,16 @@ class Map:
         weight = min_weight + (max_weight - min_weight) * min(area, max_area) / max_area
         return weight
 
-
     def process_image(self):
         """
         Process the input image to detect obstacles and the goal.
         """
-        image = self.display.get_image()
-        # Convert the image to HSV color space
+        image = self.display.get_image()  # Get the current image from the display
+
+        # Convert the image to HSV color space for easier color detection
         hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-        # Define color ranges for obstacles and goal
+        # Define color ranges for detecting obstacles and the goal
         obstacle_range = {
             "lower": np.array([5, 45, 60]),
             "upper": np.array([30, 255, 255])
@@ -50,31 +51,30 @@ class Map:
             "upper": np.array([125, 255, 100])
         }
 
-        # Create a mask for the obstacles (rectangle A)
+        # Create a mask for detecting obstacles
         obstacle_mask = cv2.inRange(hsv_image, obstacle_range["lower"], obstacle_range["upper"])
 
-        # Detect contours in the filtered obstacle mask
+        # Detect contours in the obstacle mask
         contours, _ = cv2.findContours(obstacle_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         # Initialize storage for obstacles and weights
         self.obstacles = []
         self.obstacle_weights = {}
 
-        max_area = 1000  # Maximum area for a single rectangle
+        max_area = 1000  # Maximum allowed area for an obstacle
 
         for contour in contours:
-            # Calculate the bounding box and area of the contour
+            # Calculate the bounding box and area of each contour
             x, y, w, h = cv2.boundingRect(contour)
             area = w * h
 
             if area > 100:  # Ignore small noise-like regions
-                # Create a filled mask of the contour
+                # Create a filled mask for the current contour
                 contour_mask = np.zeros_like(obstacle_mask)
                 cv2.drawContours(contour_mask, [contour], -1, 255, thickness=cv2.FILLED)
 
-                # Process the contour to generate smaller bounding rectangles
                 if area > max_area:
-                    # Split the large filled rectangle
+                    # Split large rectangles into smaller regions
                     num_splits = int((area + max_area - 1) // max_area)
                     aspect_ratio = w / h
                     num_x_splits = max(1, int(np.sqrt(num_splits * aspect_ratio)))
@@ -88,52 +88,41 @@ class Map:
                             split_x = x + i * split_width
                             split_y = y + j * split_height
 
-                            # Adjust width/height for the last split if uneven
+                            # Adjust dimensions for uneven splits
                             actual_width = split_width if i < num_x_splits - 1 else w - i * split_width
                             actual_height = split_height if j < num_y_splits - 1 else h - j * split_height
 
-                            # Check if the rectangle overlaps with the actual mask
+                            # Check overlap with the original contour mask
                             mask_region = contour_mask[split_y:split_y + actual_height, split_x:split_x + actual_width]
-                            if cv2.countNonZero(mask_region) > 0:  # Check if any part of the rectangle is in the mask
+                            if cv2.countNonZero(mask_region) > 0:
                                 split_rect = (split_x, split_y, actual_width, actual_height)
-
-                                # Calculate weight for the sub-rectangle
                                 split_area = actual_width * actual_height
                                 split_weight = self.calculate_obstacle_weight(split_area)
 
-                                # Store and visualize the sub-rectangles
+                                # Store and visualize the split rectangle
                                 self.obstacles.append(split_rect)
                                 self.obstacle_weights[split_rect] = split_weight
                                 self.display.draw_rectangle(f"obstacle_{split_rect}", split_x, split_y, actual_width, actual_height, weight=split_weight, color="#FFA500")
                 else:
-                    # If the rectangle is within the size limit, process it directly
+                    # Process rectangles within size limits
                     mask_region = contour_mask[y:y + h, x:x + w]
-                    if cv2.countNonZero(mask_region) > 0:  # Check if any part of the rectangle is in the mask
+                    if cv2.countNonZero(mask_region) > 0:
                         filled_rect = (x, y, w, h)
-
-                        # Calculate weight based on area
                         weight = self.calculate_obstacle_weight(area)
-
-                        # Store and visualize the rectangle
                         self.obstacles.append(filled_rect)
                         self.obstacle_weights[filled_rect] = weight
                         self.display.draw_rectangle(f"obstacle_{filled_rect}", x, y, w, h, weight=weight, color="#FFA500")
 
-        # Detect goal
+        # Detect the goal region
         goal_mask = cv2.inRange(hsv_image, goal_range["lower"], goal_range["upper"])
         contours, _ = cv2.findContours(goal_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         if contours:
-            # Assuming the goal is the largest detected region
+            # Use the largest detected region as the goal
             largest_contour = max(contours, key=cv2.contourArea)
             x, y, w, h = cv2.boundingRect(largest_contour)
-
-            # Store the goal as a rectangle
             self.goal = (x, y, w, h)
-
-            # Visualize the goal rectangle
             self.display.draw_rectangle("goal", x, y, w, h, weight=1.0, color="#0000FF")
-
 
     def generate_prm(self, num_nodes=200, initial_radius=100, max_radius=1000):
         """
@@ -143,20 +132,19 @@ class Map:
             initial_radius: Starting distance to connect nodes.
             max_radius: Maximum distance to connect nodes.
         """
-        # Process the image to detect obstacles and goal
-        self.process_image()
+        self.process_image()  # Process the image to detect obstacles and the goal
 
-        # Initialize nodes and edges
+        # Initialize nodes and edges for the PRM
         self.nodes = []
         self.edges = []
 
         height, width = self.display.height, self.display.width
 
-        # Add goal as an area if detected
-        if self.goal:  # Assume self.goal is (x, y, w, h)
+        if self.goal:
+            # Add the goal center as a node
             gx, gy, gw, gh = self.goal
-            goal_center = (gx + gw // 2, gy + gh // 2)  # Use center of the goal area
-            self.nodes.append(goal_center)  # Add the center of the goal area as a node
+            goal_center = (gx + gw // 2, gy + gh // 2)
+            self.nodes.append(goal_center)
             self.display.draw_point("goal_node", goal_center[1], goal_center[0], weight=0.2, color="#0000FF")
         else:
             print("No goal detected.")
@@ -164,8 +152,8 @@ class Map:
         if not self.obstacles:
             print("No obstacles detected.")
 
-        # Generate random nodes
-        max_attempts = 1000  # Limit attempts to avoid infinite loops
+        # Generate random nodes avoiding obstacles
+        max_attempts = 1000
         attempts = 0
         while len(self.nodes) < num_nodes and attempts < max_attempts:
             x, y = random.randint(0, width - 1), random.randint(0, height - 1)
@@ -174,7 +162,7 @@ class Map:
                 self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
             attempts += 1
 
-        # Dynamically adjust the connection radius to ensure at least 5 connections per node
+        # Connect nodes within a dynamic radius
         for i, (x1, y1) in enumerate(self.nodes):
             current_radius = initial_radius
             connections = 0
@@ -185,12 +173,12 @@ class Map:
                         distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
                         if distance <= current_radius and not self.check_collision_with_rects((x1, y1), (x2, y2)):
                             edge = ((x1, y1), (x2, y2))
-                            if edge not in self.edges:  # Prevent duplicate edges
+                            if edge not in self.edges:
                                 self.edges.append(edge)
                                 self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
                                 connections += 1
                 if connections < 5:
-                    current_radius += 50  # Increase radius if fewer than 5 connections
+                    current_radius += 50
 
     def is_near_obstacle_rect(self, x, y, rect):
         """
@@ -218,7 +206,6 @@ class Map:
             if self.line_intersects_rect(point1, point2, rect):
                 return True
         return False
-
 
     def line_intersects_rect(self, p1, p2, rect):
         """
@@ -254,4 +241,3 @@ class Map:
             return (c[1] - a[1]) * (b[0] - a[0]) > (b[1] - a[1]) * (c[0] - a[0])
 
         return ccw(p1, q1, q2) != ccw(p2, q1, q2) and ccw(p1, p2, q1) != ccw(p1, p2, q2)
-

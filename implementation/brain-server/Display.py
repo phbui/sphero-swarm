@@ -6,11 +6,14 @@ class Display:
     mouse_y = 0
 
     def __init__(self):
-        self.image = None
-        self.width = None
-        self.height = None
-        self.drawings = []
-        self.lock = threading.Lock()
+        """
+        Initialize the Display class to manage image display and drawing functionality.
+        """
+        self.image = None  # Current image to be displayed
+        self.width = None  # Width of the current image
+        self.height = None  # Height of the current image
+        self.drawings = []  # List to store drawing instructions (e.g., points, lines, rectangles)
+        self.lock = threading.Lock()  # Lock for thread-safe operations
         self.running = True  # Controls the display loop
 
     def set_image(self, image):
@@ -32,7 +35,7 @@ class Display:
         """
         with self.lock:
             return self.image
-        
+
     def hex_to_bgr(self, hex_color):
         """
         Convert a hex color code to BGR format.
@@ -46,7 +49,7 @@ class Display:
         hex_color = hex_color.lstrip('#')  # Remove the '#' if present
         if len(hex_color) != 6:
             raise ValueError(f"Invalid hex color: {hex_color}")
-        
+
         # Convert hex to RGB
         r = int(hex_color[0:2], 16)
         g = int(hex_color[2:4], 16)
@@ -67,7 +70,7 @@ class Display:
         """
         # Convert hex to BGR
         color = self.hex_to_bgr(color)
-        
+
         with self.lock:
             # Remove any existing drawings with the same ID
             self.drawings = [drawing for drawing in self.drawings if drawing["id"] != id]
