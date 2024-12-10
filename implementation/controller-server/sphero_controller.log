@@ -4884,3 +4884,192 @@ ile specified
 2024-12-10 10:07:21,217 [INFO] WebSocket: Sent connection initialization.
 2024-12-10 10:07:21,298 [INFO] WebSocket Sender: Connected to the server.
 2024-12-10 10:07:21,304 [INFO] SB-2E86: Attempting to connect.
+2024-12-10 10:07:26,683 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:07:28,456 [INFO] SB-4844: Attempting to connect.
+2024-12-10 10:07:30,363 [INFO] SB-7104: Attempting to connect.
+2024-12-10 10:07:30,981 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:07:31,287 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:07:33,205 [INFO] SB-D8B2: Attempting to connect.
+2024-12-10 10:07:33,893 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:07:34,830 [INFO] Main: All processes started.
+2024-12-10 10:07:35,394 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-10 10:07:36,642 [INFO] SB-4844: Calibrating compass.
+2024-12-10 10:07:38,401 [INFO] SB-7104: Calibrating compass.
+2024-12-10 10:07:39,662 [INFO] SB-2E86: Calibrating compass.
+2024-12-10 10:07:40,146 [INFO] SB-D8B2: Calibrating compass.
+2024-12-10 10:07:40,907 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:07:41,006 [INFO] SB-4844: Initialization complete.
+2024-12-10 10:07:41,007 [INFO] SB-4844: Subscribed to message bus.
+2024-12-10 10:07:42,640 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:07:42,682 [INFO] SB-7104: Initialization complete.
+2024-12-10 10:07:42,683 [INFO] SB-7104: Subscribed to message bus.
+2024-12-10 10:07:43,957 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:07:43,984 [INFO] SB-2E86: Initialization complete.
+2024-12-10 10:07:43,985 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-10 10:07:44,390 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:07:44,394 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:07:44,438 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:07:44,442 [INFO] SB-D8B2: Initialization complete.
+2024-12-10 10:07:44,443 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-10 10:07:44,464 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:07:44,495 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:11:58,602 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-10 10:11:58,605 [WARNING] WebSocket: Closing connection.
+2024-12-10 10:11:58,956 [INFO] Main: All processes terminated.
+2024-12-10 10:12:06,814 [INFO] WebSocket: Connected to the server.
+2024-12-10 10:12:06,816 [INFO] WebSocket: Sent connection initialization.
+2024-12-10 10:12:06,836 [INFO] SB-2E86: Attempting to connect.
+2024-12-10 10:12:06,836 [INFO] WebSocket Sender: Connected to the server.
+2024-12-10 10:12:11,685 [INFO] SB-4844: Attempting to connect.
+2024-12-10 10:12:12,119 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:12:12,494 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:12:16,139 [INFO] SB-7104: Attempting to connect.
+2024-12-10 10:12:17,276 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:12:17,730 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:12:19,436 [INFO] SB-4844: Calibrating compass.
+2024-12-10 10:12:20,470 [INFO] SB-D8B2: Attempting to connect.
+2024-12-10 10:12:21,611 [INFO] Main: All processes started.
+2024-12-10 10:12:22,122 [INFO] SB-7104: Calibrating compass.
+2024-12-10 10:12:23,770 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:12:23,799 [INFO] SB-4844: Initialization complete.
+2024-12-10 10:12:23,801 [INFO] SB-4844: Subscribed to message bus.
+2024-12-10 10:12:26,006 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:12:26,103 [INFO] SB-2E86: Calibrating compass.
+2024-12-10 10:12:26,404 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:12:26,485 [INFO] SB-7104: Initialization complete.
+2024-12-10 10:12:26,487 [INFO] SB-7104: Subscribed to message bus.
+2024-12-10 10:12:30,465 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:12:30,468 [INFO] SB-2E86: Initialization complete.
+2024-12-10 10:12:30,469 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-10 10:12:36,081 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:12:46,130 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:12:56,223 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:13:01,321 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-10 10:13:22,580 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-10 10:13:22,582 [WARNING] WebSocket: Closing connection.
+2024-12-10 10:13:22,768 [INFO] Main: All processes terminated.
+2024-12-10 10:13:28,350 [INFO] WebSocket: Connected to the server.
+2024-12-10 10:13:28,351 [INFO] WebSocket: Sent connection initialization.
+2024-12-10 10:13:28,381 [INFO] SB-2E86: Attempting to connect.
+2024-12-10 10:13:28,404 [INFO] WebSocket Sender: Connected to the server.
+2024-12-10 10:13:32,690 [INFO] SB-4844: Attempting to connect.
+2024-12-10 10:13:33,608 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:13:36,268 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:13:36,851 [INFO] SB-7104: Attempting to connect.
+2024-12-10 10:13:37,281 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:13:41,900 [INFO] SB-D8B2: Attempting to connect.
+2024-12-10 10:13:42,656 [INFO] SB-4844: Calibrating compass.
+2024-12-10 10:13:43,533 [INFO] Main: All processes started.
+2024-12-10 10:13:43,651 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:13:43,836 [INFO] SB-7104: Calibrating compass.
+2024-12-10 10:13:46,786 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-10 10:13:46,912 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:13:46,988 [INFO] SB-4844: Initialization complete.
+2024-12-10 10:13:46,988 [INFO] SB-4844: Subscribed to message bus.
+2024-12-10 10:13:48,120 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:13:48,220 [INFO] SB-7104: Initialization complete.
+2024-12-10 10:13:48,222 [INFO] SB-7104: Subscribed to message bus.
+2024-12-10 10:13:51,165 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:13:53,960 [INFO] SB-D8B2: Calibrating compass.
+2024-12-10 10:13:58,362 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:13:58,417 [INFO] SB-D8B2: Initialization complete.
+2024-12-10 10:13:58,445 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-10 10:13:59,075 [INFO] SB-2E86: Calibrating compass.
+2024-12-10 10:14:03,344 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:14:03,350 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:14:03,394 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:14:03,427 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:14:03,449 [INFO] SB-2E86: Initialization complete.
+2024-12-10 10:14:03,452 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-10 10:14:03,520 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:14:32,734 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-10 10:14:32,737 [WARNING] WebSocket: Closing connection.
+2024-12-10 10:14:32,941 [INFO] Main: All processes terminated.
+2024-12-10 10:14:56,088 [INFO] SB-2E86: Attempting to connect.
+2024-12-10 10:14:56,092 [INFO] WebSocket: Connected to the server.
+2024-12-10 10:14:56,092 [INFO] WebSocket: Sent connection initialization.
+2024-12-10 10:14:56,096 [INFO] WebSocket Sender: Connected to the server.
+2024-12-10 10:14:57,538 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:15:03,265 [INFO] SB-4844: Attempting to connect.
+2024-12-10 10:15:03,295 [INFO] SB-2E86: Calibrating compass.
+2024-12-10 10:15:06,706 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:15:07,475 [INFO] SB-7104: Attempting to connect.
+2024-12-10 10:15:07,480 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:15:07,606 [INFO] SB-2E86: Initialization complete.
+2024-12-10 10:15:07,620 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-10 10:15:08,261 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:15:11,898 [INFO] Main: All processes started.
+2024-12-10 10:15:12,532 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: [WinError -2147024894] The system cannot find the file specified.
+2024-12-10 10:15:12,544 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-10 10:15:12,944 [INFO] SB-D8B2: Attempting to connect.
+2024-12-10 10:15:13,669 [INFO] SB-4844: Calibrating compass.
+2024-12-10 10:15:17,929 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:15:17,970 [INFO] SB-4844: Initialization complete.
+2024-12-10 10:15:17,972 [INFO] SB-4844: Subscribed to message bus.
+2024-12-10 10:15:18,517 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:15:20,445 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:15:25,760 [INFO] SB-7104: Calibrating compass.
+2024-12-10 10:15:28,601 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:15:30,186 [INFO] SB-7104: Initialization complete.
+2024-12-10 10:15:30,188 [INFO] SB-7104: Subscribed to message bus.
+2024-12-10 10:15:30,203 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:15:38,692 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-10 10:15:43,923 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-10 10:16:11,399 [ERROR] SB-D8B2: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:16:26,641 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-10 10:20:43,219 [INFO] SB-2E86: Attempting to connect.
+2024-12-10 10:20:43,232 [INFO] WebSocket: Connected to the server.
+2024-12-10 10:20:43,232 [INFO] WebSocket: Sent connection initialization.
+2024-12-10 10:20:43,235 [INFO] WebSocket Sender: Connected to the server.
+2024-12-10 10:20:43,303 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:20:47,234 [INFO] SB-4844: Attempting to connect.
+2024-12-10 10:20:47,325 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:20:47,521 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:20:47,521 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-10 10:20:51,228 [INFO] SB-7104: Attempting to connect.
+2024-12-10 10:20:51,333 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:20:51,542 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:20:51,542 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-10 10:20:52,856 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:20:55,230 [INFO] SB-D8B2: Attempting to connect.
+2024-12-10 10:20:55,360 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-10 10:20:55,486 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:20:55,486 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-10 10:20:56,591 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:20:57,094 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:20:57,094 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-10 10:20:58,929 [INFO] Main: All processes started.
+2024-12-10 10:21:00,562 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:21:01,158 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:21:01,160 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-10 10:21:02,138 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:21:05,185 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:21:05,186 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-10 10:21:06,066 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:21:06,066 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-10 10:21:07,142 [ERROR] SB-D8B2: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-10 10:21:07,142 [WARNING] SB-D8B2: Sphero connection closed. Retrying...
+2024-12-10 10:21:09,586 [INFO] SB-4844: Connected to Sphero.
+2024-12-10 10:21:10,277 [INFO] SB-7104: Connected to Sphero.
+2024-12-10 10:21:11,200 [INFO] SB-2E86: Connected to Sphero.
+2024-12-10 10:21:12,353 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-10 10:21:13,229 [INFO] SB-4844: Calibrating compass.
+2024-12-10 10:21:14,310 [INFO] SB-7104: Calibrating compass.
+2024-12-10 10:21:15,889 [INFO] SB-2E86: Calibrating compass.
+2024-12-10 10:21:17,574 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:21:17,608 [INFO] SB-4844: Initialization complete.
+2024-12-10 10:21:17,646 [INFO] SB-4844: Subscribed to message bus.
+2024-12-10 10:21:17,862 [INFO] SB-D8B2: Calibrating compass.
+2024-12-10 10:21:18,664 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:21:18,706 [INFO] SB-7104: Initialization complete.
+2024-12-10 10:21:18,707 [INFO] SB-7104: Subscribed to message bus.
+2024-12-10 10:21:20,192 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:21:20,270 [INFO] SB-2E86: Initialization complete.
+2024-12-10 10:21:20,270 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-10 10:21:22,067 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-10 10:21:22,071 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:21:22,091 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:21:22,106 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:21:22,125 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMatrix","message":"X"}
+2024-12-10 10:21:22,178 [INFO] SB-D8B2: Initialization complete.
+2024-12-10 10:21:22,179 [INFO] SB-D8B2: Subscribed to message bus.
