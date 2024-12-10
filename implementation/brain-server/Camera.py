@@ -1,5 +1,4 @@
 import cv2
-import time
 
 SCALE_FACTOR = 50  # 1 unit of distance = 50 pixels
 
@@ -49,6 +48,7 @@ class Camera:
         if ret:
             print("Image captured.")
             self.display.set_image(frame)  # Update the display with the captured frame
+            return frame
         else:
             print("Failed to capture image.")
 

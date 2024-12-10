@@ -12,7 +12,8 @@ color_ranges = {
 
 
 class Localizer:
-    def __init__(self, display, color, num_particles):
+    def __init__(self, camera, display, color, num_particles):
+        self.camera = camera
         self.display = display
         self.color = color
         self.num_particles = num_particles
@@ -22,7 +23,7 @@ class Localizer:
 
     def updateParticles(self):
         # Capture the current frame
-        image = self.display.get_image()
+        image = self.camera.capture_image()
         height, width = image.shape[:2]  # Extract height and width from the image
 
         # Extract the region of interest (mask) based on the target color
