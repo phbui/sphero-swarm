@@ -186,7 +186,7 @@ if __name__ == "__main__":
             {"id": "SB-4844", "color": "#FF0000", "ready": False},
             {"id": "SB-7104", "color": "#008000", "ready": False},
             {"id": "SB-D8B2", "color": "#00FFFF", "ready": False},
-            {"id": "SB-E12C", "color": "#964B00", "ready": False}
+            {"id": "SB-E12C", "color": "#DFFF00", "ready": False}
         ]
 
         message_bus = manager.dict({sphero["id"]: manager.list() for sphero in spheros})
