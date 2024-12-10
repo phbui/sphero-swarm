@@ -32,8 +32,9 @@ class SpheroMovement:
             deltax = target[0] - current[0]
             deltay = target[1] - current[1]
 
-            rad = math.atan2(-deltax, deltay)
+            rad = math.atan2(deltax, deltay)
             deg = rad * (180 / math.pi)
+            deg = 90 - deg
             if deg < 0:
                 deg += 360
 
@@ -72,6 +73,13 @@ class SpheroMovement:
                     self.droid.set_matrix_line(1,0,7,6,Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(0,1,6,7,Color(r=255, g=0, b=0))
                 elif self.client_id == "SB-4844" or self.client_id == "SB-7104":
+                    self.droid.set_matrix_line(0,7,7,0,Color(r=255,g=0,b=0))
+                    self.droid.set_matrix_line(0,6,6,0,Color(r=255, g=0, b=0))
+                    self.droid.set_matrix_line(1,7,7,1,Color(r=255, g=0, b=0))
+                elif self.client_id == "SB-E12C":
+                    self.droid.set_matrix_line(0,0,7,7,Color(r=255,g=0,b=0))
+                    self.droid.set_matrix_line(1,0,7,6,Color(r=255, g=0, b=0))
+                    self.droid.set_matrix_line(0,1,6,7,Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(0,7,7,0,Color(r=255,g=0,b=0))
                     self.droid.set_matrix_line(0,6,6,0,Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(1,7,7,1,Color(r=255, g=0, b=0))
