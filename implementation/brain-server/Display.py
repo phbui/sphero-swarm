@@ -9,6 +9,9 @@ COLOR_MAP = {
 }
 
 class Display:
+    mouse_x = 0
+    mouse_y = 0
+
     def __init__(self):
         self.image = None
         self.width = None
@@ -69,8 +72,8 @@ class Display:
             weight: Weight or size of the object.
             color: The color in hex.
         """
-        # Get the color from the COLOR_MAP dictionary
-        color = self.hex_to_bgr(color) # Default to black if not found
+        # Convert hex to BGR
+        color = self.hex_to_bgr(color)
         
         with self.lock:
             # Remove any existing drawings with the same ID
@@ -94,7 +97,7 @@ class Display:
         with self.lock:
             # Remove any existing drawings with the same ID
             self.drawings = [drawing for drawing in self.drawings if drawing["id"] != id]
-            # Add the new line drawing with the specified color
+            # Add the new line drawing
             self.drawings.append({
                 "id": id,
                 "start": point1,
@@ -102,7 +105,6 @@ class Display:
                 "weight": weight,
                 "color": color
             })
-
 
     def draw_rectangle(self, id, x, y, w, h, weight, color):
         """
@@ -120,7 +122,7 @@ class Display:
         with self.lock:
             # Remove any existing drawings with the same ID
             self.drawings = [drawing for drawing in self.drawings if drawing["id"] != id]
-            # Add the new rectangle drawing with the specified color
+            # Add the new rectangle drawing
             self.drawings.append({
                 "id": id,
                 "x": x,
@@ -131,26 +133,37 @@ class Display:
                 "color": color
             })
 
+    @staticmethod
+    def mouse_callback(event, x, y, flags, param):
+        """
+        Mouse callback to update mouse_x, mouse_y when moving the cursor over the display window.
+        """
+        if event == cv2.EVENT_MOUSEMOVE:
+            Display.mouse_x = x
+            Display.mouse_y = y
+
     def show(self):
         """
         Continuously display the current image with any drawings.
         """
+        cv2.namedWindow("Display")
+        cv2.setMouseCallback("Display", self.mouse_callback)
+
         while self.running:
             image = self.get_image()
             if image is not None:
                 with self.lock:
-                    # Create a copy to draw overlays on
                     overlay_image = image.copy()
 
                     # Draw all the overlays
                     for drawing in self.drawings:
-                        if "x" in drawing and "y" in drawing and "w" in drawing and "h" in drawing:  # Rectangle handling
+                        if "x" in drawing and "y" in drawing and "w" in drawing and "h" in drawing:  # Rectangle
                             x = int(drawing["x"])
                             y = int(drawing["y"])
                             w = int(drawing["w"])
                             h = int(drawing["h"])
                             weight = max(1, int(drawing["weight"] * 5))  # Scale thickness
-                            color = drawing["color"]  # Use the specified color (in BGR)
+                            color = drawing["color"]  # Use the specified color (BGR)
 
                             cv2.rectangle(
                                 overlay_image,
@@ -159,34 +172,45 @@ class Display:
                                 color=color,
                                 thickness=weight
                             )
-                        elif "x" in drawing and "y" in drawing:  # Point handling
+                        elif "x" in drawing and "y" in drawing:  # Point
                             x = int(drawing["x"])
                             y = int(drawing["y"])
                             radius = int(drawing["weight"] * 50)  # Example scaling
-                            color = drawing["color"]  # Use the specified color (in BGR)
+                            color = drawing["color"]
 
                             cv2.circle(
                                 overlay_image,
-                                (y, x),  # Pass the integer coordinates
+                                (y, x),  # Note: (y, x) order in OpenCV for display
                                 radius=radius,
-                                color=color,  # Use the specified color
+                                color=color,
                                 thickness=2
                             )
-                        elif "start" in drawing and "end" in drawing:  # Line handling
+                        elif "start" in drawing and "end" in drawing:  # Line
                             start_x, start_y = drawing["start"]
                             end_x, end_y = drawing["end"]
 
-                            # Ensure weight is a valid thickness
                             weight = max(1, min(int(drawing["weight"] * 5), 255))  # Scale and clamp thickness
-                            color = drawing["color"]  # Use the specified color (in BGR)
+                            color = drawing["color"]
 
                             cv2.line(
                                 overlay_image,
-                                (int(start_y), int(start_x)),  # Start coordinates (y, x)
-                                (int(end_y), int(end_x)),  # End coordinates (y, x)
+                                (int(start_y), int(start_x)),  # (y, x)
+                                (int(end_y), int(end_x)),  # (y, x)
                                 color=color,
                                 thickness=weight
                             )
+
+                # Display mouse coordinates on the image
+                mouse_text = f"X: {self.mouse_x}, Y: {self.mouse_y}"
+                cv2.putText(
+                    overlay_image,
+                    mouse_text,
+                    (10, 30),  # Position in the image (x, y)
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    1.0,  # Font scale
+                    (255, 255, 255),  # White text
+                    2  # Thickness
+                )
 
                 # Resize the overlay image to max half the screen width while maintaining the aspect ratio
                 screen_width = 1920
@@ -200,7 +224,6 @@ class Display:
                     new_height = int(new_width * aspect_ratio)
                     overlay_image = cv2.resize(overlay_image, (new_width, new_height))
 
-                # Show the image in a window
                 cv2.imshow("Display", overlay_image)
                 if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit
                     self.running = False
@@ -208,7 +231,6 @@ class Display:
             else:
                 # If no image is set, wait briefly before checking again
                 cv2.waitKey(100)
-
 
     def stop(self):
         """

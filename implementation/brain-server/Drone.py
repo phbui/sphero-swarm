@@ -33,7 +33,7 @@ async def _send_message_async(ws, message):
         print(f"WebSocket: Error sending message: {e}")
 
 class Drone:
-    def __init__(self, display, sphero_id, sphero_color, map):
+    def __init__(self, camera, display, sphero_id, sphero_color, map):
         """
         Initialize a Drone (Sphero) with its display, ID, and color.
         Args:
@@ -46,7 +46,7 @@ class Drone:
         self.sphero_id = sphero_id
         self.sphero_color = sphero_color
         print(f"Sphero Initialized: {sphero_id}")
-        self.localizer = Localizer.Localizer(display, sphero_color, 100)
+        self.localizer = Localizer.Localizer(camera, display, sphero_color, 100)
         self.map = map
         if len(self.map.goal) == 4:
             # map.goal = (x_min, y_min, x_max, y_max)

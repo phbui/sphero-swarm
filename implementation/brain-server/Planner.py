@@ -14,7 +14,7 @@ class Planner:
         self.display_thread.start()
         self.map = Map.Map(self.display)
         self.map.generate_prm()
-        self.spheros = [Drone.Drone(self.display, sphero["id"], sphero["color"],  self.map) for sphero in spheros]
+        self.spheros = [Drone.Drone(self.camera, self.display, sphero["id"], sphero["color"],  self.map) for sphero in spheros]
 
     def start(self, ws):
         """Iterate over all Spheros and trigger their next moves."""
