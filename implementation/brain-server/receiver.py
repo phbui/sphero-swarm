@@ -21,7 +21,6 @@ class WebSocketHandler:
                     self.planner.start(ws)  
 
                 case "SpheroFeedback":
-                    print("Executing next move.")
                     self.planner.next_move(ws, message)  
 
     async def websocket_receiver(self):

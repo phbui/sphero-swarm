@@ -1,13 +1,6 @@
 import threading
 import cv2
 
-COLOR_MAP = {
-    'red': (0, 0, 255),     # Red in BGR
-    'blue': (255, 0, 0),    # Blue in BGR
-    'green': (0, 255, 0),   # Green in BGR
-    'yellow': (0, 255, 255) # Yellow in BGR
-}
-
 class Display:
     mouse_x = 0
     mouse_y = 0
