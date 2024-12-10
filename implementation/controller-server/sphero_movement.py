@@ -32,8 +32,9 @@ class SpheroMovement:
             deltax = target[0] - current[0]
             deltay = target[1] - current[1]
 
-            rad = math.atan2(-deltax, deltay)
+            rad = math.atan2(deltax, deltay)
             deg = rad * (180 / math.pi)
+            deg = 90 - deg
             if deg < 0:
                 deg += 360
 
