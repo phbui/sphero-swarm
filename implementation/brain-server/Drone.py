@@ -67,6 +67,38 @@ class Drone:
             self.last_x = -1  # Last known x-coordinate of the drone
             self.last_y = -1  # Last known y-coordinate of the drone
             self.current_state_index = 0  # Start with "move_to_goal"
+            self.states = [
+            {
+                "state": "move_to_goal",
+                "description": "Sphero navigates towards the goal.",
+                "transitions": [
+                    {
+                        "condition": "Reached goal threshold distance",
+                        "next_state": "reaching_goal"
+                    }
+                ]
+            },
+            {
+                "state": "reaching_goal",
+                "description": "Sphero adjusts its position to precisely align with the goal.",
+                "transitions": [
+                    {
+                        "condition": "Precisely aligned with the goal",
+                        "next_state": "interact"
+                    }
+                ]
+            },
+            {
+                "state": "interact",
+                "description": "Sphero executes interaction behavior.",
+                "transitions": [
+                    {
+                        "condition": "Interaction complete",
+                        "next_state": None
+                    }
+                ]
+            }
+        ]
         except Exception as e:
             print(f"Error initializing Drone: {e}")
 
