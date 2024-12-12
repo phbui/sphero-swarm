@@ -3,7 +3,7 @@ import cv2
 SCALE_FACTOR = 50  # 1 unit of distance = 50 pixels
 
 class Camera:
-    def __init__(self, display, camera_index=1):
+    def __init__(self, display, camera_index=0):
         """
         Initialize the Camera class.
         Args:
@@ -48,7 +48,6 @@ class Camera:
         """
         ret, frame = self.cap.read()
         if ret:
-            print("Image captured.")
             self.display.set_image(frame)  # Update the display with the captured frame
             return frame
         else:
