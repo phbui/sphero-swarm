@@ -102,36 +102,36 @@ def send_message_to_server(outgoing_queue, id, messageType, message):
         logging.error(f"Error adding message to outgoing queue: {e}")
 
 # This function processes incoming messages for a specific Sphero
-def process_subscriber(client_id, client_color, message_bus, outgoing_queue, sphero):
+def process_subscriber(sphero_id, sphero_color, message_bus, outgoing_queue, sphero):
     """
     Process messages from the message bus for a specific Sphero.
 
     Args:
-        client_id: Sphero ID.
-        client_color: Color of the Sphero.
+        sphero_id: Sphero ID.
+        sphero_color: Color of the Sphero.
         message_bus: Dictionary containing message lists for each Sphero.
         outgoing_queue: Queue for sending outgoing messages.
         sphero: SpheroMovement instance for controlling the Sphero.
     """
-    logging.info(f"{client_id}: Subscribed to message bus.")
+    logging.info(f"{sphero_id}: Subscribed to message bus.")
     while True:
         try:
-            if message_bus[client_id]:
-                parsed_message = json.loads(message_bus[client_id].pop(0))
+            if message_bus[sphero_id]:
+                parsed_message = json.loads(message_bus[sphero_id].pop(0))
                 message_type = parsed_message["messageType"]
                 message_content = parsed_message["message"]
-                handle_message(client_id, client_color, message_type, message_content, outgoing_queue, sphero)
+                handle_message(sphero_id, sphero_color, message_type, message_content, outgoing_queue, sphero)
         except Exception as e:
-            logging.error(f"{client_id}: Error in subscriber: {e}")
+            logging.error(f"{sphero_id}: Error in subscriber: {e}")
 
 # This function handles specific messages for the Sphero
-def handle_message(id, client_color, message_type, message, outgoing_queue, sphero):
+def handle_message(id, sphero_color, message_type, message, outgoing_queue, sphero):
     """
     Handle specific commands for the Sphero.
 
     Args:
         id: Sphero ID.
-        client_color: Color of the Sphero.
+        sphero_color: Color of the Sphero.
         message_type: Type of the message.
         message: Content of the message.
         outgoing_queue: Queue for sending outgoing messages.
@@ -161,20 +161,20 @@ def handle_message(id, client_color, message_type, message, outgoing_queue, sphe
         logging.warning(f"Sphero {id}: Unhandled message type: {message_type}")
 
 # This function runs the Sphero connection and processes messages
-def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=False):
+def run_sphero(sphero_id, sphero_color, message_bus, outgoing_queue, first_run=False):
     """
     Initialize and manage the connection to a specific Sphero.
 
     Args:
-        client_id: Sphero ID.
-        client_color: Color of the Sphero.
+        sphero_id: Sphero ID.
+        sphero_color: Color of the Sphero.
         message_bus: Dictionary containing message lists for each Sphero.
         outgoing_queue: Queue for sending outgoing messages.
         first_run: Boolean indicating if this is the first connection attempt.
     """
-    logging.info(f"{client_id}: Attempting to connect.")
-    rgb = ImageColor.getrgb(client_color)
-    client_color = Color(r=rgb[0], g=rgb[1], b=rgb[2])
+    logging.info(f"{sphero_id}: Attempting to connect.")
+    rgb = ImageColor.getrgb(sphero_color)
+    sphero_color = Color(r=rgb[0], g=rgb[1], b=rgb[2])
     first_run_bool = first_run
 
     while True:  # Retry loop
@@ -183,35 +183,35 @@ def run_sphero(client_id, client_color, message_bus, outgoing_queue, first_run=F
         # Attempt to find and connect to the Sphero
         while toy is None:
             try:
-                toy = scanner.find_toy(toy_name=client_id)
-                logging.info(f"{client_id}: Connected to Sphero.")
+                toy = scanner.find_toy(toy_name=sphero_id)
+                logging.info(f"{sphero_id}: Connected to Sphero.")
             except scanner.ToyNotFoundError:
-                logging.warning(f"{client_id}: Sphero not found. Ensure it is powered on and in range. Retrying...")
+                logging.warning(f"{sphero_id}: Sphero not found. Ensure it is powered on and in range. Retrying...")
                 time.sleep(5)
             except Exception as e:
-                logging.error(f"{client_id}: Unexpected error: {e}")
+                logging.error(f"{sphero_id}: Unexpected error: {e}")
                 time.sleep(5)
 
         try:
             with MySpheroEduAPI(toy) as droid:
 
                 if first_run_bool:
-                    logging.info(f"{client_id}: Calibrating compass.")
+                    logging.info(f"{sphero_id}: Calibrating compass.")
                     droid.calibrate_compass()
                     droid.set_compass_direction(0)
-                    send_message_to_server(outgoing_queue, client_id, "SpheroReady", "Ready")
+                    send_message_to_server(outgoing_queue, sphero_id, "SpheroReady", "Ready")
                     first_run_bool = False
-                droid.set_main_led(client_color)
-                logging.info(f"{client_id}: Initialization complete.")
-                sphero = SpheroMovement(droid, client_id, client_color, outgoing_queue)
-                process_subscriber(client_id, client_color, message_bus, outgoing_queue, sphero)
+                droid.set_main_led(sphero_color)
+                logging.info(f"{sphero_id}: Initialization complete.")
+                sphero = SpheroMovement(droid, sphero_id, sphero_color, outgoing_queue)
+                process_subscriber(sphero_id, sphero_color, message_bus, outgoing_queue, sphero)
 
         except Exception as e:
-            logging.error(f"{client_id}: Failed to initialize or maintain connection to Sphero: {e}")
+            logging.error(f"{sphero_id}: Failed to initialize or maintain connection to Sphero: {e}")
 
         finally:
             # Clean up and prepare for retry
-            logging.warning(f"{client_id}: Sphero connection closed. Retrying...")
+            logging.warning(f"{sphero_id}: Sphero connection closed. Retrying...")
             time.sleep(5)  # Retry delay before attempting to reconnect
 
 # WebSocket processes

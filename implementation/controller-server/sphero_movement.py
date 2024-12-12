@@ -3,19 +3,19 @@ from multiprocessing import Process
 from spherov2.types import Color
 
 class SpheroMovement:
-    def __init__(self, droid, client_id, client_color, outgoing_queue):
+    def __init__(self, droid, sphero_id, sphero_color, outgoing_queue):
         """
         Initialize the SpheroMovement class to manage Sphero movements and feedback.
 
         Args:
             droid: Persistent SpheroEduAPI instance to control the Sphero.
-            client_id: Unique identifier for the Sphero client.
-            client_color: Color for the Sphero's main LED.
+            sphero_id: Unique identifier for the Sphero client.
+            sphero_color: Color for the Sphero's main LED.
             outgoing_queue: Queue for sending feedback messages.
         """
         self.droid = droid
-        self.client_id = client_id
-        self.client_color = client_color
+        self.sphero_id = sphero_id
+        self.sphero_color = sphero_color
         self.outgoing_queue = outgoing_queue
         self.multiplier = 0.3  # Timing adjustment for movements
 
@@ -29,7 +29,7 @@ class SpheroMovement:
         try:
             message_json = {
                 "clientType": "SpheroController",
-                "id": self.client_id,
+                "id": self.sphero_id,
                 "messageType": "SpheroFeedback",
                 "message": message
             }
@@ -48,7 +48,7 @@ class SpheroMovement:
             target: Tuple (x, y) representing the target position.
         """
         try:
-            self.droid.set_main_led(self.client_color)  # Set the main LED to the client color
+            self.droid.set_main_led(self.sphero_color)  # Set the main LED to the client color
 
             deltax = target[0] - current[0]
             deltay = target[1] - current[1]
@@ -66,7 +66,7 @@ class SpheroMovement:
             self.droid.roll(0, 30, math.sqrt(deltax ** 2 + deltay ** 2) * self.multiplier)
         except Exception as e:
             print(f"Error in move: {e}")
-        self.send_feedback("Done")
+        self.send_feedback(self.sphero_id)
 
     def move_direction(self, direction, duration):
         """
@@ -85,7 +85,7 @@ class SpheroMovement:
         angle = directions.get(direction.lower(), 0)  # Default to 0 degrees if direction is invalid
 
         try:
-            self.droid.set_main_led(self.client_color)  # Set the main LED to the client color
+            self.droid.set_main_led(self.sphero_color)  # Set the main LED to the client color
             self.droid.set_compass_direction(angle)  # Set the compass direction
             self.droid.roll(0, 30, duration)  # Move the Sphero
         except Exception as e:
@@ -105,15 +105,15 @@ class SpheroMovement:
                 self.droid.set_compass_direction(0)  # Reset compass direction
 
                 # Define patterns for specific Spheros
-                if self.client_id == "SB-2E86" or self.client_id == "SB-D8B2":
+                if self.sphero_id == "SB-2E86" or self.sphero_id == "SB-D8B2":
                     self.droid.set_matrix_line(0, 0, 7, 7, Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(1, 0, 7, 6, Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(0, 1, 6, 7, Color(r=255, g=0, b=0))
-                elif self.client_id == "SB-4844" or self.client_id == "SB-7104":
+                elif self.sphero_id == "SB-4844" or self.sphero_id == "SB-7104":
                     self.droid.set_matrix_line(0, 7, 7, 0, Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(0, 6, 6, 0, Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(1, 7, 7, 1, Color(r=255, g=0, b=0))
-                elif self.client_id == "SB-E12C":
+                elif self.sphero_id == "SB-E12C":
                     self.droid.set_matrix_line(0, 0, 7, 7, Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(1, 0, 7, 6, Color(r=255, g=0, b=0))
                     self.droid.set_matrix_line(0, 1, 6, 7, Color(r=255, g=0, b=0))
