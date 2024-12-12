@@ -1,0 +1,10 @@
+2024-12-12 15:07:43,281 [INFO] SB-4844: Attempting to connect.
+2024-12-12 15:07:44,160 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 15:07:45,828 [INFO] Main: All processes started.
+2024-12-12 15:07:47,334 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-12 15:07:47,335 [WARNING] WebSocket: Closing connection.
+2024-12-12 15:07:47,350 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-12 15:07:47,350 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 15:07:49,001 [INFO] SB-4844: Calibrating compass.
+2024-12-12 15:07:54,291 [INFO] SB-4844: Initialization complete.
+2024-12-12 15:07:54,291 [INFO] SB-4844: Subscribed to message bus.

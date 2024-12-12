@@ -33,6 +33,7 @@ class Drone:
                 self.goal = self.map.goal
             print(f"Goat at: {self.goal}")
             self.prm_nodes = self.map.nodes  # Set PRM nodes from the map
+            self.goal_node = self.find_closest_node(self.goal)
             self.last_x = -1  # Last known x-coordinate of the drone
             self.last_y = -1  # Last known y-coordinate of the drone
             # State Machine for the Drone
@@ -86,8 +87,6 @@ class Drone:
             Tuple (x, y) representing the new position.
         """
         try:
-            print(f"Sphero [{self.sphero_id}] moving to y: {target_y}, x: {target_x}")
-
             # Draw a line from the current position to the target position
             line_id = f"{self.sphero_id}-vector"
             self.display.draw_line(
@@ -192,12 +191,31 @@ class Drone:
         except Exception as e:
             print(f"Error transitioning state: {e}")
 
-    def _find_path(self, start, goal):
+    def find_closest_node(self, position):
+        """
+        Find the closest node to a given position based on x and y coordinates.
+        Args:
+            nodes: List of PRM nodes as (x, y) tuples.
+            position: Target position as (x, y) tuple.
+        Returns:
+            Closest node as a tuple (x, y).
+        """
+        closest_node = None
+        min_distance = float('inf')
+
+        for node in self.prm_nodes:
+            distance = np.sqrt((node[0] - position[0]) ** 2 + (node[1] - position[1]) ** 2)
+            if distance < min_distance:
+                min_distance = distance
+                closest_node = node
+
+        return closest_node
+
+    def _find_path(self, start):
         """
         Find the shortest path from start to goal using the PRM nodes.
         Args:
             start: Starting position as a tuple (x, y).
-            goal: Goal position as a tuple (x, y).
         Returns:
             List of tuples representing the path.
         """
@@ -206,10 +224,24 @@ class Drone:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
 
-            # KDTree for nearest neighbors
-            tree = KDTree(self.prm_nodes)
-            start_idx = int(tree.query(start)[1])  # Closest PRM node to start
-            goal_idx = int(tree.query(goal)[1])   # Closest PRM node to goal
+            closest_node = self.find_closest_node(start)
+            start_idx = self.prm_nodes.index(closest_node)
+
+            print(self.prm_nodes)
+        
+            print(f"Closet Node: {closest_node}")
+
+            goal_idx = self.prm_nodes.index(self.goal_node)
+    
+            # Check if the drone is already close to any PRM node
+            distance_to_closest_node = self._euclidean_distance(start, closest_node)
+            close_threshold = 10.0  # Threshold to determine if already close
+
+            path = []
+
+            if distance_to_closest_node > close_threshold:
+                # Add the closest node as the first step in the path
+                path.append(closest_node)
 
             # Priority queue for A* search
             pq = []
@@ -240,19 +272,19 @@ class Drone:
                     if neighbor_idx not in cost_so_far or new_cost < cost_so_far[neighbor_idx]:
                         cost_so_far[neighbor_idx] = new_cost
                         priority = new_cost + self._euclidean_distance(
-                            self.prm_nodes[neighbor_idx], self.prm_nodes[goal_idx]
+                            self.prm_nodes[neighbor_idx], self.goal_node
                         )
                         heapq.heappush(pq, (priority, neighbor_idx))
                         came_from[neighbor_idx] = current_idx
 
             # Reconstruct the path
-            path = []
             current_idx = goal_idx
             while current_idx is not None:
                 if current_idx < 0 or current_idx >= len(self.prm_nodes):
                     return []
                 path.append(self.prm_nodes[current_idx])
                 current_idx = came_from.get(current_idx)
+
             path.reverse()
 
             print(f"Sphero [{self.sphero_id}] found path: {path}")
@@ -294,7 +326,7 @@ class Drone:
             planner: Reference to the Planner instance.
         """
         try:
-            trajectory = self._find_path(current_position, self.goal)
+            trajectory = self._find_path(current_position)
             self.planner.add_trajectory((trajectory, current_position, self))
             print(f"Sphero [{self.sphero_id}] submitted trajectory: {trajectory}")
         except Exception as e:

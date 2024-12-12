@@ -143,7 +143,7 @@ class Planner:
                     if drone.sphero_id not in collision_ids:
                         print(f"No collision detected for Drone {drone.sphero_id}. Moving to next point.")
                         if len(trajectory) > 1:
-                            self._notify_and_move_drone(drone, trajectory[1])
+                            self._notify_and_move_drone(drone, drone_pos, trajectory[1])
                         else:
                             print(f"Drone {drone.sphero_id} has reached its final destination.")
 
@@ -189,31 +189,87 @@ class Planner:
 
     def _adjust_paths(self, drone1, drone1_pos, drone2, drone2_pos):
         """
-        Adjust the paths of two drones to mitigate collision risk and notify them of updated paths.
+        Adjust the paths of two drones to mitigate collision risk using PRM and dynamic path adjustments.
         Args:
             drone1: First drone involved in the collision risk.
             drone2: Second drone involved in the collision risk.
+            drone1_pos: Current position of drone1.
+            drone2_pos: Current position of drone2.
         """
         try:
             print(f"Adjusting paths for {drone1.sphero_id} & {drone2.sphero_id}")
 
-            # Re-plan paths for both drones
-            new_path1 = drone1._find_path(drone1_pos, drone1.goal)
-            new_path2 = drone2._find_path(drone2_pos, drone2.goal)
+            # Re-plan paths using PRM nodes
+            new_path1 = drone1._find_path(drone1_pos)
+            new_path2 = drone2._find_path(drone2_pos)
 
-            if len(new_path1) > 1:
-                self._notify_and_move_drone(drone1, drone1_pos, new_path1[1])
+            # Check if paths have potential collision points
+            collision_nodes = self._find_collision_nodes(new_path1, new_path2)
+
+            if collision_nodes:
+                print(f"Collision detected on nodes: {collision_nodes}")
+                # Adjust paths to avoid collision nodes
+                adjusted_path1 = self._reroute_path(new_path1, collision_nodes)
+                adjusted_path2 = self._reroute_path(new_path2, collision_nodes)
+
+                # Update paths and notify drones
+                if len(adjusted_path1) > 1:
+                    self._notify_and_move_drone(drone1, drone1_pos, adjusted_path1[1])
+                else:
+                    print(f"Drone {drone1.sphero_id} has no valid adjusted path.")
+
+                if len(adjusted_path2) > 1:
+                    self._notify_and_move_drone(drone2, drone2_pos, adjusted_path2[1])
+                else:
+                    print(f"Drone {drone2.sphero_id} has no valid adjusted path.")
             else:
-                print(f"Drone {drone1.sphero_id} has no valid path adjustments.")
+                # If no collision detected, proceed with original paths
+                if len(new_path1) > 1:
+                    self._notify_and_move_drone(drone1, drone1_pos, new_path1[1])
+                else:
+                    print(f"Drone {drone1.sphero_id} has no valid path adjustments.")
 
-            if len(new_path2) > 1:
-                self._notify_and_move_drone(drone2, drone2_pos, new_path2[1])
-            else:
-                print(f"Drone {drone2.sphero_id} has no valid path adjustments.")
+                if len(new_path2) > 1:
+                    self._notify_and_move_drone(drone2, drone2_pos, new_path2[1])
+                else:
+                    print(f"Drone {drone2.sphero_id} has no valid path adjustments.")
 
-            print(f"Paths adjusted for Drone {drone1.sphero_id} and Drone {drone2.sphero_id}")
         except Exception as e:
             print(f"Error adjusting paths: {e}")
+
+    def _find_collision_nodes(self, path1, path2):
+        """
+        Find collision points between two paths based on shared PRM nodes.
+        Args:
+            path1: Path of the first drone as a list of PRM nodes.
+            path2: Path of the second drone as a list of PRM nodes.
+        Returns:
+            A set of nodes that are shared between the two paths (potential collision points).
+        """
+        return set(path1).intersection(path2)
+
+    def _reroute_path(self, path, collision_nodes):
+        """
+        Reroute a path to avoid specified collision nodes using the PRM.
+        Args:
+            path: Original path as a list of PRM nodes.
+            collision_nodes: Set of nodes to avoid.
+        Returns:
+            Adjusted path that avoids collision nodes, if possible.
+        """
+        adjusted_path = []
+        for node in path:
+            if node not in collision_nodes:
+                adjusted_path.append(node)
+            else:
+                # Attempt to find an alternate neighboring node
+                neighbors = self.map._get_neighbors(self.map.nodes.index(node))
+                for neighbor in neighbors:
+                    if neighbor not in collision_nodes and neighbor not in adjusted_path:
+                        adjusted_path.append(neighbor)
+                        break
+        return adjusted_path
+
 
     def _notify_and_move_drone(self, drone, current_position, target_point):
         """

@@ -31,7 +31,7 @@ class WebSocketHandler:
                     self.planner.start(ws)  # Start the Planner when all Spheros are ready
                 case "SpheroFeedback":
                     print(f"Next move for {id}")
-                    self.planner.next_move(message)  # Process feedback and plan the next move
+                    #self.planner.next_move(message)  # Process feedback and plan the next move
 
     async def websocket_receiver(self):
         """

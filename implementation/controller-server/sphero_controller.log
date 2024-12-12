@@ -1,0 +1,830 @@
+2024-12-12 13:33:08,666 [INFO] SB-4844: Attempting to connect.
+2024-12-12 13:33:08,707 [INFO] WebSocket: Connected to the server.
+2024-12-12 13:33:08,709 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 13:33:08,735 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 13:33:09,097 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:10,539 [INFO] Main: All processes started.
+2024-12-12 13:33:13,107 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:17,125 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:21,141 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:25,154 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:29,168 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:33,195 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:37,209 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:41,224 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:45,237 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:49,253 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:53,269 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:33:57,292 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:01,308 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:05,329 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:09,348 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:13,364 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:17,383 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:21,399 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:25,417 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:29,439 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:33,477 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:37,501 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:34:37,829 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 13:34:37,831 [WARNING] WebSocket: Closing connection.
+2024-12-12 13:34:37,878 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 13:34:37,879 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 13:34:57,000 [INFO] SB-4844: Attempting to connect.
+2024-12-12 13:34:57,005 [INFO] WebSocket: Connected to the server.
+2024-12-12 13:34:57,005 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 13:34:57,005 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 13:34:57,056 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:00,692 [INFO] Main: All processes started.
+2024-12-12 13:35:01,065 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:05,075 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:09,086 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:13,095 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:17,105 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:21,115 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:25,131 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:29,142 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:33,155 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:37,169 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:41,180 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:45,192 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:35:49,206 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:36:29,570 [INFO] SB-4844: Attempting to connect.
+2024-12-12 13:36:29,574 [INFO] WebSocket: Connected to the server.
+2024-12-12 13:36:29,574 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 13:36:29,578 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 13:36:29,635 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:36:33,268 [INFO] Main: All processes started.
+2024-12-12 13:36:33,660 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:36:37,671 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:36:41,684 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:36:45,702 [ERROR] SB-4844: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 13:36:50,995 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 13:36:56,108 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-12 13:36:56,109 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 13:37:02,395 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 13:37:07,436 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-12 13:37:07,436 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 13:37:17,362 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 13:37:21,057 [INFO] SB-4844: Calibrating compass.
+2024-12-12 13:37:26,318 [INFO] SB-4844: Initialization complete.
+2024-12-12 13:37:26,318 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 13:37:26,339 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 13:39:35,476 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 13:39:35,477 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,480 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,480 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,481 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,481 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,482 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,483 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,483 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,483 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,484 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,484 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,485 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,485 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,485 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,486 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,486 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,486 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,487 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,487 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,488 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,488 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,488 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,489 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,489 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,489 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,490 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,490 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,491 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,491 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,491 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,492 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,492 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,493 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,493 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,494 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,494 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,494 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,495 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,495 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,495 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,496 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,496 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,497 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,497 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,497 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,497 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,498 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,498 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,499 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,499 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,499 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,500 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,500 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,501 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,501 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,501 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,502 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,503 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,504 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,504 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,504 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,505 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,505 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,506 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,506 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,507 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,507 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,508 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,508 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,508 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,509 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,509 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,509 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,510 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,510 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,510 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 13:39:35,510 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:05:03,754 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:05:03,774 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:05:03,774 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:05:03,775 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:05:07,451 [INFO] Main: All processes started.
+2024-12-12 14:05:08,865 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 14:05:15,525 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:05:19,618 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:05:24,860 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:05:24,860 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:05:24,881 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:05:26,159 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[511.53968253968253,652.1111111111111],"targetLocation":[425,677],"lastTargetLocation":[-1,-1]}}
+2024-12-12 14:05:31,562 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 14:05:32,463 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[439.1,868.8727272727273],"targetLocation":[226,702],"lastTargetLocation":[425,677]}}
+2024-12-12 14:05:46,933 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 14:05:47,774 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[202.85714285714286,1423.3492063492063],"targetLocation":[89,664],"lastTargetLocation":[226,702]}}
+2024-12-12 14:05:50,562 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 14:05:50,565 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:06:18,141 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:06:18,141 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:06:18,141 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:06:18,145 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:06:18,737 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:06:21,818 [INFO] Main: All processes started.
+2024-12-12 14:06:26,409 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:06:31,671 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:06:31,671 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:06:31,741 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:06:34,361 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[238.08333333333334,1240.0555555555557],"targetLocation":[461,691],"lastTargetLocation":[-1,-1]}}
+2024-12-12 14:06:48,022 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:06:48,023 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:09:35,376 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:09:35,399 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:09:35,400 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:09:35,400 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:09:38,513 [INFO] Main: All processes started.
+2024-12-12 14:09:40,565 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 14:09:45,749 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:09:52,167 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: 
+2024-12-12 14:09:52,168 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 14:09:58,522 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:10:02,422 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:10:07,640 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:10:07,640 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:10:07,643 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:10:09,351 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[190.7710843373494,1423.0722891566265],"targetLocation":[177,634],"lastTargetLocation":[-1,-1]}}
+2024-12-12 14:10:50,088 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 14:12:19,218 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:12:19,221 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:12:19,248 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 14:12:19,250 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,262 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:12:19,264 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,265 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,268 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,268 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,271 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,274 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,276 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,277 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,278 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,279 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,281 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,282 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,286 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,287 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,288 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,290 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,291 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,292 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,293 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,294 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,295 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,296 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,297 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,298 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,298 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,299 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,300 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,301 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,302 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,303 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,304 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,305 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,305 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,306 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,308 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,308 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,309 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,310 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,311 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,311 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,312 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,312 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,313 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,314 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,315 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,315 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,316 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,316 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,318 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:12:19,318 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:13:10,836 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:13:10,839 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:13:10,840 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:13:10,846 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:13:14,529 [INFO] Main: All processes started.
+2024-12-12 14:13:15,908 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 14:13:23,223 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:13:27,862 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:13:33,123 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:13:33,124 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:13:33,154 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:13:35,078 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[197.70469798657717,1353.6711409395973],"targetLocation":[144,722],"lastTargetLocation":[-1,-1]}}
+2024-12-12 14:14:09,034 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 14:20:43,374 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:20:43,378 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:20:43,404 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 14:20:43,414 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,416 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,417 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,418 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,420 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,421 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,422 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,424 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,425 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 14:20:43,426 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,429 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:20:43,444 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,453 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,458 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,463 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,469 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,471 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,472 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,473 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,476 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,476 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,476 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,476 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,477 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,477 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,477 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,477 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,480 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:20:43,480 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:21:22,918 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:21:22,924 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:21:22,924 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:21:22,926 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:21:23,563 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:21:26,603 [INFO] Main: All processes started.
+2024-12-12 14:21:26,976 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:21:32,255 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:21:32,256 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:21:32,306 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:22:57,495 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 14:22:57,497 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 14:22:57,633 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:22:57,679 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:22:57,741 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:24:04,671 [INFO] Main: All processes started.
+2024-12-12 14:24:05,272 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:24:05,662 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:24:05,666 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:24:05,681 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:24:09,784 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:24:21,665 [WARNING] DD:D1:3C:95:48:44: unhandled services changed event
+2024-12-12 14:24:25,044 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00020005-574f-4f20-5370-6865726f2121 was not found!
+2024-12-12 14:24:25,050 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 14:24:32,459 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:24:38,786 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:24:44,157 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:24:44,157 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:24:44,233 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:26:26,368 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:26:26,370 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:26:26,397 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 14:26:26,397 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,415 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:26:26,427 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,428 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,430 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,432 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,444 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,465 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,466 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,470 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,474 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,475 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,477 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,482 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,484 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,485 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,486 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,488 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,489 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,490 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,491 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,492 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,493 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,495 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,495 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,498 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,499 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,500 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,501 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,502 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,505 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,506 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,507 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,508 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,509 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:26,510 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:26:59,170 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:26:59,175 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:26:59,175 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:26:59,175 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:27:00,103 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:27:02,887 [INFO] Main: All processes started.
+2024-12-12 14:27:07,041 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:27:12,405 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:27:12,406 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:27:12,432 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:28:14,598 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:28:14,599 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:28:14,619 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 14:28:14,619 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 14:28:14,627 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:28:14,628 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,636 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,644 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,651 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,652 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,653 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,654 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,656 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,656 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,657 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,657 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,658 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,658 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,659 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,659 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,661 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,662 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,663 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,663 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,665 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,665 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,666 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,667 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,668 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,669 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,670 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,671 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,672 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,673 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,674 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,675 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,676 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,677 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,678 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,679 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,679 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,680 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,681 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,682 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,682 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,683 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,683 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,684 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,684 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,685 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,685 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,686 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,686 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,687 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:14,687 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 14:28:46,562 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:28:46,578 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:28:46,579 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:28:46,579 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:28:49,631 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:28:50,246 [INFO] Main: All processes started.
+2024-12-12 14:28:55,131 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:29:00,381 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:29:00,382 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:29:00,463 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:30:33,620 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:30:33,626 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:30:33,636 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 14:30:33,637 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 14:30:33,639 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 14:30:33,639 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,641 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,650 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,652 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,652 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,655 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,659 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,662 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,670 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,673 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,684 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,689 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,690 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,691 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,694 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,696 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,698 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,702 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,703 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,704 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,704 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,705 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,706 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,706 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,709 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,709 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,711 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,712 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,713 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,715 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,716 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,717 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,718 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,719 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,719 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,720 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,720 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,721 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,721 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:30:33,723 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:00,414 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:31:00,423 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:31:00,423 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:31:00,425 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:31:04,098 [INFO] Main: All processes started.
+2024-12-12 14:31:05,493 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 14:31:12,123 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:31:16,868 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:31:22,146 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:31:22,146 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:31:22,157 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:31:43,907 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 14:31:43,908 [WARNING] WebSocket: Closing connection.
+2024-12-12 14:31:43,915 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,922 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,924 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,925 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,927 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,933 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,934 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,936 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,937 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,938 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,939 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,940 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,941 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,942 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,946 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,952 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,953 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,954 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,956 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,957 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,958 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,959 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,960 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,961 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,962 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,963 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,965 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,967 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,969 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,970 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,971 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,972 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,973 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,974 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,975 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,977 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,979 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,981 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,982 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,983 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,986 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,988 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,993 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,995 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,997 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,998 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:43,999 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,000 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,001 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,002 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,003 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,005 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,006 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,008 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,009 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,010 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:31:44,012 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 14:32:32,596 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 14:32:32,597 [INFO] WebSocket: Connected to the server.
+2024-12-12 14:32:32,597 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 14:32:32,599 [INFO] SB-4844: Attempting to connect.
+2024-12-12 14:32:33,513 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 14:32:36,263 [INFO] Main: All processes started.
+2024-12-12 14:32:38,321 [INFO] SB-4844: Calibrating compass.
+2024-12-12 14:32:43,704 [INFO] SB-4844: Initialization complete.
+2024-12-12 14:32:43,704 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 14:32:43,811 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 14:32:46,553 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[380.9550561797753,832.6516853932584],"targetLocation":[236,844],"lastTargetLocation":[-1,-1]}}
+2024-12-12 14:32:55,458 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 15:03:09,728 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,731 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,748 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 15:03:09,778 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 15:03:09,782 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,783 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,784 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,785 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,786 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,787 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,788 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,790 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,791 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,792 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,793 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,794 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,795 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,797 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,798 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,799 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,799 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,801 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,802 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,803 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,804 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,806 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,807 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,808 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,809 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,810 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,812 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,813 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,814 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,816 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,817 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,818 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,878 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:09,904 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:03:50,257 [INFO] SB-4844: Attempting to connect.
+2024-12-12 15:03:50,258 [INFO] WebSocket: Connected to the server.
+2024-12-12 15:03:50,259 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 15:03:50,261 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 15:03:51,723 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 15:03:53,970 [INFO] Main: All processes started.
+2024-12-12 15:03:56,457 [INFO] SB-4844: Calibrating compass.
+2024-12-12 15:04:01,808 [INFO] SB-4844: Initialization complete.
+2024-12-12 15:04:01,808 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 15:04:01,850 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 15:04:10,243 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 15:04:10,250 [WARNING] WebSocket: Closing connection.
+2024-12-12 15:04:10,265 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 15:04:10,275 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,283 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,285 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,288 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,288 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,289 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 15:04:10,293 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,297 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 15:04:10,297 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,299 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,303 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,305 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,306 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,307 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,308 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,309 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,311 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,313 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,314 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,315 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,316 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,318 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,319 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,319 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,320 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,322 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,323 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,324 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,324 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,325 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,326 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,326 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,327 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,328 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,329 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,330 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,331 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,331 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,332 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,333 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,333 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,334 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,335 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,337 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,338 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,339 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,340 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,342 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,343 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,345 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,346 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,347 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:10,348 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 15:04:59,135 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 15:04:59,143 [INFO] SB-4844: Attempting to connect.
+2024-12-12 15:04:59,151 [INFO] WebSocket: Connected to the server.
+2024-12-12 15:04:59,151 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 15:04:59,889 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 15:05:01,262 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Could not get GATT services: Unreachable
+2024-12-12 15:05:01,262 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 15:05:02,842 [INFO] Main: All processes started.
+2024-12-12 15:05:11,304 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 15:05:15,410 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 15:05:19,016 [INFO] SB-4844: Calibrating compass.
+2024-12-12 15:05:24,277 [INFO] SB-4844: Initialization complete.
+2024-12-12 15:05:24,277 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 15:05:24,316 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 15:05:25,729 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[331.1621621621622,1156.1216216216217],"targetLocation":[309,719],"lastTargetLocation":[-1,-1]}}
+2024-12-12 15:05:48,637 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 15:05:53,198 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 15:05:53,199 [WARNING] WebSocket: Closing connection.
+2024-12-12 15:05:53,226 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 15:05:53,226 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,227 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,228 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,228 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,229 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,229 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,229 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,230 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,230 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,231 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,232 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,232 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,233 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,234 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,234 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,235 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,236 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,236 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,237 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,237 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,237 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,238 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,239 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,239 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,240 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,240 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,240 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,241 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,241 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,241 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,241 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,242 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,242 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,244 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,244 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,244 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,245 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,245 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,246 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,246 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,246 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,247 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,247 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,248 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,248 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,248 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,249 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,249 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,249 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,250 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,250 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,251 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,251 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,251 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,251 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,252 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,252 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,253 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,253 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,253 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,253 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,254 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,254 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 15:05:53,254 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,255 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,255 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,256 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,257 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,257 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,258 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,258 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,258 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,259 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,259 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,260 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,260 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,261 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,261 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,261 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,261 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,263 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,264 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,264 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,264 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,264 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,265 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,265 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,265 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,266 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,266 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,266 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,267 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,267 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,268 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,268 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,269 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,269 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,270 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,270 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,271 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,271 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,272 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,272 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,272 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,273 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,273 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,273 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,274 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,274 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,274 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,275 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:05:53,275 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 15:06:29,109 [INFO] SB-4844: Attempting to connect.
+2024-12-12 15:06:29,117 [INFO] WebSocket: Connected to the server.
+2024-12-12 15:06:29,117 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 15:06:29,127 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 15:06:29,378 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 15:06:32,823 [INFO] Main: All processes started.
+2024-12-12 15:06:35,244 [INFO] SB-4844: Calibrating compass.
+2024-12-12 15:06:40,507 [INFO] SB-4844: Initialization complete.
+2024-12-12 15:06:40,507 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 15:06:40,553 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 15:06:42,989 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[587.4999999999999,114.49999999999999],"targetLocation":[597,380],"lastTargetLocation":[-1,-1]}}
+2024-12-12 15:06:50,283 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 15:06:50,284 [WARNING] WebSocket: Closing connection.
+2024-12-12 15:06:50,333 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 15:06:50,336 [WARNING] WebSocket Sender: Closing connection.
