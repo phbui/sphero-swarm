@@ -124,7 +124,7 @@ class Map:
             self.goal = (x, y, w, h)
             self.display.draw_rectangle("goal", x, y, w, h, weight=1.0, color="#0000FF")
 
-    def generate_prm(self, num_nodes=200, initial_radius=100, max_radius=1000):
+    def generate_prm(self, num_nodes=100, initial_radius=100, max_radius=500):
         """
         Generate a probabilistic roadmap (PRM) for path planning.
         Args:
@@ -167,7 +167,7 @@ class Map:
             current_radius = initial_radius
             connections = 0
 
-            while connections < 5 and current_radius <= max_radius:
+            while connections < 2 and current_radius <= max_radius:
                 for j, (x2, y2) in enumerate(self.nodes):
                     if i != j:
                         distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)

@@ -47,6 +47,10 @@ class Camera:
             frame (numpy.ndarray): Captured frame from the camera.
         """
         ret, frame = self.cap.read()
+
+        for _ in range(5):
+            ret, frame = self.cap.read()
+
         if ret:
             self.display.set_image(frame)  # Update the display with the captured frame
             return frame

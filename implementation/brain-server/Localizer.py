@@ -39,43 +39,33 @@ class Localizer:
             # Extract the region of interest (mask) based on the target color
             mask = self._getColorMask(image, self.color)
             points = np.column_stack(np.where(mask > 0))  # Extract pixel coordinates
+            print(f"Points (y,x) -{self.color}: {points}")
 
             # Fit a Gaussian Mixture Model to the color region
             if len(points) > 0:
-                 # Use pixel intensities as weights
-                weights = mask[points[:, 0], points[:, 1]]  # Extract pixel intensities
+                # Calculate the geometric center of the points (unweighted mean)
+                geometric_center = np.mean(points, axis=0)  # Average of all points
 
-                # Calculate the weighted center (center of mass)
-                weighted_center = np.average(points, axis=0, weights=weights)
-
-                # Fit a Gaussian Mixture Model initialized at the weighted center
+                # Fit a Gaussian Mixture Model initialized at the geometric center
                 gmm = GaussianMixture(
                     n_components=1,
-                    means_init=[weighted_center]  # Initialize mean to weighted center
+                    means_init=[geometric_center]  # Initialize mean to the geometric center
                 ).fit(points)
 
                 # Retrieve GMM mean and covariance
                 gmm_x, gmm_y = gmm.means_[0]
                 cov = gmm.covariances_[0]
             else:
-                # Handle edge case if no points are detected
+                # Handle case when no points are detected
                 height, width = mask.shape[:2]
-                gmm_x, gmm_y = width // 2, height // 2  # Default to center
+                gmm_x, gmm_y = width // 2, height // 2  # Default to image center
                 cov = np.eye(2)  # Default covariance
+
 
             # Update particle weights based on the GMM
             for particle in self.particles:
-                # Map particle coordinates to the mask pixel space
-                px, py = int(particle.x), int(particle.y)
-
-                # Ensure particle coordinates are within bounds
-                if 0 <= px < mask.shape[1] and 0 <= py < mask.shape[0]:
-                    # Combine GMM likelihood and mask intensity for weight calculation
-                    mask_weight = mask[py, px] / 255.0  # Normalize mask intensity to [0, 1]
-                    gmm_weight = self._calculateWeight(particle.x, particle.y, (gmm_x, gmm_y), cov)
-                    particle.weight = mask_weight * gmm_weight  # Use both sources for weight
-                else:
-                    particle.weight = 0  # Out-of-bounds particles have zero weight
+                gmm_weight = self._calculateWeight(particle.x, particle.y, (gmm_x, gmm_y), cov)
+                particle.weight = gmm_weight 
 
             # Normalize weights
             self._normalizeWeights()
@@ -159,19 +149,51 @@ class Localizer:
             lower_bound, upper_bound = self._getColorBounds(color)  # Get color bounds
             mask = cv2.inRange(hsv_image, lower_bound, upper_bound)  # Generate mask
 
-            # Create a black background and overlay the mask
-            # screen_width = 1920
-            # screen_height = 1080
-            # quarter_width = screen_width // 4
-            # quarter_height = screen_height // 4
+            kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
-            # black_background = np.zeros((quarter_height, quarter_width), dtype=np.uint8)
-            # mask_resized = cv2.resize(mask, (quarter_width, quarter_height))
-            # overlay_image = cv2.merge((black_background, mask_resized, black_background))  # Optional: convert to 3 channels if needed
+            moments = cv2.moments(mask)
+            if moments["m00"] > 0:
+                center_x = int(moments["m10"] / moments["m00"])
+                center_y = int(moments["m01"] / moments["m00"])
+            else:
+                center_x, center_y = -1, -1
+
+
+        
+
+            # Create a black background and overlay the mask
+            screen_width = 1920
+            screen_height = 1080
+            quarter_width = screen_width // 4
+            quarter_height = screen_height // 4
+
+            black_background = np.zeros((quarter_height, quarter_width), dtype=np.uint8)
+            mask_resized = cv2.resize(mask, (quarter_width, quarter_height))
+            overlay_image = cv2.merge((black_background, mask_resized, black_background))  # Optional: convert to 3 channels if needed
+
+            if center_x >= 0 and center_y >= 0:
+                scaled_center_x = int(center_x * (quarter_width / mask.shape[1]))
+                scaled_center_y = int(center_y * (quarter_height / mask.shape[0]))
+
+                # Add a label with coordinates to the overlay image
+                cv2.circle(overlay_image, (scaled_center_x, scaled_center_y), 5, (0, 255, 0), -1)  # Green dot
+                label = f"({center_y}, {center_x})"
+                cv2.putText(
+                    overlay_image,
+                    label,
+                    (scaled_center_x + 10, scaled_center_y - 10),  # Offset for readability
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5,  # Font scale
+                    (0, 255, 0),  # Green color
+                    1,  # Thickness
+                    cv2.LINE_AA
+                )
 
             # Display the mask non-blocking
-            # cv2.imshow(f"Mask - {color}", overlay_image)
-            # cv2.waitKey(1)  # Non-blocking, updates the display without halting execution
+            cv2.imshow(f"Mask {color} for {lower_bound} - {upper_bound}", overlay_image)
+            cv2.waitKey(1)  # Non-blocking, updates the display without halting execution
 
             return mask
         except Exception as e:

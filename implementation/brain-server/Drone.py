@@ -87,16 +87,6 @@ class Drone:
                     ]
                 },
                 {
-                    "state": "reaching_goal",
-                    "description": "Sphero adjusts its position to precisely align with the goal.",
-                    "transitions": [
-                        {
-                            "condition": "Precisely aligned with the goal",
-                            "next_state": "interact"
-                        }
-                    ]
-                },
-                {
                     "state": "interact",
                     "description": "Sphero executes interaction behavior.",
                     "transitions": [
@@ -155,8 +145,6 @@ class Drone:
 
             if state_name == "move_to_goal":
                 self._move_to_goal(ws)
-            elif state_name == "reaching_goal":
-                self._reaching_goal()
             elif state_name == "interact":
                 self._interact()
         except Exception as e:
@@ -172,45 +160,52 @@ class Drone:
             if not self.goal:
                 print(f"Sphero [{self.sphero_id}]: Goal is not set!")
                 return
+            
             current_position = self.get_position()
-
             print(f"Sphero [{self.sphero_id}] at: {current_position}")
-            path = self._find_path(current_position, self.goal)
 
-            if path and len(path) > 1:
-                # Move to the next point on the path
-                next_point = path[1]
+            if (self.reached_goal(current_position)):
+                self._transition_to_state("interact")
+            else:
+                path = self._find_path(current_position, self.goal)
 
-                current_x, current_y = self.get_position()
-                if self._euclidean_distance((current_x, current_y), self.goal) <= 10:
-                    self._transition_to_state("reaching_goal")
-                else:
-                    message_content = {
-                        "id": self.sphero_id,
-                        "current_x": float(current_x),
-                        "current_y": float(current_y),
-                        "target_x": float(next_point[0]),
-                        "target_y": float(next_point[1]),
-                        "last_x": float(self.last_x),
-                        "last_y": float(self.last_y)
-                    }
+                if path and len(path) > 1:
+                    # Move to the next point on the path
+                    next_point = path[1]
 
-                    self.move(next_point[0], next_point[1])
-                    send_message(ws, self.sphero_id, "BrainControl", message_content)
+                    current_x, current_y = self.get_position()
+                    if self._euclidean_distance((current_x, current_y), self.goal) <= 10:
+                        self._transition_to_state("reaching_goal")
+                    else:
+                        message_content = {
+                            "id": self.sphero_id,
+                            "current_x": float(current_x),
+                            "current_y": float(current_y),
+                            "target_x": float(next_point[0]),
+                            "target_y": float(next_point[1]),
+                            "last_x": float(self.last_x),
+                            "last_y": float(self.last_y)
+                        }
+
+                        self.move(next_point[0], next_point[1])
+                        send_message(ws, self.sphero_id, "BrainControl", message_content)
+
         except Exception as e:
             print(f"Error in _move_to_goal: {e}")
 
-    def _reaching_goal(self):
+    def reached_goal(self, current_position):
         """
         Fine-tune the Sphero's position to align with the goal.
         """
         try:
-            current_x, current_y = self.get_position()
+            current_x, current_y = current_position
             if self._euclidean_distance((current_x, current_y), self.goal) <= 5:
                 print(f"Sphero [{self.sphero_id}] precisely aligned with the goal.")
-                self._transition_to_state("interact")
+                return True
         except Exception as e:
             print(f"Error in _reaching_goal: {e}")
+        print(f"Sphero [{self.sphero_id}] not at goal.")
+        return False
 
     def _interact(self):
         """
@@ -254,8 +249,8 @@ class Drone:
 
             # Use A* algorithm to find the shortest path on the PRM
             tree = KDTree(self.prm_nodes)
-            start_idx = tree.query(start)[1]
-            goal_idx = tree.query(goal)[1]
+            start_idx = int(tree.query(start)[1])  # Convert np.int64 to int
+            goal_idx = int(tree.query(goal)[1])  # Convert np.int64 to int
 
             pq = []
             heapq.heappush(pq, (0, start_idx))
@@ -264,12 +259,14 @@ class Drone:
 
             while pq:
                 current_cost, current_idx = heapq.heappop(pq)
+                current_idx = int(current_idx)  # Ensure it's a native Python int
 
                 if current_idx == goal_idx:
                     break
 
                 neighbors = self._get_neighbors(current_idx)
                 for neighbor_idx in neighbors:
+                    neighbor_idx = int(neighbor_idx)  # Ensure neighbor indices are Python ints
                     new_cost = cost_so_far[current_idx] + self._euclidean_distance(
                         self.prm_nodes[current_idx], self.prm_nodes[neighbor_idx]
                     )

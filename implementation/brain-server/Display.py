@@ -4,6 +4,8 @@ import cv2
 class Display:
     mouse_x = 0
     mouse_y = 0
+    mouse_x_original = 0
+    mouse_y_original = 0
 
     def __init__(self):
         """
@@ -132,18 +134,38 @@ class Display:
     @staticmethod
     def mouse_callback(event, x, y, flags, param):
         """
-        Mouse callback to update mouse_x, mouse_y when moving the cursor over the display window.
+        Mouse callback to update mouse_x, mouse_y relative to the original image dimensions.
         """
         if event == cv2.EVENT_MOUSEMOVE:
+            # Store the display coordinates
             Display.mouse_x = x
             Display.mouse_y = y
+
+            # Map the coordinates back to the original image's dimensions
+            if param and "scale_x" in param and "scale_y" in param:
+                Display.mouse_x_original = int(x * param["scale_x"])
+                Display.mouse_y_original = int(y / param["scale_y"])
+            else:
+                Display.mouse_x_original = x
+                Display.mouse_y_original = y
 
     def show(self):
         """
         Continuously display the current image with any drawings.
         """
+        scale_param_x = 2
+        # Resize the overlay image to max half the screen width while maintaining the aspect ratio
+        screen_width = 1920
+        max_width = screen_width // scale_param_x
+        screen = self.get_image()
+        original_height, original_width = screen.shape[:2]
+        aspect_ratio = original_height / original_width
+
+        scale_param_y = aspect_ratio
+        
+
         cv2.namedWindow("Display")
-        cv2.setMouseCallback("Display", self.mouse_callback)
+        cv2.setMouseCallback("Display", self.mouse_callback, {"scale_x": scale_param_x, "scale_y": scale_param_y})
 
         while self.running:
             image = self.get_image()
@@ -164,7 +186,7 @@ class Display:
                             cv2.rectangle(
                                 overlay_image,
                                 (x, y),  # Top-left corner
-                                ( x + w, y + h),  # Bottom-right corner
+                                (x + w, y + h),  # Bottom-right corner
                                 color=color,
                                 thickness=weight
                             )
@@ -197,7 +219,7 @@ class Display:
                             )
 
                 # Display mouse coordinates on the image
-                mouse_text = f"X: {self.mouse_x}, Y: {self.mouse_y}"
+                mouse_text = f"Y: {self.mouse_y_original}, X: {self.mouse_x_original}"
                 cv2.putText(
                     overlay_image,
                     mouse_text,
@@ -207,13 +229,6 @@ class Display:
                     (255, 255, 255),  # White text
                     2  # Thickness
                 )
-
-                # Resize the overlay image to max half the screen width while maintaining the aspect ratio
-                screen_width = 1920
-                max_width = screen_width // 2
-
-                original_height, original_width = overlay_image.shape[:2]
-                aspect_ratio = original_height / original_width
 
                 if original_width > max_width:
                     new_width = max_width

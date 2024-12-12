@@ -161,7 +161,7 @@ def handle_message(id, sphero_color, message_type, message, outgoing_queue, sphe
         logging.warning(f"Sphero {id}: Unhandled message type: {message_type}")
 
 # This function runs the Sphero connection and processes messages
-def run_sphero(sphero_id, sphero_color, message_bus, outgoing_queue, first_run=False):
+def run_sphero(sphero_id, sphero_color, message_bus, outgoing_queue):
     """
     Initialize and manage the connection to a specific Sphero.
 
@@ -175,7 +175,6 @@ def run_sphero(sphero_id, sphero_color, message_bus, outgoing_queue, first_run=F
     logging.info(f"{sphero_id}: Attempting to connect.")
     rgb = ImageColor.getrgb(sphero_color)
     sphero_color = Color(r=rgb[0], g=rgb[1], b=rgb[2])
-    first_run_bool = first_run
 
     while True:  # Retry loop
         toy = None
@@ -187,21 +186,19 @@ def run_sphero(sphero_id, sphero_color, message_bus, outgoing_queue, first_run=F
                 logging.info(f"{sphero_id}: Connected to Sphero.")
             except scanner.ToyNotFoundError:
                 logging.warning(f"{sphero_id}: Sphero not found. Ensure it is powered on and in range. Retrying...")
-                time.sleep(5)
+                time.sleep(4)
             except Exception as e:
                 logging.error(f"{sphero_id}: Unexpected error: {e}")
-                time.sleep(5)
+                time.sleep(4)
 
         try:
             with MySpheroEduAPI(toy) as droid:
-
-                if first_run_bool:
-                    logging.info(f"{sphero_id}: Calibrating compass.")
-                    droid.calibrate_compass()
-                    droid.set_compass_direction(0)
-                    send_message_to_server(outgoing_queue, sphero_id, "SpheroReady", "Ready")
-                    first_run_bool = False
+                logging.info(f"{sphero_id}: Calibrating compass.")
+                droid.calibrate_compass()
+                droid.set_compass_direction(0)
                 droid.set_main_led(sphero_color)
+                time.sleep(1)
+                send_message_to_server(outgoing_queue, sphero_id, "SpheroReady", "Ready")
                 logging.info(f"{sphero_id}: Initialization complete.")
                 sphero = SpheroMovement(droid, sphero_id, sphero_color, outgoing_queue)
                 process_subscriber(sphero_id, sphero_color, message_bus, outgoing_queue, sphero)
@@ -261,7 +258,7 @@ if __name__ == "__main__":
         subscriber_processes = []
 
         for sphero in spheros:
-            process = multiprocessing.Process(target=run_sphero, args=(sphero["id"], sphero["color"], message_bus, outgoing_queue, True))
+            process = multiprocessing.Process(target=run_sphero, args=(sphero["id"], sphero["color"], message_bus, outgoing_queue))
             process.start()
             subscriber_processes.append(process)
             time.sleep(4) 
