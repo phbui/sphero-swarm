@@ -130,42 +130,11 @@ class Display:
                 "weight": weight,
                 "color": color
             })
-
-    @staticmethod
-    def mouse_callback(event, x, y, flags, param):
-        """
-        Mouse callback to update mouse_x, mouse_y relative to the original image dimensions.
-        """
-        if event == cv2.EVENT_MOUSEMOVE:
-            # Store the display coordinates
-            Display.mouse_x = x
-            Display.mouse_y = y
-
-            # Map the coordinates back to the original image's dimensions
-            if param and "scale_x" in param and "scale_y" in param:
-                Display.mouse_x_original = int(x * param["scale_x"])
-                Display.mouse_y_original = int(y / param["scale_y"])
-            else:
-                Display.mouse_x_original = x
-                Display.mouse_y_original = y
-
     def show(self):
         """
         Continuously display the current image with any drawings.
         """
-        scale_param_x = 2
-        # Resize the overlay image to max half the screen width while maintaining the aspect ratio
-        screen_width = 1920
-        max_width = screen_width // scale_param_x
-        screen = self.get_image()
-        original_height, original_width = screen.shape[:2]
-        aspect_ratio = original_height / original_width
-
-        scale_param_y = aspect_ratio
-        
-
         cv2.namedWindow("Display")
-        cv2.setMouseCallback("Display", self.mouse_callback, {"scale_x": scale_param_x, "scale_y": scale_param_y})
 
         while self.running:
             image = self.get_image()
@@ -173,75 +142,69 @@ class Display:
                 with self.lock:
                     overlay_image = image.copy()
 
+                    # Resize overlay image to half the dimensions
+                    half_width = self.width // 2
+                    half_height = self.height // 2
+                    overlay_image = cv2.resize(overlay_image, (half_width, half_height))
+
+                    # Scale factors for mapping coordinates back to the original
+                    scale_x = self.width / half_width
+                    scale_y = self.height / half_height
+
+                    # Update mouse callback with scaling factors
+                    cv2.setMouseCallback("Display", self.mouse_callback, {"scale_x": scale_x, "scale_y": scale_y})
+
                     # Draw all the overlays
                     for drawing in self.drawings:
-                        if "x" in drawing and "y" in drawing and "w" in drawing and "h" in drawing:  # Rectangle
-                            x = int(drawing["x"])
-                            y = int(drawing["y"])
-                            w = int(drawing["w"])
-                            h = int(drawing["h"])
-                            weight = max(1, int(drawing["weight"] * 5))  # Scale thickness
-                            color = drawing["color"]  # Use the specified color (BGR)
-
-                            cv2.rectangle(
-                                overlay_image,
-                                (x, y),  # Top-left corner
-                                (x + w, y + h),  # Bottom-right corner
-                                color=color,
-                                thickness=weight
-                            )
-                        elif "x" in drawing and "y" in drawing:  # Point
-                            x = int(drawing["x"])
-                            y = int(drawing["y"])
+                        if "x" in drawing and "y" in drawing:  # Points
+                            scaled_x = int(drawing["x"] / scale_x)
+                            scaled_y = int(drawing["y"] / scale_y)
                             radius = int(drawing["weight"] * 50)  # Example scaling
                             color = drawing["color"]
-
                             cv2.circle(
                                 overlay_image,
-                                (y, x),  # Note: (y, x) order in OpenCV for display
+                                (scaled_x, scaled_y),
                                 radius=radius,
                                 color=color,
                                 thickness=2
                             )
-                        elif "start" in drawing and "end" in drawing:  # Line
-                            start_x, start_y = drawing["start"]
-                            end_x, end_y = drawing["end"]
 
-                            weight = max(1, min(int(drawing["weight"] * 5), 255))  # Scale and clamp thickness
-                            color = drawing["color"]
+                    # Display mouse coordinates
+                    mouse_text = f"X: {Display.mouse_x_original}, Y: {Display.mouse_y_original}"
+                    cv2.putText(
+                        overlay_image,
+                        mouse_text,
+                        (10, 30),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        1.0,
+                        (255, 255, 255),
+                        2
+                    )
 
-                            cv2.line(
-                                overlay_image,
-                                (int(start_y), int(start_x)),  # (y, x)
-                                (int(end_y), int(end_x)),  # (y, x)
-                                color=color,
-                                thickness=weight
-                            )
+                    # Show the resized image
+                    cv2.imshow("Display", overlay_image)
 
-                # Display mouse coordinates on the image
-                mouse_text = f"Y: {self.mouse_y_original}, X: {self.mouse_x_original}"
-                cv2.putText(
-                    overlay_image,
-                    mouse_text,
-                    (10, 30),  # Position in the image (x, y)
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    1.0,  # Font scale
-                    (255, 255, 255),  # White text
-                    2  # Thickness
-                )
-
-                if original_width > max_width:
-                    new_width = max_width
-                    new_height = int(new_width * aspect_ratio)
-                    overlay_image = cv2.resize(overlay_image, (new_width, new_height))
-
-                cv2.imshow("Display", overlay_image)
                 if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit
                     self.running = False
                     break
             else:
-                # If no image is set, wait briefly before checking again
                 cv2.waitKey(100)
+
+    @staticmethod
+    def mouse_callback(event, x, y, flags, param):
+        """
+        Mouse callback to update mouse coordinates relative to the original image dimensions.
+        """
+        if event == cv2.EVENT_MOUSEMOVE:
+            Display.mouse_x = x
+            Display.mouse_y = y
+
+            if param:
+                Display.mouse_x_original = int(x * param["scale_x"])
+                Display.mouse_y_original = int(y * param["scale_y"])
+            else:
+                Display.mouse_x_original = x
+                Display.mouse_y_original = y
 
     def stop(self):
         """
