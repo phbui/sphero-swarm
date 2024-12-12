@@ -178,7 +178,7 @@ class Display:
                             color = drawing["color"]
                             cv2.circle(
                                 overlay_image,
-                                (scaled_x, scaled_y),
+                                (scaled_y, scaled_x), # OpenCV format (y, x)
                                 radius=radius,
                                 color=color,
                                 thickness=2
