@@ -5,11 +5,11 @@ import Particle
 
 # Define color ranges for target detection in HSV format
 color_ranges = {
-    '#0000FF': ([140, 200, 200], [160, 255, 255]),  # Blue
-    '#FF0000': ([170, 110, 165], [180, 220, 245]),  # Red
-    '#008000': ([40, 120, 100], [80, 255, 255]),    # Green
-    '#00FFFF': ([85, 100, 100], [100, 255, 255]),  # Cyan
-    '#DFFF00': ([20, 200, 200], [45, 255, 255])     # Yellow
+    '#FF00FF': ([210, 75, 245], [215, 95, 255]),  # Pink
+    '#FF0000': ([165, 45, 75], [200, 75, 105]),  # Red
+    '#00FF00': ([15, 205, 155], [20, 255, 185]),    # Green
+    '#00FFFF': ([15, 220, 240], [25, 255, 255]),  # Cyan
+    '#FFFF00': ([175, 205, 170], [195, 240, 205])     # Yellow
 }
 
 class Localizer:
@@ -165,8 +165,6 @@ class Localizer:
             Weight as a float.
         """
         try:
-            if mean is None:
-                return 0
             mean = np.array(mean)
             pos = np.array([x, y])
             inv_cov = np.linalg.inv(cov)

@@ -181,11 +181,14 @@ class Drone:
                 return
 
             # Find the path to the goal
-            path = self._find_path(self.get_position(), self.goal)
+            current_location = self.get_position()
+            print(f"{self.sphero_id} at {current_location}")
+            path = self._find_path(current_location, self.goal)
 
             if path and len(path) > 1:
                 # Move to the next point on the path
                 next_point = path[1]
+                print(f"{self.sphero_id} moving to {next_point}")
                 current_x, current_y = self.get_position()
                 if self._euclidean_distance((current_x, current_y), self.goal) <= 10:
                     self._transition_to_state("reaching_goal")
@@ -216,6 +219,12 @@ class Drone:
             List of tuples representing the path.
         """
         try:
+            # Validate start and goal
+            if start is None or goal is None:
+                raise ValueError(f"Invalid start or goal: start={start}, goal={goal}")
+            if not np.isfinite(start).all() or not np.isfinite(goal).all():
+                raise ValueError(f"Non-finite values in start or goal: start={start}, goal={goal}")
+
             if not self.prm_nodes:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
