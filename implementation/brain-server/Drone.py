@@ -71,6 +71,7 @@ class Drone:
             else:
                 # Assume goal is already a tuple (x, y)
                 self.goal = self.map.goal
+            print(f"Goat at: {self.goal}")
             self.prm_nodes = self.map.nodes  # Set PRM nodes from the map
             self.last_x = -1  # Last known x-coordinate of the drone
             self.last_y = -1  # Last known y-coordinate of the drone
@@ -173,7 +174,7 @@ class Drone:
                     # Move to the next point on the path
                     next_point = path[1]
 
-                    current_x, current_y = self.get_position()
+                    current_x, current_y = current_position
                     if self._euclidean_distance((current_x, current_y), self.goal) <= 10:
                         self._transition_to_state("reaching_goal")
                     else:
@@ -243,7 +244,7 @@ class Drone:
             List of tuples representing the path.
         """
         try:
-            if not self.prm_nodes:
+            if not self.prm_nodes or len(self.prm_nodes) == 0:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
 
@@ -262,14 +263,23 @@ class Drone:
                 current_idx = int(current_idx)  # Ensure it's a native Python int
 
                 if current_idx == goal_idx:
+                    print("Goal reached during pathfinding.")
                     break
 
                 neighbors = self._get_neighbors(current_idx)
+
                 for neighbor_idx in neighbors:
                     neighbor_idx = int(neighbor_idx)  # Ensure neighbor indices are Python ints
+
+                    # Validate neighbor index
+                    if neighbor_idx < 0 or neighbor_idx >= len(self.prm_nodes):
+                        print(f"Invalid neighbor index {neighbor_idx}, skipping.")
+                        continue
+
                     new_cost = cost_so_far[current_idx] + self._euclidean_distance(
                         self.prm_nodes[current_idx], self.prm_nodes[neighbor_idx]
                     )
+
                     if neighbor_idx not in cost_so_far or new_cost < cost_so_far[neighbor_idx]:
                         cost_so_far[neighbor_idx] = new_cost
                         priority = new_cost + self._euclidean_distance(
@@ -282,10 +292,14 @@ class Drone:
             path = []
             current_idx = goal_idx
             while current_idx is not None:
+                if current_idx < 0 or current_idx >= len(self.prm_nodes):
+                    print(f"Invalid path index {current_idx}, aborting reconstruction.")
+                    return []
                 path.append(self.prm_nodes[current_idx])
-                current_idx = came_from[current_idx]
+                current_idx = came_from.get(current_idx)
             path.reverse()
             return path
+
         except Exception as e:
             print(f"Error finding path: {e}")
             return []

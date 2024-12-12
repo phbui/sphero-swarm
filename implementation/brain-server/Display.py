@@ -192,8 +192,8 @@ class Display:
                             color = drawing["color"]
                             cv2.line(
                                 overlay_image,
-                                (start_x, start_y),  # Start point
-                                (end_x, end_y),  # End point
+                                (start_y, start_x),  # Start point
+                                (end_y, end_x),  # End point
                                 color=color,
                                 thickness=thickness
                             )
