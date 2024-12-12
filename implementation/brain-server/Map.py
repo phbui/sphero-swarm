@@ -132,6 +132,7 @@ class Map:
             initial_radius: Starting distance to connect nodes.
             max_radius: Maximum distance to connect nodes.
         """
+        print("Generating map...")
         self.process_image()  # Process the image to detect obstacles and the goal
 
         # Initialize nodes and edges for the PRM
@@ -148,6 +149,7 @@ class Map:
             self.display.draw_point("goal_node", goal_center[1], goal_center[0], weight=0.2, color="#0000FF")
         else:
             print("No goal detected.")
+            return
 
         if not self.obstacles:
             print("No obstacles detected.")
@@ -159,15 +161,14 @@ class Map:
             x, y = random.randint(0, width - 1), random.randint(0, height - 1)
             if not any(self.is_near_obstacle_rect(x, y, rect) for rect in self.obstacles):
                 self.nodes.append((x, y))
-                self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
             attempts += 1
 
-        # Connect nodes within a dynamic radius
+        # Connect nodes starting from the goal
         for i, (x1, y1) in enumerate(self.nodes):
             current_radius = initial_radius
             connections = 0
 
-            while connections < 2 and current_radius <= max_radius:
+            while connections < 3 and current_radius <= max_radius:
                 for j, (x2, y2) in enumerate(self.nodes):
                     if i != j:
                         distance = np.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
@@ -175,10 +176,46 @@ class Map:
                             edge = ((x1, y1), (x2, y2))
                             if edge not in self.edges:
                                 self.edges.append(edge)
-                                self.display.draw_line(f"edge_{i}_{j}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
                                 connections += 1
-                if connections < 5:
+                if connections < 3:
                     current_radius += 50
+
+        # Prune nodes and edges not connected to the goal
+        self._prune_unconnected_nodes()
+
+        # Draw the remaining nodes and edges
+        for x, y in self.nodes:
+            self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
+
+        for (x1, y1), (x2, y2) in self.edges:
+            self.display.draw_line(f"edge_{x1}_{y1}_{x2}_{y2}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
+
+    def _prune_unconnected_nodes(self):
+        """
+        Prune nodes and edges that are not connected to the goal node.
+        """
+        if not self.nodes or not self.edges:
+            return
+
+        # Use DFS to find all reachable nodes from the goal
+        goal_node = self.nodes[0]  # Goal node is the first node added
+        reachable = set()
+        stack = [goal_node]
+
+        while stack:
+            current_node = stack.pop()
+            if current_node not in reachable:
+                reachable.add(current_node)
+                # Find neighbors of the current node
+                for edge in self.edges:
+                    if current_node == edge[0] and edge[1] not in reachable:
+                        stack.append(edge[1])
+                    elif current_node == edge[1] and edge[0] not in reachable:
+                        stack.append(edge[0])
+
+        # Remove nodes and edges not in the reachable set
+        self.nodes = [node for node in self.nodes if node in reachable]
+        self.edges = [edge for edge in self.edges if edge[0] in reachable and edge[1] in reachable]
 
     def is_near_obstacle_rect(self, x, y, rect):
         """

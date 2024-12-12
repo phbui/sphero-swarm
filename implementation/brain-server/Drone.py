@@ -247,14 +247,13 @@ class Drone:
             if not self.prm_nodes or len(self.prm_nodes) == 0:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
-            
-            print(self.prm_nodes)
 
-            # Use A* algorithm to find the shortest path on the PRM
+            # KDTree for nearest neighbors
             tree = KDTree(self.prm_nodes)
-            start_idx = int(tree.query(start)[1])  # Convert np.int64 to int
-            goal_idx = int(tree.query(goal)[1])  # Convert np.int64 to int
+            start_idx = int(tree.query(start)[1])  # Closest PRM node to start
+            goal_idx = int(tree.query(goal)[1])   # Closest PRM node to goal
 
+            # Priority queue for A* search
             pq = []
             heapq.heappush(pq, (0, start_idx))
             came_from = {start_idx: None}
@@ -265,19 +264,15 @@ class Drone:
                 current_idx = int(current_idx)  # Ensure it's a native Python int
 
                 if current_idx == goal_idx:
-                    print("Goal reached during pathfinding.")
                     break
 
                 neighbors = self._get_neighbors(current_idx)
-
-                print(neighbors)
 
                 for neighbor_idx in neighbors:
                     neighbor_idx = int(neighbor_idx)  # Ensure neighbor indices are Python ints
 
                     # Validate neighbor index
                     if neighbor_idx < 0 or neighbor_idx >= len(self.prm_nodes):
-                        print(f"Invalid neighbor index {neighbor_idx}, skipping.")
                         continue
 
                     new_cost = cost_so_far[current_idx] + self._euclidean_distance(
@@ -297,7 +292,6 @@ class Drone:
             current_idx = goal_idx
             while current_idx is not None:
                 if current_idx < 0 or current_idx >= len(self.prm_nodes):
-                    print(f"Invalid path index {current_idx}, aborting reconstruction.")
                     return []
                 path.append(self.prm_nodes[current_idx])
                 current_idx = came_from.get(current_idx)
@@ -310,6 +304,7 @@ class Drone:
             print(f"Error finding path: {e}")
             return []
 
+
     def _get_neighbors(self, idx):
         """
         Retrieve neighbors of a node from the PRM structure.
@@ -321,11 +316,15 @@ class Drone:
         try:
             neighbors = []
             current_node = self.prm_nodes[idx]
-            for (node1, node2) in self.map.edges:
-                if current_node == node1:
-                    neighbors.append(self.prm_nodes.index(node2))
-                elif current_node == node2:
-                    neighbors.append(self.prm_nodes.index(node1))
+            for node1, node2 in self.map.edges:
+                if np.allclose(current_node, node1):
+                    neighbor_idx = next((i for i, node in enumerate(self.prm_nodes) if np.allclose(node, node2)), None)
+                    if neighbor_idx is not None:
+                        neighbors.append(neighbor_idx)
+                elif np.allclose(current_node, node2):
+                    neighbor_idx = next((i for i, node in enumerate(self.prm_nodes) if np.allclose(node, node1)), None)
+                    if neighbor_idx is not None:
+                        neighbors.append(neighbor_idx)
             return neighbors
         except Exception as e:
             print(f"Error getting neighbors: {e}")
