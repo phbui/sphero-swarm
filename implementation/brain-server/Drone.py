@@ -59,7 +59,7 @@ class Drone:
         self.sphero_id = sphero_id
         self.sphero_color = sphero_color
         print(f"Sphero Initialized: {sphero_id}")
-        self.localizer = Localizer.Localizer(camera, display, sphero_color, 100)
+        self.localizer = Localizer.Localizer(camera, display, sphero_color, 500)
         self.map = map
         if len(self.map.goal) == 4:
             # If the goal is represented as a rectangle, use its center as the target goal
@@ -157,8 +157,10 @@ class Drone:
         if not self.goal:
             print(f"Sphero [{self.sphero_id}]: Goal is not set!")
             return
+        current_position = self.get_position()
 
-        path = self._find_path(self.get_position(), self.goal)
+        print(f"Sphero [{self.sphero_id}] at: {current_position}")
+        path = self._find_path(current_position, self.goal)
 
         if path and len(path) > 1:
             # Move to the next point on the path

@@ -8,7 +8,7 @@ color_ranges = {
     '#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
     '#FF0000': ([165, 5, 200], [180, 255, 255]),  # Red
     '#035900': ([80, 120, 200], [95, 255, 240]),  # Green
-    '#00FFFF': ([75, 0, 245], [110, 255, 255]),  # Cyan
+    '#007FFF': ([75, 0, 245], [110, 255, 255]),  # Blue
     '#FFFF00': ([50, 0, 220], [80, 255, 255])  # Yellow
 }
 
@@ -116,9 +116,13 @@ class Localizer:
         mask = cv2.inRange(hsv_image, lower_bound, upper_bound)  # Generate mask
 
         # Clean up the mask
-        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
-        mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
-        mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+        #kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+        #mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+        #mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+
+        #cv2.imshow({color}, mask)
+        #cv2.waitKey(0)
+        #cv2.destroyAllWindows()
 
         return mask
 
