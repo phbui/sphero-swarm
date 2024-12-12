@@ -92,7 +92,7 @@ class Drone:
             line_id = f"{self.sphero_id}-vector"
             self.display.draw_line(
                 id=line_id,
-                point1=(current_x, current_y),
+                point1=(current_x, current_y), 
                 point2=(target_x, target_y),
                 weight=2,
                 color=self.sphero_color
@@ -102,8 +102,8 @@ class Drone:
             point_id = f"{self.sphero_id}-point"
             self.display.draw_point(
                 id=point_id,
-                x=target_x,
-                y=target_y,
+                x=target_x, 
+                y=target_y, 
                 weight=0.25,
                 color=self.sphero_color
             )
