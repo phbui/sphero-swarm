@@ -74,10 +74,12 @@ class Drone:
             print(f"Error getting position: {e}")
             return None
 
-    def move(self, target_x, target_y):
+    def move(self, current_x, current_y, target_x, target_y):
         """
         Move the Sphero to the target position.
         Args:
+            current_x: Current x-coordinate.
+            current_y: Current y-coordinate.
             target_x: Target x-coordinate.
             target_y: Target y-coordinate.
         Returns:
@@ -85,6 +87,27 @@ class Drone:
         """
         try:
             print(f"Sphero [{self.sphero_id}] moving to y: {target_y}, x: {target_x}")
+
+            # Draw a line from the current position to the target position
+            line_id = f"{self.sphero_id}-vector"
+            self.display.draw_line(
+                id=line_id,
+                point1=(current_x, current_y),
+                point2=(target_x, target_y),
+                weight=2,
+                color=self.sphero_color
+            )
+
+            # Draw a point at the target position
+            point_id = f"{self.sphero_id}-point"
+            self.display.draw_point(
+                id=point_id,
+                x=target_x,
+                y=target_y,
+                weight=2,
+                color=self.sphero_color
+            )
+
             # Placeholder for actual movement logic; update position directly
             self.last_x = target_x
             self.last_y = target_y

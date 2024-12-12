@@ -239,7 +239,7 @@ class Planner:
                 "last_y": float(drone.last_y)
             }
 
-            drone.move(target_x, target_y)
+            drone.move(current_x, current_y, target_x, target_y)
             send_message(self.ws, drone.sphero_id, "BrainControl", message_content)
         except Exception as e:
             print(f"Error notifying and moving Drone {drone.sphero_id}: {e}")
