@@ -27,11 +27,11 @@ class WebSocketHandler:
                     spheros = message  # List of Spheros with "id" and "color"
                     self.planner = Planner.Planner(spheros)
                 case "SpheroReady":
-                    print("Starting planner.")
+                    print("Starting planner...")
                     self.planner.start(ws)  # Start the Planner when all Spheros are ready
                 case "SpheroFeedback":
                     print(f"Next move for {id}")
-                    self.planner.next_move(ws, message)  # Process feedback and plan the next move
+                    self.planner.next_move(message)  # Process feedback and plan the next move
 
     async def websocket_receiver(self):
         """

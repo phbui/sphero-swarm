@@ -18,19 +18,15 @@ def send_message(ws, id, message_type, message_content):
         message_content: Content of the message to be sent.
     """
     try:
-        # Prepare the message
         message = {
             "clientType": "SpheroBrain",
             "id": id,
             "messageType": message_type,
             "message": message_content,
         }
-
         message = json.dumps(message)
 
-        # Get the running event loop and run the async send_message coroutine in a thread-safe way
-        loop = asyncio.get_running_loop()
-        asyncio.run_coroutine_threadsafe(_send_message_async(ws, message), loop)
+        asyncio.run(_send_message_async(ws, message))
         print(f"WebSocket: Sent message: {message}")
     except Exception as e:
         print(f"WebSocket: Error sending message: {e}")
@@ -84,9 +80,18 @@ class Planner:
             ws: WebSocket connection to send updates.
         """
         print("System started.")
+        threading.Thread(target=self.process_trajectories, daemon=True).start()
         self.ws = ws
         for sphero in self.spheros:
             sphero.execute_state()  # Trigger the state execution for each Sphero
+
+    def _start_event_loop(self):
+        """
+        Start an asyncio event loop in the current thread.
+        """
+        asyncio.set_event_loop(asyncio.new_event_loop())
+        loop = asyncio.get_event_loop()
+        loop.run_forever()
 
     def next_move(self, id):
         """
@@ -102,8 +107,8 @@ class Planner:
         """Add a trajectory to the queue and process if the queue is full."""
         with self.queue_condition:
             self.trajectory_queue.put(trajectory)
+            print(f"{self.trajectory_queue.qsize()}, {len(self.spheros)}")
             if self.trajectory_queue.qsize() == len(self.spheros):
-                print(f"{self.trajectory_queue.qsize()}, {len(self.spheros)}")
                 # Notify all threads to process the trajectories
                 self.queue_condition.notify_all()
 
@@ -190,7 +195,7 @@ class Planner:
             drone2: Second drone involved in the collision risk.
         """
         try:
-            print(f"Adjusting paths for {drone1.sphero_1} & {drone2.sphero_1}")
+            print(f"Adjusting paths for {drone1.sphero_id} & {drone2.sphero_id}")
 
             # Re-plan paths for both drones
             new_path1 = drone1._find_path(drone1_pos, drone1.goal)
@@ -221,6 +226,8 @@ class Planner:
             current_position = drone.get_position()
             current_x, current_y = current_position
             target_x, target_y = target_point
+
+            print(f"Moving [{drone.sphero_id}] from Y: {current_y}, X: {current_x} to Y:{target_y}, X: {target_x}")
 
             message_content = {
                 "id": drone.sphero_id,
