@@ -2,50 +2,9 @@ import numpy as np
 from scipy.spatial import KDTree
 import heapq
 import Localizer
-import asyncio
-import json
-
-def send_message(ws, id, message_type, message_content):
-    """
-    Sends a message to the WebSocket server in a non-async way.
-    Args:
-        ws: WebSocket connection instance.
-        id: Unique identifier for the message sender.
-        message_type: Type of message (e.g., "BrainControl").
-        message_content: Content of the message to be sent.
-    """
-    try:
-        # Prepare the message
-        message = {
-            "clientType": "SpheroBrain",
-            "id": id,
-            "messageType": message_type,
-            "message": message_content,
-        }
-
-        message = json.dumps(message)
-
-        # Get the running event loop and run the async send_message coroutine in a thread-safe way
-        loop = asyncio.get_running_loop()
-        asyncio.run_coroutine_threadsafe(_send_message_async(ws, message), loop)
-        print(f"WebSocket: Sent message: {message}")
-    except Exception as e:
-        print(f"WebSocket: Error sending message: {e}")
-
-async def _send_message_async(ws, message):
-    """
-    Async function to send the message via the WebSocket connection.
-    Args:
-        ws: WebSocket connection instance.
-        message: JSON-formatted message to send.
-    """
-    try:
-        await ws.send(message)
-    except Exception as e:
-        print(f"WebSocket: Error sending message: {e}")
 
 class Drone:
-    def __init__(self, camera, display, sphero_id, sphero_color, map):
+    def __init__(self, planner, camera, display, sphero_id, sphero_color, map):
         """
         Initialize a Drone (Sphero) with its display, ID, and color.
         Args:
@@ -56,6 +15,7 @@ class Drone:
             map: Reference to the Map instance containing PRM and obstacles.
         """
         try:
+            self.planner = planner
             self.display = display
             self.sphero_id = sphero_id
             self.sphero_color = sphero_color
@@ -124,7 +84,7 @@ class Drone:
             Tuple (x, y) representing the new position.
         """
         try:
-            print(f"Sphero [{self.sphero_id}] moving to x: {target_x}, y: {target_y}")
+            print(f"Sphero [{self.sphero_id}] moving to y: {target_y}, x: {target_x}")
             # Placeholder for actual movement logic; update position directly
             self.last_x = target_x
             self.last_y = target_y
@@ -133,11 +93,9 @@ class Drone:
             print(f"Error during move: {e}")
             return self.last_x, self.last_y
 
-    def execute_state(self, ws):
+    def execute_state(self):
         """
         Execute the current state of the Sphero.
-        Args:
-            ws: WebSocket connection for sending updates.
         """
         try:
             current_state = self.states[self.current_state_index]
@@ -145,17 +103,15 @@ class Drone:
             print(f"Sphero [{self.sphero_id}] executing state: {state_name}")
 
             if state_name == "move_to_goal":
-                self._move_to_goal(ws)
+                self._move_to_goal()
             elif state_name == "interact":
                 self._interact()
         except Exception as e:
             print(f"Error executing state: {e}")
 
-    def _move_to_goal(self, ws):
+    def _move_to_goal(self):
         """
         Navigate towards the goal and send movement updates.
-        Args:
-            ws: WebSocket connection for sending updates.
         """
         try:
             if not self.goal:
@@ -168,28 +124,7 @@ class Drone:
             if (self.reached_goal(current_position)):
                 self._transition_to_state("interact")
             else:
-                path = self._find_path(current_position, self.goal)
-
-                if path and len(path) > 1:
-                    # Move to the next point on the path
-                    next_point = path[1]
-
-                    current_x, current_y = current_position
-                    if self._euclidean_distance((current_x, current_y), self.goal) <= 10:
-                        self._transition_to_state("reaching_goal")
-                    else:
-                        message_content = {
-                            "id": self.sphero_id,
-                            "current_x": float(current_x),
-                            "current_y": float(current_y),
-                            "target_x": float(next_point[0]),
-                            "target_y": float(next_point[1]),
-                            "last_x": float(self.last_x),
-                            "last_y": float(self.last_y)
-                        }
-
-                        self.move(next_point[0], next_point[1])
-                        send_message(ws, self.sphero_id, "BrainControl", message_content)
+                self.submit_trajectory(current_position)
 
         except Exception as e:
             print(f"Error in _move_to_goal: {e}")
@@ -304,7 +239,6 @@ class Drone:
             print(f"Error finding path: {e}")
             return []
 
-
     def _get_neighbors(self, idx):
         """
         Retrieve neighbors of a node from the PRM structure.
@@ -330,6 +264,19 @@ class Drone:
             print(f"Error getting neighbors: {e}")
             return []
 
+    def submit_trajectory(self, current_position):
+        """
+        Submit the planned trajectory to the Planner's queue for collision evaluation.
+        Args:
+            planner: Reference to the Planner instance.
+        """
+        try:
+            trajectory = self._find_path(current_position, self.goal)
+            self.planner.add_trajectory((trajectory, current_position, self))
+            print(f"Sphero [{self.sphero_id}] submitted trajectory: {trajectory}")
+        except Exception as e:
+            print(f"Error submitting trajectory: {e}")
+
     @staticmethod
     def _euclidean_distance(p1, p2):
         """
@@ -345,3 +292,4 @@ class Drone:
         except Exception as e:
             print(f"Error calculating Euclidean distance: {e}")
             return float('inf')
+

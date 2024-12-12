@@ -3,6 +3,50 @@ import Camera
 import Display
 import Drone
 import Map
+import queue
+import numpy as np
+import asyncio
+import json
+
+def send_message(ws, id, message_type, message_content):
+    """
+    Sends a message to the WebSocket server in a non-async way.
+    Args:
+        ws: WebSocket connection instance.
+        id: Unique identifier for the message sender.
+        message_type: Type of message (e.g., "BrainControl").
+        message_content: Content of the message to be sent.
+    """
+    try:
+        # Prepare the message
+        message = {
+            "clientType": "SpheroBrain",
+            "id": id,
+            "messageType": message_type,
+            "message": message_content,
+        }
+
+        message = json.dumps(message)
+
+        # Get the running event loop and run the async send_message coroutine in a thread-safe way
+        loop = asyncio.get_running_loop()
+        asyncio.run_coroutine_threadsafe(_send_message_async(ws, message), loop)
+        print(f"WebSocket: Sent message: {message}")
+    except Exception as e:
+        print(f"WebSocket: Error sending message: {e}")
+
+async def _send_message_async(ws, message):
+    """
+    Async function to send the message via the WebSocket connection.
+    Args:
+        ws: WebSocket connection instance.
+        message: JSON-formatted message to send.
+    """
+    try:
+        await ws.send(message)
+    except Exception as e:
+        print(f"WebSocket: Error sending message: {e}")
+
 
 class Planner:
     def __init__(self, spheros):
@@ -11,6 +55,7 @@ class Planner:
         Args:
             spheros: List of dictionaries, where each dictionary contains the "id" and "color" of a Sphero.
         """
+        self.ws = None
         self.display = Display.Display()  # Initialize the display instance
         self.camera = Camera.Camera(self.display)  # Initialize the camera instance with the display
         self.camera.capture_image()  # Capture an initial image from the camera
@@ -25,9 +70,12 @@ class Planner:
 
         # Initialize the list of Spheros (Drones)
         self.spheros = [
-            Drone.Drone(self.camera, self.display, sphero["id"], sphero["color"], self.map)
+            Drone.Drone(self, self.camera, self.display, sphero["id"], sphero["color"], self.map)
             for sphero in spheros
         ]
+
+        self.trajectory_queue = queue.Queue()
+        self.queue_condition = threading.Condition()  # Create a condition variable
 
     def start(self, ws):
         """
@@ -36,16 +84,156 @@ class Planner:
             ws: WebSocket connection to send updates.
         """
         print("System started.")
+        self.ws = ws
         for sphero in self.spheros:
-            sphero.execute_state(ws)  # Trigger the state execution for each Sphero
+            sphero.execute_state()  # Trigger the state execution for each Sphero
 
-    def next_move(self, ws, id):
+    def next_move(self, id):
         """
         Trigger the next move for a specific Sphero based on its ID.
         Args:
-            ws: WebSocket connection to send updates.
             id: The unique ID of the Sphero to control.
         """
         for sphero in self.spheros:
             if sphero.sphero_id == id:  # Match the Sphero by ID
-                sphero.execute_state(ws)  # Trigger its state execution
+                sphero.execute_state()  # Trigger its state execution
+
+    def add_trajectory(self, trajectory):
+        """Add a trajectory to the queue and process if the queue is full."""
+        with self.queue_condition:
+            self.trajectory_queue.put(trajectory)
+            if self.trajectory_queue.qsize() == len(self.spheros):
+                print(f"{self.trajectory_queue.qsize()}, {len(self.spheros)}")
+                # Notify all threads to process the trajectories
+                self.queue_condition.notify_all()
+
+
+    def process_trajectories(self):
+        """Process the trajectories in the queue, evaluate CVaR risk, and move drones."""
+        with self.queue_condition:
+            while self.trajectory_queue.qsize() < len(self.spheros):
+                # Wait until all trajectories are in the queue
+                self.queue_condition.wait()
+
+            print("Analyzing trajectories")
+
+            # Collect all trajectories from the queue
+            trajectories = []
+            while not self.trajectory_queue.empty():
+                trajectories.append(self.trajectory_queue.get())
+
+            # Evaluate CVaR risk for collision
+            collision_pairs = self._evaluate_cvar_risk(trajectories)
+            collision_ids = set()
+
+            # Handle drones with potential collision risks
+            for drone1, drone1_pos, drone2, drone2_pos in collision_pairs:
+                print(f"Collision risk detected between Drone {drone1.sphero_id} and Drone {drone2.sphero_id}")
+                collision_ids.add(drone1.sphero_id)
+                collision_ids.add(drone2.sphero_id)
+                self._adjust_paths(drone1, drone1_pos, drone2, drone2_pos)
+
+            # Handle drones with no collision risks
+            for trajectory, drone_pos, drone in trajectories:
+                if drone.sphero_id not in collision_ids:
+                    print(f"No collision detected for Drone {drone.sphero_id}. Moving to next point.")
+                    if len(trajectory) > 1:
+                        self._notify_and_move_drone(drone, trajectory[1])
+                    else:
+                        print(f"Drone {drone.sphero_id} has reached its final destination.")
+
+            # Clear the queue after processing (queue is already empty at this point)
+            print("All trajectories processed. Queue cleared.")
+
+    def _evaluate_cvar_risk(self, trajectories):
+        """
+        Evaluate CVaR risk for collisions among the given trajectories.
+        Args:
+            trajectories: List of trajectories submitted by drones.
+        Returns:
+            List of tuples representing pairs of drones at risk of collision.
+        """
+        collision_pairs = []
+        for i in range(len(trajectories)):
+            for j in range(i + 1, len(trajectories)):
+                traj1, drone1_pos, drone1 = trajectories[i]
+                traj2, drone2_pos, drone2 = trajectories[j]
+                
+                # Compute pairwise risk (using a simplified distance threshold for this example)
+                risk = self._calculate_collision_risk(traj1, traj2)
+                if risk > 0.5:  # Assume 50% as a threshold for CVaR (customize as needed)
+                    collision_pairs.append((drone1, drone1_pos, drone2, drone2_pos))
+
+        return collision_pairs
+
+    def _calculate_collision_risk(self, traj1, traj2):
+        """
+        Calculate CVaR-based collision risk between two trajectories.
+        """
+        try:
+            # Example: Risk based on minimum distance between trajectory points
+            min_distance = np.min([
+                np.linalg.norm(np.array(p1) - np.array(p2))
+                for p1 in traj1 for p2 in traj2
+            ])
+            risk = np.exp(-min_distance)  # Exponential decay of risk with distance
+            return risk
+        except Exception as e:
+            print(f"Error calculating collision risk: {e}")
+            return 0
+
+    def _adjust_paths(self, drone1, drone1_pos, drone2, drone2_pos):
+        """
+        Adjust the paths of two drones to mitigate collision risk and notify them of updated paths.
+        Args:
+            drone1: First drone involved in the collision risk.
+            drone2: Second drone involved in the collision risk.
+        """
+        try:
+            print(f"Adjusting paths for {drone1.sphero_1} & {drone2.sphero_1}")
+
+            # Re-plan paths for both drones
+            new_path1 = drone1._find_path(drone1_pos, drone1.goal)
+            new_path2 = drone2._find_path(drone2_pos, drone2.goal)
+
+            if len(new_path1) > 1:
+                self._notify_and_move_drone(drone1, drone1_pos, new_path1[1])
+            else:
+                print(f"Drone {drone1.sphero_id} has no valid path adjustments.")
+
+            if len(new_path2) > 1:
+                self._notify_and_move_drone(drone2, drone2_pos, new_path2[1])
+            else:
+                print(f"Drone {drone2.sphero_id} has no valid path adjustments.")
+
+            print(f"Paths adjusted for Drone {drone1.sphero_id} and Drone {drone2.sphero_id}")
+        except Exception as e:
+            print(f"Error adjusting paths: {e}")
+
+    def _notify_and_move_drone(self, drone, current_position, target_point):
+        """
+        Notify a drone of its updated path and move it to the next target point.
+        Args:
+            drone: The drone to notify and move.
+            target_point: The next target point as a tuple (x, y).
+        """
+        try:
+            current_position = drone.get_position()
+            current_x, current_y = current_position
+            target_x, target_y = target_point
+
+            message_content = {
+                "id": drone.sphero_id,
+                "current_x": float(current_x),
+                "current_y": float(current_y),
+                "target_x": float(target_x),
+                "target_y": float(target_y),
+                "last_x": float(drone.last_x),
+                "last_y": float(drone.last_y)
+            }
+
+            drone.move(target_x, target_y)
+            send_message(self.ws, drone.sphero_id, "BrainControl", message_content)
+        except Exception as e:
+            print(f"Error notifying and moving Drone {drone.sphero_id}: {e}")
+
