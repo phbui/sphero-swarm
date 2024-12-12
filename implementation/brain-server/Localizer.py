@@ -2,15 +2,7 @@ import numpy as np
 import cv2
 from sklearn.mixture import GaussianMixture
 import Particle
-
-# Define color ranges for target detection in HSV format
-color_ranges = {
-    '#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
-    '#FF0000': ([165, 5, 200], [180, 255, 255]),  # Red
-    '#035900': ([80, 120, 200], [95, 255, 240]),  # Green
-    '#007FFF': ([75, 0, 245], [110, 255, 255]),  # Blue
-    '#FFFF00': ([50, 0, 220], [80, 255, 255])  # Yellow
-}
+from color_ranges import color_ranges
 
 class Localizer:
     def __init__(self, camera, display, color, num_particles):
