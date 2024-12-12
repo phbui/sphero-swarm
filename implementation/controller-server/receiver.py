@@ -9,6 +9,7 @@ from PIL import ImageColor
 import time
 import logging
 from sphero_movement import SpheroMovement  # Import the movement class
+from spheros import sphero_list
 
 # Set up logging
 logging.basicConfig(
@@ -247,14 +248,7 @@ if __name__ == "__main__":
     multiprocessing.set_start_method("spawn")
 
     with multiprocessing.Manager() as manager:
-        spheros = [
-            {"id": "SB-2E86", "color": "#FF00FF", "ready": False},
-            {"id": "SB-4844", "color": "#FF0000", "ready": False},
-            {"id": "SB-7104", "color": "#035900", "ready": False},
-            {"id": "SB-D8B2", "color": "#007FFF", "ready": False},
-            {"id": "SB-E12C", "color": "#FFFF00", "ready": False}
-        ]
-
+        spheros = sphero_list
         message_bus = manager.dict({sphero["id"]: manager.list() for sphero in spheros})
         outgoing_queue = manager.Queue()
 
