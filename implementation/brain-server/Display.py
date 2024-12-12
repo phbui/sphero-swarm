@@ -162,7 +162,7 @@ class Display:
                             scaled_y = int(drawing["y"] / scale_y)
                             scaled_w = int(drawing["w"] / scale_x)
                             scaled_h = int(drawing["h"] / scale_y)
-                            thickness = 0.5
+                            thickness = 1
                             color = drawing["color"]
                             cv2.rectangle(
                                 overlay_image,
@@ -188,7 +188,7 @@ class Display:
                             start_y = int(drawing["start"][1] / scale_y)
                             end_x = int(drawing["end"][0] / scale_x)
                             end_y = int(drawing["end"][1] / scale_y)
-                            thickness = 0.5
+                            thickness = 1
                             color = drawing["color"]
                             cv2.line(
                                 overlay_image,
