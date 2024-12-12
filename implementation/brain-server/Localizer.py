@@ -39,7 +39,6 @@ class Localizer:
             # Extract the region of interest (mask) based on the target color
             mask = self._getColorMask(image, self.color)
             points = np.column_stack(np.where(mask > 0))  # Extract pixel coordinates
-            print(f"Points (y,x) -{self.color}: {points}")
 
             # Fit a Gaussian Mixture Model to the color region
             if len(points) > 0:
@@ -153,47 +152,45 @@ class Localizer:
             mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
             mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
-            moments = cv2.moments(mask)
-            if moments["m00"] > 0:
-                center_x = int(moments["m10"] / moments["m00"])
-                center_y = int(moments["m01"] / moments["m00"])
-            else:
-                center_x, center_y = -1, -1
-
-
-        
+            # Debug coordinates:
+            #moments = cv2.moments(mask)
+            #if moments["m00"] > 0:
+            #    center_x = int(moments["m10"] / moments["m00"])
+            #    center_y = int(moments["m01"] / moments["m00"])
+            #else:
+            #    center_x, center_y = -1, -1
 
             # Create a black background and overlay the mask
-            screen_width = 1920
-            screen_height = 1080
-            quarter_width = screen_width // 4
-            quarter_height = screen_height // 4
+            #screen_width = 1920
+            #screen_height = 1080
+            #quarter_width = screen_width // 4
+            #quarter_height = screen_height // 4
 
-            black_background = np.zeros((quarter_height, quarter_width), dtype=np.uint8)
-            mask_resized = cv2.resize(mask, (quarter_width, quarter_height))
-            overlay_image = cv2.merge((black_background, mask_resized, black_background))  # Optional: convert to 3 channels if needed
+            #black_background = np.zeros((quarter_height, quarter_width), dtype=np.uint8)
+            #mask_resized = cv2.resize(mask, (quarter_width, quarter_height))
+            #overlay_image = cv2.merge((black_background, mask_resized, black_background))  # Optional: convert to 3 channels if needed
 
-            if center_x >= 0 and center_y >= 0:
-                scaled_center_x = int(center_x * (quarter_width / mask.shape[1]))
-                scaled_center_y = int(center_y * (quarter_height / mask.shape[0]))
+            #if center_x >= 0 and center_y >= 0:
+            #    scaled_center_x = int(center_x * (quarter_width / mask.shape[1]))
+            #    scaled_center_y = int(center_y * (quarter_height / mask.shape[0]))
 
                 # Add a label with coordinates to the overlay image
-                cv2.circle(overlay_image, (scaled_center_x, scaled_center_y), 5, (0, 255, 0), -1)  # Green dot
-                label = f"({center_y}, {center_x})"
-                cv2.putText(
-                    overlay_image,
-                    label,
-                    (scaled_center_x + 10, scaled_center_y - 10),  # Offset for readability
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5,  # Font scale
-                    (0, 255, 0),  # Green color
-                    1,  # Thickness
-                    cv2.LINE_AA
-                )
+            #    cv2.circle(overlay_image, (scaled_center_x, scaled_center_y), 5, (0, 255, 0), -1)  # Green dot
+            #    label = f"({center_y}, {center_x})"
+            #    cv2.putText(
+            #        overlay_image,
+            #        label,
+            #        (scaled_center_x + 10, scaled_center_y - 10),  # Offset for readability
+            #        cv2.FONT_HERSHEY_SIMPLEX,
+            #        0.5,  # Font scale
+            #        (0, 255, 0),  # Green color
+            #        1,  # Thickness
+            #        cv2.LINE_AA
+            #    )
 
             # Display the mask non-blocking
-            cv2.imshow(f"Mask {color} for {lower_bound} - {upper_bound}", overlay_image)
-            cv2.waitKey(1)  # Non-blocking, updates the display without halting execution
+            #cv2.imshow(f"Mask {color} for {lower_bound} - {upper_bound}", overlay_image)
+            #cv2.waitKey(1)  # Non-blocking, updates the display without halting execution
 
             return mask
         except Exception as e:

@@ -130,6 +130,7 @@ class Display:
                 "weight": weight,
                 "color": color
             })
+
     def show(self):
         """
         Continuously display the current image with any drawings.
@@ -156,7 +157,21 @@ class Display:
 
                     # Draw all the overlays
                     for drawing in self.drawings:
-                        if "x" in drawing and "y" in drawing:  # Points
+                        if "x" in drawing and "y" in drawing and "w" in drawing and "h" in drawing:  # Rectangle
+                            scaled_x = int(drawing["x"] / scale_x)
+                            scaled_y = int(drawing["y"] / scale_y)
+                            scaled_w = int(drawing["w"] / scale_x)
+                            scaled_h = int(drawing["h"] / scale_y)
+                            thickness = 0.5
+                            color = drawing["color"]
+                            cv2.rectangle(
+                                overlay_image,
+                                (scaled_x, scaled_y),  # Top-left corner
+                                (scaled_x + scaled_w, scaled_y + scaled_h),  # Bottom-right corner
+                                color=color,
+                                thickness=thickness
+                            )
+                        elif "x" in drawing and "y" in drawing:  # Point
                             scaled_x = int(drawing["x"] / scale_x)
                             scaled_y = int(drawing["y"] / scale_y)
                             radius = int(drawing["weight"] * 50)  # Example scaling
@@ -168,9 +183,23 @@ class Display:
                                 color=color,
                                 thickness=2
                             )
+                        elif "start" in drawing and "end" in drawing:  # Line
+                            start_x = int(drawing["start"][0] / scale_x)
+                            start_y = int(drawing["start"][1] / scale_y)
+                            end_x = int(drawing["end"][0] / scale_x)
+                            end_y = int(drawing["end"][1] / scale_y)
+                            thickness = 0.5
+                            color = drawing["color"]
+                            cv2.line(
+                                overlay_image,
+                                (start_x, start_y),  # Start point
+                                (end_x, end_y),  # End point
+                                color=color,
+                                thickness=thickness
+                            )
 
                     # Display mouse coordinates
-                    mouse_text = f"X: {Display.mouse_x_original}, Y: {Display.mouse_y_original}"
+                    mouse_text = f"Y: {Display.mouse_y_original}, X: {Display.mouse_x_original}"
                     cv2.putText(
                         overlay_image,
                         mouse_text,
