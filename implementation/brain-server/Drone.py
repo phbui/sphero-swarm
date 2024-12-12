@@ -247,6 +247,8 @@ class Drone:
             if not self.prm_nodes or len(self.prm_nodes) == 0:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
+            
+            print(self.prm_nodes)
 
             # Use A* algorithm to find the shortest path on the PRM
             tree = KDTree(self.prm_nodes)
@@ -267,6 +269,8 @@ class Drone:
                     break
 
                 neighbors = self._get_neighbors(current_idx)
+
+                print(neighbors)
 
                 for neighbor_idx in neighbors:
                     neighbor_idx = int(neighbor_idx)  # Ensure neighbor indices are Python ints
@@ -298,6 +302,8 @@ class Drone:
                 path.append(self.prm_nodes[current_idx])
                 current_idx = came_from.get(current_idx)
             path.reverse()
+
+            print(f"Sphero [{self.sphero_id}] found path: {path}")
             return path
 
         except Exception as e:

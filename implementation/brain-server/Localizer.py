@@ -54,20 +54,31 @@ class Localizer:
                 # Retrieve GMM mean and covariance
                 gmm_x, gmm_y = gmm.means_[0]
                 cov = gmm.covariances_[0]
+                cov += np.eye(2) * 1e-6  # Ensure covariance matrix is not singular
+
+                for particle in self.particles:
+                    if particle.x == 0 and particle.y == 0:
+                        particle.x = np.random.normal(gmm_x, np.sqrt(cov[0, 0]))
+                        particle.y = np.random.normal(gmm_y, np.sqrt(cov[1, 1]))
+                        particle.weight = 1.0 / len(self.particles)
             else:
                 # Handle case when no points are detected
-                height, width = mask.shape[:2]
                 gmm_x, gmm_y = width // 2, height // 2  # Default to image center
                 cov = np.eye(2)  # Default covariance
-
 
             # Update particle weights based on the GMM
             for particle in self.particles:
                 gmm_weight = self._calculateWeight(particle.x, particle.y, (gmm_x, gmm_y), cov)
-                particle.weight = gmm_weight 
+                particle.weight = gmm_weight
 
             # Normalize weights
             self._normalizeWeights()
+
+            # Check if all weights are zero after normalization
+            total_weight = sum(p.weight for p in self.particles)
+            if total_weight == 0:
+                for particle in self.particles:
+                    particle.weight = 1.0 / len(self.particles)
 
             # Resample and move particles
             self._resampleAndMoveParticles(gmm_x, gmm_y)
@@ -87,14 +98,19 @@ class Localizer:
         Returns:
             Weight as a float.
         """
-        if mean is None:
+        try:
+            if mean is None:
+                return 0
+            mean = np.array(mean)
+            pos = np.array([x, y])
+            cov += np.eye(2) * 1e-6  # Add small value to diagonal for stability
+            inv_cov = np.linalg.inv(cov)
+            diff = pos - mean
+            weight = np.exp(-0.5 * diff @ inv_cov @ diff.T) / (2 * np.pi * np.sqrt(np.linalg.det(cov)))
+            return weight
+        except Exception as e:
             return 0
-        mean = np.array(mean)
-        pos = np.array([x, y])
-        inv_cov = np.linalg.inv(cov)
-        diff = pos - mean
-        weight = np.exp(-0.5 * diff @ inv_cov @ diff.T) / (2 * np.pi * np.sqrt(np.linalg.det(cov)))
-        return weight
+
 
     def _resampleAndMoveParticles(self, mean_x, mean_y):
         """
