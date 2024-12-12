@@ -104,7 +104,7 @@ class Drone:
                 id=point_id,
                 x=target_x,
                 y=target_y,
-                weight=2,
+                weight=0.25,
                 color=self.sphero_color
             )
 

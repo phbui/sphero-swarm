@@ -107,48 +107,48 @@ class Planner:
         """Add a trajectory to the queue and process if the queue is full."""
         with self.queue_condition:
             self.trajectory_queue.put(trajectory)
-            print(f"{self.trajectory_queue.qsize()}, {len(self.spheros)}")
             if self.trajectory_queue.qsize() == len(self.spheros):
                 # Notify all threads to process the trajectories
                 self.queue_condition.notify_all()
 
 
     def process_trajectories(self):
-        """Process the trajectories in the queue, evaluate CVaR risk, and move drones."""
-        with self.queue_condition:
-            while self.trajectory_queue.qsize() < len(self.spheros):
-                # Wait until all trajectories are in the queue
-                self.queue_condition.wait()
+        """Continuously process the trajectories in the queue, evaluate CVaR risk, and move drones."""
+        while True:  # Run indefinitely to handle new trajectories as they come
+            with self.queue_condition:
+                while self.trajectory_queue.qsize() < len(self.spheros):
+                    # Wait until all trajectories are in the queue
+                    self.queue_condition.wait()
 
-            print("Analyzing trajectories")
+                print("Analyzing trajectories")
 
-            # Collect all trajectories from the queue
-            trajectories = []
-            while not self.trajectory_queue.empty():
-                trajectories.append(self.trajectory_queue.get())
+                # Collect all trajectories from the queue
+                trajectories = []
+                while not self.trajectory_queue.empty():
+                    trajectories.append(self.trajectory_queue.get())
 
-            # Evaluate CVaR risk for collision
-            collision_pairs = self._evaluate_cvar_risk(trajectories)
-            collision_ids = set()
+                # Evaluate CVaR risk for collision
+                collision_pairs = self._evaluate_cvar_risk(trajectories)
+                collision_ids = set()
 
-            # Handle drones with potential collision risks
-            for drone1, drone1_pos, drone2, drone2_pos in collision_pairs:
-                print(f"Collision risk detected between Drone {drone1.sphero_id} and Drone {drone2.sphero_id}")
-                collision_ids.add(drone1.sphero_id)
-                collision_ids.add(drone2.sphero_id)
-                self._adjust_paths(drone1, drone1_pos, drone2, drone2_pos)
+                # Handle drones with potential collision risks
+                for drone1, drone1_pos, drone2, drone2_pos in collision_pairs:
+                    print(f"Collision risk detected between Drone {drone1.sphero_id} and Drone {drone2.sphero_id}")
+                    collision_ids.add(drone1.sphero_id)
+                    collision_ids.add(drone2.sphero_id)
+                    self._adjust_paths(drone1, drone1_pos, drone2, drone2_pos)
 
-            # Handle drones with no collision risks
-            for trajectory, drone_pos, drone in trajectories:
-                if drone.sphero_id not in collision_ids:
-                    print(f"No collision detected for Drone {drone.sphero_id}. Moving to next point.")
-                    if len(trajectory) > 1:
-                        self._notify_and_move_drone(drone, trajectory[1])
-                    else:
-                        print(f"Drone {drone.sphero_id} has reached its final destination.")
+                # Handle drones with no collision risks
+                for trajectory, drone_pos, drone in trajectories:
+                    if drone.sphero_id not in collision_ids:
+                        print(f"No collision detected for Drone {drone.sphero_id}. Moving to next point.")
+                        if len(trajectory) > 1:
+                            self._notify_and_move_drone(drone, trajectory[1])
+                        else:
+                            print(f"Drone {drone.sphero_id} has reached its final destination.")
 
-            # Clear the queue after processing (queue is already empty at this point)
-            print("All trajectories processed. Queue cleared.")
+                # Print completion message
+                print("All trajectories processed. Queue cleared.")
 
     def _evaluate_cvar_risk(self, trajectories):
         """
