@@ -11490,3 +11490,215 @@ spherov2.controls.PacketDecodingException: Bad response checksum
 2024-12-13 01:37:00,803 [WARNING] WebSocket: Closing connection.
 2024-12-13 01:37:00,843 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
 2024-12-13 01:37:00,861 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 01:47:16,726 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 01:47:16,764 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 01:47:16,767 [INFO] WebSocket: Connected to the server.
+2024-12-13 01:47:16,767 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 01:47:19,128 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 01:47:20,279 [INFO] Main: All processes started.
+2024-12-13 01:47:23,251 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 01:47:28,518 [INFO] SB-2E86: Initialization complete.
+2024-12-13 01:47:28,519 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 01:47:28,625 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 01:47:29,266 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:47:32,137 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:47:32,619 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:47:35,547 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:47:35,967 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:47:38,739 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:47:39,211 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:49:10,769 [INFO] WebSocket: Connected to the server.
+2024-12-13 01:49:10,770 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 01:49:10,798 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 01:49:10,812 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 01:49:12,017 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 01:49:14,254 [INFO] Main: All processes started.
+2024-12-13 01:49:15,918 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 01:49:21,195 [INFO] SB-2E86: Initialization complete.
+2024-12-13 01:49:21,195 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 01:49:21,260 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 01:49:22,226 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:49:25,099 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:49:25,654 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:49:28,479 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:49:29,081 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:49:32,006 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:49:32,566 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 01:49:35,414 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:49:36,199 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 01:49:36,199 [WARNING] WebSocket: Closing connection.
+2024-12-13 01:53:47,691 [INFO] WebSocket: Connected to the server.
+2024-12-13 01:53:47,692 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 01:53:47,692 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 01:53:47,692 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 01:53:51,054 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 01:53:51,222 [INFO] Main: All processes started.
+2024-12-13 01:53:57,725 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 01:54:03,094 [INFO] SB-2E86: Initialization complete.
+2024-12-13 01:54:03,096 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 01:54:03,148 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 01:55:51,275 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...002159AD1C110>)(bytearray(b'\x8b\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...002159AD1C110>)(bytearray(b'\x8b\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 01:55:53,230 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...002159AD1C110>)(bytearray(b'\xfb\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...002159AD1C110>)(bytearray(b'\xfb\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 01:55:53,338 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...002159AD1C110>)(bytearray(b'\x9f\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...002159AD1C110>)(bytearray(b'\x9f\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 01:57:35,997 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 01:57:35,999 [ERROR] SB-2E86: Error in subscriber: 
+2024-12-13 01:57:36,000 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 01:57:36,006 [WARNING] WebSocket: Closing connection.
+2024-12-13 01:57:36,008 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,037 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 01:57:36,065 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,070 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,072 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,074 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,076 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,076 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,082 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,086 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,087 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,089 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,091 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,093 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,097 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,098 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:57:36,099 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:58:46,678 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 01:58:46,682 [INFO] WebSocket: Connected to the server.
+2024-12-13 01:58:46,683 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 01:58:46,700 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 01:58:46,827 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 01:58:50,224 [INFO] Main: All processes started.
+2024-12-13 01:58:50,238 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 01:58:55,517 [INFO] SB-2E86: Initialization complete.
+2024-12-13 01:58:55,518 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 01:58:55,587 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 01:58:56,287 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 01:58:59,204 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:58:59,709 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 01:59:02,720 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:59:03,298 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 01:59:06,225 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 01:59:07,274 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,274 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,276 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,276 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,276 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,276 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,277 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,277 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,277 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,277 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,277 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,277 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,278 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,278 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,278 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,278 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,278 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,279 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,279 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,279 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,279 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,281 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,281 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,281 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,281 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,281 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,281 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,283 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,284 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,284 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,285 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,286 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,287 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,287 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,287 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,288 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,288 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,289 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,289 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,289 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,290 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,292 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,292 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,292 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,292 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,292 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,293 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,293 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,293 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,294 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,294 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,295 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,295 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,295 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,296 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,296 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,297 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,297 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,298 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,298 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,299 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,299 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,300 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,300 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,302 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,302 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,303 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,303 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,303 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,304 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,304 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:07,305 [ERROR] SB-2E86: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 01:59:52,688 [INFO] WebSocket: Connected to the server.
+2024-12-13 01:59:52,688 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 01:59:52,692 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 01:59:52,699 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 01:59:56,182 [INFO] Main: All processes started.
+2024-12-13 01:59:57,027 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:00:02,393 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:00:07,656 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:00:07,657 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:00:07,716 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:00:08,417 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:00:11,442 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:00:12,013 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:00:14,945 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:00:15,427 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:00:16,935 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:00:16,937 [WARNING] WebSocket: Closing connection.

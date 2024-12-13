@@ -37,7 +37,6 @@ class Drone:
 
             # Kalman filter variables
             self.angle = -1
-            self.speed = -1
             self.x_kf = None
             self.P_kf = None
             self.F = None
@@ -150,18 +149,35 @@ class Drone:
         if timing > 5:
             timing = 5  
 
+        # Visualize the predicted angle
+        end_x = self.current_x + 50 * math.cos(math.radians(angle))
+        end_y = self.current_y - 50 * math.sin(math.radians(angle))  # Inverted y-coordinate system
+
+        # Draw the predicted angle direction
+        self.display.draw_line(
+            id=f"{self.sphero_id}_angle_line",
+            point1=(self.current_y, self.current_x),
+            point2=(end_y, end_x),
+            weight=2,
+            color=(255, 0, 0)  # Red color for the line
+        )
+
+        # Label the angle
+        self.display.draw_label(
+            id=f"{self.sphero_id}_angle_label",
+            position=(self.current_y, self.current_x),
+            text=f"Angle: {int(angle)}°",
+            color=(255, 255, 255)  # White color for the label
+        )
+
         # Heuristic: Check if stuck
         if (self.last_location is not None 
             and self._position_unchanged(self.last_location, (self.current_y, self.current_x))
-            and self._angle_unchanged(self.angle, angle)
-            and self.map.is_on_obstacle_near_boundary(self.current_x, self.current_y)):
-            
+            and self._angle_unchanged(self.angle, angle)):
+ 
             # Turn around or choose a new angle
             angle = (angle + 180) % 360
             print("Stuck detected. Turning around.")
-
-        self.angle = angle
-        self.speed = speed
 
         # Update state references
         self.last_location = (self.current_y, self.current_x)
@@ -180,81 +196,18 @@ class Drone:
             tuple: (corrected_angle, timing)
         """
         try:
-            if self.last_location is None:
-                return self._initialize_state(target_position)
-
-            if self.angle == -1 or self.speed == -1:
-                return self._initialize_angle_and_speed(target_position)
+            if not self.kf_initialized:
+                self._init_kf(self.current_y, self.current_x)
+                return 0, 2
 
             return self._calculate_corrected_parameters(target_position)
 
         except ZeroDivisionError:
             print("Error: Division by zero occurred in timing calculation.")
-            return self.angle, 2  # Fallback timing
+            return 0, 2  # Fallback timing
         except Exception as e:
             print(f"Unexpected error in calculate_movement_parameters: {e}")
-            return self.angle, 2  # Fallback timing
-
-    def _initialize_state(self, target_position):
-        """
-        Handle the initial state where no previous data exists.
-        Initialize the KF with the current position.
-        """
-        self.last_location = (self.current_y, self.current_x)
-        self.last_attempt = target_position
-
-        if not self.kf_initialized:
-            self._init_kf(self.current_y, self.current_x)
-
-        # From the KF state (initially zero velocity), compute angle and speed
-        vy = self.x_kf[2,0]
-        vx = self.x_kf[3,0]
-        angle = math.degrees(math.atan2(vx, vy)) % 360
-        speed = math.sqrt(vx**2 + vy**2)
-
-        self.angle = angle
-        self.speed = speed
-
-        # Just return some initial guess for timing since no movement yet
-        return angle, 2
-
-    def _initialize_angle_and_speed(self, target_position):
-        """
-        After the second movement, use the second measurement to update the KF and get a better estimate.
-        """
-        if not self.kf_initialized:
-            # In case it wasn't done before
-            self._init_kf(self.last_location[0], self.last_location[1])
-
-        # Predict then update with the new measurement (current position)
-        self._kf_predict()
-        self._kf_update((self.current_y, self.current_x))
-
-        # Extract angle and speed from the KF
-        vy = self.x_kf[2,0]
-        vx = self.x_kf[3,0]
-        observed_speed = math.sqrt(vx**2 + vy**2)
-        observed_angle = math.degrees(math.atan2(vx, vy)) % 360
-
-        # Calculate timing based on observed speed
-        delta_y_target = target_position[0] - self.x_kf[0,0]
-        delta_x_target = target_position[1] - self.x_kf[1,0]
-        distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
-        
-        speed_adj = observed_speed + 1e-6
-        timing = distance_to_target / speed_adj
-
-        if timing > 5:
-            timing = 5
-
-        self.angle = observed_angle
-        self.speed = observed_speed
-
-        # Update last known positions
-        self.last_location = (self.current_y, self.current_x)
-        self.last_attempt = target_position
-
-        return self.angle, timing
+            return 0, 2  # Fallback timing
 
     def _position_unchanged(self, prev_pos, current_pos, threshold=5.0):
         py, px = prev_pos
