@@ -30,7 +30,7 @@ class Drone:
 
             self.current_y = -1
             self.current_x = -1
-            self.current_confidence = 0
+            self.current_confidence = 0.5
 
             self.last_attempt = None  # Store the last visited point
             self.last_location = None
@@ -77,98 +77,130 @@ class Drone:
             tuple: (corrected_angle, timing)
         """
         try:
-            # Handle uninitialized state
             if self.last_location is None:
-                self.last_location = (self.current_y, self.current_x)
-                self.last_attempt = target_position
-                return 0, 2  # Initial angle and default timing
+                return self._initialize_state(target_position)
 
             if self.angle == -1 or self.speed == -1:
-                # Second move: Initialize angle and speed using observed values
-                delta_y_actual = self.current_y - self.last_location[0]
-                delta_x_actual = self.current_x - self.last_location[1]
+                return self._initialize_angle_and_speed(target_position)
 
-                observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
-                distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
-                observed_speed = distance_traveled / 2  # Assume default timing of 2 seconds
-
-                # Initialize states
-                self.angle = observed_angle
-                self.speed = observed_speed
-
-                # Update last positions
-                self.last_location = (self.current_y, self.current_x)
-                self.last_attempt = target_position
-
-                return self.angle, 2  # Return observed angle and default timing
-
-            # Previous positions: a (start), b (intended target), c (current actual position)
-            a = self.last_location
-            b = self.last_attempt
-            c = (self.current_y, self.current_x)
-            confidence = self.current_confidence
-
-            # Calculate angle a -> b (previous intended direction)
-            delta_y_intended = b[0] - a[0]
-            delta_x_intended = b[1] - a[1]
-            angle_intended = math.degrees(math.atan2(delta_x_intended, delta_y_intended))
-
-            # Calculate angle a -> c (actual movement direction)
-            delta_y_actual = c[0] - a[0]
-            delta_x_actual = c[1] - a[1]
-            angle_actual = math.degrees(math.atan2(delta_x_actual, delta_y_actual))
-
-            # Correct the previous angle (z): angle_actual - angle_intended + previous_angle
-            correction_angle = angle_actual - angle_intended
-            observed_angle = (self.angle + correction_angle) % 360
-
-            adjusted_angle_weight = confidence
-            adjusted_speed_weight = confidence
-
-            # Apply Kalman-like correction for angle
-            self.angle = (
-                adjusted_angle_weight * self.angle + (1 - adjusted_angle_weight) * observed_angle
-            ) % 360
-
-            # Calculate the current angle to the target (c -> target)
-            delta_y_target = target_position[0] - c[0]
-            delta_x_target = target_position[1] - c[1]
-            target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target))
-
-            # Combine corrected angle with current target angle
-            corrected_angle = (self.angle + target_angle) % 360
-
-            # Calculate observed speed from the previous movement
-            distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
-            observed_speed = distance_traveled / 2  # Assume previous timing of 2 seconds
-
-            # Apply Kalman-like correction for speed
-            self.speed = adjusted_speed_weight * self.speed + (1 - adjusted_speed_weight) * observed_speed
-
-            # Calculate distance to target
-            distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
-
-            # Calculate timing based on corrected speed
-            timing = distance_to_target / (self.speed + 1e-6)  # Avoid division by zero
-
-            # Update state
-            self.last_location = (self.current_y, self.current_x)
-            self.last_attempt = target_position
-
-            return corrected_angle, timing
+            return self._calculate_corrected_parameters(target_position)
 
         except ZeroDivisionError:
             print("Error: Division by zero occurred in timing calculation.")
             return self.angle, 2  # Fallback timing
-
-        except ValueError as ve:
-            print(f"Error: Value error occurred - {ve}")
-            return self.angle, 2  # Fallback timing
-
         except Exception as e:
             print(f"Unexpected error in calculate_movement_parameters: {e}")
             return self.angle, 2  # Fallback timing
+
+    def _initialize_state(self, target_position):
+        """
+        Handle the initial state where no previous data exists.
+        """
+        self.last_location = (self.current_y, self.current_x)
+        self.last_attempt = target_position
+        return 0, 2  # Initial angle and default timing
+
+    def _initialize_angle_and_speed(self, target_position):
+        """
+        Initialize angle and speed for the second movement.
+        """
+        delta_y_actual = self.current_y - self.last_location[0]
+        delta_x_actual = self.current_x - self.last_location[1]
+
+        observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
+        distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+        observed_speed = distance_traveled / 2  # Assume default timing of 2 seconds
+
+
+
+        # Calculate timing for the new target
+        delta_y_target = target_position[0] - self.current_y
+        delta_x_target = target_position[1] - self.current_x
+        distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
         
+        # Calculate timing based on observed speed
+        timing = distance_to_target / (observed_speed + 1e-6)
+
+        if timing > 3:
+            scaling_factor = 3 / timing
+            adjusted_speed = observed_speed * scaling_factor
+            timing = 3  # Cap timing at 3 seconds
+        else:
+            adjusted_speed = observed_speed  # Keep the original speed if timing is within limits
+
+        # Initialize states
+        self.angle = observed_angle
+        self.speed = adjusted_speed
+
+        # Update last positions
+        self.last_location = (self.current_y, self.current_x)
+        self.last_attempt = target_position
+
+        return self.angle, timing
+
+    def _calculate_corrected_parameters(self, target_position):
+        """
+        Calculate corrected angle and timing using Kalman-like correction.
+        """
+        a = self.last_location
+        b = self.last_attempt
+        c = (self.current_y, self.current_x)
+        confidence = self.current_confidence
+
+        angle_intended = self._calculate_angle(a, b)
+        angle_actual = self._calculate_angle(a, c)
+        correction_angle = angle_actual - angle_intended
+        observed_angle = (self.angle + correction_angle) % 360
+
+        # Apply Kalman-like correction for angle
+        self.angle = (
+            confidence * self.angle + (1 - confidence) * observed_angle
+        ) % 360
+
+        # Calculate the current angle to the target
+        target_angle = self._calculate_angle(c, target_position)
+        corrected_angle = (self.angle + target_angle) % 360
+
+        # Calculate observed speed from previous movement
+        delta_y_actual = c[0] - a[0]
+        delta_x_actual = c[1] - a[1]
+        distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+        observed_speed = distance_traveled / 2  # Assume previous timing of 2 seconds
+
+        # Apply Kalman-like correction for speed
+        self.speed = confidence * self.speed + (1 - confidence) * observed_speed
+
+        # Calculate timing based on corrected speed
+        delta_y_target = target_position[0] - c[0]
+        delta_x_target = target_position[1] - c[1]
+        distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
+        
+        # Calculate timing based on observed speed
+        timing = distance_to_target / (observed_speed + 1e-6)
+
+        if timing > 3:
+            scaling_factor = 3 / timing
+            adjusted_speed = observed_speed * scaling_factor
+            timing = 3  # Cap timing at 3 seconds
+        else:
+            adjusted_speed = observed_speed  # Keep the original speed if timing is within limits
+
+        self.speed = adjusted_speed
+
+        # Update state
+        self.last_location = (self.current_y, self.current_x)
+        self.last_attempt = target_position
+
+        return corrected_angle, timing
+
+    def _calculate_angle(self, start, end):
+        """
+        Calculate the angle from start to end.
+        """
+        delta_y = end[0] - start[0]
+        delta_x = end[1] - start[1]
+        return math.degrees(math.atan2(delta_x, delta_y))
+      
     def get_position(self):
         """
         Get the current position of the Sphero using localization.
@@ -236,6 +268,8 @@ class Drone:
             state_name = current_state["state"]
             print(f"Sphero [{self.sphero_id}] executing state: {state_name}")
 
+            self.get_position()
+
             if state_name == "move_to_goal":
                 self._move_to_goal()
             elif state_name == "interact":
@@ -249,12 +283,10 @@ class Drone:
         """
         try:
             if not self.goal:
-                print(f"Sphero [{self.sphero_id}]: Goal is not set!")
+                #print(f"Sphero [{self.sphero_id}]: Goal is not set!")
                 return
             
             print(f"Sphero [{self.sphero_id}] at: y:{self.current_y}, x:{self.current_x}")
-
-            
 
             if (self.reached_goal()):
                 self._transition_to_state("interact")
@@ -269,7 +301,7 @@ class Drone:
         Fine-tune the Sphero's position to align with the goal.
         """
         try:
-            if self._euclidean_distance((self.current_x, self.current_y), self.goal) <= 5:
+            if self._euclidean_distance((self.current_x, self.current_y), self.goal) <= 100:
                 print(f"Sphero [{self.sphero_id}] precisely aligned with the goal.")
                 return True
         except Exception as e:
@@ -368,7 +400,7 @@ class Drone:
 
             path.reverse()
 
-            print(f"Sphero [{self.sphero_id}] found path: {path}")
+            #print(f"Sphero [{self.sphero_id}] found path: {path}")
             return path
 
         except Exception as e:
@@ -408,7 +440,7 @@ class Drone:
             current_position = (self.current_y, self.current_x)
             trajectory = self._find_path(current_position)
             self.planner.add_trajectory((trajectory, self))
-            print(f"Sphero [{self.sphero_id}] submitted trajectory: {trajectory}")
+            #print(f"Sphero [{self.sphero_id}] submitted trajectory: {trajectory}")
         except Exception as e:
             print(f"Error submitting trajectory: {e}")
 

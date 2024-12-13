@@ -52,7 +52,7 @@ class SpheroMovement:
 
             # Use the provided timing for movement
             self.droid.roll(angle, 25, timing)
-            print(f"[{self.sphero_id}] movement complete!")
+            print(f"[{self.sphero_id}] Movement complete.")
             self.send_feedback(self.sphero_id)
         except Exception as e:
             print(f"Error in move: {e}")

@@ -49,7 +49,7 @@ class WebSocketHandler:
                     try:
                         # Receive and process messages in real-time
                         message = await ws.recv()
-                        print(f"WebSocket: Received message: {message} \n")
+                        #print(f"WebSocket: Received message: {message} \n")
 
                         try:
                             parsed_message = json.loads(message)

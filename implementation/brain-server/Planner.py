@@ -28,7 +28,7 @@ def send_message(ws, id, message_type, message_content):
         message = json.dumps(message)
 
         asyncio.run(_send_message_async(ws, message))
-        print(f"WebSocket: Sent message: {message}")
+        #print(f"WebSocket: Sent message: {message}")
     except Exception as e:
         print(f"WebSocket: Error sending message: {e}")
 
@@ -121,7 +121,7 @@ class Planner:
                     # Wait until all trajectories are in the queue
                     self.queue_condition.wait()
 
-                print("Analyzing trajectories")
+                #print("Analyzing trajectories")
 
                 # Collect all trajectories from the queue
                 trajectories = []
@@ -149,7 +149,7 @@ class Planner:
                             print(f"Drone {drone.sphero_id} has reached its final destination.")
 
                 # Print completion message
-                print("All trajectories processed. Queue cleared.")
+                #print("All trajectories processed. Queue cleared.")
 
     def _evaluate_cvar_risk(self, trajectories):
         """
@@ -290,7 +290,7 @@ class Planner:
             message_content = {
                 "id": drone.sphero_id,
                 "angle": int(round(angle_deg)),
-                "timing": int(round(timing))
+                "timing": float(timing)
             }
 
             drone.move(current_x, current_y, target_x, target_y)

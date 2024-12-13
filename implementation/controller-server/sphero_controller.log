@@ -5568,3 +5568,455 @@ ng closed
 2024-12-12 21:24:01,660 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
 2024-12-12 21:24:04,948 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
 2024-12-12 21:24:04,968 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":483529730}}
+2024-12-12 21:26:26,943 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:26:26,948 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:26:26,951 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:26:26,951 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:26:28,296 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:26:30,615 [INFO] Main: All processes started.
+2024-12-12 21:26:32,228 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:26:37,599 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:26:37,599 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:26:37,619 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:26:37,647 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:26:41,022 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:26:41,047 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:26:44,098 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:26:44,111 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":198,"timing":493802592}}
+2024-12-12 21:27:28,114 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 21:27:28,121 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:28:17,349 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:28:17,351 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:28:17,352 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:28:17,354 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:28:17,892 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:28:20,744 [INFO] Main: All processes started.
+2024-12-12 21:28:23,648 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:28:29,016 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:28:29,017 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:28:29,036 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:28:29,060 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:28:32,553 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:28:32,572 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:28:36,173 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:28:36,206 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":194,"timing":559946426}}
+2024-12-12 21:29:44,009 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:29:44,010 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:29:44,033 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 21:29:44,034 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:31:05,346 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:31:05,347 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:31:05,349 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:31:05,401 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:31:06,161 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:31:07,426 [INFO] Main: All processes started.
+2024-12-12 21:31:10,706 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:31:16,103 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:31:16,106 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:31:16,210 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:31:16,286 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:31:19,491 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:19,541 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:31:22,674 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:22,686 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":168,"timing":2}}
+2024-12-12 21:31:25,648 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:25,656 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":156,"timing":2}}
+2024-12-12 21:31:28,926 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:28,949 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":145,"timing":2}}
+2024-12-12 21:31:32,110 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:32,128 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":133,"timing":2}}
+2024-12-12 21:31:35,294 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:35,305 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":121,"timing":2}}
+2024-12-12 21:31:38,590 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:38,609 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":109,"timing":2}}
+2024-12-12 21:31:41,773 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:41,808 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":97,"timing":2}}
+2024-12-12 21:31:45,395 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:31:45,450 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":85,"timing":2}}
+2024-12-12 21:31:46,369 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:31:46,370 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:31:46,379 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 21:31:46,389 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:36:47,494 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:36:47,500 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:36:47,500 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:36:47,503 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:36:48,297 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:36:51,197 [INFO] Main: All processes started.
+2024-12-12 21:36:52,045 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:36:57,411 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:36:57,412 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:36:57,470 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:36:57,478 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:37:01,061 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:37:01,098 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":630575134}}
+2024-12-12 21:37:02,044 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:37:02,045 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:37:06,935 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 21:37:06,936 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:38:42,422 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:38:42,425 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:38:42,426 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:38:42,433 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:38:43,093 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:38:46,135 [INFO] Main: All processes started.
+2024-12-12 21:38:46,343 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:38:46,343 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:38:46,586 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:38:46,702 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 21:38:46,704 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:39:25,470 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:39:25,473 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:39:25,475 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:39:25,498 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:39:26,223 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:39:28,041 [INFO] Main: All processes started.
+2024-12-12 21:39:33,394 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:39:38,656 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:39:38,656 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:39:38,758 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:39:39,730 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:39:43,034 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:39:43,288 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":169,"timing":2}}
+2024-12-12 21:39:46,449 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:39:46,685 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":142,"timing":6}}
+2024-12-12 21:39:54,023 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:39:54,299 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":20,"timing":1}}
+2024-12-12 21:39:56,550 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:39:56,775 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":120,"timing":10}}
+2024-12-12 21:40:07,772 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:40:07,991 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":211,"timing":6}}
+2024-12-12 21:40:15,114 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:40:15,367 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":51,"timing":3}}
+2024-12-12 21:40:19,401 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:40:19,665 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":343,"timing":3}}
+2024-12-12 21:40:23,788 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:40:24,093 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":276,"timing":1}}
+2024-12-12 21:40:26,315 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:40:26,606 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":331,"timing":231}}
+2024-12-12 21:41:53,281 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:41:53,283 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:42:12,896 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:42:12,902 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:42:12,902 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:42:12,902 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:42:14,457 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:42:16,610 [INFO] Main: All processes started.
+2024-12-12 21:42:21,498 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:42:26,806 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:42:26,806 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:42:26,859 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:42:27,399 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:42:30,803 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:31,210 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":193,"timing":1}}
+2024-12-12 21:42:35,408 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:35,888 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":303,"timing":3}}
+2024-12-12 21:42:40,222 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:40,513 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":206,"timing":1}}
+2024-12-12 21:42:42,733 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:43,007 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":201,"timing":2}}
+2024-12-12 21:42:46,363 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:46,602 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":47,"timing":5}}
+2024-12-12 21:42:52,857 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:53,100 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":109,"timing":1}}
+2024-12-12 21:42:55,499 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:42:55,790 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":303,"timing":3}}
+2024-12-12 21:42:58,678 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 21:42:58,684 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:46:41,066 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:46:41,070 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:46:41,070 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:46:41,075 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:46:41,505 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:46:44,764 [INFO] Main: All processes started.
+2024-12-12 21:46:50,072 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:46:55,486 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:46:55,486 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:46:55,523 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:46:56,160 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:46:59,350 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:46:59,634 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":58,"timing":62}}
+2024-12-12 21:47:23,734 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:47:23,735 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:47:23,749 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 21:47:23,756 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:48:21,116 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:48:21,119 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:48:21,124 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:48:21,125 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:48:23,802 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:48:24,790 [INFO] Main: All processes started.
+2024-12-12 21:48:27,363 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:48:32,744 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:48:32,745 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:48:32,763 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:48:33,522 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:48:37,288 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:48:37,618 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":211,"timing":3}}
+2024-12-12 21:48:42,034 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:48:42,375 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":248,"timing":5}}
+2024-12-12 21:48:49,033 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:48:49,388 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":225,"timing":5}}
+2024-12-12 21:48:55,863 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:48:56,202 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":81,"timing":0}}
+2024-12-12 21:48:57,846 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:48:58,187 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":104,"timing":2}}
+2024-12-12 21:49:01,573 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:49:01,854 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":323,"timing":1}}
+2024-12-12 21:49:04,206 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:49:04,472 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":298,"timing":3}}
+2024-12-12 21:49:06,627 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:49:06,628 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:49:31,315 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:49:31,316 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:49:31,316 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:49:31,316 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:49:33,138 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:49:34,992 [INFO] Main: All processes started.
+2024-12-12 21:49:38,402 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:49:43,770 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:49:43,771 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:49:43,820 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:49:44,513 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:49:47,888 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:49:48,173 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":213,"timing":1}}
+2024-12-12 21:49:50,631 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:49:50,987 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":210,"timing":4}}
+2024-12-12 21:49:56,454 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:49:56,721 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":195,"timing":0}}
+2024-12-12 21:49:59,086 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:49:59,474 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":243,"timing":5}}
+2024-12-12 21:49:59,711 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:49:59,723 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:49:59,741 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 21:49:59,744 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 21:51:50,601 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:51:50,620 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:51:50,621 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:51:50,640 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:51:52,037 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:51:53,267 [INFO] Main: All processes started.
+2024-12-12 21:51:56,852 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:52:02,149 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:52:02,149 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:52:02,159 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:52:02,813 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:52:06,118 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:06,424 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":318,"timing":3}}
+2024-12-12 21:52:10,734 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:11,053 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":243,"timing":0.5577118422753092}}
+2024-12-12 21:52:13,050 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:13,389 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":235,"timing":3}}
+2024-12-12 21:52:17,667 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:18,062 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":170,"timing":0.7396606989124709}}
+2024-12-12 21:52:20,281 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:20,580 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":292,"timing":3}}
+2024-12-12 21:52:24,891 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:25,218 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":217,"timing":1.4978002166434456}}
+2024-12-12 21:52:27,992 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:28,207 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":285,"timing":3}}
+2024-12-12 21:52:32,505 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:32,774 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":74,"timing":3}}
+2024-12-12 21:52:37,019 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:37,271 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":105,"timing":3}}
+2024-12-12 21:52:41,295 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:41,636 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":312,"timing":0.827878172645536}}
+2024-12-12 21:52:43,909 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:44,194 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":308,"timing":3}}
+2024-12-12 21:52:48,643 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:48,973 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":27,"timing":1.1593007412245262}}
+2024-12-12 21:52:51,421 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:51,689 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":167,"timing":3}}
+2024-12-12 21:52:55,808 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:56,071 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":127,"timing":1.1447863032414631}}
+2024-12-12 21:52:58,340 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:52:58,570 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":228,"timing":1.9294371089582667}}
+2024-12-12 21:53:01,634 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:01,863 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":7,"timing":1.3873267285225062}}
+2024-12-12 21:53:04,497 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:04,722 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":220,"timing":2.4390701333193237}}
+2024-12-12 21:53:08,449 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:08,692 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":321,"timing":2.301289883044347}}
+2024-12-12 21:53:12,297 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:12,581 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":138,"timing":1.0926104269270351}}
+2024-12-12 21:53:15,041 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:15,342 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":103,"timing":3}}
+2024-12-12 21:53:19,759 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:20,016 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":308,"timing":0.58683263122322}}
+2024-12-12 21:53:21,726 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:53:21,932 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":257,"timing":3}}
+2024-12-12 21:53:24,139 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:53:24,140 [WARNING] WebSocket: Closing connection.
+2024-12-12 21:57:09,896 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:57:09,898 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:57:09,903 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:57:09,903 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:57:11,462 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:57:13,588 [INFO] Main: All processes started.
+2024-12-12 21:57:15,887 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:57:21,280 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:57:21,281 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:57:21,311 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:57:22,255 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:57:25,703 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:26,027 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":283,"timing":3}}
+2024-12-12 21:57:30,543 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:30,875 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":210,"timing":1.1921719935215127}}
+2024-12-12 21:57:35,143 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:35,538 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":188,"timing":3}}
+2024-12-12 21:57:40,075 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:40,457 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":175,"timing":3}}
+2024-12-12 21:57:45,331 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:45,716 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":211,"timing":3}}
+2024-12-12 21:57:50,049 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:50,297 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":6,"timing":3}}
+2024-12-12 21:57:54,417 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:54,651 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":127,"timing":3}}
+2024-12-12 21:57:58,789 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:57:59,008 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":353,"timing":1.6805131466093022}}
+2024-12-12 21:58:02,733 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:58:03,087 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":308,"timing":3}}
+2024-12-12 21:58:07,312 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:59:14,584 [ERROR] SB-D8B2: Error in subscriber: 
+2024-12-12 21:59:14,585 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,587 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,587 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,588 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,588 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,588 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,589 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,589 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,589 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,589 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,591 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,591 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,592 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,592 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,592 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,594 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,594 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,594 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,595 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,595 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,595 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,597 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,598 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,599 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,599 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,601 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,601 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,604 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,604 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,604 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,606 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,606 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,608 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,610 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,611 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,613 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,615 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,616 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,616 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,620 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 21:59:14,650 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:00:03,172 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 22:00:03,176 [INFO] WebSocket: Connected to the server.
+2024-12-12 22:00:03,177 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 22:00:03,178 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 22:00:06,532 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 22:00:06,889 [INFO] Main: All processes started.
+2024-12-12 22:00:10,382 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 22:00:15,749 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 22:00:15,749 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 22:00:15,808 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 22:00:16,368 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 22:00:19,517 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:19,731 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":205,"timing":3}}
+2024-12-12 22:00:23,894 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:24,120 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":30,"timing":3}}
+2024-12-12 22:00:28,372 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:28,603 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":326,"timing":2.101916518323836}}
+2024-12-12 22:00:31,866 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:32,081 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":281,"timing":3}}
+2024-12-12 22:00:36,346 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:36,604 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":176,"timing":2.020746600913559}}
+2024-12-12 22:00:39,759 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:39,978 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":284,"timing":3}}
+2024-12-12 22:00:44,267 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:44,535 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":294,"timing":3}}
+2024-12-12 22:00:48,896 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:49,168 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":17,"timing":0.7162963704931096}}
+2024-12-12 22:00:51,097 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:51,324 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":307,"timing":3}}
+2024-12-12 22:00:55,371 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:00:55,621 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":181,"timing":3}}
+2024-12-12 22:00:59,859 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:01:00,102 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":209,"timing":3}}
+2024-12-12 22:01:04,144 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:01:04,410 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":220,"timing":3}}
+2024-12-12 22:01:09,247 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 22:01:49,293 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 22:01:49,294 [WARNING] WebSocket: Closing connection.
+2024-12-12 22:01:49,315 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,317 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,320 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,323 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,324 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,326 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,328 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,333 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,335 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,335 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,336 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,338 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,339 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,341 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,343 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,344 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,346 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,346 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,347 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,348 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,349 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,350 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,353 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,354 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,354 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,355 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,356 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,357 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,359 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,359 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,360 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,361 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,362 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,363 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,365 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,366 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,368 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,369 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,369 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,370 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,370 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,372 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,373 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,374 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,375 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,375 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,376 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,377 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,378 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,378 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,379 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,379 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,380 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,380 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,381 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,383 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,384 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,384 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,385 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,385 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,386 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,386 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 22:01:49,387 [ERROR] SB-D8B2: Error in subscriber: [WinError 2] The system cannot find the file specified
