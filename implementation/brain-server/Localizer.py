@@ -46,6 +46,7 @@ class Localizer:
             if len(points) > 0:
                 # Calculate the geometric center of the points (unweighted mean)
                 geometric_center = np.mean(points, axis=0)  # Average of all points
+                robot_size = 50.0 
 
                 # Fit a Gaussian Mixture Model initialized at the geometric center
                 gmm = GaussianMixture(
@@ -55,10 +56,10 @@ class Localizer:
 
                 # Retrieve GMM mean and covariance
                 gmm_y, gmm_x = gmm.means_[0]
-                cov = gmm.covariances_[0]
+                cov = gmm.covariances_[0] / (robot_size * 2)
                 cov += np.eye(2) * 1e-6  # Ensure covariance matrix is not singular
 
-                confidence = 1.0 / (np.linalg.det(cov) + 1e-6) 
+                confidence = np.exp(-np.linalg.det(cov))
 
                 for particle in self.particles:
                     if particle.x == 0 and particle.y == 0:
@@ -116,7 +117,6 @@ class Localizer:
         except Exception as e:
             return 0
 
-
     def _resampleAndMoveParticles(self, mean_y, mean_x):
         """
         Resample particles based on their weights and move them closer to the detected mean.
@@ -145,11 +145,11 @@ class Localizer:
                 resampled_particle = self.particles[resampled_indices[i]]
 
                 # Move towards the mean with some Gaussian noise
-                noise_x = np.random.normal(0, 5)  # Adjust noise level as needed
-                noise_y = np.random.normal(0, 5)
+                noise_x = np.random.normal(0, 1)  
+                noise_y = np.random.normal(0, 1)
 
-                new_x = 0.7 * resampled_particle.x + 0.3 * mean_x + noise_x  # Weighted towards mean
-                new_y = 0.7 * resampled_particle.y + 0.3 * mean_y + noise_y
+                new_x = 0.8 * resampled_particle.x + 0.2 * mean_x + noise_x  # Weighted towards mean
+                new_y = 0.8 * resampled_particle.y + 0.2 * mean_y + noise_y
 
                 particle.move(new_y, new_x, resampled_particle.weight / 4)
         except Exception as e:

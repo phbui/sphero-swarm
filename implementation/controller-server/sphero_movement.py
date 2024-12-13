@@ -51,7 +51,7 @@ class SpheroMovement:
             self.droid.set_compass_direction(round(angle))
 
             # Use the provided timing for movement
-            self.droid.roll(angle, 25, timing)
+            self.droid.roll(angle, 20, timing)
             print(f"[{self.sphero_id}] Movement complete.")
             self.send_feedback(self.sphero_id)
         except Exception as e:

@@ -35,9 +35,17 @@ class Drone:
             self.last_attempt = None  # Store the last visited point
             self.last_location = None
 
-            # Kalman filter
+            # Kalman filter variables
             self.angle = -1
             self.speed = -1
+            self.x_kf = None
+            self.P_kf = None
+            self.F = None
+            self.H = None
+            self.Q = None
+            self.R_base = None
+            self.kf_initialized = False
+            self.dt = 2.0  # Time interval between updates (assumed)
 
             # State Machine for the Drone
             self.states = [
@@ -66,9 +74,104 @@ class Drone:
         except Exception as e:
             print(f"Error initializing Drone: {e}")
 
+    def _init_kf(self, y, x):
+        """
+        Initialize the Kalman filter with the initial position and zero velocity.
+        State: [y, x, vy, vx]
+        """
+        self.x_kf = np.array([[y],
+                              [x],
+                              [0.0],
+                              [0.0]])
+        self.P_kf = np.eye(4)*1.0
+
+        self.F = np.array([[1, 0, self.dt, 0],
+                           [0, 1, 0, self.dt],
+                           [0, 0, 1,    0],
+                           [0, 0, 0,    1]], dtype=float)
+
+        self.H = np.array([[1, 0, 0, 0],
+                           [0, 1, 0, 0]], dtype=float)
+
+        q = 1e-2
+        dt = self.dt
+        self.Q = q * np.array([[dt**4/4, 0,         dt**3/2, 0        ],
+                               [0,       dt**4/4,   0,       dt**3/2  ],
+                               [dt**3/2, 0,         dt**2,   0        ],
+                               [0,       dt**3/2,   0,       dt**2    ]])
+
+        r = 0.1
+        self.R_base = np.array([[r,   0],
+                                [0,   r]], dtype=float)
+
+        self.kf_initialized = True
+
+    def _kf_predict(self):
+        self.x_kf = self.F @ self.x_kf
+        self.P_kf = self.F @ self.P_kf @ self.F.T + self.Q
+
+    def _kf_update(self, z):
+        # Scale R by inverse of confidence: higher confidence -> smaller R
+        eps = 1e-6
+        scale = 1.0 / (self.current_confidence + eps)
+        R = self.R_base * scale
+
+        z = np.array([[z[0]],
+                      [z[1]]])
+        y = z - self.H @ self.x_kf
+        S = self.H @ self.P_kf @ self.H.T + R
+        K = self.P_kf @ self.H.T @ np.linalg.inv(S)
+        self.x_kf = self.x_kf + K @ y
+        I = np.eye(len(self.P_kf))
+        self.P_kf = (I - K @ self.H) @ self.P_kf
+    
+    def _calculate_corrected_parameters(self, target_position):
+        """
+        Perform a full predict-update cycle with the Kalman filter and calculate angle & timing.
+        Also implements a stuck detection heuristic.
+        """
+        self._kf_predict()
+        self._kf_update((self.current_y, self.current_x))
+
+        # Extract angle and speed from updated KF state
+        vy = self.x_kf[2,0]
+        vx = self.x_kf[3,0]
+        speed = math.sqrt(vx**2 + vy**2)
+        angle = math.degrees(math.atan2(vx, vy)) % 360
+
+        # Calculate timing based on speed
+        delta_y_target = target_position[0] - self.x_kf[0,0]
+        delta_x_target = target_position[1] - self.x_kf[1,0]
+        distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
+        
+        speed_adj = speed + 1e-6
+        timing = distance_to_target / speed_adj
+
+        if timing > 5:
+            timing = 5  
+
+        # Heuristic: Check if stuck
+        if (self.last_location is not None 
+            and self._position_unchanged(self.last_location, (self.current_y, self.current_x))
+            and self._angle_unchanged(self.angle, angle)
+            and self.map.is_on_obstacle_near_boundary(self.current_x, self.current_y)):
+            
+            # Turn around or choose a new angle
+            angle = (angle + 180) % 360
+            print("Stuck detected. Turning around.")
+
+        self.angle = angle
+        self.speed = speed
+
+        # Update state references
+        self.last_location = (self.current_y, self.current_x)
+        self.last_attempt = target_position
+
+        return angle, timing
+
     def calculate_movement_parameters(self, target_position):
         """
-        Calculate the angle and timing needed to reach the target position with Kalman-like correction.
+        Calculate the angle and timing needed to reach the target position with a proper Kalman filter approach.
 
         Args:
             target_position: Tuple (y, x) representing the target position.
@@ -95,103 +198,72 @@ class Drone:
     def _initialize_state(self, target_position):
         """
         Handle the initial state where no previous data exists.
+        Initialize the KF with the current position.
         """
         self.last_location = (self.current_y, self.current_x)
         self.last_attempt = target_position
-        return 0, 2  # Initial angle and default timing
+
+        if not self.kf_initialized:
+            self._init_kf(self.current_y, self.current_x)
+
+        # From the KF state (initially zero velocity), compute angle and speed
+        vy = self.x_kf[2,0]
+        vx = self.x_kf[3,0]
+        angle = math.degrees(math.atan2(vx, vy)) % 360
+        speed = math.sqrt(vx**2 + vy**2)
+
+        self.angle = angle
+        self.speed = speed
+
+        # Just return some initial guess for timing since no movement yet
+        return angle, 2
 
     def _initialize_angle_and_speed(self, target_position):
         """
-        Initialize angle and speed for the second movement.
+        After the second movement, use the second measurement to update the KF and get a better estimate.
         """
-        delta_y_actual = self.current_y - self.last_location[0]
-        delta_x_actual = self.current_x - self.last_location[1]
+        if not self.kf_initialized:
+            # In case it wasn't done before
+            self._init_kf(self.last_location[0], self.last_location[1])
 
-        observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
-        distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
-        observed_speed = distance_traveled / 2  # Assume default timing of 2 seconds
+        # Predict then update with the new measurement (current position)
+        self._kf_predict()
+        self._kf_update((self.current_y, self.current_x))
 
+        # Extract angle and speed from the KF
+        vy = self.x_kf[2,0]
+        vx = self.x_kf[3,0]
+        observed_speed = math.sqrt(vx**2 + vy**2)
+        observed_angle = math.degrees(math.atan2(vx, vy)) % 360
 
-
-        # Calculate timing for the new target
-        delta_y_target = target_position[0] - self.current_y
-        delta_x_target = target_position[1] - self.current_x
+        # Calculate timing based on observed speed
+        delta_y_target = target_position[0] - self.x_kf[0,0]
+        delta_x_target = target_position[1] - self.x_kf[1,0]
         distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
         
-        # Calculate timing based on observed speed
-        timing = distance_to_target / (observed_speed + 1e-6)
+        speed_adj = observed_speed + 1e-6
+        timing = distance_to_target / speed_adj
 
-        if timing > 3:
-            scaling_factor = 3 / timing
-            adjusted_speed = observed_speed * scaling_factor
-            timing = 3  # Cap timing at 3 seconds
-        else:
-            adjusted_speed = observed_speed  # Keep the original speed if timing is within limits
+        if timing > 5:
+            timing = 5
 
-        # Initialize states
         self.angle = observed_angle
-        self.speed = adjusted_speed
+        self.speed = observed_speed
 
-        # Update last positions
+        # Update last known positions
         self.last_location = (self.current_y, self.current_x)
         self.last_attempt = target_position
 
         return self.angle, timing
 
-    def _calculate_corrected_parameters(self, target_position):
-        """
-        Calculate corrected angle and timing using Kalman-like correction.
-        """
-        a = self.last_location
-        b = self.last_attempt
-        c = (self.current_y, self.current_x)
-        confidence = self.current_confidence
+    def _position_unchanged(self, prev_pos, current_pos, threshold=5.0):
+        py, px = prev_pos
+        cy, cx = current_pos
+        dist = math.sqrt((cx - px)**2 + (cy - py)**2)
+        return dist < threshold
 
-        angle_intended = self._calculate_angle(a, b)
-        angle_actual = self._calculate_angle(a, c)
-        correction_angle = angle_actual - angle_intended
-        observed_angle = (self.angle + correction_angle) % 360
-
-        # Apply Kalman-like correction for angle
-        self.angle = (
-            confidence * self.angle + (1 - confidence) * observed_angle
-        ) % 360
-
-        # Calculate the current angle to the target
-        target_angle = self._calculate_angle(c, target_position)
-        corrected_angle = (self.angle + target_angle) % 360
-
-        # Calculate observed speed from previous movement
-        delta_y_actual = c[0] - a[0]
-        delta_x_actual = c[1] - a[1]
-        distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
-        observed_speed = distance_traveled / 2  # Assume previous timing of 2 seconds
-
-        # Apply Kalman-like correction for speed
-        self.speed = confidence * self.speed + (1 - confidence) * observed_speed
-
-        # Calculate timing based on corrected speed
-        delta_y_target = target_position[0] - c[0]
-        delta_x_target = target_position[1] - c[1]
-        distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
-        
-        # Calculate timing based on observed speed
-        timing = distance_to_target / (observed_speed + 1e-6)
-
-        if timing > 3:
-            scaling_factor = 3 / timing
-            adjusted_speed = observed_speed * scaling_factor
-            timing = 3  # Cap timing at 3 seconds
-        else:
-            adjusted_speed = observed_speed  # Keep the original speed if timing is within limits
-
-        self.speed = adjusted_speed
-
-        # Update state
-        self.last_location = (self.current_y, self.current_x)
-        self.last_attempt = target_position
-
-        return corrected_angle, timing
+    def _angle_unchanged(self, prev_angle, current_angle, tolerance=5.0):
+        return abs((current_angle - prev_angle) % 360) < tolerance
 
     def _calculate_angle(self, start, end):
         """
@@ -200,7 +272,7 @@ class Drone:
         delta_y = end[0] - start[0]
         delta_x = end[1] - start[1]
         return math.degrees(math.atan2(delta_x, delta_y))
-      
+
     def get_position(self):
         """
         Get the current position of the Sphero using localization.
@@ -223,7 +295,7 @@ class Drone:
             target_y: Target y-coordinate.
         """
         try:
-            # Draw a point at the target position
+            # Draw a point at the current position
             point_id = f"{self.sphero_id}"
             self.display.draw_point(
                 point_id,
@@ -288,17 +360,16 @@ class Drone:
             
             print(f"Sphero [{self.sphero_id}] at: y:{self.current_y}, x:{self.current_x}")
 
-            if (self.reached_goal()):
+            if self.reached_goal():
                 self._transition_to_state("interact")
             else:
                 self.submit_trajectory()
-
         except Exception as e:
             print(f"Error in _move_to_goal: {e}")
 
-    def reached_goal(self, ):
+    def reached_goal(self):
         """
-        Fine-tune the Sphero's position to align with the goal.
+        Check if the Sphero is within threshold distance of the goal.
         """
         try:
             if self._euclidean_distance((self.current_x, self.current_y), self.goal) <= 100:
@@ -459,4 +530,3 @@ class Drone:
         except Exception as e:
             print(f"Error calculating Euclidean distance: {e}")
             return float('inf')
-

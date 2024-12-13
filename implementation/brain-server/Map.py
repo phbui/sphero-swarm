@@ -198,6 +198,34 @@ class Map:
             else:
                 print("No PRM nodes available to build KDTree.")
 
+    def is_on_obstacle_near_boundary(self, y, x, boundary_threshold=50):
+        """
+        Check if the given point (y, x) lies on an obstacle that is near the edge of the screen.
+        Args:
+            y, x: The coordinates of the point to check.
+            boundary_threshold: The distance threshold from the screen edge to consider "near the edge."
+        Returns:
+            True if the point is on an obstacle located near the screen boundary, False otherwise.
+        """
+        # Get the dimensions of the display
+        height, width = self.display.height, self.display.width
+
+        for rect in self.obstacles:
+            rx, ry, rw, rh = rect
+            # Check if the obstacle is near the boundary of the screen
+            near_left_edge = (rx <= boundary_threshold)
+            near_right_edge = (rx + rw >= width - boundary_threshold)
+            near_top_edge = (ry <= boundary_threshold)
+            near_bottom_edge = (ry + rh >= height - boundary_threshold)
+
+            if near_left_edge or near_right_edge or near_top_edge or near_bottom_edge:
+                # Check if the point (x, y) lies inside the obstacle rectangle
+                if rx <= x <= rx + rw and ry <= y <= ry + rh:
+                    return True
+
+        return False
+
+
     def find_closest_node(self, position):
         """
         Find the closest node to a given position based on x and y coordinates using KDTree.

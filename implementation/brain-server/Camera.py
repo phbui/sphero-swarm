@@ -3,7 +3,7 @@ import cv2
 SCALE_FACTOR = 50  # 1 unit of distance = 50 pixels
 
 class Camera:
-    def __init__(self, display, camera_index=0):
+    def __init__(self, display, camera_index=1):
         """
         Initialize the Camera class.
         Args:

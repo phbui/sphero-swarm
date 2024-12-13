@@ -209,8 +209,8 @@ class Planner:
             if collision_nodes:
                 print(f"Collision detected on nodes: {collision_nodes}")
                 # Adjust paths to avoid collision nodes
-                adjusted_path1 = self._reroute_path(new_path1, collision_nodes)
-                adjusted_path2 = self._reroute_path(new_path2, collision_nodes)
+                adjusted_path1 = self._reroute_path(drone1, new_path1, collision_nodes)
+                adjusted_path2 = self._reroute_path(drone1, new_path2, collision_nodes)
 
                 # Update paths and notify drones
                 if len(adjusted_path1) > 1:
@@ -248,7 +248,7 @@ class Planner:
         """
         return set(path1).intersection(path2)
 
-    def _reroute_path(self, path, collision_nodes):
+    def _reroute_path(self, drone, path, collision_nodes):
         """
         Reroute a path to avoid specified collision nodes using the PRM.
         Args:
@@ -263,7 +263,7 @@ class Planner:
                 adjusted_path.append(node)
             else:
                 # Attempt to find an alternate neighboring node
-                neighbors = self.map._get_neighbors(self.map.nodes.index(node))
+                neighbors = drone._get_neighbors(self.map.nodes.index(node))
                 for neighbor in neighbors:
                     if neighbor not in collision_nodes and neighbor not in adjusted_path:
                         adjusted_path.append(neighbor)

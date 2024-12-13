@@ -5,11 +5,11 @@ import json
 
 # Define initial color ranges in HSV format
 color_ranges = {           
-    #'#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
-    #'#FF0000': ([5, 45, 60], [30, 255, 255]),  # Red
-    #'#035900': ([80, 115, 65], [95, 255, 255]),  # Green
-    '#020082': ([70, 20, 180], [180, 100, 255]),  # Blue
-    #'#FFFF00': ([50, 0, 245], [80, 80, 255])  # Yellow
+    '#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
+    '#FF0000': ([5, 0, 230], [15, 255, 255]),  # Red
+    '#035900': ([80, 115, 65], [95, 255, 255]),  # Green
+    '#020082': ([90, 75, 220], [110, 255, 255]),  # Blue
+    '#FFFF00': ([0, 0, 175], [45, 0, 255]),  # Yellow
     'Obstacles': ([5, 135, 60], [20, 255, 240]),
     'Goal':([125, 115, 0],[130, 165, 130]) 
 }
@@ -63,7 +63,7 @@ for color_hex, (lower_bound, upper_bound) in color_ranges.items():
 
 
 # Open the default camera
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 # Capture and save an image every 5 seconds
 last_capture_time = time.time()
