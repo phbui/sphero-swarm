@@ -190,14 +190,13 @@ class Display:
                             scaled_y = int(drawing["y"] / scale_y)
                             scaled_w = int(drawing["w"] / scale_x)
                             scaled_h = int(drawing["h"] / scale_y)
-                            thickness = 1
                             color = drawing["color"]
                             cv2.rectangle(
                                 overlay_image,
                                 (scaled_x, scaled_y),  # Top-left corner
                                 (scaled_x + scaled_w, scaled_y + scaled_h),  # Bottom-right corner
                                 color=color,
-                                thickness=thickness
+                                thickness=drawing["weight"]
                             )
                         elif "label" in drawing:  # Label
                             scaled_x = int(drawing["x"] / scale_x)
@@ -210,7 +209,6 @@ class Display:
                                 cv2.FONT_HERSHEY_SIMPLEX,
                                 0.5,  # Font scale
                                 color=color,
-                                thickness=1
                             )    
                         elif "x" in drawing and "y" in drawing:  # Point
                             scaled_x = int(drawing["x"] / scale_x)
@@ -229,14 +227,13 @@ class Display:
                             start_y = int(drawing["start"][1] / scale_y)
                             end_x = int(drawing["end"][0] / scale_x)
                             end_y = int(drawing["end"][1] / scale_y)
-                            thickness = 1
                             color = drawing["color"]
                             cv2.line(
                                 overlay_image,
                                 (start_y, start_x),  # Start point
                                 (end_y, end_x),  # End point
                                 color=color,
-                                thickness=thickness
+                                thickness=drawing["weight"]
                             )
                             # Update the `show` method to handle labels
 

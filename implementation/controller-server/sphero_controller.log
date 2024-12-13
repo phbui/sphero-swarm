@@ -11702,3 +11702,831 @@ spherov2.controls.PacketDecodingException: Bad response checksum
 2024-12-13 02:00:15,427 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
 2024-12-13 02:00:16,935 [ERROR] WebSocket: Error receiving message: no close frame received or sent
 2024-12-13 02:00:16,937 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:05:07,130 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:05:07,142 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:05:07,143 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:05:07,159 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:05:07,396 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:05:10,632 [INFO] Main: All processes started.
+2024-12-13 02:05:11,050 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:05:16,327 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:05:16,327 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:05:16,354 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:05:17,016 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:05:19,863 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:05:20,331 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:05:23,158 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:05:23,651 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:05:26,443 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:05:26,930 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:05:29,670 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:05:30,126 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:05:32,922 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:05:33,425 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:05:36,192 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:05:36,659 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:08:23,188 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:08:23,188 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:08:23,199 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:08:23,199 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:08:26,017 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:08:26,702 [INFO] Main: All processes started.
+2024-12-13 02:08:30,090 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:08:35,366 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:08:35,366 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:08:35,413 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:08:36,006 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:08:39,252 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:08:40,457 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:08:44,005 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:08:44,649 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:08:47,956 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:08:48,571 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:08:52,007 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:08:52,703 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:08:56,180 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:08:56,842 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:09:00,034 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:09:00,708 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:09:04,213 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:09:05,000 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:09:05,504 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...0027DA8E0C110>)(bytearray(b'\...xdc)\xf8\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...0027DA8E0C110>)(bytearray(b'\...xdc)\xf8\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:09:10,259 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:09:10,259 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:09:11,066 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-13 02:09:11,070 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:10:37,963 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:10:37,965 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:10:37,985 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:10:38,006 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:10:38,519 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:10:40,929 [INFO] Main: All processes started.
+2024-12-13 02:10:43,807 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:10:49,102 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:10:49,102 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:10:49,165 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:10:50,409 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:10:53,987 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:10:54,927 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:10:57,214 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00286F798C200>)(bytearray(b'\xe1\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00286F798C200>)(bytearray(b'\xe1\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:10:59,977 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:11:00,797 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:11:00,955 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...00286F798C200>)(bytearray(b'\x94\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...00286F798C200>)(bytearray(b'\x94\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:11:04,294 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:11:05,085 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:11:08,883 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:11:09,607 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:11:12,979 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:11:13,782 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:11:17,153 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:11:17,848 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:11:21,946 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:11:22,823 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:11:24,923 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:11:24,924 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:11:24,994 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 02:11:24,996 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:12:59,668 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:12:59,693 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:12:59,716 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:12:59,717 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:13:00,489 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:13:02,450 [INFO] Main: All processes started.
+2024-12-13 02:13:05,822 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:13:11,103 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:13:11,110 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:13:11,198 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:13:12,745 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:13:16,504 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:13:17,445 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:13:20,605 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:13:21,383 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:13:25,037 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:13:25,653 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:13:30,527 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:13:31,571 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:14:46,860 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:14:46,861 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:14:46,899 [ERROR] SB-2E86: Error in subscriber: 
+2024-12-13 02:14:46,900 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,901 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,909 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,910 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,911 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,912 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,915 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,916 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,917 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,918 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,919 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,921 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,922 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,923 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,923 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,923 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,925 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:14:46,928 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,930 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,931 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,945 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,947 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,949 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,953 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,958 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,959 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,960 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,962 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,962 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,964 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,966 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,966 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,968 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,969 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,971 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,972 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,973 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,974 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,975 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,976 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,977 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,978 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,979 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,979 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,980 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,981 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,982 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,983 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,984 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,986 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,988 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,989 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,990 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,991 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,992 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,993 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,993 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,995 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:14:46,996 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:15:34,403 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:15:34,411 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:15:34,411 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:15:34,426 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:15:37,950 [INFO] Main: All processes started.
+2024-12-13 02:15:38,753 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:15:44,999 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: [WinError -2147024894] The system cannot find the file specified.
+2024-12-13 02:15:45,008 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-13 02:15:52,680 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:15:59,477 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:16:04,805 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:16:04,806 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:16:04,891 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:16:08,269 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:16:12,804 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:16:13,585 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":-1,"timing":2}}
+2024-12-13 02:16:13,684 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...002302F1B4C50>)(bytearray(b'E\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...002302F1B4C50>)(bytearray(b'E\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:16:14,231 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...002302F1B4C50>)(bytearray(b'\...xddp\xb1\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...002302F1B4C50>)(bytearray(b'\...xddp\xb1\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:16:27,284 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...002302F1B4C50>)(bytearray(b'\xf4\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...002302F1B4C50>)(bytearray(b'\xf4\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:17:15,604 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:17:15,606 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:17:15,650 [ERROR] SB-2E86: Error in subscriber: 
+2024-12-13 02:17:15,659 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,663 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,666 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,668 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,671 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,673 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,676 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,684 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,694 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,697 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,698 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,700 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,699 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:17:15,704 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,722 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,725 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,727 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,729 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,731 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,733 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,734 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,736 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,737 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,739 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,740 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,741 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,743 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,744 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,746 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,748 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,750 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,752 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,755 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,757 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,758 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,760 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,762 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,763 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,764 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,765 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,768 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,772 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,776 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,778 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,779 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,782 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,785 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,786 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,790 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,792 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:15,795 [ERROR] SB-2E86: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:17:55,169 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:17:55,198 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:17:55,199 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:17:55,200 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:17:55,726 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 02:17:57,900 [INFO] Main: All processes started.
+2024-12-13 02:18:03,309 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 02:18:08,559 [INFO] SB-2E86: Initialization complete.
+2024-12-13 02:18:08,560 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 02:18:08,599 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:18:09,318 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:18:12,884 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:13,799 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:18:20,192 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:20,924 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:18:28,217 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:28,965 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:18:35,272 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:35,940 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:18:41,989 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:42,612 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:18:48,628 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:49,253 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:18:55,250 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:18:55,894 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:19:01,956 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:02,508 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:19:08,545 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:09,173 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:19:15,244 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:15,805 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:19:21,869 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:22,457 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":180,"timing":5}}
+2024-12-13 02:19:28,495 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:29,643 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":35,"timing":5}}
+2024-12-13 02:19:35,550 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:36,185 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":152,"timing":1.6311941267813823}}
+2024-12-13 02:19:38,738 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:39,408 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":143,"timing":3.2757236989327234}}
+2024-12-13 02:19:43,921 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:44,739 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":128,"timing":5}}
+2024-12-13 02:19:50,653 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:51,237 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":21,"timing":5}}
+2024-12-13 02:19:57,634 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:19:58,351 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":279,"timing":5}}
+2024-12-13 02:20:04,975 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:05,830 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":268,"timing":1.2114687668907733}}
+2024-12-13 02:20:08,547 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:09,275 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":271,"timing":0.7359233759469814}}
+2024-12-13 02:20:11,196 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:11,866 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":274,"timing":0.30605883393399397}}
+2024-12-13 02:20:13,507 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:14,127 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":284,"timing":3.9503907865627603}}
+2024-12-13 02:20:19,132 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:19,740 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":268,"timing":1.021566072094025}}
+2024-12-13 02:20:21,763 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:22,396 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":266,"timing":3.1146527303628435}}
+2024-12-13 02:20:26,502 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:27,119 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":278,"timing":5}}
+2024-12-13 02:20:33,008 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:33,597 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":278,"timing":5}}
+2024-12-13 02:20:39,495 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-13 02:20:40,082 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":44,"timing":1.1431218666660345}}
+2024-12-13 02:20:41,121 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:20:41,122 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:20:42,019 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-13 02:20:42,019 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:20:48,847 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:20:48,858 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:20:48,858 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:20:48,859 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:20:52,410 [INFO] Main: All processes started.
+2024-12-13 02:20:54,006 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 02:20:54,241 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:20:54,242 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:20:56,678 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-13 02:20:56,682 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:21:16,133 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:21:16,134 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:21:16,150 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:21:16,172 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 02:21:18,797 [INFO] Main: All processes started.
+2024-12-13 02:21:21,413 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 02:21:30,451 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 02:21:32,981 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 02:21:32,996 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:22:23,441 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:22:23,441 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:22:23,445 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:22:23,449 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:22:24,189 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:22:27,128 [INFO] Main: All processes started.
+2024-12-13 02:22:27,666 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:22:32,929 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:22:32,929 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:22:32,992 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:22:33,716 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:22:36,626 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:22:37,120 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":78,"timing":1.996080211851849}}
+2024-12-13 02:22:40,149 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:22:40,615 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":23,"timing":2.7161335025368425}}
+2024-12-13 02:22:44,303 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:22:44,817 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":42,"timing":1.7704774709103572}}
+2024-12-13 02:22:47,588 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:22:48,162 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":46,"timing":3.7943090893669695}}
+2024-12-13 02:22:52,851 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:22:53,392 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":50,"timing":4.085378402243886}}
+2024-12-13 02:22:58,567 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:22:59,129 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":53,"timing":5}}
+2024-12-13 02:23:05,266 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:23:05,865 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":71,"timing":5}}
+2024-12-13 02:23:11,985 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:23:12,571 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":250,"timing":5}}
+2024-12-13 02:23:18,486 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:23:19,105 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":195,"timing":1.5085495780426288}}
+2024-12-13 02:23:21,561 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:23:22,355 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:23:22,355 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:23:23,650 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-13 02:23:23,652 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,655 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,655 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:23:23,655 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,656 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,656 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,657 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,658 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,660 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,661 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,662 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,663 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,663 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,664 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,665 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,666 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,666 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,666 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,667 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,667 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,667 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,667 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,669 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,670 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,671 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,671 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,672 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,672 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,673 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,673 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,674 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,674 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,675 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,675 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,675 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,676 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,677 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,677 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,678 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,678 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,680 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,681 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,683 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,684 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:23,684 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:23:32,930 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:23:32,938 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:23:32,940 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:23:32,941 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:23:35,884 [INFO] Main: All processes started.
+2024-12-13 02:23:38,156 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 02:23:47,172 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 02:23:49,591 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:23:49,591 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:24:39,077 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:24:39,084 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:24:39,086 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:24:39,086 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:24:42,431 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:24:42,758 [INFO] Main: All processes started.
+2024-12-13 02:24:47,277 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:24:52,553 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:24:52,553 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:24:52,564 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:24:53,843 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:24:56,852 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:24:57,465 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":89,"timing":5}}
+2024-12-13 02:25:03,547 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:25:04,191 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":2,"timing":0.5838478245460839}}
+2024-12-13 02:25:05,870 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:25:06,455 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":180,"timing":2.106431357581575}}
+2024-12-13 02:25:08,773 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:25:08,774 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:25:09,405 [ERROR] WebSocket Sender: Error sending message: no close frame received or sent
+2024-12-13 02:25:09,405 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:25:09,875 [ERROR] SB-7104: Error in subscriber: 
+2024-12-13 02:25:09,879 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,881 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,883 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,884 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,885 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,886 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,886 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:25:09,887 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:27:13,682 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:27:13,729 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:27:13,730 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:27:13,745 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:27:15,928 [INFO] Main: All processes started.
+2024-12-13 02:27:16,612 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:27:20,644 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:28:47,684 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:28:47,715 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:28:47,736 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:28:47,739 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:28:48,565 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:28:48,677 [INFO] Main: All processes started.
+2024-12-13 02:28:54,638 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:28:59,899 [ERROR] Error adding message to outgoing queue: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,899 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:28:59,899 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:28:59,900 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,900 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,900 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,900 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,900 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,900 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,902 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,902 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,902 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,903 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,903 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,903 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,903 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,903 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,905 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,905 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,906 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,906 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,906 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,907 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,907 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,908 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,909 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:28:59,909 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:29:33,277 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:29:33,314 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:29:33,316 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:29:33,374 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:29:35,375 [INFO] Main: All processes started.
+2024-12-13 02:29:36,225 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:29:42,836 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:29:48,123 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:29:48,123 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:29:48,210 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:29:51,350 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:29:55,799 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:29:56,769 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":85,"timing":2.490052640427559}}
+2024-12-13 02:30:00,337 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:30:01,114 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":11,"timing":1.841559199141591}}
+2024-12-13 02:30:06,486 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001CBC6A0C140>)(bytearray(b'\x19\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001CBC6A0C140>)(bytearray(b'\x19\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:30:06,550 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001CBC6A0C140>)(bytearray(b'\x9f\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001CBC6A0C140>)(bytearray(b'\x9f\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:30:06,573 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001CBC6A0C140>)(bytearray(b'\x0c\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001CBC6A0C140>)(bytearray(b'\x0c\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:30:08,990 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:30:10,136 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":50,"timing":1.4925201462492352}}
+2024-12-13 02:30:13,044 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:30:13,607 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":64,"timing":3.531807434578746}}
+2024-12-13 02:30:15,466 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-13 02:30:15,471 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:31:11,060 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:31:11,087 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:31:11,088 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:31:11,088 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:31:11,455 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:31:13,484 [INFO] Main: All processes started.
+2024-12-13 02:31:16,021 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:31:21,299 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:31:21,299 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:31:21,368 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:31:22,599 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:31:26,343 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:31:27,084 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":70,"timing":0.9771885445688107}}
+2024-12-13 02:31:29,781 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:31:30,480 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":42,"timing":3.389809090660542}}
+2024-12-13 02:31:35,550 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:31:36,286 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":45,"timing":1.4967513896592035}}
+2024-12-13 02:31:39,513 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:31:40,176 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":45,"timing":2.1038538324194174}}
+2024-12-13 02:31:43,730 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:31:44,454 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":45,"timing":5}}
+2024-12-13 02:31:49,316 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 02:32:21,862 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:32:21,864 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:32:21,892 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:32:23,022 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:32:24,181 [INFO] Main: All processes started.
+2024-12-13 02:32:28,280 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:32:33,563 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:32:33,564 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:32:33,577 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:32:34,928 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:32:38,512 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:32:39,193 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":86,"timing":2.782671749002275}}
+2024-12-13 02:32:43,692 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:32:44,366 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":12,"timing":1.7534247230388156}}
+2024-12-13 02:32:48,107 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:32:48,844 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":18,"timing":4.170272124206876}}
+2024-12-13 02:32:54,728 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:32:55,425 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":56,"timing":2.5159434562080714}}
+2024-12-13 02:33:00,672 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:01,662 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":58,"timing":5}}
+2024-12-13 02:33:07,943 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:08,602 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":230,"timing":2.7221412756997063}}
+2024-12-13 02:33:12,986 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:13,790 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":221,"timing":1.1819076640875366}}
+2024-12-13 02:33:16,737 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:17,511 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":219,"timing":1.374980797062635}}
+2024-12-13 02:33:20,668 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:21,416 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":218,"timing":3.671724195316195}}
+2024-12-13 02:33:26,840 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:27,603 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":230,"timing":5}}
+2024-12-13 02:33:34,205 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:33:34,904 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":238,"timing":5}}
+2024-12-13 02:33:39,454 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-13 02:34:26,699 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:34:26,710 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:34:26,712 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:34:26,771 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:34:28,046 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:34:29,261 [INFO] Main: All processes started.
+2024-12-13 02:34:36,025 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:34:41,289 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:34:41,290 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:34:41,375 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:34:41,906 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:34:45,442 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:34:47,117 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":351,"timing":4.664971026809158}}
+2024-12-13 02:34:53,456 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:34:54,264 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":6,"timing":5}}
+2024-12-13 02:35:00,920 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:35:01,573 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":10,"timing":5}}
+2024-12-13 02:35:08,181 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:35:08,836 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":50,"timing":5}}
+2024-12-13 02:35:15,468 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:35:16,173 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":308,"timing":2.408665243181598}}
+2024-12-13 02:35:20,202 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:35:20,820 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":339,"timing":2.1272994139357935}}
+2024-12-13 02:35:24,480 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:35:25,276 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":8,"timing":2.5677189114155667}}
+2024-12-13 02:35:29,334 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:35:30,314 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":14,"timing":4.537765571679133}}
+2024-12-13 02:35:31,484 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001F99B3041A0>)(bytearray(b'\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001F99B3041A0>)(bytearray(b'\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:35:32,129 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:35:32,129 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:35:32,836 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-13 02:35:32,836 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:35:55,308 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:35:55,313 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:35:55,314 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:35:55,344 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:35:55,804 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:35:58,038 [INFO] Main: All processes started.
+2024-12-13 02:36:00,374 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:36:05,794 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:36:05,795 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:36:05,862 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:36:13,815 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:36:18,779 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:19,676 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":175,"timing":1.7381693811192762}}
+2024-12-13 02:36:22,758 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:23,399 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":2,"timing":5}}
+2024-12-13 02:36:29,697 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:30,398 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":179,"timing":0.22958201830837716}}
+2024-12-13 02:36:32,006 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:32,735 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":181,"timing":1.6387249938442134}}
+2024-12-13 02:36:35,767 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:36,373 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":348,"timing":5}}
+2024-12-13 02:36:43,332 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:44,242 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":219,"timing":5}}
+2024-12-13 02:36:50,615 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:51,308 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":311,"timing":2.7987010847015514}}
+2024-12-13 02:36:55,384 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:36:56,155 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":278,"timing":2.213535317866086}}
+2024-12-13 02:36:58,921 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:36:58,927 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:37:00,725 [ERROR] WebSocket Sender: Error sending message: no close frame received or sent
+2024-12-13 02:37:00,726 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:37:16,400 [ERROR] SB-7104: Error in subscriber: 
+2024-12-13 02:37:16,406 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:37:16,406 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:37:16,410 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-13 02:38:13,986 [INFO] WebSocket: Connected to the server.
+2024-12-13 02:38:13,986 [INFO] SB-7104: Attempting to connect.
+2024-12-13 02:38:13,987 [INFO] WebSocket: Sent connection initialization.
+2024-12-13 02:38:14,001 [INFO] WebSocket Sender: Connected to the server.
+2024-12-13 02:38:14,184 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 02:38:17,663 [INFO] Main: All processes started.
+2024-12-13 02:38:21,743 [INFO] SB-7104: Calibrating compass.
+2024-12-13 02:38:27,130 [INFO] SB-7104: Initialization complete.
+2024-12-13 02:38:27,131 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 02:38:27,187 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-13 02:38:28,500 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-13 02:38:31,880 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:38:42,603 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":86,"timing":3.734807012697973}}
+2024-12-13 02:38:47,869 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:38:59,472 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":13,"timing":2.0828812925606406}}
+2024-12-13 02:39:03,076 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:39:13,837 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":11,"timing":4.245881751320992}}
+2024-12-13 02:39:19,588 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:39:23,429 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EBA46FC140>)(bytearray(b'S\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EBA46FC140>)(bytearray(b'S\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 62, in parse_response
+    raise PacketDecodingException('Unexpected start of packet')
+spherov2.controls.PacketDecodingException: Unexpected start of packet
+2024-12-13 02:39:23,451 [ERROR] Exception in callback Toy.__api_read(<bleak.backen...001EBA46FC140>)(bytearray(b'\xd9\xd8'))
+handle: <Handle Toy.__api_read(<bleak.backen...001EBA46FC140>)(bytearray(b'\xd9\xd8'))>
+Traceback (most recent call last):
+  File "C:\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\toy\__init__.py", line 106, in __api_read
+    self.__decoder.add(data)
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 174, in add
+    self.__callback(Packet.parse_response(pkt))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\buiph\Desktop\tufts\cs0133\implementation\controller-server\venv\Lib\site-packages\spherov2\controls\v2.py", line 67, in parse_response
+    raise PacketDecodingException('Bad response checksum')
+spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 02:39:30,330 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":9,"timing":5}}
+2024-12-13 02:39:36,863 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:39:47,662 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":6,"timing":5}}
+2024-12-13 02:39:54,125 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:40:04,781 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":139,"timing":0.30365021081401344}}
+2024-12-13 02:40:07,149 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:40:17,956 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":141,"timing":1.454352717561137}}
+2024-12-13 02:40:20,892 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:40:31,558 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":160,"timing":5}}
+2024-12-13 02:40:38,095 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:40:48,942 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":288,"timing":2.599006432167564}}
+2024-12-13 02:40:53,181 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:41:03,929 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":276,"timing":0.5730724708256604}}
+2024-12-13 02:41:06,105 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:41:17,013 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":265,"timing":1.984134913322679}}
+2024-12-13 02:41:20,571 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-13 02:41:31,394 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":208,"timing":5}}
+2024-12-13 02:41:36,909 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-13 02:41:36,910 [WARNING] WebSocket: Closing connection.
+2024-12-13 02:41:38,810 [ERROR] WebSocket Sender: Error sending message: no close frame received or sent
+2024-12-13 02:41:38,811 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 02:42:09,634 [ERROR] SB-7104: Error in subscriber: 
+2024-12-13 02:42:09,636 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,638 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,639 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,640 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,641 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,642 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,643 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,644 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,644 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,646 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,647 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,647 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,648 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-13 02:42:09,649 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified

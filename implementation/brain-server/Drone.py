@@ -2,6 +2,7 @@ import numpy as np
 import heapq
 import Localizer
 import math
+import time
 
 class Drone:
     def __init__(self, planner, camera, display, sphero_id, sphero_color, map):
@@ -32,199 +33,69 @@ class Drone:
             self.current_x = -1
             self.current_confidence = 0.5
 
-            self.last_attempt = None  # Store the last visited point
+            self.last_attempt = None
             self.last_location = None
 
-            # Kalman filter variables
+            # Movement parameters
             self.angle = -1
-            self.x_kf = None
-            self.P_kf = None
-            self.F = None
-            self.H = None
-            self.Q = None
-            self.R_base = None
-            self.kf_initialized = False
-            self.dt = 2.0  # Time interval between updates (assumed)
-
-            # State Machine for the Drone
-            self.states = [
-                {
-                    "state": "move_to_goal",
-                    "description": "Sphero navigates towards the goal.",
-                    "transitions": [
-                        {
-                            "condition": "Reached goal threshold distance",
-                            "next_state": "reaching_goal"
-                        }
-                    ]
-                },
-                {
-                    "state": "interact",
-                    "description": "Sphero executes interaction behavior.",
-                    "transitions": [
-                        {
-                            "condition": "Interaction complete",
-                            "next_state": None
-                        }
-                    ]
-                }
-            ]
-            self.current_state_index = 0  # Start with "move_to_goal"
+            self.speed = None
+            self.timing = 2
         except Exception as e:
-            print(f"Error initializing Drone: {e}")
-
-    def _init_kf(self, y, x):
-        """
-        Initialize the Kalman filter with the initial position and zero velocity.
-        State: [y, x, vy, vx]
-        """
-        self.x_kf = np.array([[y],
-                              [x],
-                              [0.0],
-                              [0.0]])
-        self.P_kf = np.eye(4)*1.0
-
-        self.F = np.array([[1, 0, self.dt, 0],
-                           [0, 1, 0, self.dt],
-                           [0, 0, 1,    0],
-                           [0, 0, 0,    1]], dtype=float)
-
-        self.H = np.array([[1, 0, 0, 0],
-                           [0, 1, 0, 0]], dtype=float)
-
-        q = 1e-2
-        dt = self.dt
-        self.Q = q * np.array([[dt**4/4, 0,         dt**3/2, 0        ],
-                               [0,       dt**4/4,   0,       dt**3/2  ],
-                               [dt**3/2, 0,         dt**2,   0        ],
-                               [0,       dt**3/2,   0,       dt**2    ]])
-
-        r = 0.1
-        self.R_base = np.array([[r,   0],
-                                [0,   r]], dtype=float)
-
-        self.kf_initialized = True
-
-    def _kf_predict(self):
-        self.x_kf = self.F @ self.x_kf
-        self.P_kf = self.F @ self.P_kf @ self.F.T + self.Q
-
-    def _kf_update(self, z):
-        # Scale R by inverse of confidence: higher confidence -> smaller R
-        eps = 1e-6
-        scale = 1.0 / (self.current_confidence + eps)
-        R = self.R_base * scale
-
-        z = np.array([[z[0]],
-                      [z[1]]])
-        y = z - self.H @ self.x_kf
-        S = self.H @ self.P_kf @ self.H.T + R
-        K = self.P_kf @ self.H.T @ np.linalg.inv(S)
-        self.x_kf = self.x_kf + K @ y
-        I = np.eye(len(self.P_kf))
-        self.P_kf = (I - K @ self.H) @ self.P_kf
-    
-    def _calculate_corrected_parameters(self, target_position):
-        """
-        Perform a full predict-update cycle with the Kalman filter and calculate angle & timing.
-        Also implements a stuck detection heuristic.
-        """
-        self._kf_predict()
-        self._kf_update((self.current_y, self.current_x))
-
-        # Extract angle and speed from updated KF state
-        vy = self.x_kf[2,0]
-        vx = self.x_kf[3,0]
-        speed = math.sqrt(vx**2 + vy**2)
-        angle = math.degrees(math.atan2(vx, vy)) % 360
-
-        # Calculate timing based on speed
-        delta_y_target = target_position[0] - self.x_kf[0,0]
-        delta_x_target = target_position[1] - self.x_kf[1,0]
-        distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
-        
-        speed_adj = speed + 1e-6
-        timing = distance_to_target / speed_adj
-
-        if timing > 5:
-            timing = 5  
-
-        # Visualize the predicted angle
-        end_x = self.current_x + 50 * math.cos(math.radians(angle))
-        end_y = self.current_y - 50 * math.sin(math.radians(angle))  # Inverted y-coordinate system
-
-        # Draw the predicted angle direction
-        self.display.draw_line(
-            id=f"{self.sphero_id}_angle_line",
-            point1=(self.current_y, self.current_x),
-            point2=(end_y, end_x),
-            weight=2,
-            color=(255, 0, 0)  # Red color for the line
-        )
-
-        # Label the angle
-        self.display.draw_label(
-            id=f"{self.sphero_id}_angle_label",
-            position=(self.current_y, self.current_x),
-            text=f"Angle: {int(angle)}°",
-            color=(255, 255, 255)  # White color for the label
-        )
-
-        # Heuristic: Check if stuck
-        if (self.last_location is not None 
-            and self._position_unchanged(self.last_location, (self.current_y, self.current_x))
-            and self._angle_unchanged(self.angle, angle)):
- 
-            # Turn around or choose a new angle
-            angle = (angle + 180) % 360
-            print("Stuck detected. Turning around.")
-
-        # Update state references
-        self.last_location = (self.current_y, self.current_x)
-        self.last_attempt = target_position
-
-        return angle, timing
+           print(f"Error initializing Drone: {e}")
 
     def calculate_movement_parameters(self, target_position):
         """
-        Calculate the angle and timing needed to reach the target position with a proper Kalman filter approach.
+        Calculate the angle, speed, and timing needed to reach the target position with feedback correction.
 
         Args:
             target_position: Tuple (y, x) representing the target position.
 
         Returns:
-            tuple: (corrected_angle, timing)
+            tuple: (corrected_angle, corrected_speed, corrected_timing)
         """
         try:
-            if not self.kf_initialized:
-                self._init_kf(self.current_y, self.current_x)
-                return 0, 2
+            # If this is the first move
+            if self.last_location == None:
+                print("[Movement Parameters] First Move: Setting True North.")
+                self.last_location = (self.current_y, self.current_x)
+                self.angle = 0
 
-            return self._calculate_corrected_parameters(target_position)
+                return self.angle, self.timing
 
+            # Calculate movement vector
+            delta_x_actual = self.current_x - self.last_location[1]
+            delta_y_actual = self.current_y - self.last_location[0]
+            distance_moved = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+
+            # Update speed based on current confidence
+            updated_speed = (distance_moved / self.timing)
+            if self.speed is not None:
+                updated_speed = (1 - self.current_confidence) + self.current_confidence * self.speed
+            self.speed = updated_speed
+
+            # Calculate angle to target
+            delta_x_target = target_position[1] - self.current_x
+            delta_y_target = target_position[0] - self.current_y
+            target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target)) % 360
+
+            # Calculate corrected timing
+            distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
+            corrected_timing = distance_to_target / (self.speed + 1e-6)
+
+            # Update state
+            self.angle = target_angle
+            self.timing = corrected_timing
+            self.last_location = (self.current_y, self.current_x)
+
+            print("[Movement Parameters] Calculated Values:")
+            print(f"Angle: {self.angle}, Speed: {self.speed}, Timing: {self.timing}")
+            return self.angle, self.timing
         except ZeroDivisionError:
-            print("Error: Division by zero occurred in timing calculation.")
-            return 0, 2  # Fallback timing
+            print("[Movement Parameters] Division by zero in speed calculation.")
+            return self.angle, 2 
         except Exception as e:
             print(f"Unexpected error in calculate_movement_parameters: {e}")
-            return 0, 2  # Fallback timing
-
-    def _position_unchanged(self, prev_pos, current_pos, threshold=5.0):
-        py, px = prev_pos
-        cy, cx = current_pos
-        dist = math.sqrt((cx - px)**2 + (cy - py)**2)
-        return dist < threshold
-
-    def _angle_unchanged(self, prev_angle, current_angle, tolerance=5.0):
-        return abs((current_angle - prev_angle) % 360) < tolerance
-
-    def _calculate_angle(self, start, end):
-        """
-        Calculate the angle from start to end.
-        """
-        delta_y = end[0] - start[0]
-        delta_x = end[1] - start[1]
-        return math.degrees(math.atan2(delta_x, delta_y))
+            return self.angle, 2
 
     def get_position(self):
         """
@@ -236,7 +107,6 @@ class Drone:
             self.current_y, self.current_x, self.current_confidence = self.localizer.updateParticles()
         except Exception as e:
             print(f"Error getting position: {e}")
-            return None
 
     def move(self, current_x, current_y, target_x, target_y):
         """

@@ -100,7 +100,7 @@ class Map:
                                 # Store and visualize the split rectangle
                                 self.obstacles.append(split_rect)
                                 self.obstacle_weights[split_rect] = split_weight
-                                self.display.draw_rectangle(f"obstacle_{split_rect}", split_x, split_y, actual_width, actual_height, weight=split_weight, color="#FFA500")
+                                self.display.draw_rectangle(f"obstacle_{split_rect}", split_x, split_y, actual_width, actual_height, weight=2, color="#FFA500")
                 else:
                     # Process rectangles within size limits
                     mask_region = contour_mask[y:y + h, x:x + w]
@@ -109,7 +109,7 @@ class Map:
                         weight = self.calculate_obstacle_weight(area)
                         self.obstacles.append(filled_rect)
                         self.obstacle_weights[filled_rect] = weight
-                        self.display.draw_rectangle(f"obstacle_{filled_rect}", x, y, w, h, weight=weight, color="#FFA500")
+                        self.display.draw_rectangle(f"obstacle_{filled_rect}", x, y, w, h, weight=2, color="#FFA500")
 
         # Detect the goal region
         goal_mask = cv2.inRange(hsv_image, goal_range["lower"], goal_range["upper"])
@@ -120,7 +120,7 @@ class Map:
             largest_contour = max(contours, key=cv2.contourArea)
             x, y, w, h = cv2.boundingRect(largest_contour)
             self.goal = (x, y, w, h)
-            self.display.draw_rectangle("goal", x, y, w, h, weight=1.0, color="#0000FF")
+            self.display.draw_rectangle("goal", x, y, w, h, weight=2, color="#0000FF")
 
     def generate_prm(self, num_nodes=100, initial_radius=100, max_radius=500):
         """
@@ -191,7 +191,7 @@ class Map:
 
 
         for (x1, y1), (x2, y2) in self.edges:
-            self.display.draw_line(f"edge_{x1}_{y1}_{x2}_{y2}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
+            self.display.draw_line(f"edge_{x1}_{y1}_{x2}_{y2}", (y1, x1), (y2, x2), weight=1, color="#000000")
 
             if self.nodes:
                 self.kdtree = KDTree(self.nodes)
