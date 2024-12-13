@@ -5553,3 +5553,18 @@ ng closed
 2024-12-12 21:22:21,988 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
 2024-12-12 21:22:22,023 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
 2024-12-12 21:22:25,198 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 21:23:46,939 [INFO] WebSocket: Connected to the server.
+2024-12-12 21:23:46,941 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 21:23:46,946 [INFO] SB-D8B2: Attempting to connect.
+2024-12-12 21:23:46,950 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 21:23:48,591 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-12 21:23:49,915 [INFO] Main: All processes started.
+2024-12-12 21:23:52,854 [INFO] SB-D8B2: Calibrating compass.
+2024-12-12 21:23:58,118 [INFO] SB-D8B2: Initialization complete.
+2024-12-12 21:23:58,119 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-12 21:23:58,136 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 21:23:58,159 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:24:01,650 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:24:01,660 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-12 21:24:04,948 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-D8B2', 'messageType': 'SpheroFeedback', 'message': 'SB-D8B2'}
+2024-12-12 21:24:04,968 [INFO] WebSocket: Received message: {"id":"SB-D8B2","messageType":"SpheroMovement","message":{"angle":0,"timing":483529730}}

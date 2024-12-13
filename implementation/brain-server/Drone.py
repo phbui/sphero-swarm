@@ -87,7 +87,6 @@ class Drone:
                 # Second move: Initialize angle and speed using observed values
                 delta_y_actual = self.current_y - self.last_location[0]
                 delta_x_actual = self.current_x - self.last_location[1]
-                confidence = self.current_confidence
 
                 observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
                 distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
@@ -107,6 +106,7 @@ class Drone:
             a = self.last_location
             b = self.last_attempt
             c = (self.current_y, self.current_x)
+            confidence = self.current_confidence
 
             # Calculate angle a -> b (previous intended direction)
             delta_y_intended = b[0] - a[0]
