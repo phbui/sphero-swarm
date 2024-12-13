@@ -31,7 +31,7 @@ class Drone:
             self.last_attempt = None  # Store the last visited point
             self.last_location = None
             self.angle = 0
-            self.timing = 2
+            self.speed = 0
             # State Machine for the Drone
             self.states = [
                 {
@@ -73,36 +73,63 @@ class Drone:
         try:
             # Handle uninitialized state
             if self.last_location is None:
-                return self.angle, self.timing
+                return self.angle, 2
 
-            # Calculate actual movement vector
-            delta_x_actual = current_position[1] - self.last_location[1]
-            delta_y_actual = current_position[0] - self.last_location[0]
+            # Previous positions: a (start), b (intended target), c (current actual position)
+            a = self.last_location
+            b = self.last_attempt
+            c = current_position
 
-            # Calculate deviations
-            deviation_x = -delta_x_actual  # Reverse actual movement to calculate correction
-            deviation_y = -delta_y_actual
+            # Calculate angle a -> b (previous intended direction)
+            delta_y_intended = b[0] - a[0]
+            delta_x_intended = b[1] - a[1]
+            angle_intended = math.degrees(math.atan2(delta_x_intended, delta_y_intended))
 
-            # Correct angle using deviation
-            corrected_angle_rad = math.atan2(
-                target_position[1] - current_position[1] + deviation_x,
-                target_position[0] - current_position[0] + deviation_y
-            )
-            corrected_angle = (90 - math.degrees(corrected_angle_rad)) % 360
+            # Calculate angle a -> c (actual movement direction)
+            delta_y_actual = c[0] - a[0]
+            delta_x_actual = c[1] - a[1]
+            angle_actual = math.degrees(math.atan2(delta_x_actual, delta_y_actual))
+
+            # Correct the previous angle (z): angle_actual - angle_intended + previous_angle
+            correction_angle = angle_actual - angle_intended
+            corrected_previous_angle = (self.angle + correction_angle) % 360
+
+            # Calculate the current angle to the target (c -> target)
+            delta_y_target = target_position[0] - c[0]
+            delta_x_target = target_position[1] - c[1]
+            current_to_target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target))
+
+            # Final corrected angle
+            corrected_angle = (corrected_previous_angle + current_to_target_angle) % 360
 
             # Calculate distance to target
-            delta_x_target = target_position[1] - current_position[1]
-            delta_y_target = target_position[0] - current_position[0]
             distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
 
-            # Adjust timing based on constant speed
-            corrected_timing = distance_to_target / 25
+            # Calculate observed speed from the previous movement
+            distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+            observed_speed = distance_traveled / (self.timing + 1e-6)  # Avoid division by zero
+
+            # Calculate new timing based on observed speed
+            corrected_timing = distance_to_target / (observed_speed + 1e-6)  # Avoid division by zero
 
             # Update state
             self.angle = corrected_angle
-            self.timing = corrected_timing
+            self.self = ???
 
             return corrected_angle, corrected_timing
+
+        except ZeroDivisionError:
+            print("Error: Division by zero occurred in timing calculation.")
+            return self.angle, self.timing
+
+        except ValueError as ve:
+            print(f"Error: Value error occurred - {ve}")
+            return self.angle, self.timing
+
+        except Exception as e:
+            print(f"Unexpected error in calculate_movement_parameters: {e}")
+            return self.angle, self.timing
+
 
         except ZeroDivisionError:
             print("Error: Division by zero occurred in timing calculation.")
