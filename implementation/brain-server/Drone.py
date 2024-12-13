@@ -100,23 +100,19 @@ class Drone:
             current_to_target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target))
 
             # Final corrected angle
-            corrected_angle = (corrected_previous_angle + current_to_target_angle) % 360
+            self.angle = (corrected_previous_angle + current_to_target_angle) % 360
 
             # Calculate distance to target
             distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
 
             # Calculate observed speed from the previous movement
             distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
-            observed_speed = distance_traveled / (self.timing + 1e-6)  # Avoid division by zero
+            self.speed = distance_traveled / (self.timing + 1e-6)  # Avoid division by zero
 
             # Calculate new timing based on observed speed
-            corrected_timing = distance_to_target / (observed_speed + 1e-6)  # Avoid division by zero
+            timing = distance_to_target / (self.speed + 1e-6)  # Avoid division by zero
 
-            # Update state
-            self.angle = corrected_angle
-            self.self = ???
-
-            return corrected_angle, corrected_timing
+            return self.angle, timing
 
         except ZeroDivisionError:
             print("Error: Division by zero occurred in timing calculation.")
