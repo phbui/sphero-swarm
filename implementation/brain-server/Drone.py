@@ -251,7 +251,7 @@ class Drone:
 
             # Add the closest node if the drone is not already close
             distance_to_closest_node = self._euclidean_distance(start, closest_node)
-            close_threshold = 10.0
+            close_threshold = 20.0
             if distance_to_closest_node > close_threshold:
                 path.insert(0, closest_node)
 

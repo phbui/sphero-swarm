@@ -1911,3 +1911,266 @@ message:
 2024-12-12 16:23:20,137 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[311.42857142857144,1496.063829787234],"targetLocation":[1524,368],"lastTargetLocation":[-1,-1]}}
 2024-12-12 16:24:36,380 [ERROR] WebSocket: Error receiving message: no close frame received or sent
 2024-12-12 16:24:36,381 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:25:10,207 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:25:10,211 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:25:10,308 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:25:10,311 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:25:10,721 [INFO] Main: All processes started.
+2024-12-12 16:25:15,708 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:25:21,873 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:25:27,278 [INFO] SB-4844: Calibrating compass.
+2024-12-12 16:25:32,541 [INFO] SB-4844: Initialization complete.
+2024-12-12 16:25:32,542 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 16:25:32,650 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:25:34,898 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[188.67241379310346,1451.9068965517242],"targetLocation":[1359,231],"lastTargetLocation":[-1,-1]}}
+2024-12-12 16:27:01,710 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 16:27:27,716 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:27:27,720 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:27:27,742 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 16:27:27,746 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,748 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,748 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,750 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,755 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,756 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:27:27,756 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,757 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,763 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,776 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,778 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,779 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,780 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,781 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,782 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,783 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,784 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,785 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,785 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,786 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,788 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,789 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,790 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,791 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,792 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,793 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,793 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,794 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,795 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,797 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,798 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,799 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,799 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,800 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,801 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,802 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,802 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,803 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,804 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,804 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,805 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,805 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,807 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,807 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,808 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,808 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,809 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,809 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,810 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,811 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,812 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,812 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:27,813 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:27:47,481 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:27:47,482 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:27:47,496 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:27:47,519 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:27:50,592 [INFO] Main: All processes started.
+2024-12-12 16:27:52,737 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:27:57,630 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:28:06,121 [INFO] SB-4844: Calibrating compass.
+2024-12-12 16:28:11,390 [INFO] SB-4844: Initialization complete.
+2024-12-12 16:28:11,394 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 16:28:11,413 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:28:14,139 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[1412.3073394495414,93.43119266055047],"targetLocation":[223,1335],"lastTargetLocation":[-1,-1]}}
+2024-12-12 16:29:06,376 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:29:06,380 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:29:27,366 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:29:27,372 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:29:27,372 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:29:27,375 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:29:30,168 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:29:31,071 [INFO] Main: All processes started.
+2024-12-12 16:29:33,884 [INFO] SB-4844: Calibrating compass.
+2024-12-12 16:29:35,160 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:29:35,161 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:29:35,184 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:29:35,185 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:29:48,395 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:29:48,396 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:29:48,396 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:29:48,413 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:29:51,696 [INFO] Main: All processes started.
+2024-12-12 16:29:53,571 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:02,634 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:11,692 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:20,738 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:29,782 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:38,886 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:47,941 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:30:56,996 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:31:06,059 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:31:15,107 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:31:24,134 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:31:33,198 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:31:34,611 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:31:34,613 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:31:34,644 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:31:34,652 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:31:55,748 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:31:55,754 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:31:55,754 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:31:55,763 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:31:59,446 [INFO] Main: All processes started.
+2024-12-12 16:31:59,551 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:31:59,551 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:32:00,852 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:32:06,014 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:32:06,016 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:32:06,017 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:32:06,021 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:32:09,328 [INFO] Main: All processes started.
+2024-12-12 16:32:11,162 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:32:20,229 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:32:29,306 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:32:38,349 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:32:47,397 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:32:56,821 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:33:00,966 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:33:06,123 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-12 16:33:06,123 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 16:33:16,191 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:33:22,117 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:33:26,887 [INFO] SB-4844: Calibrating compass.
+2024-12-12 16:33:32,165 [INFO] SB-4844: Initialization complete.
+2024-12-12 16:33:32,165 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 16:33:32,183 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:33:35,825 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[1184.7571115973742,250.48577680525165],"targetLocation":[1163,279],"lastTargetLocation":[-1,-1]}}
+2024-12-12 16:33:38,912 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 16:34:01,438 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 16:34:01,440 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,441 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,443 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,445 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,447 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:34:01,449 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,450 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:34:01,467 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,472 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,476 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,476 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,478 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,479 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,480 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,482 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,483 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,484 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,485 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,486 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,488 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,493 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,496 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,497 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,498 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,499 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,501 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,502 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,505 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,517 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,521 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,523 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,524 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,525 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,527 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,528 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,528 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:01,529 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:34:23,140 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:34:23,191 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:34:23,192 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:34:23,193 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:34:23,704 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:34:25,666 [INFO] Main: All processes started.
+2024-12-12 16:34:31,316 [INFO] SB-4844: Calibrating compass.
+2024-12-12 16:34:36,579 [INFO] SB-4844: Initialization complete.
+2024-12-12 16:34:36,580 [INFO] SB-4844: Subscribed to message bus.
+2024-12-12 16:34:36,631 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:34:39,450 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[1180.1418439716313,248.99290780141843],"targetLocation":[1180,303],"lastTargetLocation":[-1,-1]}}
+2024-12-12 16:34:43,909 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 16:34:45,855 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[1171.8157894736842,252.59649122807016],"targetLocation":[1180,303],"lastTargetLocation":[1180,303]}}
+2024-12-12 16:34:49,697 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 16:34:51,190 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[1180.8463251670378,248.16703786191536],"targetLocation":[1180,303],"lastTargetLocation":[1180,303]}}
+2024-12-12 16:34:55,250 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 16:34:56,741 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"currentLocation":[1169.676844783715,253.94910941475828],"targetLocation":[1180,303],"lastTargetLocation":[1180,303]}}
+2024-12-12 16:35:00,705 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-12 16:35:02,245 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:35:02,245 [ERROR] SB-4844: Error in subscriber: 
+2024-12-12 16:35:02,246 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,247 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,248 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,249 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,249 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,250 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,251 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,252 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,252 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,253 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,254 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,255 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,256 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,257 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,259 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,260 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,261 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,261 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,262 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,264 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,265 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,267 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,268 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,270 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,271 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,273 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,274 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,279 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,282 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,284 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,285 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,288 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,291 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,292 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,293 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,294 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,295 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,296 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,298 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,299 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,300 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,300 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,302 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,303 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,303 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,305 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,308 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,310 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,311 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,313 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,313 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,315 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,317 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,318 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,320 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,322 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,325 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,326 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:35:02,329 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed

@@ -280,8 +280,8 @@ class Planner:
         """
         try:
             current_position = drone.get_position()
-            current_x, current_y = current_position
-            target_x, target_y = target_point
+            current_y, current_x  = current_position
+            target_x, target_y  = target_point
 
             print(f"Moving [{drone.sphero_id}] from Y: {current_y}, X: {current_x} to Y:{target_y}, X: {target_x}")
 
