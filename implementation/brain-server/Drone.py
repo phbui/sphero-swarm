@@ -96,7 +96,7 @@ class Drone:
             distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
 
             # Adjust timing based on constant speed
-            corrected_timing = distance_to_target
+            corrected_timing = distance_to_target / 25
 
             # Update state
             self.angle = corrected_angle
@@ -314,12 +314,6 @@ class Drone:
                 current_idx = came_from.get(current_idx)
 
             path.reverse()
-
-            # Add the closest node if the drone is not already close
-            distance_to_closest_node = self._euclidean_distance(start, closest_node)
-            close_threshold = 20.0
-            if distance_to_closest_node > close_threshold and closest_node != self.last_attempt:
-                path.insert(0, closest_node)
 
             print(f"Sphero [{self.sphero_id}] found path: {path}")
             return path

@@ -1,8 +1,5 @@
 from multiprocessing import Process
 from spherov2.types import Color
-import time
-
-SPEED_CONSTANT = 25
 
 class SpheroMovement:
     def __init__(self, droid, sphero_id, sphero_color, outgoing_queue):
@@ -54,7 +51,7 @@ class SpheroMovement:
             self.droid.set_compass_direction(round(angle))
 
             # Use the provided timing for movement
-            self.droid.roll(angle, SPEED_CONSTANT, timing)
+            self.droid.roll(angle, 25, timing)
             print(f"[{self.sphero_id}] movement complete!")
             self.send_feedback(self.sphero_id)
         except Exception as e:
