@@ -31,8 +31,7 @@ class Drone:
             self.last_attempt = None  # Store the last visited point
             self.last_location = None
             self.angle = 0
-            self.speed = 25
-            self.timing = 3
+            self.timing = 2
             # State Machine for the Drone
             self.states = [
                 {
@@ -62,52 +61,60 @@ class Drone:
 
     def calculate_movement_parameters(self, current_position, target_position):
         """
-        Calculate the angle, speed, and timing needed to reach the target position with feedback correction.
+        Calculate the angle and timing needed to reach the target position with feedback correction.
 
         Args:
             current_position: Tuple (y, x) representing the current position.
             target_position: Tuple (y, x) representing the target position.
 
         Returns:
-            tuple: (corrected_angle, corrected_speed, corrected_timing)
+            tuple: (corrected_angle, corrected_timing)
         """
-        if self.last_location == (-1, -1):
-            return self.angle, self.speed, self.timing
+        try:
+            # Handle uninitialized state
+            if self.last_location is None:
+                return self.angle, self.timing
 
-        # Calculate actual movement vector
-        delta_x_actual = current_position[1] - self.last_location[1]
-        delta_y_actual = current_position[0] - self.last_location[0]
+            # Calculate actual movement vector
+            delta_x_actual = current_position[1] - self.last_location[1]
+            delta_y_actual = current_position[0] - self.last_location[0]
 
-        # Calculate deviations
-        intended_speed_x = self.speed * math.cos(math.radians(self.angle))
-        intended_speed_y = self.speed * math.sin(math.radians(self.angle))
-        deviation_x = intended_speed_x - delta_x_actual
-        deviation_y = intended_speed_y - delta_y_actual
+            # Calculate deviations
+            deviation_x = -delta_x_actual  # Reverse actual movement to calculate correction
+            deviation_y = -delta_y_actual
 
-        # Correct angle using deviation
-        corrected_angle_rad = math.atan2(
-            target_position[1] - current_position[1] + deviation_x,
-            target_position[0] - current_position[0] + deviation_y
-        )
-        corrected_angle = (90 - math.degrees(corrected_angle_rad)) % 360
+            # Correct angle using deviation
+            corrected_angle_rad = math.atan2(
+                target_position[1] - current_position[1] + deviation_x,
+                target_position[0] - current_position[0] + deviation_y
+            )
+            corrected_angle = (90 - math.degrees(corrected_angle_rad)) % 360
 
-        # Adjust speed based on deviation magnitude
-        deviation_magnitude = math.sqrt(deviation_x**2 + deviation_y**2)
-        distance_to_target = math.sqrt(
-            (target_position[1] - current_position[1])**2 +
-            (target_position[0] - current_position[0])**2
-        )
-        corrected_speed = min(25, distance_to_target / (self.timing + 1e-6) - deviation_magnitude)
+            # Calculate distance to target
+            delta_x_target = target_position[1] - current_position[1]
+            delta_y_target = target_position[0] - current_position[0]
+            distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
 
-        # Adjust timing
-        corrected_timing = distance_to_target / (corrected_speed + 1e-6)
+            # Adjust timing based on constant speed
+            corrected_timing = distance_to_target
 
-        # Update state
-        self.angle = corrected_angle
-        self.speed = corrected_speed
-        self.timing = corrected_timing
+            # Update state
+            self.angle = corrected_angle
+            self.timing = corrected_timing
 
-        return corrected_angle, corrected_speed, corrected_timing
+            return corrected_angle, corrected_timing
+
+        except ZeroDivisionError:
+            print("Error: Division by zero occurred in timing calculation.")
+            return self.angle, self.timing
+
+        except ValueError as ve:
+            print(f"Error: Value error occurred - {ve}")
+            return self.angle, self.timing
+
+        except Exception as e:
+            print(f"Unexpected error in calculate_movement_parameters: {e}")
+            return self.angle, self.timing
 
     def get_position(self):
         """
@@ -163,7 +170,7 @@ class Drone:
 
             # Update the last visited point
             self.last_attempt = (target_y, target_x)
-            self.last_attempt = (current_y, current_x)
+            self.last_location = (current_y, current_x)
         except Exception as e:
             print(f"Error during move: {e}")
 

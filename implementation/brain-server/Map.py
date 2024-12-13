@@ -49,6 +49,10 @@ class Map:
 
         # Create a mask for detecting obstacles
         obstacle_mask = cv2.inRange(hsv_image, obstacle_range["lower"], obstacle_range["upper"])
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+        obstacle_mask = cv2.morphologyEx(obstacle_mask, cv2.MORPH_CLOSE, kernel)    
+        obstacle_mask = cv2.erode(obstacle_mask, kernel, iterations=1) 
+        obstacle_mask = cv2.dilate(obstacle_mask, kernel, iterations=1)
 
         # Detect contours in the obstacle mask
         contours, _ = cv2.findContours(obstacle_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -65,9 +69,7 @@ class Map:
             area = w * h
 
             if area > 100:  # Ignore small noise-like regions
-                # Create a filled mask for the current contour
-                contour_mask = np.zeros_like(obstacle_mask)
-                cv2.drawContours(contour_mask, [contour], -1, 255, thickness=cv2.FILLED)
+                contour_mask = obstacle_mask[y:y + h, x:x + w].copy()
 
                 if area > max_area:
                     # Split large rectangles into smaller regions

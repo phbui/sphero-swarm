@@ -140,9 +140,8 @@ def handle_message(id, sphero_color, message_type, message, outgoing_queue, sphe
     """
     if message_type == "SpheroMovement":
         angle = message["angle"]
-        speed = message["speed"]
         timing = message["timing"]
-        sphero.move(angle, speed, timing)
+        sphero.move(angle, timing)
 
     elif message_type == "MoveNorth":
         sphero.move_direction("north", message)

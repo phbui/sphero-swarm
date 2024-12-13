@@ -4,12 +4,14 @@ import time
 import json
 
 # Define initial color ranges in HSV format
-color_ranges = {
-    '#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
-    '#FF0000': ([165, 5, 200], [180, 255, 255]),  # Red
-    '#035900': ([80, 115, 65], [95, 255, 255]),  # Green
-    '#007FFF': ([75, 0, 245], [110, 255, 255]),  # Cyan
-    '#FFFF00': ([50, 0, 245], [80, 80, 255])  # Yellow
+color_ranges = {           
+    #'#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
+    #'#FF0000': ([5, 45, 60], [30, 255, 255]),  # Red
+    #'#035900': ([80, 115, 65], [95, 255, 255]),  # Green
+    #'#020082': ([70, 20, 180], [180, 100, 255]),  # Blue
+    #'#FFFF00': ([50, 0, 245], [80, 80, 255])  # Yellow
+    'Obstacles': ([5, 135, 60], [20, 255, 240]),
+    'Goal':([125, 115, 100],[130, 140, 130]) 
 }
 
 # Define colors for visualization
@@ -17,8 +19,10 @@ color_map = {
     '#FF00FF': (255, 0, 255),  # Pink
     '#FF0000': (0, 0, 255),      # Red
     '#035900': (0, 255, 0),      # Green
-    '#007FFF': (255, 255, 0),      # Cyan
-    '#FFFF00': (0, 255, 255)      # Yellow
+    '#020082': (255, 255, 0),    # Dark Blue
+    '#FFFF00': (0, 255, 255) ,     # Yellow
+    'Obstacles': (255, 255, 255),
+    'Goal': (255, 255, 255) 
 }
 
 # Function to create trackbars for HSV range adjustment

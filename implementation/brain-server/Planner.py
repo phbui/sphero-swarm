@@ -271,7 +271,6 @@ class Planner:
                         break
         return adjusted_path
 
-
     def _notify_and_move_drone(self, drone, current_position, target_point):
         """
         Notify a drone of its updated path and move it to the next target point.
@@ -283,16 +282,15 @@ class Planner:
             current_y, current_x  = current_position
             target_x, target_y  = target_point
 
-            angle_deg, timing, speed = drone.calculate_movement_parameters(current_position, (target_y, target_x))
+            angle_deg, timing = drone.calculate_movement_parameters(current_position, (target_y, target_x))
 
             print(f"Corrected Angle: {angle_deg}, Timing: {timing}")
             print(f"Moving [{drone.sphero_id}] from Y: {current_y}, X: {current_x} to Y:{target_y}, X: {target_x}")
 
             message_content = {
                 "id": drone.sphero_id,
-                "angle": float(angle_deg),
-                "timing": float(timing),
-                "speed": float(speed)
+                "angle": int(round(angle_deg)),
+                "timing": int(round(timing))
             }
 
             drone.move(current_x, current_y, target_x, target_y)
