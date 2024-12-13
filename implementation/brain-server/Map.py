@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 import random
 from sklearn.neighbors import KDTree
+from color_ranges import obstacle_range, goal_range
 
 class Map:
     def __init__(self, display):
@@ -44,14 +45,7 @@ class Map:
         hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
         # Define color ranges for detecting obstacles and the goal
-        obstacle_range = {
-            "lower": np.array([5, 45, 60]),
-            "upper": np.array([30, 255, 255])
-        }
-        goal_range = {
-            "lower": np.array([125, 115, 100]),
-            "upper": np.array([130, 140, 130])
-        }
+
 
         # Create a mask for detecting obstacles
         obstacle_mask = cv2.inRange(hsv_image, obstacle_range["lower"], obstacle_range["upper"])

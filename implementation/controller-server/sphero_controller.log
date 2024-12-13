@@ -2174,3 +2174,606 @@ message:
 2024-12-12 16:35:02,325 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-12 16:35:02,326 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-12 16:35:02,329 [ERROR] SB-4844: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 16:41:08,013 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:41:08,018 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:41:08,019 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:41:08,019 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:41:09,047 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:41:11,711 [INFO] Main: All processes started.
+2024-12-12 16:41:13,849 [INFO] SB-4844: Calibrating compass.
+2024-12-12 16:41:16,297 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:41:16,298 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:41:30,949 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:41:30,950 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:41:30,957 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:41:30,976 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:41:34,242 [INFO] Main: All processes started.
+2024-12-12 16:41:36,130 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:41:43,289 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:41:43,292 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:41:43,293 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:41:43,300 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:41:46,464 [INFO] Main: All processes started.
+2024-12-12 16:41:48,470 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:41:53,096 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:41:53,099 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:41:53,774 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:41:53,775 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:42:00,693 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:42:00,715 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:42:00,716 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:42:00,735 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:42:03,496 [INFO] Main: All processes started.
+2024-12-12 16:42:04,730 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:42:04,732 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:42:05,970 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:43:04,485 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:43:04,528 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:43:04,529 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:43:04,550 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:43:06,792 [INFO] Main: All processes started.
+2024-12-12 16:43:09,819 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:43:18,898 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:43:20,899 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:43:20,899 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:43:28,000 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:43:28,003 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:43:28,004 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:43:28,027 [INFO] SB-4844: Attempting to connect.
+2024-12-12 16:43:31,090 [INFO] Main: All processes started.
+2024-12-12 16:43:33,197 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:43:42,250 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:43:51,287 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:44:00,332 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:44:09,377 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:44:18,417 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:44:27,449 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:44:34,006 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:44:39,064 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-12 16:44:39,065 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-12 16:44:49,091 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:44:58,179 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:45:04,422 [INFO] SB-4844: Connected to Sphero.
+2024-12-12 16:45:06,238 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:45:06,240 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:45:06,322 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 16:45:06,326 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:45:17,771 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:45:17,777 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:45:17,791 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:45:17,792 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:45:18,878 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:45:20,974 [INFO] Main: All processes started.
+2024-12-12 16:45:23,331 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:45:23,337 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:45:23,353 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:45:23,354 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:45:28,111 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:45:28,112 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:45:28,112 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:45:28,112 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:45:31,353 [INFO] Main: All processes started.
+2024-12-12 16:45:33,336 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:45:34,073 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:45:34,074 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:45:34,575 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:45:34,576 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:45:41,868 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:45:41,869 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:45:41,869 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:45:41,884 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:45:42,439 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:45:45,116 [INFO] Main: All processes started.
+2024-12-12 16:45:45,520 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:45:45,521 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:48:38,559 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:48:38,560 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:48:38,565 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:48:38,571 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:48:40,602 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:48:41,762 [INFO] Main: All processes started.
+2024-12-12 16:48:45,900 [INFO] SB-7104: Calibrating compass.
+2024-12-12 16:48:51,175 [INFO] SB-7104: Initialization complete.
+2024-12-12 16:48:51,176 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 16:48:51,251 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:49:09,357 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:49:09,359 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:49:09,359 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,377 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:49:09,381 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,382 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:49:09,390 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,416 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,467 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,528 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,547 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,549 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,550 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,552 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,553 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,554 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,562 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,564 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:09,565 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:49:28,393 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:49:28,398 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:49:28,400 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:49:28,401 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:49:29,373 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:49:31,277 [INFO] Main: All processes started.
+2024-12-12 16:49:36,297 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-12 16:49:36,303 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 16:49:44,101 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:49:49,945 [INFO] SB-7104: Calibrating compass.
+2024-12-12 16:49:55,219 [INFO] SB-7104: Initialization complete.
+2024-12-12 16:49:55,220 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 16:49:55,274 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:49:58,279 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[1020.2091836734694,451.4540816326531],"targetLocation":[1027,525],"lastTargetLocation":[null,null]}}
+2024-12-12 16:50:03,400 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:50:07,430 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[914.6025641025641,503.4294871794872],"targetLocation":[918,510],"lastTargetLocation":[null,null]}}
+2024-12-12 16:50:09,558 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:50:12,132 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[958.8059360730593,512.2100456621005],"targetLocation":[918,510],"lastTargetLocation":[null,null]}}
+2024-12-12 16:50:16,116 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:50:18,765 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[956.2713178294574,515.8294573643411],"targetLocation":[918,510],"lastTargetLocation":[null,null]}}
+2024-12-12 16:50:22,261 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:50:24,730 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[859.7153846153847,504.38461538461536],"targetLocation":[1289,657],"lastTargetLocation":[null,null]}}
+2024-12-12 16:50:48,492 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:50:51,691 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[1656.4619047619049,155.95238095238096],"targetLocation":[1605,340],"lastTargetLocation":[null,null]}}
+2024-12-12 16:51:02,721 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:51:04,949 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[1179.6469072164948,575.6237113402062],"targetLocation":[1027,525],"lastTargetLocation":[null,null]}}
+2024-12-12 16:51:16,382 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:51:18,574 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:51:18,576 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:52:38,420 [ERROR] SB-7104: Error in subscriber: 
+2024-12-12 16:52:38,422 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,425 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,426 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,427 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,429 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,432 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,434 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,436 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,437 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,438 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,439 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,441 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,443 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,444 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,445 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,446 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,448 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,449 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,449 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,451 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,452 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,453 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,454 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,455 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,456 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,457 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,458 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,459 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,460 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,461 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,462 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,469 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,470 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,471 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,473 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,474 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,474 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,475 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,475 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,476 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:52:38,477 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:53:06,607 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:53:06,611 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:53:06,650 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:53:06,768 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:53:08,258 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:53:09,126 [INFO] Main: All processes started.
+2024-12-12 16:53:16,375 [INFO] SB-7104: Calibrating compass.
+2024-12-12 16:53:21,652 [INFO] SB-7104: Initialization complete.
+2024-12-12 16:53:21,652 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 16:53:21,747 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:53:23,923 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[1015.4668587896253,626.3342939481269],"targetLocation":[1014,570],"lastTargetLocation":[null,null]}}
+2024-12-12 16:53:28,012 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:55:27,953 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:55:27,954 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:55:28,004 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,012 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,013 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,016 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 16:55:28,017 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,020 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:55:28,021 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,032 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,034 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,035 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,036 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,037 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,038 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,039 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,040 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,041 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,042 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,043 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,045 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,046 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,046 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,047 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,050 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,053 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,055 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,056 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,058 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,059 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,060 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,063 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,065 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,066 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,068 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,070 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,072 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,074 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,075 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,077 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,079 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,081 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,082 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,084 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,089 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,090 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,091 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,092 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,093 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,094 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,094 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,095 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,096 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,096 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,097 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,098 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,099 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:55:28,100 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:56:20,408 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:56:20,417 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:56:20,418 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:56:20,421 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:56:21,987 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:56:24,128 [INFO] Main: All processes started.
+2024-12-12 16:56:27,807 [INFO] SB-7104: Calibrating compass.
+2024-12-12 16:56:33,070 [INFO] SB-7104: Initialization complete.
+2024-12-12 16:56:33,071 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 16:56:33,086 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:56:35,394 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[999.658273381295,629.1258992805756],"targetLocation":[1048,666],"lastTargetLocation":[null,null]}}
+2024-12-12 16:56:39,704 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 16:57:29,992 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:57:29,994 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:57:30,001 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 16:57:30,001 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,003 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 16:57:30,003 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,005 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,009 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,033 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,037 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,044 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,047 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,051 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,059 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,070 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,073 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,075 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,076 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,077 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,078 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,079 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,080 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,081 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,082 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,083 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,084 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,085 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,086 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,086 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,087 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,088 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,089 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,090 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,091 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,093 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,094 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,095 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,097 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:30,097 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 16:57:38,318 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:57:38,320 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:57:38,321 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:57:38,324 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:57:41,446 [INFO] Main: All processes started.
+2024-12-12 16:57:43,525 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:57:52,613 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 16:58:01,483 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:58:05,783 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Could not get GATT services: Unreachable
+2024-12-12 16:58:05,784 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 16:58:14,074 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:58:15,467 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 16:58:15,471 [WARNING] WebSocket: Closing connection.
+2024-12-12 16:58:21,631 [INFO] SB-7104: Attempting to connect.
+2024-12-12 16:58:21,633 [INFO] WebSocket: Connected to the server.
+2024-12-12 16:58:21,635 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 16:58:21,654 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 16:58:21,929 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:58:24,765 [INFO] Main: All processes started.
+2024-12-12 16:58:27,011 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-12 16:58:27,012 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 16:58:33,398 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 16:58:37,729 [INFO] SB-7104: Calibrating compass.
+2024-12-12 16:58:43,109 [INFO] SB-7104: Initialization complete.
+2024-12-12 16:58:43,110 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 16:58:43,164 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 16:58:47,625 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[969.4727272727273,666.4690909090909],"targetLocation":[987,734],"lastTargetLocation":[null,null]}}
+2024-12-12 16:58:52,549 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 17:01:48,250 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 17:01:48,251 [WARNING] WebSocket: Closing connection.
+2024-12-12 17:01:48,274 [ERROR] SB-7104: Error in subscriber: 
+2024-12-12 17:01:48,281 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,284 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,285 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,286 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,287 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,288 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,289 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,289 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,291 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,291 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,293 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,294 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,295 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,295 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,297 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,298 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,299 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,300 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,300 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,302 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,303 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,303 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,304 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,305 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,307 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,307 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,308 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,308 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,309 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,309 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,310 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,311 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,311 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,312 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,312 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,314 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,314 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,315 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,316 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,316 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,317 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,318 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,318 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,319 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,320 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,320 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,321 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,321 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,321 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,322 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,322 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,324 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,325 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,325 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,326 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,326 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,327 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,327 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,328 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,328 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,329 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,329 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,330 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,331 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,333 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:01:48,333 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:02:08,786 [INFO] SB-7104: Attempting to connect.
+2024-12-12 17:02:08,804 [INFO] WebSocket: Connected to the server.
+2024-12-12 17:02:08,806 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 17:02:08,816 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 17:02:11,577 [INFO] Main: All processes started.
+2024-12-12 17:02:12,385 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:02:21,896 [INFO] SB-7104: Calibrating compass.
+2024-12-12 17:02:27,158 [INFO] SB-7104: Initialization complete.
+2024-12-12 17:02:27,159 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 17:02:27,242 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 17:02:29,683 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[926.65625,668.3459821428571],"targetLocation":[953,700],"lastTargetLocation":[null,null]}}
+2024-12-12 17:02:33,141 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 17:04:36,237 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 17:04:36,237 [ERROR] SB-7104: Error in subscriber: 
+2024-12-12 17:04:36,240 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,242 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,242 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,243 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,243 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,245 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,245 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,247 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,248 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,252 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 17:04:36,251 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,253 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 17:04:36,257 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,274 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,276 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,278 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,279 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,287 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,292 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,292 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,294 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,304 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,307 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,310 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,312 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,314 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,316 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,323 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,324 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,327 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,330 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,332 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,337 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,338 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,340 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,341 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:36,344 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-12 17:04:52,827 [INFO] SB-7104: Attempting to connect.
+2024-12-12 17:04:52,827 [INFO] WebSocket: Connected to the server.
+2024-12-12 17:04:52,828 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 17:04:52,837 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 17:04:52,986 [ERROR] SB-7104: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 17:04:55,979 [INFO] Main: All processes started.
+2024-12-12 17:04:57,001 [ERROR] SB-7104: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 17:05:01,014 [ERROR] SB-7104: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 17:05:05,029 [ERROR] SB-7104: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 17:05:09,168 [ERROR] SB-7104: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 17:05:13,187 [ERROR] SB-7104: Unexpected error: [WinError -2147020577] The device is not ready for use
+2024-12-12 17:05:19,368 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:05:25,346 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-12 17:05:25,348 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 17:05:26,562 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 17:05:26,565 [WARNING] WebSocket: Closing connection.
+2024-12-12 17:05:26,591 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 17:05:26,601 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 17:05:41,869 [INFO] SB-7104: Attempting to connect.
+2024-12-12 17:05:41,891 [INFO] WebSocket: Connected to the server.
+2024-12-12 17:05:41,893 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 17:05:41,895 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 17:05:44,107 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:05:44,612 [INFO] Main: All processes started.
+2024-12-12 17:05:49,208 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-12 17:05:49,209 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 17:05:55,032 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:06:01,631 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: [WinError -2147024894] The system cannot find the file specified.
+2024-12-12 17:06:01,632 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 17:06:07,985 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:06:19,981 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-12 17:06:19,982 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 17:06:25,462 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:06:30,423 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-12 17:06:30,424 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 17:06:35,668 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:06:40,907 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-12 17:06:40,907 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-12 17:06:46,302 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:06:52,830 [INFO] SB-7104: Calibrating compass.
+2024-12-12 17:06:58,090 [INFO] SB-7104: Initialization complete.
+2024-12-12 17:06:58,091 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 17:06:58,192 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 17:06:59,965 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[771.7373417721519,667.6740506329114],"targetLocation":[873,623],"lastTargetLocation":[null,null]}}
+2024-12-12 17:07:06,644 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 17:08:24,269 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 17:08:24,273 [WARNING] WebSocket: Closing connection.
+2024-12-12 17:08:24,307 [ERROR] SB-7104: Error in subscriber: 
+2024-12-12 17:08:24,319 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,330 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,333 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,337 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,342 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,345 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,348 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,349 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,350 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,351 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,352 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,354 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 17:08:24,356 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,357 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 17:08:24,358 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,358 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,360 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,361 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,362 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,363 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,364 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,365 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,366 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,367 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,367 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,368 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,370 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,370 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,371 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,372 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,373 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,374 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,375 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,377 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,378 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,380 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,381 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,382 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,383 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,385 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,386 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,387 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,388 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,389 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,390 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,390 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,391 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,392 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,392 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,393 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,394 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,394 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,395 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:24,396 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:08:44,948 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 17:08:44,955 [INFO] SB-7104: Attempting to connect.
+2024-12-12 17:08:44,958 [INFO] WebSocket: Connected to the server.
+2024-12-12 17:08:44,959 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 17:08:47,744 [INFO] SB-7104: Connected to Sphero.
+2024-12-12 17:08:48,654 [INFO] Main: All processes started.
+2024-12-12 17:08:53,923 [INFO] SB-7104: Calibrating compass.
+2024-12-12 17:08:59,187 [INFO] SB-7104: Initialization complete.
+2024-12-12 17:08:59,187 [INFO] SB-7104: Subscribed to message bus.
+2024-12-12 17:08:59,209 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-12 17:09:00,183 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"currentLocation":[551.7276422764228,772.7865853658536],"targetLocation":[589,830],"lastTargetLocation":[null,null]}}
+2024-12-12 17:09:04,848 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-12 17:09:37,822 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 17:09:37,828 [WARNING] WebSocket: Closing connection.
+2024-12-12 17:09:37,861 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,873 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,875 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,876 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,881 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,882 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,883 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,884 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,887 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,889 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,896 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 17:09:37,902 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,905 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 17:09:37,921 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,925 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,928 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,937 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,941 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,943 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,945 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,949 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,952 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,954 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,957 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,959 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-12 17:09:37,965 [ERROR] SB-7104: Error in subscriber: [WinError 2] The system cannot find the file specified

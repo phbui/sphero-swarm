@@ -291,8 +291,6 @@ class Planner:
                 "current_y": float(current_y),
                 "target_x": float(target_x),
                 "target_y": float(target_y),
-                "last_x": float(drone.last_x),
-                "last_y": float(drone.last_y)
             }
 
             drone.move(current_x, current_y, target_x, target_y)

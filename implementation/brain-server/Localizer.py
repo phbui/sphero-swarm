@@ -81,7 +81,7 @@ class Localizer:
                     particle.weight = 1.0 / len(self.particles)
 
             # Resample and move particles
-            self._resampleAndMoveParticles(gmm_x, gmm_y)
+            self._resampleAndMoveParticles(gmm_y, gmm_x)
 
             return gmm_y, gmm_x
         except Exception as e:
@@ -112,7 +112,7 @@ class Localizer:
             return 0
 
 
-    def _resampleAndMoveParticles(self, mean_x, mean_y):
+    def _resampleAndMoveParticles(self, mean_y, mean_x):
         """
         Resample particles based on their weights and move them closer to the detected mean.
         Args:
@@ -146,7 +146,7 @@ class Localizer:
                 new_x = 0.7 * resampled_particle.x + 0.3 * mean_x + noise_x  # Weighted towards mean
                 new_y = 0.7 * resampled_particle.y + 0.3 * mean_y + noise_y
 
-                particle.move(new_x, new_y, resampled_particle.weight)
+                particle.move(new_y, new_x, resampled_particle.weight / 4)
         except Exception as e:
             print(f"Error in resampling and moving particles: {e}")
 

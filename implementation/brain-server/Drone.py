@@ -27,8 +27,7 @@ class Drone:
                 self.goal = (gx + gw // 2, gy + gh // 2)
             print(f"Goat at: y:{self.goal[1]}, x:{self.goal[0]}")
             self.goal_node = self.map.find_closest_node(self.goal)
-            self.last_x = -1  # Last known x-coordinate of the drone
-            self.last_y = -1  # Last known y-coordinate of the drone
+            self.visited_points = set()
             # State Machine for the Drone
             self.states = [
                 {
@@ -76,16 +75,24 @@ class Drone:
             current_y: Current y-coordinate.
             target_x: Target x-coordinate.
             target_y: Target y-coordinate.
-        Returns:
-            Tuple (x, y) representing the new position.
         """
         try:
+            # Draw a point at the target position
+            point_id = f"{self.sphero_id}"
+            self.display.draw_point(
+                point_id,
+                current_y, 
+                current_x, 
+                0.5,
+                self.sphero_color
+            )
+
             # Draw a line from the current position to the target position
             line_id = f"{self.sphero_id}-vector"
             self.display.draw_line(
                 id=line_id,
-                point1=(current_x, current_y), 
-                point2=(target_x, target_y),
+                point1=(current_y, current_x), 
+                point2=(target_y, target_x),
                 weight=2,
                 color=self.sphero_color
             )
@@ -93,20 +100,16 @@ class Drone:
             # Draw a point at the target position
             point_id = f"{self.sphero_id}-point"
             self.display.draw_point(
-                id=point_id,
-                x=target_x, 
-                y=target_y, 
-                weight=0.25,
-                color=self.sphero_color
+                point_id,
+                target_y, 
+                target_x, 
+                0.25,
+                self.sphero_color
             )
 
-            # Placeholder for actual movement logic; update position directly
-            self.last_x = target_x
-            self.last_y = target_y
-            return target_x, target_y
+            self.visited_points.add((current_y, current_x))
         except Exception as e:
             print(f"Error during move: {e}")
-            return self.last_x, self.last_y
 
     def execute_state(self):
         """
@@ -252,7 +255,7 @@ class Drone:
             # Add the closest node if the drone is not already close
             distance_to_closest_node = self._euclidean_distance(start, closest_node)
             close_threshold = 20.0
-            if distance_to_closest_node > close_threshold:
+            if distance_to_closest_node > close_threshold and closest_node not in self.visited_points:
                 path.insert(0, closest_node)
 
             print(f"Sphero [{self.sphero_id}] found path: {path}")
