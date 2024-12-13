@@ -13,6 +13,6 @@ obstacle_range = {
     "upper": np.array([20, 255, 240])
 }
 goal_range = {
-    "lower": np.array([125, 115, 100]),
-    "upper": np.array([130, 140, 130])
+    "lower": np.array([125, 115, 0]),
+    "upper": np.array([130, 165, 130])
 }

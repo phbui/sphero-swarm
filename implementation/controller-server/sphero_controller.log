@@ -5138,3 +5138,30 @@ ng closed
 2024-12-12 20:35:43,054 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":139,"timing":2}}
 2024-12-12 20:35:43,983 [ERROR] WebSocket Sender: Error sending message: 
 2024-12-12 20:35:43,997 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 20:51:51,966 [INFO] SB-2E86: Attempting to connect.
+2024-12-12 20:51:51,975 [INFO] WebSocket: Connected to the server.
+2024-12-12 20:51:51,976 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 20:51:52,002 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 20:51:55,099 [INFO] Main: All processes started.
+2024-12-12 20:51:56,293 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-12 20:51:56,307 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 20:52:43,650 [INFO] WebSocket: Connected to the server.
+2024-12-12 20:52:43,652 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 20:52:43,665 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 20:52:43,681 [INFO] SB-2E86: Attempting to connect.
+2024-12-12 20:52:46,491 [INFO] Main: All processes started.
+2024-12-12 20:52:49,018 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 20:52:58,086 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-12 20:52:58,969 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 20:52:58,973 [WARNING] WebSocket: Closing connection.
+2024-12-12 20:52:59,022 [ERROR] WebSocket Sender: Error sending message: [WinError 232] The pipe is being closed
+2024-12-12 20:52:59,024 [WARNING] WebSocket Sender: Closing connection.
+2024-12-12 20:53:40,657 [INFO] WebSocket: Connected to the server.
+2024-12-12 20:53:40,659 [INFO] WebSocket: Sent connection initialization.
+2024-12-12 20:53:40,688 [INFO] SB-2E86: Attempting to connect.
+2024-12-12 20:53:40,704 [INFO] WebSocket Sender: Connected to the server.
+2024-12-12 20:53:41,354 [INFO] SB-2E86: Connected to Sphero.
+2024-12-12 20:53:43,229 [INFO] Main: All processes started.
+2024-12-12 20:53:46,842 [INFO] SB-2E86: Calibrating compass.
+2024-12-12 20:53:47,730 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-12 20:53:47,730 [WARNING] WebSocket: Closing connection.

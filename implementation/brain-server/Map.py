@@ -66,7 +66,10 @@ class Map:
             area = w * h
 
             if area > 100:  # Ignore small noise-like regions
-                contour_mask = obstacle_mask[y:y + h, x:x + w].copy()
+                temp_mask = obstacle_mask[y:y + h, x:x + w].copy()
+                full_mask = np.zeros_like(obstacle_mask)
+                full_mask[y:y+h, x:x+w] = temp_mask
+                contour_mask = full_mask
 
                 if area > max_area:
                     # Split large rectangles into smaller regions
@@ -112,6 +115,8 @@ class Map:
         goal_mask = cv2.inRange(hsv_image, goal_range["lower"], goal_range["upper"])
         contours, _ = cv2.findContours(goal_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
+        cv2.imshow("goal_mask", goal_mask)
+        cv2.waitKey(1)
         if contours:
             # Use the largest detected region as the goal
             largest_contour = max(contours, key=cv2.contourArea)
