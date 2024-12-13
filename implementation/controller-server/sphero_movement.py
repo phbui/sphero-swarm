@@ -78,7 +78,7 @@ class SpheroMovement:
         try:
             self.droid.set_main_led(self.sphero_color)  # Set the main LED to the client color
             self.droid.set_compass_direction(angle)  # Set the compass direction
-            self.droid.roll(0, 30, duration)  # Move the Sphero
+            self.droid.roll(0, 40, duration)  # Move the Sphero
         except Exception as e:
             print(f"Error in move_direction: {e}")
 

@@ -37,9 +37,33 @@ class Drone:
             self.last_location = None
 
             # Movement parameters
-            self.angle = -1
+            self.angle = 0
             self.speed = None
             self.timing = 2
+            self.angle_offset = None
+            self.states = [
+                {
+                    "state": "move_to_goal",
+                    "description": "Sphero navigates towards the goal.",
+                    "transitions": [
+                        {
+                            "condition": "Reached goal threshold distance",
+                            "next_state": "reaching_goal"
+                        }
+                    ]
+                },
+                {
+                    "state": "interact",
+                    "description": "Sphero executes interaction behavior.",
+                    "transitions": [
+                        {
+                            "condition": "Interaction complete",
+                            "next_state": None
+                        }
+                    ]
+                }
+            ]
+            self.current_state_index = 0
         except Exception as e:
            print(f"Error initializing Drone: {e}")
 
@@ -55,47 +79,87 @@ class Drone:
         """
         try:
             # If this is the first move
-            if self.last_location == None:
+            if self.last_location is None:
                 print("[Movement Parameters] First Move: Setting True North.")
                 self.last_location = (self.current_y, self.current_x)
-                self.angle = 0
-
                 return self.angle, self.timing
 
-            # Calculate movement vector
+            # Calculate actual movement vector
             delta_x_actual = self.current_x - self.last_location[1]
             delta_y_actual = self.current_y - self.last_location[0]
+
+            print(f"delta_x: last: {self.last_location[1]}, curr: {self.current_x}")
+            print(f"delta_y: last: {self.last_location[0]}, curr: {self.current_y}")
+
+            actual_angle = math.degrees(math.atan2(delta_x_actual, -delta_y_actual)) % 360
             distance_moved = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+
+            if self.angle_offset is None:
+                self.angle_offset = actual_angle
+
+            # Calculate intended movement vector (from last location to last target)
+            delta_x_intended = self.last_attempt[1] - self.last_location[1]
+            delta_y_intended = self.last_attempt[0] - self.last_location[0]
+            intended_angle = math.degrees(math.atan2(delta_x_intended, -delta_y_intended)) % 360
+
+            angle_deviation = ((actual_angle - intended_angle) % 360)
 
             # Update speed based on current confidence
             updated_speed = (distance_moved / self.timing)
             if self.speed is not None:
-                updated_speed = (1 - self.current_confidence) + self.current_confidence * self.speed
+                updated_speed = (1 - self.current_confidence) * self.speed + self.current_confidence * updated_speed
             self.speed = updated_speed
 
-            # Calculate angle to target
+            # Calculate angle to the new target
             delta_x_target = target_position[1] - self.current_x
             delta_y_target = target_position[0] - self.current_y
-            target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target)) % 360
+            target_angle = (math.degrees(math.atan2(delta_x_target, -delta_y_target)) - self.angle_offset) % 360
 
             # Calculate corrected timing
             distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
             corrected_timing = distance_to_target / (self.speed + 1e-6)
 
+            end_x = self.current_x + 100 * math.cos(math.radians(self.angle_offset))
+            end_y = self.current_y - 100 * math.sin(math.radians(self.angle_offset)) 
+
+            print(self.angle_offset)
+
+            # Draw the predicted angle direction
+            self.display.draw_line(
+                id=f"{self.sphero_id}_offset_angle",
+                point1=(self.current_y, self.current_x),
+                point2=(end_y, end_x),
+                weight=2,
+                color='#00FF00'  
+            )
+
+
+            end_x = self.current_x + 100 * math.cos(math.radians(0))
+            end_y = self.current_y - 100 * math.sin(math.radians(0)) 
+
+            self.display.draw_line(
+                id=f"{self.sphero_id}_zero_angle",
+                point1=(self.current_y, self.current_x),
+                point2=(end_y, end_x),
+                weight=2,
+                color='#FF0000'  
+            )
+
+
             # Update state
             self.angle = target_angle
-            self.timing = corrected_timing
+            self.last_attempt = target_position
             self.last_location = (self.current_y, self.current_x)
+            self.timing = corrected_timing
 
             print("[Movement Parameters] Calculated Values:")
-            print(f"Angle: {self.angle}, Speed: {self.speed}, Timing: {self.timing}")
             return self.angle, self.timing
         except ZeroDivisionError:
-            print("[Movement Parameters] Division by zero in speed calculation.")
-            return self.angle, 2 
+            print("[Movement Parameters] Division by zero in timing calculation.")
+            return self.angle, 2  # Fallback timing
         except Exception as e:
             print(f"Unexpected error in calculate_movement_parameters: {e}")
-            return self.angle, 2
+            return self.angle, 2  # Fallback timing
 
     def get_position(self):
         """
