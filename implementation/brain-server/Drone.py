@@ -34,8 +34,6 @@ class Drone:
             # Kalman filter
             self.angle = -1
             self.speed = -1
-            self.angle_weight = 0.7  
-            self.speed_weight = 0.7  
 
             # State Machine for the Drone
             self.states = [
@@ -64,22 +62,6 @@ class Drone:
         except Exception as e:
             print(f"Error initializing Drone: {e}")
 
-import math
-
-class MovementController:
-    def __init__(self):
-        # Initialize Kalman filter state
-        self.angle = -1  # Indicates uninitialized angle state
-        self.speed = -1  # Indicates uninitialized speed state
-
-        # Weights for Kalman-like filter
-        self.angle_weight = 0.7  # Trust factor for previous angle state
-        self.speed_weight = 0.7  # Trust factor for previous speed state
-
-        # Last recorded positions
-        self.last_location = None
-        self.last_attempt = None
-
     def calculate_movement_parameters(self, current_position, target_position):
         """
         Calculate the angle and timing needed to reach the target position with Kalman-like correction.
@@ -102,6 +84,7 @@ class MovementController:
                 # Second move: Initialize angle and speed using observed values
                 delta_y_actual = current_position[0] - self.last_location[0]
                 delta_x_actual = current_position[1] - self.last_location[1]
+                confidence = current_position[2]
                 observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
                 distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
                 observed_speed = distance_traveled / 2  # Assume default timing of 2 seconds
@@ -111,7 +94,7 @@ class MovementController:
                 self.speed = observed_speed
 
                 # Update last positions
-                self.last_location = current_position
+                self.last_location = (current_position[0], current_position[1])
                 self.last_attempt = target_position
 
                 return self.angle, 2  # Return observed angle and default timing
@@ -135,9 +118,12 @@ class MovementController:
             correction_angle = angle_actual - angle_intended
             observed_angle = (self.angle + correction_angle) % 360
 
+            adjusted_angle_weight = confidence
+            adjusted_speed_weight = confidence
+
             # Apply Kalman-like correction for angle
             self.angle = (
-                self.angle_weight * self.angle + (1 - self.angle_weight) * observed_angle
+                adjusted_angle_weight * self.angle + (1 - adjusted_angle_weight) * observed_angle
             ) % 360
 
             # Calculate the current angle to the target (c -> target)
@@ -153,7 +139,7 @@ class MovementController:
             observed_speed = distance_traveled / 2  # Assume previous timing of 2 seconds
 
             # Apply Kalman-like correction for speed
-            self.speed = self.speed_weight * self.speed + (1 - self.speed_weight) * observed_speed
+            self.speed = adjusted_speed_weight * self.speed + (1 - adjusted_speed_weight) * observed_speed
 
             # Calculate distance to target
             distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
@@ -178,7 +164,7 @@ class MovementController:
         except Exception as e:
             print(f"Unexpected error in calculate_movement_parameters: {e}")
             return self.angle, 2  # Fallback timing
-
+        
     def get_position(self):
         """
         Get the current position of the Sphero using localization.
@@ -278,7 +264,7 @@ class MovementController:
         Fine-tune the Sphero's position to align with the goal.
         """
         try:
-            current_x, current_y = current_position
+            current_x, current_y, _ = current_position
             if self._euclidean_distance((current_x, current_y), self.goal) <= 5:
                 print(f"Sphero [{self.sphero_id}] precisely aligned with the goal.")
                 return True

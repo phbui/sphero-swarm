@@ -279,7 +279,7 @@ class Planner:
             target_point: The next target point as a tuple (x, y).
         """
         try:
-            current_y, current_x  = current_position
+            current_y, current_x, _  = current_position
             target_x, target_y  = target_point
 
             angle_deg, timing = drone.calculate_movement_parameters(current_position, (target_y, target_x))

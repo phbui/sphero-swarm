@@ -40,6 +40,8 @@ class Localizer:
             mask = self._getColorMask(image, self.color)
             points = np.column_stack(np.where(mask > 0))  # Extract pixel coordinates
 
+            confidence = 0 
+
             # Fit a Gaussian Mixture Model to the color region
             if len(points) > 0:
                 # Calculate the geometric center of the points (unweighted mean)
@@ -56,6 +58,8 @@ class Localizer:
                 cov = gmm.covariances_[0]
                 cov += np.eye(2) * 1e-6  # Ensure covariance matrix is not singular
 
+                confidence = 1.0 / (np.linalg.det(cov) + 1e-6) 
+
                 for particle in self.particles:
                     if particle.x == 0 and particle.y == 0:
                         particle.x = np.random.normal(gmm_x, np.sqrt(cov[0, 0]))
@@ -65,6 +69,7 @@ class Localizer:
                 # Handle case when no points are detected
                 gmm_y, gmm_x = height // 2, width // 2   # Default to image center
                 cov = np.eye(2)  # Default covariance
+                confidence = 0 
 
             # Update particle weights based on the GMM
             for particle in self.particles:
@@ -83,7 +88,7 @@ class Localizer:
             # Resample and move particles
             self._resampleAndMoveParticles(gmm_y, gmm_x)
 
-            return gmm_y, gmm_x
+            return gmm_y, gmm_x, confidence
         except Exception as e:
             print(f"Error updating particles: {e}")
             return None, None

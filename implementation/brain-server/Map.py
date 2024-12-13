@@ -44,9 +44,6 @@ class Map:
         # Convert the image to HSV color space for easier color detection
         hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-        # Define color ranges for detecting obstacles and the goal
-
-
         # Create a mask for detecting obstacles
         obstacle_mask = cv2.inRange(hsv_image, obstacle_range["lower"], obstacle_range["upper"])
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
