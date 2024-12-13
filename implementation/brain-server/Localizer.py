@@ -60,6 +60,9 @@ class Localizer:
 
                 confidence = 1.0 / (np.linalg.det(cov) + 1e-6) 
 
+                print(f"cov: {cov}")
+                print(f"conf: {confidence}")
+
                 for particle in self.particles:
                     if particle.x == 0 and particle.y == 0:
                         particle.x = np.random.normal(gmm_x, np.sqrt(cov[0, 0]))

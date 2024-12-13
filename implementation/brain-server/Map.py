@@ -115,8 +115,6 @@ class Map:
         goal_mask = cv2.inRange(hsv_image, goal_range["lower"], goal_range["upper"])
         contours, _ = cv2.findContours(goal_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        cv2.imshow("goal_mask", goal_mask)
-        cv2.waitKey(1)
         if contours:
             # Use the largest detected region as the goal
             largest_contour = max(contours, key=cv2.contourArea)
@@ -147,7 +145,8 @@ class Map:
             goal_center = (gx + gw // 2, gy + gh // 2)
             self.nodes.append(goal_center)
             self.display.draw_point("goal_node", goal_center[1], goal_center[0], weight=0.2, color="#0000FF")
-            self.display.draw_label(f"goal_label", goal_center[1], goal_center[0], f"y:{goal_center[1]},x:{goal_center[0]}", color="#0000FF")
+            # Debug Nodes
+            #self.display.draw_label(f"goal_label", goal_center[1], goal_center[0], f"y:{goal_center[1]},x:{goal_center[0]}", color="#0000FF")
         else:
             print("No goal detected.")
             return
@@ -188,7 +187,7 @@ class Map:
         for x, y in self.nodes:
             self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
             # Debug Nodes
-            self.display.draw_label(f"node_{x}_{y}_label", y, x, f"y:{y},x:{x}", color="#00FF00")
+            #self.display.draw_label(f"node_{x}_{y}_label", y, x, f"y:{y},x:{x}", color="#00FF00")
 
 
         for (x1, y1), (x2, y2) in self.edges:

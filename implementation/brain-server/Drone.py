@@ -28,6 +28,10 @@ class Drone:
             print(f"Goal at: y:{self.goal[1]}, x:{self.goal[0]}")
             self.goal_node = self.map.find_closest_node(self.goal)
 
+            self.current_y = -1
+            self.current_x = -1
+            self.current_confidence = 0
+
             self.last_attempt = None  # Store the last visited point
             self.last_location = None
 
@@ -62,12 +66,11 @@ class Drone:
         except Exception as e:
             print(f"Error initializing Drone: {e}")
 
-    def calculate_movement_parameters(self, current_position, target_position):
+    def calculate_movement_parameters(self, target_position):
         """
         Calculate the angle and timing needed to reach the target position with Kalman-like correction.
 
         Args:
-            current_position: Tuple (y, x) representing the current position.
             target_position: Tuple (y, x) representing the target position.
 
         Returns:
@@ -76,15 +79,16 @@ class Drone:
         try:
             # Handle uninitialized state
             if self.last_location is None:
-                self.last_location = current_position
+                self.last_location = (self.current_y, self.current_x)
                 self.last_attempt = target_position
                 return 0, 2  # Initial angle and default timing
 
             if self.angle == -1 or self.speed == -1:
                 # Second move: Initialize angle and speed using observed values
-                delta_y_actual = current_position[0] - self.last_location[0]
-                delta_x_actual = current_position[1] - self.last_location[1]
-                confidence = current_position[2]
+                delta_y_actual = self.current_y - self.last_location[0]
+                delta_x_actual = self.current_x - self.last_location[1]
+                confidence = self.current_confidence
+
                 observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
                 distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
                 observed_speed = distance_traveled / 2  # Assume default timing of 2 seconds
@@ -94,7 +98,7 @@ class Drone:
                 self.speed = observed_speed
 
                 # Update last positions
-                self.last_location = (current_position[0], current_position[1])
+                self.last_location = (self.current_y, self.current_x)
                 self.last_attempt = target_position
 
                 return self.angle, 2  # Return observed angle and default timing
@@ -102,7 +106,7 @@ class Drone:
             # Previous positions: a (start), b (intended target), c (current actual position)
             a = self.last_location
             b = self.last_attempt
-            c = current_position
+            c = (self.current_y, self.current_x)
 
             # Calculate angle a -> b (previous intended direction)
             delta_y_intended = b[0] - a[0]
@@ -148,7 +152,7 @@ class Drone:
             timing = distance_to_target / (self.speed + 1e-6)  # Avoid division by zero
 
             # Update state
-            self.last_location = current_position
+            self.last_location = (self.current_y, self.current_x)
             self.last_attempt = target_position
 
             return corrected_angle, timing
@@ -172,7 +176,7 @@ class Drone:
             Tuple (y, x) representing the current position.
         """
         try:
-            return self.localizer.updateParticles()
+            self.current_y, self.current_x, self.current_confidence = self.localizer.updateParticles()
         except Exception as e:
             print(f"Error getting position: {e}")
             return None
@@ -248,24 +252,24 @@ class Drone:
                 print(f"Sphero [{self.sphero_id}]: Goal is not set!")
                 return
             
-            current_position = self.get_position()
-            print(f"Sphero [{self.sphero_id}] at: y:{current_position[0]}, x:{current_position[1]}")
+            print(f"Sphero [{self.sphero_id}] at: y:{self.current_y}, x:{self.current_x}")
 
-            if (self.reached_goal(current_position)):
+            
+
+            if (self.reached_goal()):
                 self._transition_to_state("interact")
             else:
-                self.submit_trajectory(current_position)
+                self.submit_trajectory()
 
         except Exception as e:
             print(f"Error in _move_to_goal: {e}")
 
-    def reached_goal(self, current_position):
+    def reached_goal(self, ):
         """
         Fine-tune the Sphero's position to align with the goal.
         """
         try:
-            current_x, current_y, _ = current_position
-            if self._euclidean_distance((current_x, current_y), self.goal) <= 5:
+            if self._euclidean_distance((self.current_x, self.current_y), self.goal) <= 5:
                 print(f"Sphero [{self.sphero_id}] precisely aligned with the goal.")
                 return True
         except Exception as e:
@@ -394,15 +398,16 @@ class Drone:
             print(f"Error getting neighbors: {e}")
             return []
 
-    def submit_trajectory(self, current_position):
+    def submit_trajectory(self):
         """
         Submit the planned trajectory to the Planner's queue for collision evaluation.
         Args:
             planner: Reference to the Planner instance.
         """
         try:
+            current_position = (self.current_y, self.current_x)
             trajectory = self._find_path(current_position)
-            self.planner.add_trajectory((trajectory, current_position, self))
+            self.planner.add_trajectory((trajectory, self))
             print(f"Sphero [{self.sphero_id}] submitted trajectory: {trajectory}")
         except Exception as e:
             print(f"Error submitting trajectory: {e}")
