@@ -30,8 +30,13 @@ class Drone:
 
             self.last_attempt = None  # Store the last visited point
             self.last_location = None
-            self.angle = 0
-            self.speed = 0
+
+            # Kalman filter
+            self.angle = -1
+            self.speed = -1
+            self.angle_weight = 0.7  
+            self.speed_weight = 0.7  
+
             # State Machine for the Drone
             self.states = [
                 {
@@ -59,21 +64,57 @@ class Drone:
         except Exception as e:
             print(f"Error initializing Drone: {e}")
 
+import math
+
+class MovementController:
+    def __init__(self):
+        # Initialize Kalman filter state
+        self.angle = -1  # Indicates uninitialized angle state
+        self.speed = -1  # Indicates uninitialized speed state
+
+        # Weights for Kalman-like filter
+        self.angle_weight = 0.7  # Trust factor for previous angle state
+        self.speed_weight = 0.7  # Trust factor for previous speed state
+
+        # Last recorded positions
+        self.last_location = None
+        self.last_attempt = None
+
     def calculate_movement_parameters(self, current_position, target_position):
         """
-        Calculate the angle and timing needed to reach the target position with feedback correction.
+        Calculate the angle and timing needed to reach the target position with Kalman-like correction.
 
         Args:
             current_position: Tuple (y, x) representing the current position.
             target_position: Tuple (y, x) representing the target position.
 
         Returns:
-            tuple: (corrected_angle, corrected_timing)
+            tuple: (corrected_angle, timing)
         """
         try:
             # Handle uninitialized state
             if self.last_location is None:
-                return self.angle, 2
+                self.last_location = current_position
+                self.last_attempt = target_position
+                return 0, 2  # Initial angle and default timing
+
+            if self.angle == -1 or self.speed == -1:
+                # Second move: Initialize angle and speed using observed values
+                delta_y_actual = current_position[0] - self.last_location[0]
+                delta_x_actual = current_position[1] - self.last_location[1]
+                observed_angle = math.degrees(math.atan2(delta_x_actual, delta_y_actual)) % 360
+                distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+                observed_speed = distance_traveled / 2  # Assume default timing of 2 seconds
+
+                # Initialize states
+                self.angle = observed_angle
+                self.speed = observed_speed
+
+                # Update last positions
+                self.last_location = current_position
+                self.last_attempt = target_position
+
+                return self.angle, 2  # Return observed angle and default timing
 
             # Previous positions: a (start), b (intended target), c (current actual position)
             a = self.last_location
@@ -92,52 +133,51 @@ class Drone:
 
             # Correct the previous angle (z): angle_actual - angle_intended + previous_angle
             correction_angle = angle_actual - angle_intended
-            corrected_previous_angle = (self.angle + correction_angle) % 360
+            observed_angle = (self.angle + correction_angle) % 360
+
+            # Apply Kalman-like correction for angle
+            self.angle = (
+                self.angle_weight * self.angle + (1 - self.angle_weight) * observed_angle
+            ) % 360
 
             # Calculate the current angle to the target (c -> target)
             delta_y_target = target_position[0] - c[0]
             delta_x_target = target_position[1] - c[1]
-            current_to_target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target))
+            target_angle = math.degrees(math.atan2(delta_x_target, delta_y_target))
 
-            # Final corrected angle
-            self.angle = (corrected_previous_angle + current_to_target_angle) % 360
+            # Combine corrected angle with current target angle
+            corrected_angle = (self.angle + target_angle) % 360
+
+            # Calculate observed speed from the previous movement
+            distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
+            observed_speed = distance_traveled / 2  # Assume previous timing of 2 seconds
+
+            # Apply Kalman-like correction for speed
+            self.speed = self.speed_weight * self.speed + (1 - self.speed_weight) * observed_speed
 
             # Calculate distance to target
             distance_to_target = math.sqrt(delta_x_target**2 + delta_y_target**2)
 
-            # Calculate observed speed from the previous movement
-            distance_traveled = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
-            self.speed = distance_traveled / (self.timing + 1e-6)  # Avoid division by zero
-
-            # Calculate new timing based on observed speed
+            # Calculate timing based on corrected speed
             timing = distance_to_target / (self.speed + 1e-6)  # Avoid division by zero
 
-            return self.angle, timing
+            # Update state
+            self.last_location = current_position
+            self.last_attempt = target_position
+
+            return corrected_angle, timing
 
         except ZeroDivisionError:
             print("Error: Division by zero occurred in timing calculation.")
-            return self.angle, self.timing
+            return self.angle, 2  # Fallback timing
 
         except ValueError as ve:
             print(f"Error: Value error occurred - {ve}")
-            return self.angle, self.timing
+            return self.angle, 2  # Fallback timing
 
         except Exception as e:
             print(f"Unexpected error in calculate_movement_parameters: {e}")
-            return self.angle, self.timing
-
-
-        except ZeroDivisionError:
-            print("Error: Division by zero occurred in timing calculation.")
-            return self.angle, self.timing
-
-        except ValueError as ve:
-            print(f"Error: Value error occurred - {ve}")
-            return self.angle, self.timing
-
-        except Exception as e:
-            print(f"Unexpected error in calculate_movement_parameters: {e}")
-            return self.angle, self.timing
+            return self.angle, 2  # Fallback timing
 
     def get_position(self):
         """
