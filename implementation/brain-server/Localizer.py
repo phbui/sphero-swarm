@@ -29,7 +29,7 @@ class Localizer:
         """
         Update particle positions and weights based on the detected target color region.
         Returns:
-            Tuple (gmm_x, gmm_y): Coordinates of the Gaussian Mixture Model (GMM) mean.
+            Tuple (gmm_y, gmm_x): Coordinates of the Gaussian Mixture Model (GMM) mean.
         """
         try:
             # Capture the current frame
@@ -52,7 +52,7 @@ class Localizer:
                 ).fit(points)
 
                 # Retrieve GMM mean and covariance
-                gmm_x, gmm_y = gmm.means_[0]
+                gmm_y, gmm_x = gmm.means_[0]
                 cov = gmm.covariances_[0]
                 cov += np.eye(2) * 1e-6  # Ensure covariance matrix is not singular
 
@@ -63,7 +63,7 @@ class Localizer:
                         particle.weight = 1.0 / len(self.particles)
             else:
                 # Handle case when no points are detected
-                gmm_x, gmm_y = width // 2, height // 2  # Default to image center
+                gmm_y, gmm_x = height // 2, width // 2   # Default to image center
                 cov = np.eye(2)  # Default covariance
 
             # Update particle weights based on the GMM
@@ -83,7 +83,7 @@ class Localizer:
             # Resample and move particles
             self._resampleAndMoveParticles(gmm_x, gmm_y)
 
-            return gmm_x, gmm_y
+            return gmm_y, gmm_x
         except Exception as e:
             print(f"Error updating particles: {e}")
             return None, None

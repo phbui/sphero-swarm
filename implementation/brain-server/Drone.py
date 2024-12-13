@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.spatial import KDTree
 import heapq
 import Localizer
 
@@ -24,16 +23,10 @@ class Drone:
             self.map = map
             if len(self.map.goal) == 4:
                 # If the goal is represented as a rectangle, use its center as the target goal
-                x_min, y_min, x_max, y_max = self.map.goal
-                goal_x = (x_min + x_max) / 2
-                goal_y = (y_min + y_max) / 2
-                self.goal = (goal_x, goal_y)
-            else:
-                # Assume goal is already a tuple (x, y)
-                self.goal = self.map.goal
-            print(f"Goat at: {self.goal}")
-            self.prm_nodes = self.map.nodes  # Set PRM nodes from the map
-            self.goal_node = self.find_closest_node(self.goal)
+                gx, gy, gw, gh = self.map.goal
+                self.goal = (gx + gw // 2, gy + gh // 2)
+            print(f"Goat at: y:{self.goal[1]}, x:{self.goal[0]}")
+            self.goal_node = self.map.find_closest_node(self.goal)
             self.last_x = -1  # Last known x-coordinate of the drone
             self.last_y = -1  # Last known y-coordinate of the drone
             # State Machine for the Drone
@@ -67,7 +60,7 @@ class Drone:
         """
         Get the current position of the Sphero using localization.
         Returns:
-            Tuple (x, y) representing the current position.
+            Tuple (y, x) representing the current position.
         """
         try:
             return self.localizer.updateParticles()
@@ -141,7 +134,7 @@ class Drone:
                 return
             
             current_position = self.get_position()
-            print(f"Sphero [{self.sphero_id}] at: {current_position}")
+            print(f"Sphero [{self.sphero_id}] at: y:{current_position[0]}, x:{current_position[1]}")
 
             if (self.reached_goal(current_position)):
                 self._transition_to_state("interact")
@@ -191,26 +184,6 @@ class Drone:
         except Exception as e:
             print(f"Error transitioning state: {e}")
 
-    def find_closest_node(self, position):
-        """
-        Find the closest node to a given position based on x and y coordinates.
-        Args:
-            nodes: List of PRM nodes as (x, y) tuples.
-            position: Target position as (x, y) tuple.
-        Returns:
-            Closest node as a tuple (x, y).
-        """
-        closest_node = None
-        min_distance = float('inf')
-
-        for node in self.prm_nodes:
-            distance = np.sqrt((node[0] - position[0]) ** 2 + (node[1] - position[1]) ** 2)
-            if distance < min_distance:
-                min_distance = distance
-                closest_node = node
-
-        return closest_node
-
     def _find_path(self, start):
         """
         Find the shortest path from start to goal using the PRM nodes.
@@ -220,72 +193,67 @@ class Drone:
             List of tuples representing the path.
         """
         try:
-            if not self.prm_nodes or len(self.prm_nodes) == 0:
+            if not self.map.nodes or len(self.map.nodes) == 0:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
 
-            closest_node = self.find_closest_node(start)
-            start_idx = self.prm_nodes.index(closest_node)
+            # Find the closest PRM node to the start and the goal using KDTree
+            closest_node = self.map.find_closest_node((start[1], start[0]))
+            goal_node = self.map.find_closest_node(self.goal)
 
-            print(self.prm_nodes)
-        
-            print(f"Closet Node: {closest_node}")
+            if not closest_node or not goal_node:
+                print(f"Sphero [{self.sphero_id}] could not find valid nodes.")
+                return []
 
-            goal_idx = self.prm_nodes.index(self.goal_node)
-    
-            # Check if the drone is already close to any PRM node
-            distance_to_closest_node = self._euclidean_distance(start, closest_node)
-            close_threshold = 10.0  # Threshold to determine if already close
+            # Get indices of the closest nodes in the PRM node list
+            start_idx = self.map.nodes.index(closest_node)
+            goal_idx = self.map.nodes.index(goal_node)
+            print(f"Closest Node to Start: y:{closest_node[1]}, x: {closest_node[0]}")
+            print(f"Closest Node to Goal: y:{goal_node[1]}, x: {goal_node[0]}")
 
-            path = []
-
-            if distance_to_closest_node > close_threshold:
-                # Add the closest node as the first step in the path
-                path.append(closest_node)
-
-            # Priority queue for A* search
+            # Initialize A* search
             pq = []
             heapq.heappush(pq, (0, start_idx))
             came_from = {start_idx: None}
             cost_so_far = {start_idx: 0}
 
+            # A* Algorithm
             while pq:
                 current_cost, current_idx = heapq.heappop(pq)
-                current_idx = int(current_idx)  # Ensure it's a native Python int
 
                 if current_idx == goal_idx:
                     break
 
-                neighbors = self._get_neighbors(current_idx)
-
-                for neighbor_idx in neighbors:
-                    neighbor_idx = int(neighbor_idx)  # Ensure neighbor indices are Python ints
-
-                    # Validate neighbor index
-                    if neighbor_idx < 0 or neighbor_idx >= len(self.prm_nodes):
+                for neighbor_idx in self._get_neighbors(current_idx):
+                    if neighbor_idx < 0 or neighbor_idx >= len(self.map.nodes):
                         continue
 
                     new_cost = cost_so_far[current_idx] + self._euclidean_distance(
-                        self.prm_nodes[current_idx], self.prm_nodes[neighbor_idx]
+                        self.map.nodes[current_idx], self.map.nodes[neighbor_idx]
                     )
 
                     if neighbor_idx not in cost_so_far or new_cost < cost_so_far[neighbor_idx]:
                         cost_so_far[neighbor_idx] = new_cost
                         priority = new_cost + self._euclidean_distance(
-                            self.prm_nodes[neighbor_idx], self.goal_node
+                            self.map.nodes[neighbor_idx], self.map.nodes[goal_idx]
                         )
                         heapq.heappush(pq, (priority, neighbor_idx))
                         came_from[neighbor_idx] = current_idx
 
             # Reconstruct the path
+            path = []
             current_idx = goal_idx
             while current_idx is not None:
-                if current_idx < 0 or current_idx >= len(self.prm_nodes):
-                    return []
-                path.append(self.prm_nodes[current_idx])
+                path.append(self.map.nodes[current_idx])
                 current_idx = came_from.get(current_idx)
 
             path.reverse()
+
+            # Add the closest node if the drone is not already close
+            distance_to_closest_node = self._euclidean_distance(start, closest_node)
+            close_threshold = 10.0
+            if distance_to_closest_node > close_threshold:
+                path.insert(0, closest_node)
 
             print(f"Sphero [{self.sphero_id}] found path: {path}")
             return path
@@ -304,16 +272,14 @@ class Drone:
         """
         try:
             neighbors = []
-            current_node = self.prm_nodes[idx]
+            current_node = self.map.nodes[idx]
             for node1, node2 in self.map.edges:
-                if np.allclose(current_node, node1):
-                    neighbor_idx = next((i for i, node in enumerate(self.prm_nodes) if np.allclose(node, node2)), None)
-                    if neighbor_idx is not None:
-                        neighbors.append(neighbor_idx)
-                elif np.allclose(current_node, node2):
-                    neighbor_idx = next((i for i, node in enumerate(self.prm_nodes) if np.allclose(node, node1)), None)
-                    if neighbor_idx is not None:
-                        neighbors.append(neighbor_idx)
+                if node1 == current_node:
+                    neighbor_idx = self.map.nodes.index(node2)
+                    neighbors.append(neighbor_idx)
+                elif node2 == current_node:
+                    neighbor_idx = self.map.nodes.index(node1)
+                    neighbors.append(neighbor_idx)
             return neighbors
         except Exception as e:
             print(f"Error getting neighbors: {e}")

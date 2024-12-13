@@ -131,6 +131,34 @@ class Display:
                 "color": color
             })
 
+    def draw_label(self, id, x, y, label, color):
+        """
+        Draw a label next to a point offset by 10 pixels up and to the left.
+
+        Args:
+            id: Unique identifier for the label.
+            x: X-coordinate of the point.
+            y: Y-coordinate of the point.
+            label: Text of the label to display.
+            color: The color in hex format for the text.
+        """
+        # Convert hex to BGR
+        color = self.hex_to_bgr(color)
+
+        with self.lock:
+            # Remove any existing drawings with the same ID
+            self.drawings = [drawing for drawing in self.drawings if drawing["id"] != id]
+            # Add the label drawing
+            self.drawings.append({
+                "id": id,
+                "x": x - 10,  # Offset x by 10 pixels to the left
+                "y": y - 10,  # Offset y by 10 pixels up
+                "label": label,
+                "color": color
+            })
+
+
+
     def show(self):
         """
         Continuously display the current image with any drawings.
@@ -171,6 +199,19 @@ class Display:
                                 color=color,
                                 thickness=thickness
                             )
+                        elif "label" in drawing:  # Label
+                            scaled_x = int(drawing["x"] / scale_x)
+                            scaled_y = int(drawing["y"] / scale_y)
+                            color = drawing["color"]
+                            cv2.putText(
+                                overlay_image,
+                                drawing["label"],
+                                (scaled_y, scaled_x),  # OpenCV format (y, x)
+                                cv2.FONT_HERSHEY_SIMPLEX,
+                                0.5,  # Font scale
+                                color=color,
+                                thickness=1
+                            )    
                         elif "x" in drawing and "y" in drawing:  # Point
                             scaled_x = int(drawing["x"] / scale_x)
                             scaled_y = int(drawing["y"] / scale_y)
@@ -197,6 +238,9 @@ class Display:
                                 color=color,
                                 thickness=thickness
                             )
+                            # Update the `show` method to handle labels
+
+
 
                     # Display mouse coordinates
                     mouse_text = f"Y: {Display.mouse_y_original}, X: {Display.mouse_x_original}"

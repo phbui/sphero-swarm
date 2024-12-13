@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import random
+from sklearn.neighbors import KDTree
 
 class Map:
     def __init__(self, display):
@@ -14,6 +15,7 @@ class Map:
         self.goal = None  # Variable to store the goal region
         self.nodes = []  # List of PRM nodes
         self.edges = []  # List of PRM edges
+        self.kdtree = None
 
     def calculate_obstacle_weight(self, area):
         """
@@ -147,6 +149,7 @@ class Map:
             goal_center = (gx + gw // 2, gy + gh // 2)
             self.nodes.append(goal_center)
             self.display.draw_point("goal_node", goal_center[1], goal_center[0], weight=0.2, color="#0000FF")
+            self.display.draw_label(f"goal_label", goal_center[1], goal_center[0], f"y:{goal_center[1]},x:{goal_center[0]}", color="#0000FF")
         else:
             print("No goal detected.")
             return
@@ -186,9 +189,39 @@ class Map:
         # Draw the remaining nodes and edges
         for x, y in self.nodes:
             self.display.draw_point(f"node_{x}_{y}", y, x, weight=0.1, color="#00FF00")
+            # Debug Nodes
+            self.display.draw_label(f"node_{x}_{y}_label", y, x, f"y:{y},x:{x}", color="#00FF00")
+
 
         for (x1, y1), (x2, y2) in self.edges:
             self.display.draw_line(f"edge_{x1}_{y1}_{x2}_{y2}", (y1, x1), (y2, x2), weight=0.1, color="#000000")
+
+            if self.nodes:
+                self.kdtree = KDTree(self.nodes)
+            else:
+                print("No PRM nodes available to build KDTree.")
+
+    def find_closest_node(self, position):
+        """
+        Find the closest node to a given position based on x and y coordinates using KDTree.
+        Args:
+            position: Target position as a tuple.
+        Returns:
+            Closest node as a tuple.
+        """
+        if not hasattr(self, "kdtree") or not self.kdtree:
+            # Build KDTree if not already built
+            self.kdtree = KDTree(self.nodes)
+
+        # Reshape the position to 2D array as required by KDTree
+        position = np.array(position).reshape(1, -1)
+
+        # Query the KDTree for the nearest node
+        _, idx = self.kdtree.query(position)
+
+        # Ensure the index is a native Python integer
+        return self.nodes[int(idx)]
+
 
     def _prune_unconnected_nodes(self):
         """
