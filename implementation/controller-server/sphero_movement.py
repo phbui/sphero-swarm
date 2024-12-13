@@ -1,9 +1,5 @@
-import math
 from multiprocessing import Process
 from spherov2.types import Color
-
-SPEED = 25
-MULTIPLIER = 0.05
 
 class SpheroMovement:
     def __init__(self, droid, sphero_id, sphero_color, outgoing_queue):
@@ -41,7 +37,7 @@ class SpheroMovement:
         except Exception as e:
             print(f"Error sending feedback: {e}")
 
-    def move(self, current, target):
+    def move(self, angle, speed, timing):
         """
         Move the Sphero from the current position to the target position.
 
@@ -52,20 +48,11 @@ class SpheroMovement:
         try:
             self.droid.set_main_led(self.sphero_color)  # Set the main LED to the client color
 
-            deltax = target[0] - current[0]
-            deltay = target[1] - current[1]
+            self.droid.set_compass_direction(round(angle))
 
-            # Calculate the heading direction in degrees
-            rad = math.atan2(deltax, deltay)
-            deg = rad * (180 / math.pi)
-            deg = 90 - deg
-            if deg < 0:
-                deg += 360
+            # Use the provided timing for movement
+            self.droid.roll(0, speed, timing)
 
-            self.droid.set_compass_direction(round(deg))
-
-            # Roll the Sphero to the target position
-            self.droid.roll(0, SPEED, math.sqrt(deltax ** 2 + deltay ** 2) * MULTIPLIER)
         except Exception as e:
             print(f"Error in move: {e}")
         self.send_feedback(self.sphero_id)

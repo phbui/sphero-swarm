@@ -1,6 +1,7 @@
 import numpy as np
 import heapq
 import Localizer
+import math
 
 class Drone:
     def __init__(self, planner, camera, display, sphero_id, sphero_color, map):
@@ -22,12 +23,16 @@ class Drone:
             self.localizer = Localizer.Localizer(camera, display, sphero_color, 500)
             self.map = map
             if len(self.map.goal) == 4:
-                # If the goal is represented as a rectangle, use its center as the target goal
                 gx, gy, gw, gh = self.map.goal
                 self.goal = (gx + gw // 2, gy + gh // 2)
-            print(f"Goat at: y:{self.goal[1]}, x:{self.goal[0]}")
+            print(f"Goal at: y:{self.goal[1]}, x:{self.goal[0]}")
             self.goal_node = self.map.find_closest_node(self.goal)
-            self.visited_points = set()
+
+            self.last_attempt = None  # Store the last visited point
+            self.last_location = None
+            self.angle = 0
+            self.speed = 25
+            self.timing = 3
             # State Machine for the Drone
             self.states = [
                 {
@@ -54,6 +59,55 @@ class Drone:
             self.current_state_index = 0  # Start with "move_to_goal"
         except Exception as e:
             print(f"Error initializing Drone: {e}")
+
+    def calculate_movement_parameters(self, current_position, target_position):
+        """
+        Calculate the angle, speed, and timing needed to reach the target position with feedback correction.
+
+        Args:
+            current_position: Tuple (y, x) representing the current position.
+            target_position: Tuple (y, x) representing the target position.
+
+        Returns:
+            tuple: (corrected_angle, corrected_speed, corrected_timing)
+        """
+        if self.last_location == (-1, -1):
+            return self.angle, self.speed, self.timing
+
+        # Calculate actual movement vector
+        delta_x_actual = current_position[1] - self.last_location[1]
+        delta_y_actual = current_position[0] - self.last_location[0]
+
+        # Calculate deviations
+        intended_speed_x = self.speed * math.cos(math.radians(self.angle))
+        intended_speed_y = self.speed * math.sin(math.radians(self.angle))
+        deviation_x = intended_speed_x - delta_x_actual
+        deviation_y = intended_speed_y - delta_y_actual
+
+        # Correct angle using deviation
+        corrected_angle_rad = math.atan2(
+            target_position[1] - current_position[1] + deviation_x,
+            target_position[0] - current_position[0] + deviation_y
+        )
+        corrected_angle = (90 - math.degrees(corrected_angle_rad)) % 360
+
+        # Adjust speed based on deviation magnitude
+        deviation_magnitude = math.sqrt(deviation_x**2 + deviation_y**2)
+        distance_to_target = math.sqrt(
+            (target_position[1] - current_position[1])**2 +
+            (target_position[0] - current_position[0])**2
+        )
+        corrected_speed = min(25, distance_to_target / (self.timing + 1e-6) - deviation_magnitude)
+
+        # Adjust timing
+        corrected_timing = distance_to_target / (corrected_speed + 1e-6)
+
+        # Update state
+        self.angle = corrected_angle
+        self.speed = corrected_speed
+        self.timing = corrected_timing
+
+        return corrected_angle, corrected_speed, corrected_timing
 
     def get_position(self):
         """
@@ -91,7 +145,7 @@ class Drone:
             line_id = f"{self.sphero_id}-vector"
             self.display.draw_line(
                 id=line_id,
-                point1=(current_y, current_x), 
+                point1=(current_y, current_x),
                 point2=(target_y, target_x),
                 weight=2,
                 color=self.sphero_color
@@ -107,7 +161,9 @@ class Drone:
                 self.sphero_color
             )
 
-            self.visited_points.add((current_y, current_x))
+            # Update the last visited point
+            self.last_attempt = (target_y, target_x)
+            self.last_attempt = (current_y, current_x)
         except Exception as e:
             print(f"Error during move: {e}")
 
@@ -255,7 +311,7 @@ class Drone:
             # Add the closest node if the drone is not already close
             distance_to_closest_node = self._euclidean_distance(start, closest_node)
             close_threshold = 20.0
-            if distance_to_closest_node > close_threshold and closest_node not in self.visited_points:
+            if distance_to_closest_node > close_threshold and closest_node != self.last_attempt:
                 path.insert(0, closest_node)
 
             print(f"Sphero [{self.sphero_id}] found path: {path}")

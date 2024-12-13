@@ -120,6 +120,7 @@ def process_subscriber(sphero_id, sphero_color, message_bus, outgoing_queue, sph
                 parsed_message = json.loads(message_bus[sphero_id].pop(0))
                 message_type = parsed_message["messageType"]
                 message_content = parsed_message["message"]
+                print(f"Message received: {parsed_message}")
                 handle_message(sphero_id, sphero_color, message_type, message_content, outgoing_queue, sphero)
         except Exception as e:
             logging.error(f"{sphero_id}: Error in subscriber: {e}")
@@ -138,9 +139,10 @@ def handle_message(id, sphero_color, message_type, message, outgoing_queue, sphe
         sphero: SpheroMovement instance for controlling the Sphero.
     """
     if message_type == "SpheroMovement":
-        current = message["currentLocation"]
-        target = message["targetLocation"]
-        sphero.move(current, target)
+        angle = message["angle"]
+        speed = message["speed"]
+        timing = message["timing"]
+        sphero.move(angle, speed, timing)
 
     elif message_type == "MoveNorth":
         sphero.move_direction("north", message)

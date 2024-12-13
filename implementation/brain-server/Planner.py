@@ -7,6 +7,7 @@ import queue
 import numpy as np
 import asyncio
 import json
+import math
 
 def send_message(ws, id, message_type, message_content):
     """
@@ -279,18 +280,19 @@ class Planner:
             target_point: The next target point as a tuple (x, y).
         """
         try:
-            current_position = drone.get_position()
             current_y, current_x  = current_position
             target_x, target_y  = target_point
 
+            angle_deg, timing, speed = drone.calculate_movement_parameters(current_position, (target_y, target_x))
+
+            print(f"Corrected Angle: {angle_deg}, Timing: {timing}")
             print(f"Moving [{drone.sphero_id}] from Y: {current_y}, X: {current_x} to Y:{target_y}, X: {target_x}")
 
             message_content = {
                 "id": drone.sphero_id,
-                "current_x": float(current_x),
-                "current_y": float(current_y),
-                "target_x": float(target_x),
-                "target_y": float(target_y),
+                "angle": float(angle_deg),
+                "timing": float(timing),
+                "speed": float(speed)
             }
 
             drone.move(current_x, current_y, target_x, target_y)

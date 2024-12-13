@@ -91,19 +91,11 @@ function sendMessageToClient(id, messageType, message) {
  * @param {number} last_x - Last x-coordinate the Sphero moved to.
  * @param {number} last_y - Last y-coordinate the Sphero moved to.
  */
-function moveSphero(
-  id,
-  current_x,
-  current_y,
-  target_x,
-  target_y,
-  last_x,
-  last_y
-) {
+function moveSphero(id, angle, speed, timing) {
   sendMessageToClient(id, "SpheroMovement", {
-    currentLocation: [current_x, current_y],
-    targetLocation: [target_x, target_y],
-    lastTargetLocation: [last_x, last_y],
+    angle: angle,
+    speed: speed,
+    timing: timing,
   });
 }
 
@@ -190,15 +182,7 @@ function handleBrainMessage(ws, parsedMessage) {
 
     case "BrainControl":
       let message = parsedMessage.message;
-      moveSphero(
-        message.id,
-        message.current_x,
-        message.current_y,
-        message.target_x,
-        message.target_y,
-        message.last_x,
-        message.last_y
-      );
+      moveSphero(message.id, message.angle, message.speed, message.timing);
       break;
   }
 }
