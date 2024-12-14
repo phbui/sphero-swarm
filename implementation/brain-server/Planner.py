@@ -167,7 +167,7 @@ class Planner:
                 
                 # Compute pairwise risk (using a simplified distance threshold for this example)
                 risk = self._calculate_collision_risk(traj1, traj2)
-                if risk > 0.5: 
+                if False: #ignore this
                     collision_pairs.append((drone1, drone2))
 
         return collision_pairs
