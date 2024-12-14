@@ -2325,3 +2325,72 @@ Traceback (most recent call last):
   File "C:\Users\buiph\AppData\Roaming\Python\Python312\site-packages\spherov2\controls\v2.py", line 67, in parse_response
     raise PacketDecodingException('Bad response checksum')
 spherov2.controls.PacketDecodingException: Bad response checksum
+2024-12-13 05:08:59,698 [INFO] SB-2E86: Attempting to connect.
+2024-12-13 05:09:01,666 [INFO] SB-2E86: Connected to Sphero.
+2024-12-13 05:09:03,728 [INFO] SB-4844: Attempting to connect.
+2024-12-13 05:09:03,789 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-13 05:09:03,790 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 05:09:03,789 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-13 05:09:03,791 [WARNING] WebSocket: Closing connection.
+2024-12-13 05:09:04,098 [INFO] SB-4844: Connected to Sphero.
+2024-12-13 05:09:06,838 [INFO] SB-2E86: Calibrating compass.
+2024-12-13 05:09:07,722 [INFO] SB-7104: Attempting to connect.
+2024-12-13 05:09:08,206 [INFO] SB-4844: Calibrating compass.
+2024-12-13 05:09:08,712 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 05:09:11,760 [INFO] SB-D8B2: Attempting to connect.
+2024-12-13 05:09:12,165 [INFO] SB-2E86: Initialization complete.
+2024-12-13 05:09:12,166 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-13 05:09:13,616 [INFO] SB-4844: Initialization complete.
+2024-12-13 05:09:13,616 [INFO] SB-4844: Subscribed to message bus.
+2024-12-13 05:09:15,166 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-13 05:09:15,772 [INFO] SB-E12C: Attempting to connect.
+2024-12-13 05:09:16,485 [INFO] SB-E12C: Connected to Sphero.
+2024-12-13 05:09:16,580 [INFO] SB-7104: Calibrating compass.
+2024-12-13 05:09:19,383 [INFO] Main: All processes started.
+2024-12-13 05:09:21,517 [ERROR] SB-E12C: Failed to initialize or maintain connection to Sphero: Device with address F2:91:F9:86:E1:2C was not found.
+2024-12-13 05:09:21,517 [WARNING] SB-E12C: Sphero connection closed. Retrying...
+2024-12-13 05:09:21,917 [INFO] SB-7104: Initialization complete.
+2024-12-13 05:09:21,918 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 05:09:22,253 [INFO] SB-D8B2: Calibrating compass.
+2024-12-13 05:09:27,518 [INFO] SB-D8B2: Initialization complete.
+2024-12-13 05:09:27,518 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-13 05:09:30,014 [INFO] SB-E12C: Connected to Sphero.
+2024-12-13 05:09:35,397 [ERROR] SB-E12C: Failed to initialize or maintain connection to Sphero: 
+2024-12-13 05:09:35,398 [WARNING] SB-E12C: Sphero connection closed. Retrying...
+2024-12-13 05:09:45,436 [WARNING] SB-E12C: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 05:09:51,725 [INFO] SB-E12C: Connected to Sphero.
+2024-12-13 05:09:57,204 [INFO] SB-E12C: Calibrating compass.
+2024-12-13 05:10:03,092 [INFO] SB-E12C: Initialization complete.
+2024-12-13 05:10:03,095 [INFO] SB-E12C: Subscribed to message bus.
+2024-12-13 05:48:46,686 [INFO] SB-7104: Attempting to connect.
+2024-12-13 05:48:50,354 [INFO] SB-D8B2: Attempting to connect.
+2024-12-13 05:48:50,771 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-13 05:48:50,771 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-13 05:48:50,771 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 05:48:50,771 [WARNING] WebSocket: Closing connection.
+2024-12-13 05:48:51,936 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 05:48:54,071 [INFO] Main: All processes started.
+2024-12-13 05:48:54,464 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-13 05:48:57,521 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 05:48:58,462 [INFO] SB-D8B2: Calibrating compass.
+2024-12-13 05:49:01,508 [INFO] SB-7104: Calibrating compass.
+2024-12-13 05:49:03,769 [INFO] SB-D8B2: Initialization complete.
+2024-12-13 05:49:03,770 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-13 05:49:06,874 [INFO] SB-7104: Initialization complete.
+2024-12-13 05:49:06,874 [INFO] SB-7104: Subscribed to message bus.
+2024-12-13 06:02:25,962 [INFO] SB-7104: Attempting to connect.
+2024-12-13 06:02:29,934 [INFO] SB-D8B2: Attempting to connect.
+2024-12-13 06:02:30,058 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-13 06:02:30,058 [WARNING] WebSocket: Closing connection.
+2024-12-13 06:02:30,074 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-13 06:02:30,074 [WARNING] WebSocket Sender: Closing connection.
+2024-12-13 06:02:31,067 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-13 06:02:33,656 [INFO] Main: All processes started.
+2024-12-13 06:02:34,536 [INFO] SB-D8B2: Connected to Sphero.
+2024-12-13 06:02:38,549 [INFO] SB-D8B2: Calibrating compass.
+2024-12-13 06:02:39,659 [INFO] SB-7104: Connected to Sphero.
+2024-12-13 06:02:43,696 [INFO] SB-7104: Calibrating compass.
+2024-12-13 06:02:43,963 [INFO] SB-D8B2: Initialization complete.
+2024-12-13 06:02:43,963 [INFO] SB-D8B2: Subscribed to message bus.
+2024-12-13 06:02:49,124 [INFO] SB-7104: Initialization complete.
+2024-12-13 06:02:49,125 [INFO] SB-7104: Subscribed to message bus.

@@ -6,11 +6,11 @@ import json
 # Define initial color ranges in HSV format
 color_ranges = {           
     '#FF00FF': ([120, 0, 230], [150, 255, 255]),  # Pink
-    '#FF0000': ([5, 0, 230], [15, 255, 255]),  # Red
+    '#FF0000': ([5, 0, 190], [15, 255, 255]),  # Red
     '#035900': ([80, 115, 65], [95, 255, 255]),  # Green
-    '#020082': ([90, 75, 220], [110, 255, 255]),  # Blue
-    '#FFFF00': ([0, 0, 175], [45, 0, 255]),  # Yellow
-    'Obstacles': ([5, 135, 60], [20, 255, 240]),
+    '#020082': ([90, 75, 150], [110, 255, 255]),  # Blue
+    '#FFFF00': ([0, 0, 225], [105, 25, 255]),  # Yello
+    'Obstacles': ([115, 85, 30], [145, 255, 120]),
     'Goal':([125, 115, 0],[130, 165, 130]) 
 }
 
@@ -45,14 +45,6 @@ def get_trackbar_values(color_hex):
     v_high = cv2.getTrackbarPos("V_High", f"Settings for {color_hex}")
     return (h_low, s_low, v_low), (h_high, s_high, v_high)
 
-# Function to save current settings
-def save_settings(filename="color_settings.json"):
-    settings = {}
-    for color_hex, _ in color_ranges.items():
-        settings[color_hex] = get_trackbar_values(color_hex)
-    with open(filename, 'w') as f:
-        json.dump(settings, f, indent=2)
-
 # Dummy function for trackbar callbacks
 def nothing(x):
     pass
@@ -63,7 +55,7 @@ for color_hex, (lower_bound, upper_bound) in color_ranges.items():
 
 
 # Open the default camera
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 # Capture and save an image every 5 seconds
 last_capture_time = time.time()

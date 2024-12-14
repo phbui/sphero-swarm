@@ -80,7 +80,7 @@ class Drone:
         try:
             # If this is the first move
             if self.last_location is None:
-                print("[Movement Parameters] First Move: Setting True North.")
+                #print("[Movement Parameters] First Move: Setting True North.")
                 self.last_location = (self.current_y, self.current_x)
                 return self.angle, self.timing
 
@@ -88,21 +88,11 @@ class Drone:
             delta_x_actual = self.current_x - self.last_location[1]
             delta_y_actual = self.current_y - self.last_location[0]
 
-            print(f"delta_x: last: {self.last_location[1]}, curr: {self.current_x}")
-            print(f"delta_y: last: {self.last_location[0]}, curr: {self.current_y}")
-
             actual_angle = math.degrees(math.atan2(delta_x_actual, -delta_y_actual)) % 360
             distance_moved = math.sqrt(delta_x_actual**2 + delta_y_actual**2)
 
             if self.angle_offset is None:
                 self.angle_offset = actual_angle
-
-            # Calculate intended movement vector (from last location to last target)
-            delta_x_intended = self.last_attempt[1] - self.last_location[1]
-            delta_y_intended = self.last_attempt[0] - self.last_location[0]
-            intended_angle = math.degrees(math.atan2(delta_x_intended, -delta_y_intended)) % 360
-
-            angle_deviation = ((actual_angle - intended_angle) % 360)
 
             # Update speed based on current confidence
             updated_speed = (distance_moved / self.timing)
@@ -121,8 +111,6 @@ class Drone:
 
             end_x = self.current_x + 100 * math.cos(math.radians(self.angle_offset))
             end_y = self.current_y - 100 * math.sin(math.radians(self.angle_offset)) 
-
-            print(self.angle_offset)
 
             # Draw the predicted angle direction
             self.display.draw_line(
@@ -152,7 +140,7 @@ class Drone:
             self.last_location = (self.current_y, self.current_x)
             self.timing = corrected_timing
 
-            print("[Movement Parameters] Calculated Values:")
+            #print("[Movement Parameters] Calculated Values:")
             return self.angle, self.timing
         except ZeroDivisionError:
             print("[Movement Parameters] Division by zero in timing calculation.")
@@ -249,8 +237,8 @@ class Drone:
 
             if self.reached_goal():
                 self._transition_to_state("interact")
-            else:
-                self.submit_trajectory()
+
+            self.submit_trajectory()
         except Exception as e:
             print(f"Error in _move_to_goal: {e}")
 
@@ -272,9 +260,7 @@ class Drone:
         Execute interaction behavior.
         """
         try:
-            print(f"Sphero [{self.sphero_id}] interacting.")
-            # Add specific interaction logic here
-            print(f"Sphero [{self.sphero_id}] interaction complete.")
+            self.submit_trajectory()
         except Exception as e:
             print(f"Error in _interact: {e}")
 
@@ -302,6 +288,10 @@ class Drone:
             List of tuples representing the path.
         """
         try:
+            if self.reached_goal():
+                return[(self.current_y,self.current_x), (self.current_y,self.current_x)]
+            
+
             if not self.map.nodes or len(self.map.nodes) == 0:
                 print(f"Sphero [{self.sphero_id}] has no PRM nodes available!")
                 return []
@@ -317,8 +307,8 @@ class Drone:
             # Get indices of the closest nodes in the PRM node list
             start_idx = self.map.nodes.index(closest_node)
             goal_idx = self.map.nodes.index(goal_node)
-            print(f"Closest Node to Start: y:{closest_node[1]}, x: {closest_node[0]}")
-            print(f"Closest Node to Goal: y:{goal_node[1]}, x: {goal_node[0]}")
+            #print(f"Closest Node to Start: y:{closest_node[1]}, x: {closest_node[0]}")
+            #print(f"Closest Node to Goal: y:{goal_node[1]}, x: {goal_node[0]}")
 
             # Initialize A* search
             pq = []
@@ -396,7 +386,7 @@ class Drone:
         """
         try:
             current_position = (self.current_y, self.current_x)
-            trajectory = self._find_path(current_position)
+            trajectory = (self._find_path(current_position))[:2]
             self.planner.add_trajectory((trajectory, self))
             #print(f"Sphero [{self.sphero_id}] submitted trajectory: {trajectory}")
         except Exception as e:

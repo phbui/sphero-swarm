@@ -129,7 +129,7 @@ class Planner:
                     trajectories.append(self.trajectory_queue.get())
 
                 # Evaluate CVaR risk for collision
-                collision_pairs = self._evaluate_cvar_risk(trajectories)
+                collision_pairs = self._evaluate_collision_risk(trajectories)
                 collision_ids = set()
 
                 # Handle drones with potential collision risks
@@ -151,9 +151,9 @@ class Planner:
                 # Print completion message
                 #print("All trajectories processed. Queue cleared.")
 
-    def _evaluate_cvar_risk(self, trajectories):
+    def _evaluate_collision_risk(self, trajectories):
         """
-        Evaluate CVaR risk for collisions among the given trajectories.
+        Evaluate risk for collisions among the given trajectories.
         Args:
             trajectories: List of trajectories submitted by drones.
         Returns:
@@ -167,17 +167,16 @@ class Planner:
                 
                 # Compute pairwise risk (using a simplified distance threshold for this example)
                 risk = self._calculate_collision_risk(traj1, traj2)
-                if risk > 0.5:  # Assume 50% as a threshold for CVaR (customize as needed)
+                if risk > 0.5: 
                     collision_pairs.append((drone1, drone2))
 
         return collision_pairs
 
     def _calculate_collision_risk(self, traj1, traj2):
         """
-        Calculate CVaR-based collision risk between two trajectories.
+        Calculate collision risk between two trajectories.
         """
         try:
-            # Example: Risk based on minimum distance between trajectory points
             min_distance = np.min([
                 np.linalg.norm(np.array(p1) - np.array(p2))
                 for p1 in traj1 for p2 in traj2
@@ -212,6 +211,9 @@ class Planner:
                 adjusted_path1 = self._reroute_path(drone1, new_path1, collision_nodes)
                 adjusted_path2 = self._reroute_path(drone1, new_path2, collision_nodes)
 
+                print(adjusted_path1)
+                print(adjusted_path2)
+
                 # Update paths and notify drones
                 if len(adjusted_path1) > 1:
                     self._notify_and_move_drone(drone1, adjusted_path1[1])
@@ -225,11 +227,13 @@ class Planner:
             else:
                 # If no collision detected, proceed with original paths
                 if len(new_path1) > 1:
+                    print(new_path1)
                     self._notify_and_move_drone(drone1, new_path1[1])
                 else:
                     print(f"Drone {drone1.sphero_id} has no valid path adjustments.")
 
                 if len(new_path2) > 1:
+                    print(new_path2)
                     self._notify_and_move_drone(drone2, new_path2[1])
                 else:
                     print(f"Drone {drone2.sphero_id} has no valid path adjustments.")
@@ -278,10 +282,10 @@ class Planner:
             target_point: The next target point as a tuple (x, y).
         """
         try:
+            print(f"curr: {drone.current_y}, {drone.current_x} | tar: {target_point}")
             current_y = drone.current_y 
             current_x = drone.current_x 
             target_x, target_y  = target_point
-
             angle_deg, timing = drone.calculate_movement_parameters((target_y, target_x))
 
             print(f"Corrected Angle: {angle_deg}, Timing: {timing}")
