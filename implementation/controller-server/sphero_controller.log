@@ -18378,3 +18378,1198 @@ ile specified
 2024-12-13 08:29:58,204 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-13 08:29:58,204 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-13 08:29:58,205 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-15 14:27:02,756 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:27:03,489 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:27:06,766 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:27:06,818 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+ction
+2024-12-15 14:27:06,818 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:27:06,819 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:27:08,709 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 14:27:08,710 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 14:27:09,664 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:27:10,943 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:27:12,353 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:27:13,932 [INFO] Main: All processes started.
+2024-12-15 14:27:15,470 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:27:18,781 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:27:20,732 [INFO] SB-4844: Initialization complete.
+2024-12-15 14:27:20,733 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 14:27:22,037 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:27:22,038 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:27:23,107 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:27:27,227 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:27:29,015 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:27:32,269 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-15 14:27:32,269 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:27:34,307 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:27:34,308 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:27:38,967 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:27:45,721 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:27:45,721 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:27:51,612 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:27:56,673 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-15 14:27:56,674 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:28:01,822 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:28:06,854 [INFO] SB-7104: Calibrating compass.
+2024-12-15 14:28:12,147 [INFO] SB-7104: Initialization complete.
+2024-12-15 14:28:12,147 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 14:29:20,081 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 14:31:13,425 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:31:14,471 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:31:17,463 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:31:17,464 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:31:17,511 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:31:17,511 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:31:17,729 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:31:19,061 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:31:21,188 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:31:22,016 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:31:24,674 [INFO] Main: All processes started.
+2024-12-15 14:31:43,286 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:31:44,035 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:31:45,289 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:31:45,291 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:31:49,293 [INFO] SB-4844: Initialization complete.
+2024-12-15 14:31:49,294 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 14:31:51,310 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:31:51,311 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:31:55,775 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 14:31:55,818 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 14:32:28,786 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:32:30,242 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:32:32,708 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:32:32,872 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:32:32,876 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:32:32,877 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:32:32,987 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:32:33,922 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:32:36,764 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:32:38,636 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:32:39,274 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:32:39,275 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:32:39,531 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:32:40,011 [INFO] Main: All processes started.
+2024-12-15 14:32:43,867 [INFO] SB-4844: Initialization complete.
+2024-12-15 14:32:43,867 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 14:32:47,819 [INFO] SB-7104: Calibrating compass.
+2024-12-15 14:32:53,127 [INFO] SB-7104: Initialization complete.
+2024-12-15 14:32:53,128 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 14:39:52,081 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:39:53,124 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:39:55,598 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:39:56,774 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:39:56,776 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:39:56,777 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:39:58,653 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:39:58,654 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 14:39:59,670 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:40:00,755 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:40:02,845 [INFO] Main: All processes started.
+2024-12-15 14:40:04,866 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:40:06,334 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:40:06,774 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:40:09,195 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:40:12,440 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:40:15,832 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:40:17,808 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:40:17,808 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:40:18,627 [INFO] SB-7104: Calibrating compass.
+2024-12-15 14:40:21,034 [INFO] SB-4844: Initialization complete.
+2024-12-15 14:40:21,034 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 14:40:23,926 [INFO] SB-7104: Initialization complete.
+2024-12-15 14:40:23,926 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 14:42:21,005 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:42:21,014 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 14:45:19,176 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:45:22,990 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:45:24,185 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:45:24,185 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:45:24,187 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:45:24,189 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:45:24,908 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:45:25,070 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:45:26,836 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:45:28,749 [INFO] Main: All processes started.
+2024-12-15 14:45:32,210 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:45:32,620 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:45:34,126 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:46:36,890 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 14:47:16,291 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:47:16,472 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:47:20,227 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:47:20,419 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:47:20,419 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:47:20,420 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:47:20,422 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:47:21,530 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 14:47:21,530 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 14:47:22,002 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:47:24,409 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:47:25,300 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:47:26,142 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:47:26,717 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:47:27,480 [INFO] Main: All processes started.
+2024-12-15 14:47:31,526 [INFO] SB-4844: Initialization complete.
+2024-12-15 14:47:31,527 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 14:47:32,007 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:47:32,008 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:47:34,970 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:47:34,971 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 14:47:39,981 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:47:40,035 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:47:45,942 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:47:45,943 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:47:49,278 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:47:52,549 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:47:54,539 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:47:54,540 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:47:59,009 [INFO] SB-7104: Calibrating compass.
+2024-12-15 14:48:04,370 [INFO] SB-7104: Initialization complete.
+2024-12-15 14:48:04,370 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 14:57:08,701 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:57:09,743 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:57:12,765 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:57:13,132 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+ction
+2024-12-15 14:57:13,146 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:57:13,174 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:57:14,974 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:57:18,344 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:57:18,351 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 14:57:18,872 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:57:19,095 [INFO] Main: All processes started.
+2024-12-15 14:57:20,487 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-15 14:57:20,488 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 14:57:24,070 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:57:26,791 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:57:28,379 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:57:33,075 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:57:33,550 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:57:37,462 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:57:38,829 [INFO] SB-4844: Initialization complete.
+2024-12-15 14:57:38,830 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 14:57:42,101 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:57:45,145 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:57:46,291 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:57:50,397 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:57:54,510 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 14:57:54,510 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 14:57:55,614 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:57:55,614 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:57:59,571 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:58:07,969 [INFO] SB-7104: Calibrating compass.
+2024-12-15 14:58:13,260 [INFO] SB-7104: Initialization complete.
+2024-12-15 14:58:13,261 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 14:58:51,362 [INFO] Main: All processes terminated.
+2024-12-15 14:58:57,468 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:59:01,498 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:59:01,498 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:59:01,498 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:59:01,499 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:59:01,519 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:59:02,664 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:59:05,453 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:59:31,564 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 14:59:34,265 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 14:59:35,599 [ERROR] WebSocket: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:59:35,599 [ERROR] WebSocket Sender: Connection error: [WinError 1225] The remote computer refused the network connection
+2024-12-15 14:59:35,600 [WARNING] WebSocket: Closing connection.
+2024-12-15 14:59:35,601 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 14:59:35,765 [INFO] SB-4844: Attempting to connect.
+2024-12-15 14:59:38,096 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 14:59:39,688 [INFO] SB-7104: Attempting to connect.
+2024-12-15 14:59:40,944 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:59:42,752 [INFO] Main: All processes started.
+2024-12-15 14:59:43,362 [INFO] SB-2E86: Initialization complete.
+2024-12-15 14:59:43,363 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 14:59:44,882 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 14:59:47,672 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 14:59:51,803 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 14:59:51,913 [INFO] SB-4844: Calibrating compass.
+2024-12-15 14:59:55,526 [INFO] Main: All processes terminated.
+2024-12-15 15:00:03,190 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:00:03,236 [INFO] WebSocket: Connected to the server.
+rver.
+2024-12-15 15:00:03,238 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:00:07,189 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:00:08,385 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:00:11,158 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:00:11,489 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:00:12,339 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:00:13,195 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:00:14,336 [INFO] Main: All processes started.
+2024-12-15 15:00:16,154 [INFO] SB-7104: Calibrating compass.
+2024-12-15 15:00:18,784 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:00:21,360 [INFO] SB-7104: Initialization complete.
+2024-12-15 15:00:21,360 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 15:00:21,390 [WARNING] SB-4844: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:00:21,458 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:00:24,046 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:00:24,046 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:00:24,111 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:00:25,715 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:00:34,325 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-15 15:00:34,325 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:00:39,628 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:00:44,435 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-15 15:00:44,435 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:00:49,490 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:00:54,229 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00010002-574f-4f20-5370-6865726f2121 was not found!
+2024-12-15 15:00:54,230 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:00:59,371 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:01:10,081 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Characteristic 00020005-574f-4f20-5370-6865726f2121 was not found!
+2024-12-15 15:01:10,082 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:01:15,727 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:01:23,360 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:01:28,707 [INFO] SB-4844: Initialization complete.
+2024-12-15 15:01:28,707 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 15:01:28,734 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:01:32,638 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:01:32,638 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:01:36,763 [INFO] Main: All processes terminated.
+2024-12-15 15:07:31,962 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:07:31,963 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:07:31,964 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:07:31,970 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:07:32,707 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:07:35,965 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:07:36,983 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:07:37,487 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:07:40,261 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:07:41,796 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:07:42,866 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:07:42,867 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:07:42,908 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:07:43,233 [INFO] Main: All processes started.
+2024-12-15 15:07:44,166 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:07:48,850 [INFO] SB-7104: Calibrating compass.
+2024-12-15 15:07:49,460 [INFO] SB-4844: Initialization complete.
+2024-12-15 15:07:49,461 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 15:07:49,568 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:07:54,146 [INFO] SB-7104: Initialization complete.
+2024-12-15 15:07:54,146 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 15:07:54,234 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:07:55,316 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 15:07:55,328 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 15:07:55,341 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 15:07:58,644 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-15 15:07:58,645 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-15 15:07:58,756 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-15 15:07:59,287 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":349,"timing":42755116.6528639}}
+2024-12-15 15:07:59,305 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":252,"timing":140.08356243793006}}
+2024-12-15 15:07:59,324 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":349,"timing":42755116.6528639}}
+2024-12-15 15:08:35,611 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:08:35,612 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:08:51,218 [ERROR] WebSocket Sender: Connection error: no running event loop
+2024-12-15 15:08:51,220 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 15:08:53,289 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 15:08:53,313 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:08:53,315 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:18:38,375 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:18:38,378 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:18:38,379 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:18:38,404 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:18:38,667 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:18:42,426 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:18:42,823 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:18:44,913 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:18:46,884 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:18:47,568 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:18:49,554 [INFO] Main: All processes started.
+2024-12-15 15:18:50,249 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:18:50,249 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:18:50,301 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:18:50,858 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:18:50,858 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:18:52,145 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:18:56,035 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:18:56,045 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:20:02,368 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:20:02,383 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:20:02,384 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:20:02,386 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:20:04,325 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:20:07,109 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:20:07,946 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:20:09,227 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:20:10,518 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:20:11,503 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:20:13,011 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-15 15:20:13,012 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:20:13,589 [INFO] Main: All processes started.
+2024-12-15 15:20:14,522 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:20:14,523 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:20:14,542 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:20:18,461 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,463 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,476 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,479 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,481 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,483 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,485 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,488 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,491 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,493 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,493 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,495 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,496 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,497 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,500 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,507 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,509 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,510 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,511 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:20:18,511 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,513 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,513 [ERROR] WebSocket Sender: Connection error: Event loop is closed
+2024-12-15 15:20:18,519 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,519 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 15:20:18,526 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,527 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:20:18,529 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,540 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,543 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,545 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,547 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,549 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,551 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,552 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,555 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,556 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,559 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,560 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,566 [ERROR] WebSocket: Connection error: Event loop is closed
+2024-12-15 15:20:18,570 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,571 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:20:18,573 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,579 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,580 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,583 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,584 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,584 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,585 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,586 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,587 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,588 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,589 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,591 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,597 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,598 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,604 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,605 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,607 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,608 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,612 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,615 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,616 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,618 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,618 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,620 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,621 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,625 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,626 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,629 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,631 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,634 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,635 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,636 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,637 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,639 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,642 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,643 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,646 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,647 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,648 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,649 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,650 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,651 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,652 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,653 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,654 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,660 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,661 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,664 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,665 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,669 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,672 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,672 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,679 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,680 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,681 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,682 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,683 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,684 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,692 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,693 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,693 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,695 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,695 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,696 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,700 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,703 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,707 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,708 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,709 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,710 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,711 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,712 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,713 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,714 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,715 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,719 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,724 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,725 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,726 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,727 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,728 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,729 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,729 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,733 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,736 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,739 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,739 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,742 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,743 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,743 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,744 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,745 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,746 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,751 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,751 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,757 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,758 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,759 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,760 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,760 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,761 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,762 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,766 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,767 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,768 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,771 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,773 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,775 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,777 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,779 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,783 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,787 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,788 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,791 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,793 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,795 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,800 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,809 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,809 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,810 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,813 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,816 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,817 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,818 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,819 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,820 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,821 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,824 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,825 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,827 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,828 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,832 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,833 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,835 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,837 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,837 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,838 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,839 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,841 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,844 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,845 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,848 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,849 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,850 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,850 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,851 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,852 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,852 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,853 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,854 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,855 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,860 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,860 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,863 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,865 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,868 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,869 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,870 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,871 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,872 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,877 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,878 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,881 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,882 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,882 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,883 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,884 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,885 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,886 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,888 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,892 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,893 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,896 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,897 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,900 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,902 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,903 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,908 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:18,912 [ERROR] SB-2E86: Error in subscriber: handle is closed
+2024-12-15 15:20:21,845 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 15:20:22,152 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:20:35,930 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:20:35,947 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:20:35,950 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:20:35,951 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:20:36,472 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:20:40,040 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:20:40,213 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:20:41,588 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 15:20:41,589 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:20:42,745 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:20:42,747 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:20:44,185 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:20:48,298 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:21:17,884 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:21:17,886 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:21:17,887 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:21:17,892 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:21:19,807 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:21:21,890 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:21:23,575 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:21:23,628 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:21:26,050 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:21:26,790 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:21:28,507 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:21:28,989 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:21:28,989 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:21:29,060 [INFO] Main: All processes started.
+2024-12-15 15:21:29,070 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:21:31,880 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-15 15:21:31,880 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 15:21:33,872 [INFO] SB-4844: Initialization complete.
+2024-12-15 15:21:33,872 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 15:21:33,905 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:21:34,376 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:21:34,376 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:21:39,025 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:21:39,747 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:22:29,962 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:22:29,967 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:22:29,970 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:22:29,971 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:22:32,346 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:22:33,964 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:22:34,672 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:22:35,710 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:22:35,710 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:22:36,771 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:22:37,571 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:22:40,366 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:24:53,567 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:24:53,575 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:24:53,578 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:24:53,579 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:24:53,762 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:24:57,778 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:24:58,987 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:24:59,380 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:24:59,383 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:24:59,722 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:25:00,834 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Could not get GATT services: Unreachable
+2024-12-15 15:25:00,835 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:25:04,142 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:26:05,848 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:26:05,849 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:26:05,854 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:26:05,855 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:26:06,686 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:26:10,136 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:26:10,153 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:26:10,153 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:26:10,460 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:26:10,762 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:26:14,493 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:26:15,914 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:27:56,546 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:27:56,552 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:27:56,558 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:27:56,559 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:27:57,330 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:28:01,783 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:28:02,742 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:28:03,641 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:28:04,264 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:28:04,267 [ERROR] WebSocket Sender: Connection error: Event loop is closed
+2024-12-15 15:28:04,271 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 15:28:04,275 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:28:04,305 [ERROR] WebSocket: Connection error: Event loop is closed
+2024-12-15 15:28:04,308 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:28:04,967 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:28:07,431 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:31:08,338 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:31:08,349 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:31:08,350 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:31:08,360 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:31:10,754 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:31:12,660 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:31:14,387 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:31:15,703 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:31:16,638 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:31:18,093 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:31:19,525 [INFO] Main: All processes started.
+2024-12-15 15:31:23,011 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:31:25,561 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:31:25,561 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:31:25,639 [INFO] Main: All processes terminated.
+2024-12-15 15:35:07,401 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:35:07,415 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:35:07,415 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:35:07,421 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:35:11,518 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:35:12,577 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:35:13,489 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:35:15,991 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:35:16,758 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:35:18,569 [INFO] Main: All processes started.
+2024-12-15 15:35:19,178 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:35:19,221 [ERROR] WebSocket Sender: Connection error: Event loop is closed
+2024-12-15 15:35:19,229 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 15:35:19,232 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:35:19,239 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:35:19,274 [ERROR] WebSocket: Connection error: Event loop is closed
+2024-12-15 15:35:19,280 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:35:20,311 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:36:05,051 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:36:05,054 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:36:05,055 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:36:05,071 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:36:07,036 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:36:09,125 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:36:11,349 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:36:13,813 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:36:14,142 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:36:14,142 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:36:16,247 [INFO] Main: All processes started.
+2024-12-15 15:36:16,326 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:36:18,117 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:36:18,275 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:36:21,582 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:36:21,677 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:37:59,716 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:37:59,742 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:37:59,743 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:37:59,749 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:38:00,487 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:38:03,862 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:38:04,851 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:38:07,643 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:38:07,647 [ERROR] WebSocket Sender: Connection error: Event loop is closed
+2024-12-15 15:38:07,650 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 15:38:07,655 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 15:38:07,686 [ERROR] WebSocket: Connection error: Event loop is closed
+2024-12-15 15:38:07,694 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:38:10,777 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:41:22,308 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:41:22,320 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:41:22,320 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:41:22,332 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:41:25,482 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:41:26,271 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:41:28,908 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:41:28,909 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:41:29,724 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:41:30,420 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:41:33,874 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:45:20,382 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:45:20,382 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:45:20,384 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:45:20,390 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:45:22,647 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:45:24,438 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:45:26,007 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:45:27,868 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:45:27,869 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:53:33,581 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:53:33,648 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:53:33,649 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:53:33,650 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:53:37,596 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:53:37,787 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:53:39,051 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:53:41,646 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:53:43,265 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:53:44,040 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:53:44,041 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:53:44,730 [INFO] Main: All processes started.
+2024-12-15 15:53:46,888 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:53:48,386 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 15:53:48,387 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:53:54,027 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:53:54,293 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:53:55,337 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:54:00,061 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:54:00,061 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:54:00,995 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:54:02,609 [INFO] SB-7104: Calibrating compass.
+2024-12-15 15:54:05,238 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:54:06,274 [INFO] SB-4844: Initialization complete.
+2024-12-15 15:54:06,275 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 15:54:06,333 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:54:07,983 [INFO] SB-7104: Initialization complete.
+2024-12-15 15:54:07,984 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 15:54:08,082 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:54:09,701 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:54:13,422 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:54:13,422 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:54:13,535 [INFO] Main: All processes terminated.
+2024-12-15 15:54:33,183 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:54:33,200 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:54:33,201 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:54:33,206 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:54:35,561 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:54:37,860 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:54:38,304 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:54:39,688 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:54:42,451 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:54:43,709 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:54:44,345 [INFO] Main: All processes started.
+2024-12-15 15:54:45,056 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:54:45,058 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:54:45,071 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:54:45,704 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:54:48,909 [INFO] SB-4844: Initialization complete.
+2024-12-15 15:54:48,910 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 15:54:48,938 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:54:50,766 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-15 15:54:50,767 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 15:55:00,813 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 15:55:05,331 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:55:10,593 [INFO] SB-7104: Calibrating compass.
+2024-12-15 15:55:12,388 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:55:12,389 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:55:17,639 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 15:55:17,811 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:55:18,021 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:57:18,553 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:57:18,568 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:57:18,570 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:57:18,571 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:57:22,274 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:57:22,810 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:57:26,235 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:57:26,512 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:57:26,594 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:57:29,353 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:57:29,841 [INFO] Main: All processes started.
+2024-12-15 15:57:31,573 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:57:31,573 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:57:31,590 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:57:32,102 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:57:33,322 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 15:57:33,323 [WARNING] WebSocket: Closing connection.
+2024-12-15 15:57:33,963 [INFO] Main: All processes terminated.
+2024-12-15 15:57:59,923 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 15:57:59,942 [INFO] WebSocket: Connected to the server.
+2024-12-15 15:57:59,943 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 15:57:59,950 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 15:58:00,311 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:58:03,922 [INFO] SB-4844: Attempting to connect.
+2024-12-15 15:58:05,426 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 15:58:05,427 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:58:07,962 [INFO] SB-7104: Attempting to connect.
+2024-12-15 15:58:08,495 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:58:08,610 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:58:11,186 [INFO] Main: All processes started.
+2024-12-15 15:58:12,076 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:58:15,766 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:58:15,767 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 15:58:18,415 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:58:18,415 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:58:22,123 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:58:22,123 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 15:58:22,177 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 15:58:24,016 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:58:27,881 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 15:58:30,323 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:58:30,323 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:58:30,346 [INFO] SB-4844: Calibrating compass.
+2024-12-15 15:58:33,249 [INFO] SB-7104: Calibrating compass.
+2024-12-15 15:58:35,551 [INFO] SB-4844: Initialization complete.
+2024-12-15 15:58:35,555 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 15:58:35,619 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:58:37,144 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:58:38,525 [INFO] SB-7104: Initialization complete.
+2024-12-15 15:58:38,526 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 15:58:38,611 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:58:42,169 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 15:58:42,170 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:58:48,366 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:59:02,793 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 15:59:02,794 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 15:59:08,692 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 15:59:15,995 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 15:59:21,183 [INFO] SB-2E86: Initialization complete.
+2024-12-15 15:59:21,184 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 15:59:21,237 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 15:59:22,224 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 15:59:22,234 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 15:59:22,244 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 15:59:25,537 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-15 15:59:25,538 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-15 15:59:25,665 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-15 15:59:26,207 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":323,"timing":41.704428088818005}}
+2024-12-15 15:59:26,259 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":92,"timing":266152212.08924788}}
+2024-12-15 15:59:26,311 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":92,"timing":266152212.08924788}}
+2024-12-15 16:00:09,692 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-15 16:00:28,125 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 16:00:28,125 [ERROR] WebSocket Sender: Connection error: Event loop is closed
+2024-12-15 16:00:28,128 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 16:00:28,131 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 16:00:28,148 [ERROR] WebSocket: Connection error: Event loop is closed
+2024-12-15 16:00:28,148 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:00:31,259 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 16:00:31,299 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 16:00:31,310 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 16:05:33,858 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:05:33,867 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:05:33,867 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:05:33,877 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:05:35,021 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:05:38,224 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:05:38,751 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:05:39,382 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:05:42,938 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:05:43,397 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 16:05:43,402 [ERROR] WebSocket Sender: Connection error: Event loop is closed
+2024-12-15 16:05:43,409 [WARNING] WebSocket Sender: Closing connection.
+2024-12-15 16:05:43,412 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<Connection.keepalive() done, defined at C:\Users\globa\AppData\Local\Programs\Python\Python312\Lib\site-packages\websockets\asyncio\connection.py:785> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-12-15 16:05:43,431 [ERROR] WebSocket: Connection error: Event loop is closed
+2024-12-15 16:05:43,432 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:05:46,548 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 16:05:46,960 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 16:06:09,183 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:06:09,205 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:06:09,206 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:06:09,213 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:06:10,338 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:06:13,310 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:06:14,213 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:06:17,441 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:06:17,879 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:06:19,092 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:06:19,509 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:06:19,509 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:06:19,523 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:06:20,352 [INFO] Main: All processes started.
+2024-12-15 16:06:25,114 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 16:06:25,115 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 16:06:28,194 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 16:06:28,194 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 16:06:32,878 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:06:33,552 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:06:36,806 [INFO] SB-4844: Calibrating compass.
+2024-12-15 16:06:37,231 [INFO] SB-7104: Calibrating compass.
+2024-12-15 16:06:42,177 [INFO] SB-4844: Initialization complete.
+2024-12-15 16:06:42,178 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 16:06:42,246 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:06:42,518 [INFO] SB-7104: Initialization complete.
+2024-12-15 16:06:42,519 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 16:06:42,575 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:07:15,857 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:07:15,858 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:07:30,803 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 16:07:30,824 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 16:07:31,434 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 16:24:26,767 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:24:26,771 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:24:26,772 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:24:26,779 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:24:28,823 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:24:31,535 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:24:31,958 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:24:31,959 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:25:15,618 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:25:15,620 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:25:15,621 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:25:15,631 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:25:16,881 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:25:20,106 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:25:20,530 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:25:20,907 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:25:20,911 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:25:38,615 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:25:38,618 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:25:38,618 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:25:38,624 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:25:38,837 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:25:42,512 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:25:44,242 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:25:46,515 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:25:47,882 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:25:49,672 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:25:49,751 [INFO] Main: All processes started.
+2024-12-15 16:25:50,107 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:25:50,108 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:25:50,184 [INFO] Main: All processes terminated.
+2024-12-15 16:26:29,131 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:26:29,154 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:26:29,157 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:26:29,158 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:26:30,620 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:26:33,108 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:26:33,300 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:26:37,102 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:26:37,290 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:26:38,037 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:26:40,376 [INFO] Main: All processes started.
+2024-12-15 16:26:42,019 [INFO] SB-4844: Calibrating compass.
+2024-12-15 16:26:42,232 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:26:42,235 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:26:42,326 [INFO] Main: All processes terminated.
+2024-12-15 16:27:41,765 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:27:41,765 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:27:41,766 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:27:41,773 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:27:42,556 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:27:45,892 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:27:46,595 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:27:47,586 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:27:50,116 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:27:50,771 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:27:51,888 [INFO] SB-4844: Calibrating compass.
+2024-12-15 16:27:51,914 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:27:51,914 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:27:51,958 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:27:52,976 [INFO] Main: All processes started.
+2024-12-15 16:27:53,725 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:27:53,728 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:27:53,795 [INFO] Main: All processes terminated.
+2024-12-15 16:28:43,708 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:28:43,730 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:28:43,731 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:28:43,739 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:28:44,137 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:28:47,920 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:28:49,758 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:28:49,981 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:28:51,693 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:28:52,973 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:28:54,938 [INFO] Main: All processes started.
+2024-12-15 16:28:55,038 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:28:55,039 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:28:55,040 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:28:59,666 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:28:59,666 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:28:59,739 [INFO] Main: All processes terminated.
+2024-12-15 16:30:13,252 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:30:13,257 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:30:13,261 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:30:13,261 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:30:15,837 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:30:17,055 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:30:17,418 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:30:20,919 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-15 16:30:20,919 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 16:30:21,419 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:30:22,170 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:30:24,365 [INFO] Main: All processes started.
+2024-12-15 16:30:26,731 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:30:27,201 [INFO] SB-7104: Calibrating compass.
+2024-12-15 16:30:28,499 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:30:28,502 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:30:28,575 [INFO] Main: All processes terminated.
+2024-12-15 16:31:40,000 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:31:40,001 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:31:40,004 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:31:40,007 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:31:41,283 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:31:43,981 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:31:45,097 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:31:45,579 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:31:48,344 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:31:51,080 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:31:51,081 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:31:51,185 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:31:51,260 [INFO] Main: All processes started.
+2024-12-15 16:31:51,701 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:31:51,702 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:31:51,771 [INFO] Main: All processes terminated.
+2024-12-15 16:37:22,678 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:37:22,684 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:37:22,685 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:37:22,692 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:37:24,789 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:37:26,637 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:37:27,787 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:37:29,546 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:37:31,142 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:37:31,706 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:37:31,707 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:37:46,121 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:37:46,129 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:37:46,129 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:37:46,137 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:37:46,641 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:37:50,417 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:37:50,891 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:37:51,213 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:37:53,835 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:37:53,836 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:38:17,999 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:38:18,021 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:38:18,023 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:38:18,024 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:38:18,198 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:38:22,033 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:38:23,009 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:38:24,677 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:38:24,677 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:44:21,850 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:44:21,868 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:44:21,868 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:44:21,874 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:44:23,443 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:44:26,167 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:44:28,519 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:44:29,209 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:44:30,791 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:44:33,058 [INFO] Main: All processes started.
+2024-12-15 16:44:33,981 [INFO] SB-4844: Calibrating compass.
+2024-12-15 16:44:35,057 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:44:39,186 [INFO] SB-4844: Initialization complete.
+2024-12-15 16:44:39,187 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 16:44:39,195 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:44:45,627 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Could not get GATT services: Unreachable
+2024-12-15 16:44:45,628 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 16:44:52,341 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:44:58,811 [INFO] SB-7104: Calibrating compass.
+2024-12-15 16:45:03,483 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 16:45:03,484 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-15 16:45:04,103 [INFO] SB-7104: Initialization complete.
+2024-12-15 16:45:04,103 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 16:45:04,158 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:45:08,999 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:45:16,848 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:45:22,201 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:45:22,202 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:45:22,272 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:45:22,441 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 16:45:22,457 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 16:45:22,470 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 16:45:25,980 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-15 16:45:25,982 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-15 16:45:25,985 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-15 16:45:26,190 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":268,"timing":101044544.63255303}}
+2024-12-15 16:45:26,205 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":268,"timing":101044544.63255303}}
+2024-12-15 16:45:26,214 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":268,"timing":101044544.63255303}}
+2024-12-15 16:48:32,629 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:48:32,631 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:48:32,718 [INFO] Main: All processes terminated.
+2024-12-15 16:51:25,122 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:51:25,144 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:51:25,146 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:51:25,147 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:51:27,231 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:51:30,136 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:51:32,591 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:51:33,107 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:51:34,485 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:51:36,324 [INFO] Main: All processes started.
+2024-12-15 16:51:37,915 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:51:37,916 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:51:37,935 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:51:39,841 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 16:51:45,210 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 16:51:45,211 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 16:51:48,888 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-15 16:51:49,078 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:51:49,079 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:51:49,149 [INFO] Main: All processes terminated.
+2024-12-15 16:52:16,805 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:52:16,813 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:52:16,814 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:52:16,820 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:52:17,555 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:52:21,629 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:52:23,801 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:52:23,819 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:52:23,819 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:54:14,578 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:54:14,581 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:54:14,582 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:54:14,587 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:54:14,749 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:54:18,707 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:54:21,299 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:54:22,119 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:54:22,394 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:54:23,515 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:54:25,612 [INFO] Main: All processes started.
+2024-12-15 16:54:26,607 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:54:26,607 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:54:26,648 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:54:27,185 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: Device with address DD:D1:3C:95:48:44 was not found.
+2024-12-15 16:54:27,185 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-15 16:54:28,599 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: Device with address E5:03:16:93:71:04 was not found.
+2024-12-15 16:54:28,600 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 16:54:32,340 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:54:34,237 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:54:35,712 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:54:35,715 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:54:35,785 [INFO] Main: All processes terminated.
+2024-12-15 16:56:24,257 [INFO] SB-2E86: Attempting to connect.
+2024-12-15 16:56:24,284 [INFO] WebSocket: Connected to the server.
+2024-12-15 16:56:24,284 [INFO] WebSocket: Sent connection initialization.
+2024-12-15 16:56:24,291 [INFO] WebSocket Sender: Connected to the server.
+2024-12-15 16:56:24,826 [INFO] SB-2E86: Connected to Sphero.
+2024-12-15 16:56:28,501 [INFO] SB-4844: Attempting to connect.
+2024-12-15 16:56:29,225 [INFO] SB-4844: Connected to Sphero.
+2024-12-15 16:56:30,659 [INFO] SB-2E86: Calibrating compass.
+2024-12-15 16:56:32,643 [INFO] SB-7104: Attempting to connect.
+2024-12-15 16:56:33,060 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:56:34,308 [INFO] SB-4844: Calibrating compass.
+2024-12-15 16:56:35,464 [INFO] Main: All processes started.
+2024-12-15 16:56:36,031 [INFO] SB-2E86: Initialization complete.
+2024-12-15 16:56:36,032 [INFO] SB-2E86: Subscribed to message bus.
+2024-12-15 16:56:36,112 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:56:39,570 [INFO] SB-4844: Initialization complete.
+2024-12-15 16:56:39,570 [INFO] SB-4844: Subscribed to message bus.
+2024-12-15 16:56:39,645 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:56:40,819 [ERROR] SB-7104: Failed to initialize or maintain connection to Sphero: 
+2024-12-15 16:56:40,820 [WARNING] SB-7104: Sphero connection closed. Retrying...
+2024-12-15 16:56:48,226 [INFO] SB-7104: Connected to Sphero.
+2024-12-15 16:56:56,121 [INFO] SB-7104: Calibrating compass.
+2024-12-15 16:57:01,418 [INFO] SB-7104: Initialization complete.
+2024-12-15 16:57:01,418 [INFO] SB-7104: Subscribed to message bus.
+2024-12-15 16:57:01,489 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-15 16:57:01,685 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 16:57:01,704 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 16:57:01,716 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":0,"timing":2}}
+2024-12-15 16:57:05,015 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroFeedback', 'message': 'SB-4844'}
+2024-12-15 16:57:05,016 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-7104', 'messageType': 'SpheroFeedback', 'message': 'SB-7104'}
+2024-12-15 16:57:05,026 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-2E86', 'messageType': 'SpheroFeedback', 'message': 'SB-2E86'}
+2024-12-15 16:57:05,310 [INFO] WebSocket: Received message: {"id":"SB-4844","messageType":"SpheroMovement","message":{"angle":278,"timing":90934042.03047393}}
+2024-12-15 16:57:05,325 [INFO] WebSocket: Received message: {"id":"SB-7104","messageType":"SpheroMovement","message":{"angle":278,"timing":90934042.03047393}}
+2024-12-15 16:57:05,343 [INFO] WebSocket: Received message: {"id":"SB-2E86","messageType":"SpheroMovement","message":{"angle":278,"timing":90934042.03047393}}
+2024-12-15 16:58:03,787 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-15 16:58:03,796 [WARNING] WebSocket: Closing connection.
+2024-12-15 16:58:03,882 [INFO] Main: All processes terminated.

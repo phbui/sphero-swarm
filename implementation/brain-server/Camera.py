@@ -1,9 +1,11 @@
 import cv2
 
 SCALE_FACTOR = 50  # 1 unit of distance = 50 pixels
+address = "http://10.247.137.107:4747/video"
+# address_1 = "http://10.243.73.151:4747/video"
 
 class Camera:
-    def __init__(self, display, camera_index=0):
+    def __init__(self, display, ipcam_address=address):
         """
         Initialize the Camera class.
         Args:
@@ -11,8 +13,8 @@ class Camera:
             camera_index (int): Index of the camera to use (default: 0).
         """
         self.display = display  # Reference to a Display instance for visualization
-        self.camera_index = camera_index  # Camera index for accessing the video stream
-        self.cap = cv2.VideoCapture(self.camera_index, cv2.CAP_DSHOW)  # Initialize camera capture
+        self.ipcam_address = ipcam_address  # Camera index for accessing the video stream
+        self.cap = cv2.VideoCapture(self.ipcam_address)  # Initialize camera capture
         self.width = 0  # Width of the camera frame
         self.height = 0  # Height of the camera frame
         self.x_min = 0  # Minimum x-coordinate in world units
@@ -21,7 +23,7 @@ class Camera:
         self.y_max = 0  # Maximum y-coordinate in world units
 
         if not self.cap.isOpened():
-            raise ValueError(f"Unable to access camera at index {self.camera_index}")
+            raise ValueError(f"Unable to access camera at index {self.ipcam_address}")
 
         # Get initial frame dimensions
         ret, frame = self.cap.read()

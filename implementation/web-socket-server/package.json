@@ -11,6 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "web-socket-server": "file:"
+    "web-socket-server": "file:",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.0"
   }
 }

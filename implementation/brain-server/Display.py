@@ -172,8 +172,8 @@ class Display:
                     overlay_image = image.copy()
 
                     # Resize overlay image to half the dimensions
-                    half_width = self.width // 2
-                    half_height = self.height // 2
+                    half_width = self.width // 0.5
+                    half_height = self.height // 0.5
                     overlay_image = cv2.resize(overlay_image, (half_width, half_height))
 
                     # Scale factors for mapping coordinates back to the original
