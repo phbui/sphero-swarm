@@ -182,7 +182,7 @@ class Planner:
                 for p1 in traj1 for p2 in traj2
             ])
             risk = np.exp(-min_distance)  # Exponential decay of risk with distance
-            return risk
+            return 0
         except Exception as e:
             print(f"Error calculating collision risk: {e}")
             return 0
