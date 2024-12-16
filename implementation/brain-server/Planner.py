@@ -177,11 +177,11 @@ class Planner:
         Calculate collision risk between two trajectories.
         """
         try:
-            min_distance = np.min([
-                np.linalg.norm(np.array(p1) - np.array(p2))
-                for p1 in traj1 for p2 in traj2
-            ])
-            risk = np.exp(-min_distance)  # Exponential decay of risk with distance
+            # min_distance = np.min([
+            #     np.linalg.norm(np.array(p1) - np.array(p2))
+            #     for p1 in traj1 for p2 in traj2
+            # ])
+            # risk = np.exp(-min_distance)  # Exponential decay of risk with distance
             return 0
         except Exception as e:
             print(f"Error calculating collision risk: {e}")

@@ -95,22 +95,21 @@ class SpheroMovement:
 
             if pattern == "X":
                 self.droid.set_compass_direction(0)  # Reset compass direction
-                self.droid.scroll_matrix_text("Follow Me!", Color(255, 255, 255) , 5)
-                arrow_color = Color(255, 0, 0)  # Red color
+                arrow_color = self.sphero_color  # Red color
                 arrow_pixels = [
                     # Row 0
-                    (3, 0), (4, 0),
-                    # Row 1
-                    (2, 1), (3, 1), (4, 1), (5, 1),
-                    # Row 2
-                    (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2),
-                    # Row 3
-                    (3, 3), (4, 3),
-                    # Row 4 to 7
-                    (3, 4), (4, 4),
-                    (3, 5), (4, 5),
-                    (3, 6), (4, 6),
                     (3, 7), (4, 7),
+                    # Row 1
+                    (2, 6), (3, 6), (4, 6), (5, 6),
+                    # Row 2
+                    (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5),
+                    # Row 3
+                    (3, 4), (4, 4),
+                    # Row 4 to 7
+                    (3, 3), (4, 3),
+                    (3, 2), (4, 2),
+                    (3, 1), (4, 1),
+                    (3, 0), (4, 0),
                 ]
 
                 # Set each pixel on the matrix
