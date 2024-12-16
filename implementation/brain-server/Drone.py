@@ -255,6 +255,12 @@ class Drone:
         print(f"Sphero [{self.sphero_id}] not at goal.")
         return False
 
+    def point_out(self, sphero):
+        try:
+            print(f"Sphero [{self.sphero_id}] changing LED matrix...")
+
+        except Exception as e:
+            print(f"Error on changing LED matrix")
     def _interact(self):
         """
         Execute interaction behavior.

@@ -82,7 +82,7 @@ class SpheroMovement:
         except Exception as e:
             print(f"Error in move_direction: {e}")
 
-    def set_matrix(self, pattern):
+    def set_matrix(self, pattern="X"):
         """
         Set the LED matrix to display a specific pattern.
 
