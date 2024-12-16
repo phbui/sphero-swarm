@@ -142,7 +142,6 @@ def handle_message(id, sphero_color, message_type, message, outgoing_queue, sphe
         angle = message["angle"]
         timing = message["timing"]
         sphero.move(angle, timing)
-        sphero.set_matrix("X")
 
     elif message_type == "MoveNorth":
         sphero.move_direction("north", message)
