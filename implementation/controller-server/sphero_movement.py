@@ -95,15 +95,18 @@ class SpheroMovement:
 
             if pattern == "X":
                 self.droid.set_compass_direction(0)  # Reset compass direction
+                self.droid.scroll_matrix_text("Follow Me!", Color(255, 255, 255) , 5)
                 arrow_color = Color(255, 0, 0)  # Red color
-
-                # Draw the stem of the arrow
-                self.droid.set_matrix_line(4, 2, 4, 5, arrow_color)
+                # Draw the arrow stem
+                self.droid.set_matrix_pixel(4, 2, arrow_color)
+                self.droid.set_matrix_pixel(4, 3, arrow_color)
+                self.droid.set_matrix_pixel(4, 4, arrow_color)
+                self.droid.set_matrix_pixel(4, 5, arrow_color)
 
                 # Draw the left diagonal head
-                self.droid.set_matrix_line(3, 1, 4, 2, arrow_color)
+                self.droid.set_matrix_pixel(3, 1, arrow_color)
 
                 # Draw the right diagonal head
-                self.droid.set_matrix_line(4, 2, 5, 1, arrow_color)
+                self.droid.set_matrix_pixel(5, 1, arrow_color)
         except Exception as e:
             print(f"Error in set_matrix: {e}")
