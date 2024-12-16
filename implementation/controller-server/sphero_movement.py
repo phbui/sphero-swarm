@@ -94,24 +94,15 @@ class SpheroMovement:
 
             if pattern == "X":
                 self.droid.set_compass_direction(0)  # Reset compass direction
+                arrow_color = Color(255, 0, 0)  # Red color
 
-                # Define patterns for specific Spheros
-                if self.sphero_id == "SB-2E86" or self.sphero_id == "SB-D8B2":
-                    self.droid.set_matrix_line(0, 0, 7, 7, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(1, 0, 7, 6, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(0, 1, 6, 7, Color(r=255, g=0, b=0))
-                elif self.sphero_id == "SB-4844" or self.sphero_id == "SB-7104":
-                    self.droid.set_matrix_line(0, 7, 7, 0, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(0, 6, 6, 0, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(1, 7, 7, 1, Color(r=255, g=0, b=0))
-                elif self.sphero_id == "SB-E12C":
-                    self.droid.set_matrix_line(0, 0, 7, 7, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(1, 0, 7, 6, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(0, 1, 6, 7, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(0, 7, 7, 0, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(0, 6, 6, 0, Color(r=255, g=0, b=0))
-                    self.droid.set_matrix_line(1, 7, 7, 1, Color(r=255, g=0, b=0))
-                else:
-                    print("Droid not found")
+                # Draw the stem of the arrow
+                self.droid.set_matrix_line(4, 2, 4, 5, arrow_color)
+
+                # Draw the left diagonal head
+                self.droid.set_matrix_line(3, 1, 4, 2, arrow_color)
+
+                # Draw the right diagonal head
+                self.droid.set_matrix_line(4, 2, 5, 1, arrow_color)
         except Exception as e:
             print(f"Error in set_matrix: {e}")
