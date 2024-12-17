@@ -104,10 +104,6 @@ while(True):
     # Display the combined image with labels
     cv2.imshow("Color Masks", combined_image)
 
-    # Save settings on 's' key press
-    if cv2.waitKey(1) & 0xFF == ord('s'):
-        save_settings()
-
     # Exit on 'q' key press
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

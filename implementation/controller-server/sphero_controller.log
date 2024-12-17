@@ -18378,3 +18378,67 @@ ile specified
 2024-12-13 08:29:58,204 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-13 08:29:58,204 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
 2024-12-13 08:29:58,205 [ERROR] SB-7104: Error in subscriber: [WinError 232] The pipe is being closed
+2024-12-17 13:38:15,858 [INFO] WebSocket Sender: Connected to the server.
+2024-12-17 13:38:16,276 [INFO] SB-2E86: Attempting to connect.
+2024-12-17 13:38:16,346 [INFO] WebSocket: Connected to the server.
+2024-12-17 13:38:16,350 [INFO] WebSocket: Sent connection initialization.
+2024-12-17 13:38:19,571 [INFO] SB-2E86: Connected to Sphero.
+2024-12-17 13:39:15,615 [INFO] SB-2E86: Attempting to connect.
+2024-12-17 13:39:15,633 [INFO] WebSocket: Connected to the server.
+2024-12-17 13:39:15,636 [INFO] WebSocket: Sent connection initialization.
+2024-12-17 13:39:15,667 [INFO] WebSocket Sender: Connected to the server.
+2024-12-17 13:39:19,223 [INFO] SB-2E86: Connected to Sphero.
+2024-12-17 13:39:23,042 [INFO] SB-4844: Attempting to connect.
+2024-12-17 13:39:24,343 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-17 13:39:24,345 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-17 13:39:24,406 [INFO] Main: All processes started.
+2024-12-17 13:39:26,133 [INFO] SB-7104: Attempting to connect.
+2024-12-17 13:39:27,358 [INFO] SB-4844: Connected to Sphero.
+2024-12-17 13:39:31,713 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:39:34,454 [WARNING] SB-2E86: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:39:34,603 [ERROR] SB-4844: Failed to initialize or maintain connection to Sphero: 
+2024-12-17 13:39:34,606 [WARNING] SB-4844: Sphero connection closed. Retrying...
+2024-12-17 13:39:36,621 [INFO] SB-7104: Connected to Sphero.
+2024-12-17 13:39:38,943 [INFO] SB-2E86: Connected to Sphero.
+2024-12-17 13:39:42,427 [ERROR] WebSocket: Error receiving message: no close frame received or sent
+2024-12-17 13:39:42,452 [WARNING] WebSocket: Closing connection.
+2024-12-17 13:39:43,364 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-17 13:39:43,382 [WARNING] WebSocket Sender: Closing connection.
+2024-12-17 13:40:34,983 [INFO] WebSocket: Connected to the server.
+2024-12-17 13:40:34,986 [INFO] WebSocket: Sent connection initialization.
+2024-12-17 13:40:35,076 [INFO] SB-2E86: Attempting to connect.
+2024-12-17 13:40:35,089 [INFO] WebSocket Sender: Connected to the server.
+2024-12-17 13:40:38,892 [INFO] SB-2E86: Connected to Sphero.
+2024-12-17 13:40:39,366 [INFO] SB-4844: Attempting to connect.
+2024-12-17 13:40:44,102 [INFO] SB-4844: Connected to Sphero.
+2024-12-17 13:40:44,207 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Device with address EA:80:A1:6E:2E:86 was not found.
+2024-12-17 13:40:44,208 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-17 13:40:46,103 [INFO] SB-7104: Attempting to connect.
+2024-12-17 13:40:49,223 [INFO] SB-D8B2: Attempting to connect.
+2024-12-17 13:40:51,027 [INFO] Main: All processes started.
+2024-12-17 13:40:51,711 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:40:52,167 [INFO] SB-4844: Calibrating compass.
+2024-12-17 13:40:52,300 [INFO] SB-2E86: Connected to Sphero.
+2024-12-17 13:40:54,646 [INFO] SB-E12C: Attempting to connect.
+2024-12-17 13:40:55,754 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:41:00,877 [WARNING] SB-7104: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:41:01,047 [WARNING] SB-E12C: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:41:02,957 [WARNING] EA:80:A1:6E:2E:86: unhandled services changed event
+2024-12-17 13:41:04,124 [INFO] SB-4844: Initialization complete.
+2024-12-17 13:41:04,135 [INFO] SB-4844: Subscribed to message bus.
+2024-12-17 13:41:04,206 [INFO] WebSocket Sender: Sent message: {'clientType': 'SpheroController', 'id': 'SB-4844', 'messageType': 'SpheroReady', 'message': 'Ready'}
+2024-12-17 13:41:05,331 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:41:06,097 [INFO] SB-7104: Connected to Sphero.
+2024-12-17 13:41:06,642 [ERROR] SB-2E86: Failed to initialize or maintain connection to Sphero: Characteristic 00020005-574f-4f20-5370-6865726f2121 was not found!
+2024-12-17 13:41:06,836 [WARNING] SB-2E86: Sphero connection closed. Retrying...
+2024-12-17 13:41:10,498 [WARNING] SB-E12C: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:41:13,957 [INFO] SB-2E86: Connected to Sphero.
+2024-12-17 13:41:15,252 [WARNING] SB-D8B2: Sphero not found. Ensure it is powered on and in range. Retrying...
+2024-12-17 13:41:16,066 [INFO] SB-E12C: Connected to Sphero.
+2024-12-17 13:41:21,806 [ERROR] WebSocket Sender: Error sending message: 
+2024-12-17 13:41:21,806 [ERROR] SB-4844: Error in subscriber: 
+2024-12-17 13:41:21,830 [WARNING] WebSocket Sender: Closing connection.
+2024-12-17 13:41:21,835 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-17 13:41:21,958 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-17 13:41:22,014 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
+2024-12-17 13:41:22,089 [ERROR] SB-4844: Error in subscriber: [WinError 2] The system cannot find the file specified
